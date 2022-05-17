@@ -1,0 +1,30 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/alessioferrara/Desktop/Alit/pages/about.vue",
+    "chunkName": "pages/about",
+    "_name": "_043aed9c"
+  },
+  {
+    "name": "list",
+    "path": "/list",
+    "component": "/Users/alessioferrara/Desktop/Alit/pages/list.vue",
+    "chunkName": "pages/list",
+    "_name": "_0011bd09"
+  },
+  {
+    "name": "details-id",
+    "path": "/details/:id?",
+    "component": "/Users/alessioferrara/Desktop/Alit/pages/details/_id.vue",
+    "chunkName": "pages/details/_id",
+    "_name": "_1842af5c"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/alessioferrara/Desktop/Alit/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_1d9a63f7"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "Card": {
+    "description": "Auto imported from components/Card.vue"
+  },
+  "CustomPage": {
+    "description": "Auto imported from components/CustomPage.vue"
+  },
+  "TheHeader": {
+    "description": "Auto imported from components/TheHeader.vue"
+  }
+}
