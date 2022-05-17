@@ -1,22 +1,13 @@
 const express = require('express')
 const app = express()
-const { Sequelize, DataTypes } = require("sequelize")
-const initialize = require('./initialize').default
+const db = require("./config/database")
+//const initialize = require('./initialize').default
 app.use(express.json())
 
-// Development
-const database = new Sequelize("postgres://postgres:postgres@localhost:5432/hyp")
-
-// Production (use this code when deploying to production in Heroku)
-// const pg = require('pg')
-// pg.defaults.ssl = true
-// const database = new Sequelize(process.env.DATABASE_URL, {
-//   ssl: true,
-//   dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
-// })
+db.authenticate().catch((err) => console.log("Errore" + err));
 
 
-
+/*
 // Function that will initialize the connection to the database
 async function initializeDatabaseConnection() {
     await database.authenticate()
@@ -99,6 +90,7 @@ async function runMainApi() {
 }
 
 runMainApi()
+*/
 
 
 export default app
