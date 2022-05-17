@@ -3,7 +3,8 @@ const db = require('../config/database')
 const poi_images = db.define('poi_images', {
     image_id: {
       type: Sequelize.INTEGER,
-      allowNull: false
+      allowNull: false,
+      primaryKey: true
     },
     name: {
       type: Sequelize.STRING,
@@ -18,7 +19,7 @@ const poi_images = db.define('poi_images', {
       allowNull: true
     }
   }, {
-    sequelize,
+
     tableName: 'poi_images',
     schema: 'Alit',
     timestamps: false

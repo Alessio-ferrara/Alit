@@ -3,7 +3,8 @@ const db = require('../config/database')
 const point_of_interest = db.define('point_of_interest', {
     poi_id: {
       type: Sequelize.INTEGER,
-      allowNull: false
+      allowNull: false,
+      primaryKey: true
     },
     name: {
       type: Sequelize.STRING,
@@ -26,7 +27,7 @@ const point_of_interest = db.define('point_of_interest', {
       allowNull: false
     }
   }, {
-    sequelize,
+
     tableName: 'point_of_interest',
     schema: 'Alit',
     timestamps: false

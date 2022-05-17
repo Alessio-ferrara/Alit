@@ -3,7 +3,8 @@ const db = require('../config/database')
 const services = db.define('services', {
     service_id: {
       type: Sequelize.INTEGER,
-      allowNull: false
+      allowNull: false,
+      primaryKey: true
     },
     type_id: {
       type: Sequelize.INTEGER,
@@ -18,7 +19,6 @@ const services = db.define('services', {
       allowNull: false
     }
   }, {
-    sequelize,
     tableName: 'services',
     schema: 'Alit',
     timestamps: false

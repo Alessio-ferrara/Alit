@@ -3,7 +3,8 @@ const db = require('../config/database')
 const Itinerary = db.define('Itinerary', {
     itinerary_id: {
       type: Sequelize.INTEGER,
-      allowNull: false
+      allowNull: false,
+      primaryKey: true
     },
     name: {
       type: Sequelize.STRING,
@@ -18,7 +19,7 @@ const Itinerary = db.define('Itinerary', {
       allowNull: true
     }
   }, {
-    sequelize,
+
     tableName: 'Itinerary',
     schema: 'Alit',
     timestamps: false
