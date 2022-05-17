@@ -1,16 +1,16 @@
 <template>
   <div class="main-page">
-    <the-header />
+    <navbar />
     <nuxt />
   </div>
 </template>
 
 <script>
-import TheHeader from '~/components/TheHeader.vue'
+import Navbar from '~/components/Navbar.vue'
 export default {
   name: 'DefaultLayout',
   components: {
-    TheHeader,
+    Navbar,
   },
 }
 </script>

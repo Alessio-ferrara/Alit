@@ -5,7 +5,7 @@
   "CustomPage": {
     "description": "Auto imported from components/CustomPage.vue"
   },
-  "TheHeader": {
-    "description": "Auto imported from components/TheHeader.vue"
+  "Navbar": {
+    "description": "Auto imported from components/Navbar.vue"
   }
 }

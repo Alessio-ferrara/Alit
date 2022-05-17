@@ -41,7 +41,7 @@
 
 <script>
 export default {
-  name: 'TheHeader',
+  name: 'Navbar',
   data() {
     return {
       headerList: [

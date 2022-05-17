@@ -1,6 +1,6 @@
 export { default as Card } from '../../components/Card.vue'
 export { default as CustomPage } from '../../components/CustomPage.vue'
-export { default as TheHeader } from '../../components/TheHeader.vue'
+export { default as Navbar } from '../../components/Navbar.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

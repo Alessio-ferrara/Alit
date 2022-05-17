@@ -8,4 +8,4 @@ You can directly use them in pages and other components without the need to impo
 
 - `<Card>` | `<card>` (components/Card.vue)
 - `<CustomPage>` | `<custom-page>` (components/CustomPage.vue)
-- `<TheHeader>` | `<the-header>` (components/TheHeader.vue)
+- `<Navbar>` | `<navbar>` (components/Navbar.vue)
