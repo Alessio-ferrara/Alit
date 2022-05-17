@@ -1,20 +1,20 @@
 const Sequelize = require('sequelize');
-module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('Itinerary', {
+const db = require('../config/database')
+const Itinerary = db.define('Itinerary', {
     itinerary_id: {
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false
     },
     name: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false
     },
     duration: {
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false
     },
     description: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: true
     }
   }, {
@@ -23,4 +23,5 @@ module.exports = function(sequelize, DataTypes) {
     schema: 'Alit',
     timestamps: false
   });
-};
+
+  module.exports = Itinerary;

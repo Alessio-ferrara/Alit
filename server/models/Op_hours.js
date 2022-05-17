@@ -1,20 +1,20 @@
 const Sequelize = require('sequelize');
-module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('Op_hours', {
+const db = require('../config/database')
+const Op_hours = db.define('Op_hours', {
     service_id: {
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false
     },
     day: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false
     },
     s_hour: {
-      type: DataTypes.TIME,
+      type: Sequelize.TIME,
       allowNull: false
     },
     c_hour: {
-      type: DataTypes.TIME,
+      type: Sequelize.TIME,
       allowNull: true
     }
   }, {
@@ -23,4 +23,5 @@ module.exports = function(sequelize, DataTypes) {
     schema: 'Alit',
     timestamps: false
   });
-};
+
+  module.exports = Op_hours;
