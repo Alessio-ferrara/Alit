@@ -26,7 +26,7 @@ p {
 
 <script>
 export default {
-  name: 'CustomPage',
+  name: "CustomPage",
   props: {
     title: {
       type: String,
@@ -41,5 +41,5 @@ export default {
       required: true,
     },
   },
-}
+};
 </script>

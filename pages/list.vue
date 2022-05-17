@@ -12,28 +12,29 @@
         :breed="cat.breed"
       />
     </div>
+    
   </div>
 </template>
 
 <script>
-import Card from '~/components/Card.vue'
+import Card from "~/components/Card.vue";
 export default {
-  name: 'ListPage',
+  name: "ListPage",
   components: {
     Card,
   },
   data() {
     return {
       // catList: []
-    }
+    };
   },
   // Note: This happens on backend (server) side
   async asyncData({ $axios }) {
     // const { data } = await $axios.get('http://localhost:3000/api/cats')
-    const { data } = await $axios.get('/api/cats')
+    const { data } = await $axios.get("/api/cats");
     return {
       catList: data,
-    }
+    };
   },
 
   // Note: This would happen on frontend (client) side
@@ -41,5 +42,5 @@ export default {
   //   const { data } = await this.$axios.get('/api/cats')
   //   this.catList = data
   // },
-}
+};
 </script>
