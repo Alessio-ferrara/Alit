@@ -12,8 +12,9 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_4181bc1a from 'nuxt_plugin_plugin_4181bc1a' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_axios_f5cc83a0 from 'nuxt_plugin_axios_f5cc83a0' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_plugin_1d16cf9e from 'nuxt_plugin_plugin_1d16cf9e' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_axios_3fc67672 from 'nuxt_plugin_axios_3fc67672' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_bootstrap_68fdc73f from 'nuxt_plugin_bootstrap_68fdc73f' // Source: ../plugins/bootstrap.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -63,7 +64,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"lesson16","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbootstrap@5.1.3\u002Fdist\u002Fcss\u002Fbootstrap.min.css"}],"script":[{"src":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbootstrap@5.1.3\u002Fdist\u002Fjs\u002Fbootstrap.bundle.min.js"}],"style":[]},
+    head: {"title":"Alit","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbootstrap@5.1.3\u002Fdist\u002Fcss\u002Fbootstrap.min.css"}],"script":[{"src":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbootstrap@5.1.3\u002Fdist\u002Fjs\u002Fbootstrap.bundle.min.js"}],"style":[]},
 
     router,
     nuxt: {
@@ -177,12 +178,16 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_4181bc1a === 'function') {
-    await nuxt_plugin_plugin_4181bc1a(app.context, inject)
+  if (typeof nuxt_plugin_plugin_1d16cf9e === 'function') {
+    await nuxt_plugin_plugin_1d16cf9e(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_f5cc83a0 === 'function') {
-    await nuxt_plugin_axios_f5cc83a0(app.context, inject)
+  if (typeof nuxt_plugin_axios_3fc67672 === 'function') {
+    await nuxt_plugin_axios_3fc67672(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_bootstrap_68fdc73f === 'function') {
+    await nuxt_plugin_bootstrap_68fdc73f(app.context, inject)
   }
 
   // Lock enablePreview in context
