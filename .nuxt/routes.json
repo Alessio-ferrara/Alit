@@ -2,29 +2,29 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/about.vue",
+    "component": "/Users/francesco/git/Alit/pages/about.vue",
     "chunkName": "pages/about",
-    "_name": "_043aed9c"
+    "_name": "_0ef6862e"
   },
   {
     "name": "list",
     "path": "/list",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/list.vue",
+    "component": "/Users/francesco/git/Alit/pages/list.vue",
     "chunkName": "pages/list",
-    "_name": "_0011bd09"
+    "_name": "_b5e2931c"
   },
   {
     "name": "details-id",
     "path": "/details/:id?",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/details/_id.vue",
+    "component": "/Users/francesco/git/Alit/pages/details/_id.vue",
     "chunkName": "pages/details/_id",
-    "_name": "_1842af5c"
+    "_name": "_c93a126e"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/index.vue",
+    "component": "/Users/francesco/git/Alit/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_1d9a63f7"
+    "_name": "_183c97ae"
   }
 ]

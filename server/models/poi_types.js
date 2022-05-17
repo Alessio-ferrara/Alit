@@ -1,12 +1,12 @@
-const Sequelize = require('sequelize');
-module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('poi_types', {
+const Sequelize = require('sequelize')
+const db = require('../config/database')
+const poi_types = db.define('poi_types', {
     type_id: {
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false
     },
     name: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false
     }
   }, {
@@ -15,4 +15,5 @@ module.exports = function(sequelize, DataTypes) {
     schema: 'Alit',
     timestamps: false
   });
-};
+
+  module.exports = poi_types;

@@ -1,12 +1,12 @@
 const Sequelize = require('sequelize');
-module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('poi_itinerary', {
+const db = require('../config/database')
+const poi_itinerary = db.define('poi_itinerary', {
     itinerary_id: {
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false
     },
     poi_id: {
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false
     }
   }, {
@@ -15,4 +15,5 @@ module.exports = function(sequelize, DataTypes) {
     schema: 'Alit',
     timestamps: false
   });
-};
+
+  module.exports = poi_itinerary;

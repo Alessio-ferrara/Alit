@@ -1,28 +1,28 @@
 const Sequelize = require('sequelize');
-module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('point_of_interest', {
+const db = require('../config/database')
+const point_of_interest = db.define('point_of_interest', {
     poi_id: {
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false
     },
     name: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false
     },
     description: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false
     },
     visit_info: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: true
     },
     lat: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false
     },
     lang: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false
     }
   }, {
@@ -31,4 +31,4 @@ module.exports = function(sequelize, DataTypes) {
     schema: 'Alit',
     timestamps: false
   });
-};
+module.exports = point_of_interest;

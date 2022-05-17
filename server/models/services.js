@@ -1,20 +1,20 @@
 const Sequelize = require('sequelize');
-module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('services', {
+const db = require('../config/database')
+const services = db.define('services', {
     service_id: {
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false
     },
     type_id: {
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false
     },
     name: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false
     },
     address: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false
     }
   }, {
@@ -23,4 +23,4 @@ module.exports = function(sequelize, DataTypes) {
     schema: 'Alit',
     timestamps: false
   });
-};
+module.exports = services
