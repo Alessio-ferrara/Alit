@@ -25,4 +25,28 @@ const Itinerary = db.define('Itinerary', {
     timestamps: false
   });
 
+Itinerary.getAllItineraries = async function () {
+    try {
+        //todo get poi list?
+        const itineraries = await Itinerary.findAll({});
+        return itineraries;
+    } catch (error) {
+        throw error;
+    }
+};
+
+Itinerary.getInfo = async function (itinerary_id) {
+    try {
+        //todo get poi list?
+        const itineraries = await Itinerary.findOne({
+            where : {
+                itinerary_id
+            }
+        });
+        return itineraries;
+    } catch (error) {
+        throw error;
+    }
+};
+
   module.exports = Itinerary;
