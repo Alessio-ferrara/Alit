@@ -2,6 +2,8 @@
   <custom-page :title="title" :image="image" :description="description" />
 </template>
 
+<!--- KRISTINA'S FIRST COMMIT :P --->
+
 <script>
 import CustomPage from '~/components/CustomPage.vue'
 export default {
