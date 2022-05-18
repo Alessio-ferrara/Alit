@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database')
-const s_types = db.define('s_types', {
+const S_types = db.define('s_types', {
     type_id: {
       type: Sequelize.INTEGER,
       allowNull: false,
@@ -16,4 +16,4 @@ const s_types = db.define('s_types', {
     schema: 'Alit',
     timestamps: false
   });
-module.exports = s_types;
+module.exports = S_types;

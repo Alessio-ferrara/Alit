@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database')
-const services = db.define('services', {
+const Services = db.define('services', {
     service_id: {
       type: Sequelize.INTEGER,
       allowNull: false,
@@ -23,4 +23,4 @@ const services = db.define('services', {
     schema: 'Alit',
     timestamps: false
   });
-module.exports = services
+module.exports = Services

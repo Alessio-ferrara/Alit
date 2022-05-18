@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize')
 const db = require('../config/database')
-const poi_types = db.define('poi_types', {
+const Poi_types = db.define('poi_types', {
     type_id: {
       type: Sequelize.INTEGER,
       allowNull: false,
@@ -16,4 +16,4 @@ const poi_types = db.define('poi_types', {
     timestamps: false
   });
 
-  module.exports = poi_types;
+  module.exports = Poi_types;

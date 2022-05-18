@@ -7,9 +7,10 @@ app.use(express.json())
 db.authenticate().catch((err) => console.log("Errore" + err));
 
 const eventsRoutes = require('./routes/events-route');
+const poisRoutes = require("./routes/pois-route");
 
 app.use("/events", eventsRoutes);
-
+app.use("/pois/", poisRoutes)
 
 /*
 // Function that will initialize the connection to the database

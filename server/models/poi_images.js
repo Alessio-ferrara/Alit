@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database')
-const poi_images = db.define('poi_images', {
+const Poi_images = db.define('poi_images', {
     image_id: {
       type: Sequelize.INTEGER,
       allowNull: false,
@@ -25,4 +25,4 @@ const poi_images = db.define('poi_images', {
     timestamps: false
   });
 
-  module.exports = poi_images;
+  module.exports = Poi_images;

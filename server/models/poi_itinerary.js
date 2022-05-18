@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database')
-const poi_itinerary = db.define('poi_itinerary', {
+const Poi_itinerary = db.define('poi_itinerary', {
     itinerary_id: {
       type: Sequelize.INTEGER,
       allowNull: false,
@@ -16,4 +16,4 @@ const poi_itinerary = db.define('poi_itinerary', {
     timestamps: false
   });
 
-  module.exports = poi_itinerary;
+  module.exports = Poi_itinerary;
