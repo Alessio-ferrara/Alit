@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database')
-const s_types = require('s_types')
+const s_types = require('./s_types')
 const Services = db.define('services', {
     service_id: {
       type: Sequelize.INTEGER,
@@ -25,6 +25,12 @@ const Services = db.define('services', {
     timestamps: false
   });
 
+
+s_types.hasMany(Services, {
+    foreignKey: "type_id",
+    sourceKey: "type_id",
+});
+Services.belongsTo(s_types, { foreignKey: "type_id" });
 
 Services.getAllServices = async function () {
     try {

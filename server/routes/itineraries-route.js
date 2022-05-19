@@ -4,8 +4,8 @@ const itinerariesController = require("../controllers/itineraries-controller")
 
 const router = express.Router();
 
-router.get("/itineraries", itinerariesController.GetItineraries)
-router.get("/itineraries/:itinerary_id", itinerariesController.ItineraryInfo)
+router.get("/", itinerariesController.GetItineraries)
+router.get("/:itinerary_id", itinerariesController.ItineraryInfo)
 
 
 module.exports = router;

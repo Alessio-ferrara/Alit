@@ -4,8 +4,8 @@ const servicesController = require("../controllers/services-controller")
 
 const router = express.Router();
 
-router.get("/services", servicesController.GetServices)
-router.get("/services/:type_id", servicesController.GetServicesByType)
+router.get("/", servicesController.GetServices)
+router.get("/:type_id", servicesController.GetServicesByType)
 router.get("/servicesList/main", servicesController.GetMainServices)
 
 

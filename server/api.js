@@ -12,9 +12,9 @@ const itinerariesRoutes = require("./routes/itineraries-route");
 const servicesRoutes = require("./routes/services-route");
 
 app.use("/events", eventsRoutes);
-app.use("/pois/", poisRoutes);
-app.use("/itineraries/", itinerariesRoutes);
-app.use("/services/", servicesRoutes);
+app.use("/pois", poisRoutes);
+app.use("/itineraries", itinerariesRoutes);
+app.use("/services", servicesRoutes);
 
 /*
 // Function that will initialize the connection to the database

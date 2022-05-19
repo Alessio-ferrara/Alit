@@ -13,7 +13,7 @@ const ItineraryInfo = async (req, res, next) => {
 const GetItineraries = async (req, res, next) => {
     try {
         let itineraries;
-        itineraries = await Itinerary.getAllItineraries;
+        itineraries = await Itinerary.getAllItineraries();
         res.status(200).json(itineraries);
     } catch (err) {
         throw err;

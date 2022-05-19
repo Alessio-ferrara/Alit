@@ -19,10 +19,4 @@ const S_types = db.define('s_types', {
     timestamps: false
   });
 
-S_types.hasMany(Services, {
-    foreignKey: "type_id",
-    sourceKey: "type_id",
-});
-Services.belongsTo(S_types, { foreignKey: "type_id" });
-
 module.exports = S_types;
