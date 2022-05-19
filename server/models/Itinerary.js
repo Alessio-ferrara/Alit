@@ -1,5 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database')
+const PoiItinerary = require('./poi_itinerary');
+const PointOfInterest = require('./point_of_interest');
 const Itinerary = db.define('Itinerary', {
     itinerary_id: {
       type: Sequelize.INTEGER,
@@ -27,7 +29,6 @@ const Itinerary = db.define('Itinerary', {
 
 Itinerary.getAllItineraries = async function () {
     try {
-        //todo get poi list?
         const itineraries = await Itinerary.findAll({});
         return itineraries;
     } catch (error) {
@@ -37,8 +38,12 @@ Itinerary.getAllItineraries = async function () {
 
 Itinerary.getInfo = async function (itinerary_id) {
     try {
-        //todo get poi list?
         const itineraries = await Itinerary.findOne({
+            include : [
+                {
+                    model : PointOfInterest
+                }
+            ],
             where : {
                 itinerary_id
             }
@@ -49,4 +54,7 @@ Itinerary.getInfo = async function (itinerary_id) {
     }
 };
 
-  module.exports = Itinerary;
+Itinerary.belongsToMany(PointOfInterest, {through : PoiItinerary, foreignKey : 'itinerary_id'})
+PointOfInterest.belongsToMany(Itinerary, {through : PoiItinerary, foreignKey : 'poi_id'})
+
+module.exports = Itinerary;
