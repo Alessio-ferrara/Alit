@@ -17,7 +17,11 @@ const Event_images = db.define('Event_images', {
     },
     event_id: {
       type: Sequelize.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: "Event",
+        key: "event_id"
+      }
     }
   }, {
     tableName: 'Event_images',

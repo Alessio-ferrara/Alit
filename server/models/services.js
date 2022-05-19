@@ -9,7 +9,11 @@ const Services = db.define('services', {
     },
     type_id: {
       type: Sequelize.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+          model: "s_types",
+          key: "type_id"
+      }
     },
     name: {
       type: Sequelize.STRING,

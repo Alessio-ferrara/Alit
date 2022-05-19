@@ -16,7 +16,11 @@ const Poi_images = db.define('poi_images', {
     },
     poi_id: {
       type: Sequelize.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: "point_of_interest",
+        key: "poi_id"
+      }
     }
   }, {
 

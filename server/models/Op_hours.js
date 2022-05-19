@@ -4,7 +4,11 @@ const Op_hours = db.define('Op_hours', {
     service_id: {
       type: Sequelize.INTEGER,
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      references: {
+        model: "services",
+        key: "service_id"
+      }
     },
     day: {
       type: Sequelize.STRING,

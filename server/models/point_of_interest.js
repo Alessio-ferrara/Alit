@@ -33,6 +33,11 @@ const Point_of_interest = db.define(
     type_id: {
       type: Sequelize.INTEGER,
       allowNull: true,
+      references: {
+        model: "poi_types",
+        key: "type_id"
+
+      }
     },
     main_image: {
       type: Sequelize.STRING,
