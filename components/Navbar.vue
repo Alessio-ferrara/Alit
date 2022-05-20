@@ -128,8 +128,8 @@ export default {
           path: '/list',
         },
         {
-          name: 'About',
-          path: '/about',
+          name: 'Events',
+          path: '/events',
         },
       ],
       loginList: [{

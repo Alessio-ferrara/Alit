@@ -43,53 +43,24 @@
         <!-- GoogleMapAPI -->
         <div class="col-md-6 col-sm-12 mt-3">
           <!-- maps api with the key AIzaSyDX_OSdMYc79SeKrOLBh7VqZ5_n-mdexew -->
-          <iframe
-            width="650"
-            height="450"
-            frameborder="0"
-            style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDX_OSdMYc79SeKrOLBh7VqZ5_n-mdexew&q=Tirana,AL"
-            allowfullscreen
-          ></iframe>
-          <!-- <GoogleMap /> -->
+          <GoogleMap />
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<style scoped>
-img {
-  height: 300px;
-}
-.jumbotron {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("https://images.unsplash.com/photo-1546448396-6aef80193ceb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80");
-  background-repeat: no-repeat;
-  margin-bottom: 0px;
-  background-position: center;
-  background-size: cover;
-  min-height: 100vh;
-}
-.text-white {
-  margin-left: 5% !important;
-  margin-top: 15% !important;
-}
-.container-fluid {
-  padding-top: 55px;
-}
-p {
-  text-align: left;
-}
-</style>
 
 <script>
-// import GoogleMap from "./GoogleMap.vue"
+import GoogleMap from "./GoogleMap.vue"
+
+import '../assets/jumbotron.css';
+
 export default {
   name: "CustomPage",
-  // components: {
-  //   GoogleMap
-  // },
+  components: {
+    GoogleMap
+  },
   // center: { lat: 45.508, lng: -73.587 },
   // props: {
   //   title: {

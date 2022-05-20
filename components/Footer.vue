@@ -2,7 +2,7 @@
   <!-- Footer -->
   <footer class="bg-dark text-center text-white mt-4">
     <!-- Grid container -->
-    <div class="container p-4">
+    <div class="container-fluid p-4">
       <!-- section Socials -->
       <section class="mb-4">
         <!-- Facebook -->
@@ -49,7 +49,7 @@
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
       © 2022 Copyright:
-      <a class="text-danger" href="/">Alit</a>
+      <a class="text-danger" href="/">Alit Group</a>
     </div>
     <!-- Copyright -->
   </footer>

@@ -5,6 +5,9 @@
   "CustomPage": {
     "description": "Auto imported from components/CustomPage.vue"
   },
+  "EventsList": {
+    "description": "Auto imported from components/EventsList.vue"
+  },
   "Footer": {
     "description": "Auto imported from components/Footer.vue"
   },
