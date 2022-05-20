@@ -1,0 +1,9 @@
+{
+    "development" : {
+        "username" : "alit_admin",
+        "password" : "alit123",
+        "database" : "Alit",
+        "host" : "localhost",
+        "dialect": "postgres"
+    }
+}

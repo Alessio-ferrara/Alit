@@ -1,4 +1,4 @@
-const Event = require("../models/Event");
+const Event = require("../models/event");
 const HttpError = require("../models/http-error");
 
 const EventInfo = async (req, res, next) => {

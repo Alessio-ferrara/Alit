@@ -1,15 +1,16 @@
 const Sequelize = require("sequelize");
 const { Op } = require("sequelize");
 const db = require("../config/database");
-const Event_images = require("./Event_images");
+const event_images = require("./event_images");
 
-const Event = db.define(
-  "Event",
+const event = db.define(
+  "event",
   {
     event_id: {
       type: Sequelize.INTEGER,
       allowNull: false,
       primaryKey: true,
+      autoIncrement: true
     },
     name: {
       type: Sequelize.STRING,
@@ -34,18 +35,23 @@ const Event = db.define(
     poi_id: {
       type: Sequelize.INTEGER,
       allowNull: false,
+      references: {
+        model: "point_of_interest",
+        key: "poi_id"
+      }
     },
   },
   {
-    tableName: "Event",
+    tableName: "event",
     schema: "Alit",
     timestamps: false,
+    freezeTableName: true
   }
 );
 
-Event.getInfo = async function (event_id) {
+event.getInfo = async function (event_id) {
   try {
-    const infoEvent = await Event.findOne({
+    const infoEvent = await event.findOne({
       where: {
         event_id,
       },
@@ -57,17 +63,17 @@ Event.getInfo = async function (event_id) {
   }
 };
 
-Event.getAllEvents = async function () {
+event.getAllEvents = async function () {
   try {
-    const events = await Event.findAll();
+    const events = await event.findAll();
     return events;
   } catch (error) {
     throw error;
   }
 };
-Event.getSummerEvents = async function () {
+event.getSummerEvents = async function () {
   try {
-    const summerEvents = await Event.findAll({
+    const summerEvents = await event.findAll({
       where: {
         [Op.and]: [
           Sequelize.where(
@@ -88,9 +94,9 @@ Event.getSummerEvents = async function () {
     throw error;
   }
 };
-Event.getWinterEvents = async function () {
+event.getWinterEvents = async function () {
   try {
-    const winterEvents = await Event.findAll({
+    const winterEvents = await event.findAll({
       where: {
         [Op.and]: [
           Sequelize.where(
@@ -111,9 +117,9 @@ Event.getWinterEvents = async function () {
     throw error;
   }
 };
-Event.getYearEvents = async function () {
+event.getYearEvents = async function () {
   try {
-    const yearEvents = await Event.findAll({
+    const yearEvents = await event.findAll({
       where: Sequelize.where(
         Sequelize.fn("date_part", "year", Sequelize.col("datetime")),
         new Date().getFullYear()
@@ -125,10 +131,12 @@ Event.getYearEvents = async function () {
   }
 };
 
-Event.hasMany(Event_images, {
+event.hasMany(event_images, {
   foreignKey: "event_id",
   sourceKey: "event_id",
 });
-Event_images.belongsTo(Event, { foreignKey: "event_id" });
+event_images.belongsTo(event, { foreignKey: "event_id" });
 
-module.exports = Event;
+
+
+module.exports = event;

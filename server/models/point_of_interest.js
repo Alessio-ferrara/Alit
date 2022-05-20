@@ -2,13 +2,14 @@ const Sequelize = require("sequelize");
 const db = require("../config/database");
 const Poi_images = require("./poi_images");
 const Poi_types = require("./poi_types");
-const Point_of_interest = db.define(
+const point_of_interest = db.define(
   "point_of_interest",
   {
     poi_id: {
       type: Sequelize.INTEGER,
       allowNull: false,
       primaryKey: true,
+      autoIncrement: true
     },
     name: {
       type: Sequelize.STRING,
@@ -48,12 +49,13 @@ const Point_of_interest = db.define(
     tableName: "point_of_interest",
     schema: "Alit",
     timestamps: false,
+    freezeTableName: true
   }
 );
 
-Point_of_interest.getInfo = async function (poi_id) {
+point_of_interest.getInfo = async function (poi_id) {
   try {
-    const info = await Point_of_interest.findOne({
+    const info = await point_of_interest.findOne({
       where: {
         poi_id,
       },
@@ -68,9 +70,9 @@ Point_of_interest.getInfo = async function (poi_id) {
   }
 };
 
-Point_of_interest.getPOIs = async function() {
+point_of_interest.getPOIs = async function() {
   try {
-    const pois = await Point_of_interest.findAll({
+    const pois = await point_of_interest.findAll({
       include: [{model: Poi_types, attributes: ['name']}]
     })
     return pois;
@@ -79,16 +81,18 @@ Point_of_interest.getPOIs = async function() {
   }
 }
 
-Point_of_interest.hasMany(Poi_images, {
+point_of_interest.hasMany(Poi_images, {
   foreignKey: "poi_id",
   sourceKey: "poi_id",
 });
-Poi_images.belongsTo(Point_of_interest, { foreignKey: "poi_id" });
+Poi_images.belongsTo(point_of_interest, { foreignKey: "poi_id" });
 
 Poi_types.hasMany(Point_of_interest, {
   foreignKey: "type_id",
   sourceKey: "type_id",
 });
-Point_of_interest.belongsTo(Poi_types, { foreignKey: "type_id" });
+point_of_interest.belongsTo(Poi_types, { foreignKey: "type_id" });
 
-module.exports = Point_of_interest;
+
+
+module.exports = point_of_interest;
