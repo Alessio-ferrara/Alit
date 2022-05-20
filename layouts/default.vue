@@ -1,16 +1,19 @@
 <template>
   <div class="main-page">
-    <navbar />
-    <nuxt />
+    <nav-bar />
+    <nuxt class="min-vh-100" />
+    <foo-ter />
   </div>
 </template>
 
 <script>
-import Navbar from '~/components/Navbar.vue'
+import NavBar from '~/components/Navbar.vue'
+import FooTer from  '~/components/Footer.vue'
 export default {
   name: 'DefaultLayout',
   components: {
-    Navbar,
+    NavBar,
+    FooTer
   },
 }
 </script>

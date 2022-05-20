@@ -8,4 +8,6 @@ You can directly use them in pages and other components without the need to impo
 
 - `<Card>` | `<card>` (components/Card.vue)
 - `<CustomPage>` | `<custom-page>` (components/CustomPage.vue)
+- `<Footer>` | `<footer>` (components/Footer.vue)
+- `<GoogleMap>` | `<google-map>` (components/GoogleMap.vue)
 - `<Navbar>` | `<navbar>` (components/Navbar.vue)

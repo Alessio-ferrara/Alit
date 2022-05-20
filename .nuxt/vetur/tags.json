@@ -5,6 +5,12 @@
   "CustomPage": {
     "description": "Auto imported from components/CustomPage.vue"
   },
+  "Footer": {
+    "description": "Auto imported from components/Footer.vue"
+  },
+  "GoogleMap": {
+    "description": "Auto imported from components/GoogleMap.vue"
+  },
   "Navbar": {
     "description": "Auto imported from components/Navbar.vue"
   }
