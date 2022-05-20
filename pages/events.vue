@@ -1,18 +1,26 @@
 <template>
   <div class="container-fluid">
     <div class="container">
-      <div class="text-center display-4">
+      <div class="text-center display-4 mt-2">
         Events
-        <hr />
+        <!-- shall display the eventItem.name whose index == the one received from props -->
       </div>
-      <p class="text-center text-muted">
-        short descritption
-      </p>
+      <p
+        class="text-center text-muted mb-3"
+      >Page to see all the events related to a specific category</p>
+      <hr />
+
+      <!-- passing everything to the component that will automatically display all the event groups at the top and elle the events fetched -->
       <EventsList />
     </div>
   </div>
 </template>
 
+<style scoped>
+#EventGroup {
+  max-height: 100vh;
+}
+</style>
 
 <script>
 // import CustomPage from '~/components/CustomPage.vue'
