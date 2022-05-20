@@ -11,7 +11,7 @@ import S_types from "./models/s_types";
 
 const express = require("express");
 const app = express();
-const db = require("./config/config.json");
+const db = require("./config/database.js");
 const HttpError = require("./models/http-error");
 const initialize = require("./initialize").default;
 app.use(express.json());

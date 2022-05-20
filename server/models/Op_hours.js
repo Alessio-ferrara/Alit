@@ -1,34 +1,28 @@
-const Sequelize = require('sequelize');
-const db = require('../config/database')
-const op_hours = db.define('op_hours', {
-    service_id: {
-      type: Sequelize.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      references: {
-        model: "services",
-        key: "service_id"
-      }
-    },
-    day: {
-      type: Sequelize.STRING,
-      allowNull: false
-    },
-    s_hour: {
-      type: Sequelize.TIME,
-      allowNull: false
-    },
-    c_hour: {
-      type: Sequelize.TIME,
-      allowNull: true
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class op_hours extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      op_hours.belongsTo(models.service, {
+        foreignKey: "service_id"
+      })
     }
+  }
+  op_hours.init({
+    day: DataTypes.STRING,
+    s_hour: DataTypes.TIME,
+    c_hour: DataTypes.TIME,
+    service_id: DataTypes.INTEGER
   }, {
-    tableName: 'op_hours',
-    schema: 'Alit',
-    timestamps: false,
-    freezeTableName: true
+    sequelize,
+    modelName: 'op_hours',
   });
-
-  
-
-  module.exports = op_hours;
+  return op_hours;
+};

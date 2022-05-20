@@ -1,30 +1,24 @@
-const Sequelize = require('sequelize');
-const db = require('../config/database')
-const poi_itinerary = db.define('poi_itinerary', {
-    itinerary_id: {
-      type: Sequelize.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      references: {
-        model: "itinerary",
-        key: "itinerary_id"
-      }
-    },
-    poi_id: {
-      type: Sequelize.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      references: {
-        model: "point_of_interest",
-        key: "poi_id"
-      }
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class poi_itinerary extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
     }
+  }
+  poi_itinerary.init({
+    itinerary_id: DataTypes.INTEGER,
+    poi_id: DataTypes.INTEGER
   }, {
-    tableName: 'poi_itinerary',
-    schema: 'Alit',
-    timestamps: false,
-    freezeTableName: true
+    sequelize,
+    modelName: 'poi_itinerary',
   });
-  
-
-  module.exports = poi_itinerary;
+  return poi_itinerary;
+};

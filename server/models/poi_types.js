@@ -1,22 +1,25 @@
-const Sequelize = require('sequelize')
-const db = require('../config/database')
-const poi_types = db.define('poi_types', {
-    type_id: {
-      type: Sequelize.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
-    },
-    name: {
-      type: Sequelize.STRING,
-      allowNull: false
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class poi_type extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      poi_type.hasMany(models.point_of_interest, {
+        foreignKey: "type_id"
+      })
     }
+  }
+  poi_type.init({
+    name: DataTypes.STRING
   }, {
-    tableName: 'poi_types',
-    schema: 'Alit',
-    timestamps: false,
-    freezeTableName: true
+    sequelize,
+    modelName: 'poi_types',
   });
-  
-
-  module.exports = poi_types;
+  return poi_type;
+};

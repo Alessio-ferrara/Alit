@@ -3,25 +3,28 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class poi_image extends Model {
+  class service extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      poi_images.belongsTo(models.point_of_interest, {
-        foreignKey: "poi_id"
+      service.belongsTo(models.s_types, {
+        foreignKey: "type_id"
+      })
+      service.hasMany(models.op_hours, {
+        foreignKey: "service_id" 
       })
     }
   }
-  poi_image.init({
+  service.init({
+    type_id: DataTypes.INTEGER,
     name: DataTypes.STRING,
-    path: DataTypes.STRING,
-    poi_id: DataTypes.INTEGER
+    address: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'poi_image',
+    modelName: 'service',
   });
-  return poi_image;
+  return service;
 };
