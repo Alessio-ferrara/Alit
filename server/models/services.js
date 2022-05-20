@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
-const db = require('../config/database')
-const s_types = require('./s_types')
+const db = require('../config/database');
+const s_types = require('./s_types');
+const op_hours = require('./Op_hours');
 const Services = db.define('services', {
     service_id: {
       type: Sequelize.INTEGER,
@@ -36,12 +37,23 @@ s_types.hasMany(Services, {
 });
 Services.belongsTo(s_types, { foreignKey: "type_id" });
 
+Services.hasMany(op_hours, {
+    foreignKey: "service_id",
+    sourceKey: "service_id",
+})
+
+op_hours.belongsTo(Services, {foreignKey : "service_id"})
+
 Services.getAllServices = async function () {
     try {
         const types = await s_types.findAll({
             include : [
                 {
-                    model : Services
+                    model : Services,
+                    include : {
+                        model: op_hours,
+                        attributes : ["day", "s_hour", "c_hour"]
+                    }
                 }
             ]
         });
