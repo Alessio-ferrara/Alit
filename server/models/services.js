@@ -38,8 +38,14 @@ Services.belongsTo(s_types, { foreignKey: "type_id" });
 
 Services.getAllServices = async function () {
     try {
-        const services = await Services.findAll();
-        return services;
+        const types = await s_types.findAll({
+            include : [
+                {
+                    model : Services
+                }
+            ]
+        });
+        return types;
     } catch (error) {
         throw error;
     }
@@ -47,26 +53,33 @@ Services.getAllServices = async function () {
 
 Services.getServicesByType = async function (type) {
     try {
-        const services = await Services.findAll({
-            include: [{
-                model: s_types,
-                where: {name: type}
-            }],
+        const types = await s_types.findAll({
+            include : [
+                {
+                    model : Services,
+                    where: {type_id: type}
+                }
+            ]
         });
-        return services;
+        return types;
     } catch (error) {
         throw error;
     }
 };
-//todo think about this :)
+
 Services.getMainServices = async function () {
     try {
-        const services = await Services.findAll({
-            where: {
-                service_id: [1,2,3,4]
-            },
+        const types = await s_types.findAll({
+            include : [
+                {
+                    model : Services,
+                    where : {
+                        service_id: [1,3,4]
+                    }
+                }
+            ]
         });
-        return services;
+        return types;
     } catch (error) {
         throw error;
     }
