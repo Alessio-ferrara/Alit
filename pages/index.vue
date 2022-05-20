@@ -1,5 +1,6 @@
 <template>
-  <custom-page :title="title" :image="image" :description="description" />
+<!-- passing the static data to the jumbotron -->
+  <custom-page :title="title" :image="image" :description="description" :details="details" />
 </template>
 
 <!--- KRISTINA'S FIRST COMMIT :P --->
@@ -12,14 +13,17 @@ export default {
     CustomPage,
   },
   async asyncData({ $axios }) {
-    const { data } = await $axios.get('/api/page-info/index')
-    const title = data.title
-    const image = data.image
-    const description = data.description
+    // get all the data from the backend and pass it to the component in order to be printed
+    const { data } = []
+    const title = "Milan"
+    const image = "ciao"
+    const details = "details"
+    const description = "description"
     return {
       title,
       description,
       image,
+      details
     }
   },
 }
