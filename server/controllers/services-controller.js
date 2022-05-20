@@ -14,14 +14,14 @@ const GetServices = async (req, res, next) => {
 };
 
 const GetServicesByType = async (req, res, next) => {
-  const { type } = req.params;
+  const { type_id } = req.params;
   try {
     let services;
-    services = await Service.getServicesByType(type);
+    services = await Service.getServicesByType(type_id);
     res.status(200).json(services);
   } catch (err) {
     return next(
-      new HttpError("Error while retrieving the services, try again later", 500)
+      new HttpError(err, 500)
     );
   }
 };
