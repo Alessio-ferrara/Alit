@@ -2,11 +2,12 @@ const Sequelize = require('sequelize');
 const db = require('../config/database')
 const Services = require("./services");
 
-const S_types = db.define('s_types', {
+const s_types = db.define('s_types', {
     type_id: {
       type: Sequelize.INTEGER,
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     name: {
       type: Sequelize.STRING,
@@ -16,7 +17,9 @@ const S_types = db.define('s_types', {
 
     tableName: 's_types',
     schema: 'Alit',
-    timestamps: false
+    timestamps: false,
+    freezeTableName: true
   });
 
-module.exports = S_types;
+  
+module.exports = s_types;

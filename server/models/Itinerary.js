@@ -2,13 +2,14 @@ const Sequelize = require("sequelize");
 const db = require("../config/database");
 const PoiItinerary = require("./poi_itinerary");
 const PointOfInterest = require("./point_of_interest");
-const Itinerary = db.define(
-  "Itinerary",
+const itinerary = db.define(
+  "itinerary",
   {
     itinerary_id: {
       type: Sequelize.INTEGER,
       allowNull: false,
       primaryKey: true,
+      autoIncrement: true
     },
     name: {
       type: Sequelize.STRING,
@@ -24,13 +25,14 @@ const Itinerary = db.define(
     },
   },
   {
-    tableName: "Itinerary",
+    tableName: "itinerary",
     schema: "Alit",
     timestamps: false,
+    freezeTableName: true
   }
 );
 
-Itinerary.getAllItineraries = async function () {
+itinerary.getAllItineraries = async function () {
   try {
     const itineraries = await Itinerary.findAll();
     return itineraries;
@@ -39,9 +41,9 @@ Itinerary.getAllItineraries = async function () {
   }
 };
 
-Itinerary.getInfo = async function (itinerary_id) {
+itinerary.getInfo = async function (itinerary_id) {
   try {
-    const itineraries = await Itinerary.findOne({
+    const itineraries = await itinerary.findOne({
       include: [
         {
           model: PointOfInterest,
@@ -58,13 +60,15 @@ Itinerary.getInfo = async function (itinerary_id) {
   }
 };
 
-Itinerary.belongsToMany(PointOfInterest, {
+itinerary.belongsToMany(PointOfInterest, {
   through: PoiItinerary,
   foreignKey: "itinerary_id",
 });
-PointOfInterest.belongsToMany(Itinerary, {
+PointOfInterest.belongsToMany(itinerary, {
   through: PoiItinerary,
   foreignKey: "poi_id",
 });
 
-module.exports = Itinerary;
+
+
+module.exports = itinerary;

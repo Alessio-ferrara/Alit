@@ -1,10 +1,11 @@
 const Sequelize = require('sequelize')
 const db = require('../config/database')
-const Poi_types = db.define('poi_types', {
+const poi_types = db.define('poi_types', {
     type_id: {
       type: Sequelize.INTEGER,
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     name: {
       type: Sequelize.STRING,
@@ -13,7 +14,9 @@ const Poi_types = db.define('poi_types', {
   }, {
     tableName: 'poi_types',
     schema: 'Alit',
-    timestamps: false
+    timestamps: false,
+    freezeTableName: true
   });
+  
 
-  module.exports = Poi_types;
+  module.exports = poi_types;

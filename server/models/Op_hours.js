@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database')
-const Op_hours = db.define('Op_hours', {
+const op_hours = db.define('op_hours', {
     service_id: {
       type: Sequelize.INTEGER,
       allowNull: false,
@@ -23,9 +23,12 @@ const Op_hours = db.define('Op_hours', {
       allowNull: true
     }
   }, {
-    tableName: 'Op_hours',
+    tableName: 'op_hours',
     schema: 'Alit',
-    timestamps: false
+    timestamps: false,
+    freezeTableName: true
   });
 
-  module.exports = Op_hours;
+  
+
+  module.exports = op_hours;

@@ -1,11 +1,39 @@
+import Event from "./models/event";
+import Event_images from "./models/event_images";
+import Itinerary from "./models/Itinerary";
+import Op_hours from "./models/op_hours";
+import Point_of_interest from "./models/point_of_interest";
+import Poi_images from "./models/poi_images";
+import Poi_itinerary from "./models/poi_itinerary";
+import Poi_types from "./models/poi_types";
+import Services from "./models/services";
+import S_types from "./models/s_types";
+
 const express = require("express");
 const app = express();
-const db = require("./config/database");
+const db = require("./config/config.json");
 const HttpError = require("./models/http-error");
-//const initialize = require('./initialize').default
+const initialize = require("./initialize").default;
 app.use(express.json());
 
-db.authenticate().catch((err) => console.log("Errore" + err));
+db.authenticate()
+  .then(async () => {
+      
+    await Poi_types.sync();
+    await Point_of_interest.sync();
+    await Poi_images.sync();
+    await Itinerary.sync();
+    await Poi_itinerary.sync();
+    await S_types.sync();
+    await Services.sync();
+    await Op_hours.sync();
+    await Event.sync();
+    await Event_images.sync();
+    
+    
+  })
+  .catch((err) => console.log("Errore" + err));
+
 
 const eventsRoutes = require("./routes/events-route");
 const poisRoutes = require("./routes/pois-route");

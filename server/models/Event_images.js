@@ -1,11 +1,12 @@
 const Sequelize = require('sequelize');
 const db = require("../config/database")
 
-const Event_images = db.define('Event_images', {
+const event_images = db.define('event_images', {
     image_id: {
       type: Sequelize.INTEGER,
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     name: {
       type: Sequelize.STRING,
@@ -19,15 +20,18 @@ const Event_images = db.define('Event_images', {
       type: Sequelize.INTEGER,
       allowNull: false,
       references: {
-        model: "Event",
+        model: "event",
         key: "event_id"
       }
     }
   }, {
-    tableName: 'Event_images',
+    tableName: 'event_images',
     schema: 'Alit',
-    timestamps: false
+    timestamps: false,
+    freezeTableName: true
   });
 
+  
 
-  module.exports = Event_images;
+
+  module.exports = event_images;
