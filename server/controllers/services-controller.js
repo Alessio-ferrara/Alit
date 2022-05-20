@@ -1,5 +1,5 @@
-const HttpError = require("../models/http-error");
-const Service = require("../models/services");
+const HttpError = require("../http-error");
+const Service = require("../models/service");
 
 const GetServices = async (req, res, next) => {
   try {

@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const db = require("./config/database.js");
-const HttpError = require("./models/http-error");
+const HttpError = require("./http-error");
 //const initialize = require("./initialize").default;
 app.use(express.json());
 

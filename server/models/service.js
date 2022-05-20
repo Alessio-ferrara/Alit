@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      service.belongsTo(models.s_types, {
+      service.belongsTo(models.s_type, {
         foreignKey: "type_id"
       })
       service.hasMany(models.op_hours, {

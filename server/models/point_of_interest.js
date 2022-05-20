@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
       point_of_interest.hasMany(models.event, {
         foreignKey: "poi_id"
       })
-      point_of_interest.belongsTo(models.poi_type, {
+      point_of_interest.belongsTo(models.poi_types, {
         foreignKey: "type_id"
       })
       point_of_interest.belongsToMany(models.itinerary, {

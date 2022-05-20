@@ -1,6 +1,7 @@
-const Event = require("../models/event");
-const HttpError = require("../models/http-error");
 
+const HttpError = require("../http-error");
+
+const Event= require("../models").event;
 const EventInfo = async (req, res, next) => {
   const { event_id } = req.params;
   try {
@@ -8,7 +9,7 @@ const EventInfo = async (req, res, next) => {
     res.status(200).json(event_info);
   } catch (err) {
     return next(
-      new HttpError("Error in retrieving the event info, try again later", 500)
+      new HttpError(err, 500)
     );
   }
 };
@@ -33,7 +34,7 @@ const GetEvents = async (req, res, next) => {
     res.status(200).json(events);
   } catch (err) {
     return next(
-      new HttpError("Error in retrieving the events, try again later", 500)
+      new HttpError(err, 500)
     );
   }
 };

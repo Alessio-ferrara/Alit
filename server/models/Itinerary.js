@@ -15,6 +15,34 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "itinerary_id"
       })
     }
+
+    static getAllItineraries = async function () {
+      try {
+        const itineraries = await itinerary.findAll();
+        return itineraries;
+      } catch (error) {
+        throw error;
+      }
+    };
+    
+    static getInfo = async function (itinerary_id) {
+      try {
+        const itineraries = await itinerary.findOne({
+          include: [
+            {
+              model: sequelize.model('point_of_interest'),
+              attributes: ['name', 'id', 'main_image']
+            },
+          ],
+          where: {
+            id: itinerary_id,
+          },
+        });
+        return itineraries;
+      } catch (error) {
+        throw error;
+      }
+    };
   }
   itinerary.init({
     name: DataTypes.STRING,
