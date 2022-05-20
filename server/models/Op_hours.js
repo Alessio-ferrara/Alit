@@ -3,7 +3,12 @@ const db = require('../config/database')
 const Op_hours = db.define('Op_hours', {
     service_id: {
       type: Sequelize.INTEGER,
-      allowNull: false
+      allowNull: false,
+      primaryKey: true,
+      references: {
+        model: "services",
+        key: "service_id"
+      }
     },
     day: {
       type: Sequelize.STRING,
@@ -18,7 +23,6 @@ const Op_hours = db.define('Op_hours', {
       allowNull: true
     }
   }, {
-    sequelize,
     tableName: 'Op_hours',
     schema: 'Alit',
     timestamps: false

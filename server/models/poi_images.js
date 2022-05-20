@@ -1,9 +1,10 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database')
-const poi_images = db.define('poi_images', {
+const Poi_images = db.define('poi_images', {
     image_id: {
       type: Sequelize.INTEGER,
-      allowNull: false
+      allowNull: false,
+      primaryKey: true
     },
     name: {
       type: Sequelize.STRING,
@@ -15,13 +16,17 @@ const poi_images = db.define('poi_images', {
     },
     poi_id: {
       type: Sequelize.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: "point_of_interest",
+        key: "poi_id"
+      }
     }
   }, {
-    sequelize,
+
     tableName: 'poi_images',
     schema: 'Alit',
     timestamps: false
   });
 
-  module.exports = poi_images;
+  module.exports = Poi_images;

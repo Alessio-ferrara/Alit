@@ -4,7 +4,8 @@ const db = require("../config/database")
 const Event_images = db.define('Event_images', {
     image_id: {
       type: Sequelize.INTEGER,
-      allowNull: false
+      allowNull: false,
+      primaryKey: true
     },
     name: {
       type: Sequelize.STRING,
@@ -16,10 +17,13 @@ const Event_images = db.define('Event_images', {
     },
     event_id: {
       type: Sequelize.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: "Event",
+        key: "event_id"
+      }
     }
   }, {
-    sequelize,
     tableName: 'Event_images',
     schema: 'Alit',
     timestamps: false
