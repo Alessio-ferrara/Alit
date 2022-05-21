@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get("/", servicesController.GetServices)
 router.get("/:type_id", servicesController.GetServicesByType)
-router.get("/servicesList/main", servicesController.GetMainServices)
+router.get("/list/main", servicesController.GetMainServices)
 
 
 module.exports = router;

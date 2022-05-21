@@ -1,14 +1,14 @@
 const HttpError = require("../http-error");
-const Service = require("../models/service");
+const S_type = require("../models").s_type;
 
 const GetServices = async (req, res, next) => {
   try {
     let services;
-    services = await Service.getAllServices();
+    services = await S_type.getAllServices();
     res.status(200).json(services);
   } catch (err) {
     return next(
-        new HttpError("Error while retrieving the services, try again later", 500)
+        new HttpError(err, 500)
     )
   }
 };
@@ -17,11 +17,11 @@ const GetServicesByType = async (req, res, next) => {
   const { type_id } = req.params;
   try {
     let services;
-    services = await Service.getServicesByType(type_id);
+    services = await S_type.getServicesByType(type_id);
     res.status(200).json(services);
   } catch (err) {
     return next(
-        new HttpError("Error while retrieving the services, try again later", 500)
+        new HttpError(err, 500)
     );
   }
 };
@@ -29,11 +29,11 @@ const GetServicesByType = async (req, res, next) => {
 const GetMainServices = async (req, res, next) => {
   try {
     let services;
-    services = await Service.getMainServices();
+    services = await S_type.getMainServices();
     res.status(200).json(services);
   } catch (err) {
     return next(
-        new HttpError("Error while retrieving the services, try again later", 500)
+        new HttpError(err, 500)
       )
   }
 };

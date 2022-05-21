@@ -24,6 +24,34 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "poi_id"
       })
     }
+
+    static getInfo = async function (poi_id) {
+      try {
+        const info = await point_of_interest.findOne({
+          where: {
+            id: poi_id,
+          },
+          include: [
+            { model: sequelize.model('poi_image'), attributes: ["path"] },
+            { model: sequelize.model('poi_types'), attributes: ["name"] },
+          ],
+        });
+        return info;
+      } catch (error) {
+        throw error;
+      }
+    };
+    
+    static getPOIs = async function() {
+      try {
+        const pois = await point_of_interest.findAll({
+          include: [{model: sequelize.model('poi_types'), attributes: ['name']}]
+        })
+        return pois;
+      } catch (error) {
+        throw error
+      }
+    }
   }
   point_of_interest.init({
     name: DataTypes.STRING,

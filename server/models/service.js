@@ -17,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "service_id" 
       })
     }
+
   }
   service.init({
     type_id: DataTypes.INTEGER,

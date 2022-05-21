@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class s_type extends Model {
     /**
@@ -11,15 +9,72 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       s_type.hasMany(models.service, {
-        foreignKey: "type_id"
-      })
+        foreignKey: "type_id",
+      });
     }
-  }
-  s_type.init({
-    name: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 's_type',
-  });
+
+    static getAllServices = async function () {
+      try {
+        const types = await s_type.findAll({
+          include: [
+            {
+              model: sequelize.model("service"),
+              include: {
+                model: sequelize.model("op_hours"),
+                attributes: ["day", "s_hour", "c_hour"],
+              },
+            },
+          ],
+        });
+        return types;
+      } catch (error) {
+        throw error;
+      }
+    };
+
+    static getServicesByType = async function (type) {
+      try {
+        const types = await s_type.findAll({
+          include: [
+            {
+              model: sequelize.model('service'),
+              where: { type_id: type },
+            },
+          ],
+        });
+        return types;
+      } catch (error) {
+        throw error;
+      }
+    };
+    
+    static getMainServices = async function () {
+      try {
+        const types = await s_type.findAll({
+          include: [
+            {
+              model: sequelize.model('service'),
+              where: {
+                id: [1, 3, 4],
+              },
+            },
+          ],
+        });
+        return types;
+      } catch (error) {
+        throw error;
+      }
+    };
+    }
+  
+  s_type.init(
+    {
+      name: DataTypes.STRING,
+    },
+    {
+      sequelize,
+      modelName: "s_type",
+    }
+  );
   return s_type;
 };
