@@ -1,5 +1,5 @@
-const HttpError = require("../models/http-error");
-const Point_of_interest = require("../models/point_of_interest")
+const HttpError = require("../http-error");
+const Point_of_interest = require("../models/").point_of_interest
 
 const POIinfo = async (req, res, next) => {
   const { poi_id } = req.params;

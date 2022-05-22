@@ -3,22 +3,29 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class poi_itinerary extends Model {
+  class service extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      service.belongsTo(models.s_type, {
+        foreignKey: "type_id"
+      })
+      service.hasMany(models.op_hours, {
+        foreignKey: "service_id" 
+      })
     }
+
   }
-  poi_itinerary.init({
-    itinerary_id: DataTypes.INTEGER,
-    poi_id: DataTypes.INTEGER
+  service.init({
+    type_id: DataTypes.INTEGER,
+    name: DataTypes.STRING,
+    address: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'poi_itinerary',
+    modelName: 'service',
   });
-  return poi_itinerary;
+  return service;
 };

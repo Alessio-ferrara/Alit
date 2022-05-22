@@ -3,22 +3,25 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class poi_itinerary extends Model {
+  class event_image extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      event_image.belongsTo(models.event, {
+        foreignKey: 'event_id'
+      })
     }
   }
-  poi_itinerary.init({
-    itinerary_id: DataTypes.INTEGER,
-    poi_id: DataTypes.INTEGER
+  event_image.init({
+    name: DataTypes.STRING,
+    path: DataTypes.STRING,
+    event_id: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'poi_itinerary',
+    modelName: 'event_image',
   });
-  return poi_itinerary;
+  return event_image;
 };

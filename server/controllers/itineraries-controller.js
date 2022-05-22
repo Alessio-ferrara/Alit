@@ -1,5 +1,5 @@
-const HttpError = require("../models/http-error");
-const Itinerary = require("../models/Itinerary");
+const HttpError = require("../http-error");
+const Itinerary = require("../models/").itinerary;
 
 const ItineraryInfo = async (req, res, next) => {
   const { itinerary_id } = req.params;
@@ -9,7 +9,7 @@ const ItineraryInfo = async (req, res, next) => {
   } catch (err) {
     return next(
       new HttpError(
-        "Error while retrieving the itinerary info, try again later",
+        err,
         500
       )
     );
@@ -23,7 +23,7 @@ const GetItineraries = async (req, res, next) => {
     res.status(200).json(itineraries);
   } catch (err) {
     return next(
-      new HttpError("Error in retrieving the itineraries, try again later", 500)
+      new HttpError(err, 500)
     );
   }
 };
