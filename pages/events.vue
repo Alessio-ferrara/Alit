@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="container">
       <!-- passing everything to the component that will automatically display all the event groups at the top and elle the events fetched -->
-      <EventsList />
+      <events-list/>
       <div class="text-center display-4 mt-4">
         Events
         <!-- shall display the eventItem.name whose index == the one received from props -->
@@ -10,7 +10,7 @@
       <p
         class="text-center text-muted mb-3"
       >Page to see all the events related to a specific category</p>
-      <GridCards />
+      <grid-cards :events="events" :name="'events'"/>
     </div>
   </div>
 </template>
@@ -27,26 +27,23 @@ import '../assets/style.css';
 import EventsList from "../components/EventsList.vue"
 import GridCards from "../components/GridCards.vue"
 
+
 export default {
   name: 'EventsPage',
-  // components: {
-  //   CustomPage,
-  // },
+  components: {
+    GridCards,
+    EventsList,
+  },
   data() {
-    return {}
+    return {
+      // events: data
+    }
   },
   async asyncData({ $axios }) {
     // get all the data from the backend and pass it to the component in order to be printed
-    const { data } = []
-    const title = "Milan"
-    const image = "ciao"
-    const details = "details"
-    const description = "description"
+    const { data } = await $axios.get('api/events/list');
     return {
-      title,
-      description,
-      image,
-      details
+      events : data
     }
   },
 }

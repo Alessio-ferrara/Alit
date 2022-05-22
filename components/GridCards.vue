@@ -4,30 +4,13 @@
     <div class="row row-cols-1 row-cols-md-3 g-4 mt-3 pt-3">
       <!-- v-for in the col element to display all the events fetched -->
       <div
-        v-for="(item, itemIndex) of ItemList"
-        :key="`item${itemIndex}`"
+        v-for="(item, itemIndex) of items"
+        :key="`${name}${itemIndex}`"
         class="col"
       >
       <!-- link passing all the info of the selected item to the  -->
-        <nuxt-link :to="{ path: '/event', query: { item }}">
-          <div class="card h-100">
-            <!--      in image element
-              v-bind:src="require(`/static/event/${item.image}`)"
-            -->
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
-              class="card-img-top"
-              alt="Event Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title lead text-center text-black">{{item.name}}</h5>
-              <p class="card-text text-center text-muted">
-                <span class="badge badge-pill badge-danger">{{item.date}}</span>
-                <br />
-                {{item.description}}
-              </p>
-            </div>
-          </div>
+        <nuxt-link :to="`/${name}/${item.id}`">
+          <card-component :item="item" :name="name"/>
         </nuxt-link>
       </div>
     </div>
@@ -46,8 +29,22 @@
 
 
 <script>
+import CardComponent from "./Card.vue"
 export default {
   name: 'GridCards',
+  components:{
+    CardComponent,
+  },
+  props : {
+    items : {
+      type : Array,
+      required : true,
+    },
+    name:{
+      type : String,
+      required : true
+    }
+  },
   data(){
       return{
         // list of the objects to display
