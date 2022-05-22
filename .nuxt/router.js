@@ -4,13 +4,13 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _0125926d = () => interopDefault(import('../pages/events.vue' /* webpackChunkName: "pages/events" */))
-const _b5e2931c = () => interopDefault(import('../pages/list.vue' /* webpackChunkName: "pages/list" */))
-const _45962626 = () => interopDefault(import('../pages/poi.vue' /* webpackChunkName: "pages/poi" */))
-const _78efb832 = () => interopDefault(import('../pages/services.vue' /* webpackChunkName: "pages/services" */))
-const _c93a126e = () => interopDefault(import('../pages/details/_id.vue' /* webpackChunkName: "pages/details/_id" */))
-const _37533fbe = () => interopDefault(import('../pages/event/_id.vue' /* webpackChunkName: "pages/event/_id" */))
-const _183c97ae = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _b0fd6178 = () => interopDefault(import('../pages/events.vue' /* webpackChunkName: "pages/events" */))
+const _0011bd09 = () => interopDefault(import('../pages/list.vue' /* webpackChunkName: "pages/list" */))
+const _b9471ea2 = () => interopDefault(import('../pages/poi.vue' /* webpackChunkName: "pages/poi" */))
+const _1160c96e = () => interopDefault(import('../pages/services.vue' /* webpackChunkName: "pages/services" */))
+const _1842af5c = () => interopDefault(import('../pages/details/_id.vue' /* webpackChunkName: "pages/details/_id" */))
+const _31f2dfea = () => interopDefault(import('../pages/event/_id.vue' /* webpackChunkName: "pages/event/_id" */))
+const _1d9a63f7 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -25,31 +25,31 @@ export const routerOptions = {
 
   routes: [{
     path: "/events",
-    component: _0125926d,
+    component: _b0fd6178,
     name: "events"
   }, {
     path: "/list",
-    component: _b5e2931c,
+    component: _0011bd09,
     name: "list"
   }, {
     path: "/poi",
-    component: _45962626,
+    component: _b9471ea2,
     name: "poi"
   }, {
     path: "/services",
-    component: _78efb832,
+    component: _1160c96e,
     name: "services"
   }, {
     path: "/details/:id?",
-    component: _c93a126e,
+    component: _1842af5c,
     name: "details-id"
   }, {
     path: "/event/:id?",
-    component: _37533fbe,
+    component: _31f2dfea,
     name: "event-id"
   }, {
     path: "/",
-    component: _183c97ae,
+    component: _1d9a63f7,
     name: "index"
   }],
 
