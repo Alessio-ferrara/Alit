@@ -1,3 +1,5 @@
 /node_modules
 .eslintcache
+.eslintrc.js
+.eslintrc.json
 .nuxt
