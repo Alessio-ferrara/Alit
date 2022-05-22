@@ -41,21 +41,6 @@ s_types.hasMany(services, {
 });
 services.belongsTo(s_types, { foreignKey: "type_id" });
 
-<<<<<<< HEAD
-services.getAllServices = async function () {
-  try {
-    const types = await s_types.findAll({
-      include: [
-        {
-          model: services,
-        },
-      ],
-    });
-    return types;
-  } catch (error) {
-    throw error;
-  }
-=======
 Services.hasMany(op_hours, {
     foreignKey: "service_id",
     sourceKey: "service_id",
@@ -80,7 +65,6 @@ Services.getAllServices = async function () {
     } catch (error) {
         throw error;
     }
->>>>>>> 4f77fa1cab0aca1bf3dd9126118b0b495799c216
 };
 
 services.getServicesByType = async function (type) {

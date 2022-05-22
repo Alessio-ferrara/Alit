@@ -1,20 +1,32 @@
 <template>
   <span>
-    <div class="card-group mb-3 pb-3 mt-3 pt-3">
-      <!-- v-for="(eventItem) of headerList-->
+    <hr />
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-3 pt-3">
+      <!-- v-for in the col element to display all the events fetched -->
       <div
-        v-for="(eventItem, eventItemIndex) of GroupList"
-        :key="`eventItem${eventItemIndex}`"
-        class="card"
+        v-for="(item, itemIndex) of ItemList"
+        :key="`item${itemIndex}`"
+        class="col"
       >
-        <nuxt-link :to="eventItem.path">
-          <img
-            v-bind:src="require(`/static/${eventItem.image}`)"
-            class="card-img-top"
-            alt="Events Image"
-          />
-            <div class="card-title nav-link text-center text-center text-black lead">
-            <strong>{{ eventItem.name }}</strong>
+      <!-- link passing all the info of the selected item to the  -->
+        <nuxt-link :to="{ path: '/event', query: { item }}">
+          <div class="card h-100">
+            <!--      in image element
+              v-bind:src="require(`/static/event/${item.image}`)"
+            -->
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
+              class="card-img-top"
+              alt="Event Image"
+            />
+            <div class="card-body">
+              <h5 class="card-title lead text-center text-black">{{item.name}}</h5>
+              <p class="card-text text-center text-muted">
+                <span class="badge badge-pill badge-danger">{{item.date}}</span>
+                <br />
+                {{item.description}}
+              </p>
+            </div>
           </div>
         </nuxt-link>
       </div>
@@ -35,60 +47,41 @@
 
 <script>
 export default {
-  name: 'EventsList',
+  name: 'GridCards',
   data(){
       return{
-        // list of the items to display in the events group
-          GroupList : [
+        // list of the objects to display
+          ItemList :[
             {
-               name: "Summer Events",
-               path: '/events?summer',
-               image: "events/summer-events.jpeg",
-            },
-            {
-               name: "This year's Events",
-               path: '/events?year',
-               image: "events/year-events.jpeg"
-            },
-            {
-               name: "Winter Events",
-               path: '/events?winter',
-               image: "events/winter-events.jpeg"
-
-            },
-          ] ,
-        // list of the events to display
-          EventsList :[
-            {
-              id: "",
+              id: "0",
               name: "Evento 0",
               date: "11/02/1999",
               description: "Lorem ipsum dolor sit amet docet sbadoink",
               path: ""
             },
             {
-              id: "",
+              id: "1",
               name: "Evento Bello",
               date: "11/02/2023",
               description: "Lorem ipsum dolor sit amet docet sbadoink",
               path: ""
             },
             {
-              id: "",
+              id: "3",
               name: "Evento più bello",
               date: "11/02/2023",
               description: "Lorem ipsum dolor sit amet docet sbadoink",
               path: ""
             },
             {
-              id: "",
+              id: "4",
               name: "Evento più bello",
               date: "11/02/2023",
               description: "Lorem ipsum dolor sit amet docet sbadoink",
               path: ""
             },
             {
-              id: "",
+              id: "5",
               name: "Evento più bello",
               date: "11/02/2023",
               description: "Lorem ipsum dolor sit amet docet sbadoink",

@@ -31,7 +31,4 @@ const event_images = db.define('event_images', {
     freezeTableName: true
   });
 
-  
-
-
   module.exports = event_images;

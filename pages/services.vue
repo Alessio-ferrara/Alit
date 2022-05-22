@@ -2,14 +2,13 @@
   <div class="container-fluid">
     <div class="container">
       <!-- passing everything to the component that will automatically display all the event groups at the top and elle the events fetched -->
-      <EventsList />
       <div class="text-center display-4 mt-4">
-        Events
+        Services
         <!-- shall display the eventItem.name whose index == the one received from props -->
       </div>
       <p
         class="text-center text-muted mb-3"
-      >Page to see all the events related to a specific category</p>
+      >Page to see all the services related to a specific group</p>
       <GridCards />
     </div>
   </div>
@@ -24,11 +23,10 @@
 <script>
 // import CustomPage from '~/components/CustomPage.vue'
 import '../assets/style.css';
-import EventsList from "../components/EventsList.vue"
 import GridCards from "../components/GridCards.vue"
 
 export default {
-  name: 'EventsPage',
+  name: 'ServicesPage',
   // components: {
   //   CustomPage,
   // },
