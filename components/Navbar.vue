@@ -1,32 +1,4 @@
 <template>
-  <!-- <nav class="navbar navbar-expand-lg navbar-light px-3 header">
-    <a class="navbar-brand" href="/">The Cat Shelter</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarToggler"
-      aria-controls="navbarToggler"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarToggler">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li
-          v-for="(navItem, navItemIndex) of headerList"
-          :key="`navItem${navItemIndex}`"
-          class="nav-item"
-        >
-          <nuxt-link :to="navItem.path" class="nav-link">
-            {{ navItem.name }}
-          </nuxt-link>
-        </li>
-      </ul>
-    </div>
-  </nav>-->
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mb-3">
     <!-- Container wrapper -->
@@ -48,7 +20,6 @@
           </li>
         </ul>
       </a>-->
-
       <!-- Toggle button -->
       <button
         class="navbar-toggler"
@@ -111,12 +82,24 @@ export default {
           path: '/',
         },
         {
-          name: 'List',
-          path: '/list',
+          name: 'Services',
+          path: '/services',
         },
         {
           name: 'Events',
           path: '/events',
+        },
+        {
+          name: 'Points of Interest',
+          path: '/poi',
+        },
+        {
+          name: 'Contacts',
+          path: '/contacts',
+        },
+        {
+          name: 'About us',
+          path: '/about',
         },
       ],
       loginList: [{

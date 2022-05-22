@@ -22,9 +22,9 @@
       <div class="row">
         <!-- description -->
         <div class="col-md-6 col-sm-12 mt-3">
-          <h3
-            class="display-6"
-          >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur quibusdam saepe minus ad, quae eveniet fugit alias reprehenderit perspiciatis</h3>
+          <h1
+            class="h-1 lead"
+          >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur quibusdam saepe minus ad, quae eveniet fugit alias reprehenderit perspiciatis</h1>
           <!-- Buttons trigger collapse -->
           <a
             class="btn btn-danger"

@@ -9,7 +9,7 @@
         <a
           class="btn btn-primary btn-floating m-1"
           style="background-color: #3b5998"
-          href="#!"
+          href="https://www.facebook.com/pages/Tirana/102191273155324"
           role="button"
         >
           <i class="fab fa-facebook-f"></i>
@@ -19,7 +19,7 @@
         <a
           class="btn btn-primary btn-floating m-1"
           style="background-color: #55acee"
-          href="#!"
+          href="https://twitter.com/search?q=%23tirana&src=typeahead_click&f=top"
           role="button"
         >
           <i class="fab fa-twitter"></i>
@@ -28,7 +28,7 @@
         <a
           class="btn btn-primary btn-floating m-1"
           style="background-color: #ac2bac"
-          href="#!"
+          href="https://www.instagram.com/visit_tirana/"
           role="button"
         >
           <i class="fab fa-instagram"></i>
@@ -37,7 +37,7 @@
 
       <!-- Section: Text -->
       <section class="mb-4">
-        <p>
+        <p class="text-center">
           This website was developed thanks to the efforts of the students of the course of HyperMedia Applications of the
           Master Degree in Computer Science of the Politecnico di Milano
         </p>
@@ -49,7 +49,7 @@
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
       © 2022 Copyright:
-      <a class="text-danger" href="/">Alit Group</a>
+      <a class="text-danger" href="/about">Alit Group</a>
     </div>
     <!-- Copyright -->
   </footer>
