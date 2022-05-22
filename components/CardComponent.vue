@@ -9,24 +9,13 @@
     <div class="card-body">
       <h5 class="card-title lead text-center text-black">{{item.name}}</h5>
       <p class="card-text text-center text-muted">
-        <span class="badge badge-pill badge-danger">{{item.datetime}}</span>
+        <span class="badge badge-pill badge-primary">{{getDateTime(item.datetime)}}</span>
         <br />
         {{item.description}}
       </p>
     </div>
   </div>
 </template>
-
-
-
-<script>
-// take content from props passed to the page to check what content to display according to the request
-// ie. summer = 1 comes from the props, we display all of the elements in GroupList except the one with id 1 
-
-
-// store in the eventList all the events fetched from the backend and displaying them 
-</script>
-
 
 <script>
 export default {
@@ -39,6 +28,14 @@ export default {
     name: {
       type: String,
       required:true
+    }
+  },
+  methods :{
+    getDateTime(datetime){
+        var date = new Date(datetime)
+        var d = date.getDate()+"/"+(date.getMonth() + 1)+"/"+date.getFullYear()
+        var time = date.getHours() +":"+((date.getMinutes()<10?'0':'') + date.getMinutes())
+        return d + " "+ time
     }
   }
 }

@@ -10,7 +10,7 @@
       <p
         class="text-center text-muted mb-3"
       >Page to see all the events related to a specific category</p>
-      <grid-cards :events="events" :name="'events'"/>
+      <grid-cards :items="events" :name="'events'"/>
     </div>
   </div>
 </template>

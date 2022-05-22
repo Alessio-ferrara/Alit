@@ -9,7 +9,7 @@ module.exports = {
         visit_info: "Visit info of poi 1",
         lat: "-47.80734",
         lang: "-90.97483",
-        type_id: "3",
+        type_id: "1",
         main_image:
           "https://www.akamai.com/site/im-demo/media-viewer/10.jpg?imwidth=5000",
         createdAt: new Date(),
@@ -21,7 +21,7 @@ module.exports = {
         visit_info: "Visit info of poi 2",
         lat: "-47.80734",
         lang: "-90.97483",
-        type_id: "4",
+        type_id: "2",
         main_image:
           "https://www.akamai.com/site/im-demo/media-viewer/10.jpg?imwidth=5000",
         createdAt: new Date(),

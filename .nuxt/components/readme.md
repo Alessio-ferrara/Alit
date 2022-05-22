@@ -6,7 +6,7 @@ You can directly use them in pages and other components without the need to impo
 
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
-- `<Card>` | `<card>` (components/Card.vue)
+- `<CardComponent>` | `<card-component>` (components/CardComponent.vue)
 - `<CustomPage>` | `<custom-page>` (components/CustomPage.vue)
 - `<EventsList>` | `<events-list>` (components/EventsList.vue)
 - `<Footer>` | `<footer>` (components/Footer.vue)

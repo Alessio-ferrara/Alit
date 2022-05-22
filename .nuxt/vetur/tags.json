@@ -1,6 +1,6 @@
 {
-  "Card": {
-    "description": "Auto imported from components/Card.vue"
+  "CardComponent": {
+    "description": "Auto imported from components/CardComponent.vue"
   },
   "CustomPage": {
     "description": "Auto imported from components/CustomPage.vue"

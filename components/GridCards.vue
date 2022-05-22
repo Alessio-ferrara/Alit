@@ -29,7 +29,7 @@
 
 
 <script>
-import CardComponent from "./Card.vue"
+import CardComponent from "./CardComponent.vue"
 export default {
   name: 'GridCards',
   components:{

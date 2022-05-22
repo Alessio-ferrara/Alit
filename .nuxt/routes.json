@@ -3,49 +3,42 @@
     "name": "events",
     "path": "/events",
     "component": "/Users/francesco/git/Alit/pages/events.vue",
-    "chunkName": "pages/events",
-    "_name": "_0125926d"
+    "chunkName": "pages/events"
   },
   {
     "name": "list",
     "path": "/list",
     "component": "/Users/francesco/git/Alit/pages/list.vue",
-    "chunkName": "pages/list",
-    "_name": "_b5e2931c"
+    "chunkName": "pages/list"
   },
   {
     "name": "poi",
     "path": "/poi",
     "component": "/Users/francesco/git/Alit/pages/poi.vue",
-    "chunkName": "pages/poi",
-    "_name": "_45962626"
+    "chunkName": "pages/poi"
   },
   {
     "name": "services",
     "path": "/services",
     "component": "/Users/francesco/git/Alit/pages/services.vue",
-    "chunkName": "pages/services",
-    "_name": "_78efb832"
+    "chunkName": "pages/services"
   },
   {
     "name": "details-id",
     "path": "/details/:id?",
     "component": "/Users/francesco/git/Alit/pages/details/_id.vue",
-    "chunkName": "pages/details/_id",
-    "_name": "_c93a126e"
+    "chunkName": "pages/details/_id"
   },
   {
     "name": "event-id",
     "path": "/event/:id?",
     "component": "/Users/francesco/git/Alit/pages/event/_id.vue",
-    "chunkName": "pages/event/_id",
-    "_name": "_37533fbe"
+    "chunkName": "pages/event/_id"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/francesco/git/Alit/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_183c97ae"
+    "chunkName": "pages/index"
   }
 ]
