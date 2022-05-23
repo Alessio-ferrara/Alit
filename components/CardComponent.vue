@@ -43,7 +43,7 @@
         class="card-img-top"
         alt="Image"
       />
-      <!-- all configurations for all the different -->
+      <!-- all configurations for all the different types of services we may have -->
       <!-- PHARMACY <div class="centered display-6">
         <i class="text-success fa-solid fa-hand-holding-medical"></i>
         <i class="text-success fa-solid fa-stethoscope"></i>
