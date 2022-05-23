@@ -26,11 +26,11 @@ export const routerOptions = {
 
   routes: [{
     path: "/events",
-    component: _b0fd6178,
+    component: _0125926d,
     name: "events"
   }, {
     path: "/list",
-    component: _0011bd09,
+    component: _b5e2931c,
     name: "list"
   }, {
     path: "/pois",
@@ -38,15 +38,15 @@ export const routerOptions = {
     name: "pois"
   }, {
     path: "/services",
-    component: _1160c96e,
+    component: _78efb832,
     name: "services"
   }, {
     path: "/details/:id?",
-    component: _1842af5c,
+    component: _c93a126e,
     name: "details-id"
   }, {
     path: "/event/:id?",
-    component: _31f2dfea,
+    component: _37533fbe,
     name: "event-id"
   }, {
     path: "/poi/:id?",
@@ -54,7 +54,7 @@ export const routerOptions = {
     name: "poi-id"
   }, {
     path: "/",
-    component: _1d9a63f7,
+    component: _183c97ae,
     name: "index"
   }],
 

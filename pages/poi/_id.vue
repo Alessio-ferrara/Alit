@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <carousel-component :images="poi.poi_images" />
-  </div>
+  <carousel-component :images="poi.poi_images" />
 </template>
 
 <style scoped></style>

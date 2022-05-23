@@ -37,7 +37,7 @@
         </p>
       </div>
     </div>
-    <div v-if="name == 'poi'" class="card h-100">
+    <div v-if="name == 'service'" class="card h-100">
       <img
         src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
         class="card-img-top"
