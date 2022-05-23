@@ -14,16 +14,15 @@
           />
         </div>
         <div
-          v-for="(imageItem, imageIndex) of images"
+          v-for="(imageItem, imageIndex) of images.slice(1)"
           :key="`imageItem${imageIndex}`"
+          class="carousel-item"
         >
-          <div class="carousel-item" v-if="imageIndex != 0">
-            <img
-              v-bind:src="require('@/static/' + imageItem.path)"
-              class="d-block w-100"
-              alt="Image"
-            />
-          </div>
+          <img
+            v-bind:src="require('@/static/' + imageItem.path)"
+            class="d-block w-100"
+            alt="Image"
+          />
         </div>
       </div>
       <button
@@ -49,7 +48,9 @@
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
 
 <script>
 import "../assets/style.css";
