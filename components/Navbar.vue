@@ -91,7 +91,7 @@ export default {
         },
         {
           name: 'Points of Interest',
-          path: '/poi',
+          path: '/pois',
         },
         {
           name: 'Contacts',

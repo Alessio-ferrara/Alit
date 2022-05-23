@@ -1,4 +1,5 @@
 export { default as CardComponent } from '../../components/CardComponent.vue'
+export { default as CarouselComponent } from '../../components/CarouselComponent.vue'
 export { default as CustomPage } from '../../components/CustomPage.vue'
 export { default as EventsList } from '../../components/EventsList.vue'
 export { default as Footer } from '../../components/Footer.vue'

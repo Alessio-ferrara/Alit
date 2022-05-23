@@ -2,6 +2,9 @@
   "CardComponent": {
     "description": "Auto imported from components/CardComponent.vue"
   },
+  "CarouselComponent": {
+    "description": "Auto imported from components/CarouselComponent.vue"
+  },
   "CustomPage": {
     "description": "Auto imported from components/CustomPage.vue"
   },
