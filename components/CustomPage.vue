@@ -43,7 +43,7 @@
         <!-- GoogleMapAPI -->
         <div class="col-md-6 col-sm-12 mt-3">
           <!-- maps api with the key AIzaSyDX_OSdMYc79SeKrOLBh7VqZ5_n-mdexew -->
-          <GoogleMap />
+          <google-map :lat="41.3305141" :lang="19.825562857582966" />
         </div>
       </div>
     </div>
