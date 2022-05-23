@@ -5,7 +5,7 @@
             height="450"
             frameborder="0"
             style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDX_OSdMYc79SeKrOLBh7VqZ5_n-mdexew&q=Tirana,AL"
+            v-bind:src="'https://www.google.com/maps/embed/v1/place?key=AIzaSyDX_OSdMYc79SeKrOLBh7VqZ5_n-mdexew&q=' + lat + ',' + lang" 
             allowfullscreen
           ></iframe>
   </div>
@@ -14,11 +14,15 @@
 <script>
 export default {
   name: 'GoogleMap',
-  // props: {
-  //   address: {
-  //     type: String,  //string that gets passed in order to display the correct location on the website
-  //     required: true,
-  //   }
-  // },
+  props: {
+    lat: {
+      type: String,
+      required: true
+    },
+    lang: {
+      type: String,
+      required: true
+    }
+  },
 }
 </script>
