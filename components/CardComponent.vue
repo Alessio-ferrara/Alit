@@ -9,7 +9,7 @@
     <div class="card-body">
       <h5 class="card-title lead text-center text-black">{{item.name}}</h5>
       <p class="card-text text-center text-muted">
-        <span class="badge badge-pill badge-primary">{{getDateTime(item.datetime)}}</span>
+        <span v-if class="badge badge-pill badge-primary">{{getDateTime(item.datetime)}}</span>
         <br />
         {{item.description}}
       </p>
