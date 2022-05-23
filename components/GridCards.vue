@@ -8,84 +8,38 @@
         :key="`${name}${itemIndex}`"
         class="col"
       >
-      <!-- link passing all the info of the selected item to the  -->
+        <!-- link passing all the info of the selected item to the  -->
         <nuxt-link :to="`/${name}/${item.id}`">
-          <card-component :item="item" :name="name"/>
+          <card-component :item="item" :name="name" />
         </nuxt-link>
       </div>
     </div>
   </span>
 </template>
 
-
-
 <script>
 // take content from props passed to the page to check what content to display according to the request
-// ie. summer = 1 comes from the props, we display all of the elements in GroupList except the one with id 1 
+// ie. summer = 1 comes from the props, we display all of the elements in GroupList except the one with id 1
 
-
-// store in the eventList all the events fetched from the backend and displaying them 
+// store in the eventList all the events fetched from the backend and displaying them
 </script>
 
-
 <script>
-import CardComponent from "./CardComponent.vue"
+import CardComponent from "./CardComponent.vue";
 export default {
-  name: 'GridCards',
-  components:{
+  name: "GridCards",
+  components: {
     CardComponent,
   },
-  props : {
-    items : {
-      type : Array,
-      required : true,
+  props: {
+    items: {
+      type: Array,
+      required: true,
     },
-    name:{
-      type : String,
-      required : true
-    }
+    name: {
+      type: String,
+      required: true,
+    },
   },
-  data(){
-      return{
-        // list of the objects to display
-          ItemList :[
-            {
-              id: "0",
-              name: "Evento 0",
-              date: "11/02/1999",
-              description: "Lorem ipsum dolor sit amet docet sbadoink",
-              path: ""
-            },
-            {
-              id: "1",
-              name: "Evento Bello",
-              date: "11/02/2023",
-              description: "Lorem ipsum dolor sit amet docet sbadoink",
-              path: ""
-            },
-            {
-              id: "3",
-              name: "Evento più bello",
-              date: "11/02/2023",
-              description: "Lorem ipsum dolor sit amet docet sbadoink",
-              path: ""
-            },
-            {
-              id: "4",
-              name: "Evento più bello",
-              date: "11/02/2023",
-              description: "Lorem ipsum dolor sit amet docet sbadoink",
-              path: ""
-            },
-            {
-              id: "5",
-              name: "Evento più bello",
-              date: "11/02/2023",
-              description: "Lorem ipsum dolor sit amet docet sbadoink",
-              path: ""
-            },
-          ],
-      }
-  }
-}
+};
 </script>
