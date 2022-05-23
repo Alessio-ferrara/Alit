@@ -3,10 +3,6 @@
     <div class="container">
       <!-- passing everything to the component that will automatically display all the event groups at the top and elle the events fetched -->
       <events-list/>
-      <div class="text-center display-4 mt-4">
-        Events
-        <!-- shall display the eventItem.name whose index == the one received from props -->
-      </div>
       <p
         class="text-center text-muted mb-3"
       >Page to see all the events related to a specific category</p>

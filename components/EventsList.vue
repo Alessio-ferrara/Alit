@@ -1,24 +1,32 @@
 <template>
   <span>
-    <div class="card-group mb-3 pb-3 mt-3 pt-3">
-      <!-- v-for="(eventItem) of headerList-->
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-3 pt-3">
       <div
         v-for="(eventItem, eventItemIndex) of GroupList"
         :key="`eventItem${eventItemIndex}`"
-        class="card"
+        class="col-lg-4 col-md-12"
       >
-        <nuxt-link :to="eventItem.path">
+      <nuxt-link :to="`/${eventItem.path}`">
+        <div class="card">
           <img
-            v-bind:src="require(`/static/${eventItem.image}`)"
+            v-bind:src="require(`/static/images/${eventItem.image}`)"
             class="card-img-top"
             alt="Events Image"
           />
-            <div class="card-title nav-link text-center text-center text-black lead">
-            <strong>{{ eventItem.name }}</strong>
+          <div class="card-body">
+            <h5 class="card-title lead text-center text-black">{{eventItem.name}}</h5>
+            <p class="card-text text-center text-muted">
+              <!-- control of all the attributes to display according to the type passed -->
+            </p>
           </div>
-        </nuxt-link>
+        </div>
+      </nuxt-link>
       </div>
     </div>
+    <div class="text-center display-4 mt-4">
+        All Events
+        <!-- shall display the eventItem.name whose index == the one received from props -->
+      </div>
   </span>
 </template>
 
@@ -26,12 +34,18 @@
 
 <script>
 // take content from props passed to the page to check what content to display according to the request
-// ie. summer = 1 comes from the props, we display all of the elements in GroupList except the one with id 1 
+// ie. summer = 1 comes from the props, we display all of the elements in GroupList except the one with id 1
 
 
-// store in the eventList all the events fetched from the backend and displaying them 
+// store in the eventList all the events fetched from the backend and displaying them
 </script>
 
+<style scoped>
+.card {
+  margin-right: 1%;
+  margin-left: 1%;
+}
+</style>
 
 <script>
 export default {
@@ -56,45 +70,7 @@ export default {
                image: "events/winter-events.jpeg"
 
             },
-          ] ,
-        // list of the events to display
-          EventsList :[
-            {
-              id: "",
-              name: "Evento 0",
-              date: "11/02/1999",
-              description: "Lorem ipsum dolor sit amet docet sbadoink",
-              path: ""
-            },
-            {
-              id: "",
-              name: "Evento Bello",
-              date: "11/02/2023",
-              description: "Lorem ipsum dolor sit amet docet sbadoink",
-              path: ""
-            },
-            {
-              id: "",
-              name: "Evento più bello",
-              date: "11/02/2023",
-              description: "Lorem ipsum dolor sit amet docet sbadoink",
-              path: ""
-            },
-            {
-              id: "",
-              name: "Evento più bello",
-              date: "11/02/2023",
-              description: "Lorem ipsum dolor sit amet docet sbadoink",
-              path: ""
-            },
-            {
-              id: "",
-              name: "Evento più bello",
-              date: "11/02/2023",
-              description: "Lorem ipsum dolor sit amet docet sbadoink",
-              path: ""
-            },
-          ],
+          ]
       }
   }
 }
