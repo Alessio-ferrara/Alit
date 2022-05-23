@@ -1,7 +1,7 @@
 <template>
   <span>
     <!-- link passing all the info of the selected item to the  -->
-    <div v-if="name == 'events'" class="card h-100">
+    <div v-if="name == 'event'" class="card h-100">
       <img
         src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
         class="card-img-top"
@@ -11,13 +11,13 @@
         <h5 class="card-title lead text-center text-black">{{item.name}}</h5>
         <p class="card-text text-center text-muted">
           <!-- control of all the attributes to display according to the type passed -->
-          <span v-if="name == 'events'" class="text-primary lead">{{getDateTime(item.datetime)}}</span>
+          <span class="text-primary lead">{{getDateTime(item.datetime)}}</span>
           <br />
           {{item.description}}
         </p>
       </div>
     </div>
-    <div v-if="name == 'pois'" class="card h-100">
+    <div v-if="name == 'poi'" class="card h-100">
       <img
         src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
         class="card-img-top"
@@ -27,7 +27,7 @@
         <h5 class="card-title lead text-center text-black">{{item.name}}</h5>
         <p class="card-text text-center text-muted">
           <!-- control of all the attributes to display according to the type passed -->
-          <span v-if="name == 'events'" class="text-primary lead">{{getDateTime(item.datetime)}}</span>
+          <span class="text-primary lead">{{item.poi_type.name}}</span>
           <br />
           {{item.description}}
         </p>

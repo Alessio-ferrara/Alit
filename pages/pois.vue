@@ -5,7 +5,7 @@
       <p class="text-center text-muted mb-3">
         Page to see all the points of interest (POI) related to a specific group
       </p>
-      <grid-cards :items="pois" :name="'pois'" />
+      <grid-cards :items="pois" :name="'poi'" />
     </div>
   </div>
 </template>

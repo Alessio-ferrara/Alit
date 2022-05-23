@@ -6,10 +6,11 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _b0fd6178 = () => interopDefault(import('../pages/events.vue' /* webpackChunkName: "pages/events" */))
 const _0011bd09 = () => interopDefault(import('../pages/list.vue' /* webpackChunkName: "pages/list" */))
-const _b9471ea2 = () => interopDefault(import('../pages/poi.vue' /* webpackChunkName: "pages/poi" */))
+const _68457358 = () => interopDefault(import('../pages/pois.vue' /* webpackChunkName: "pages/pois" */))
 const _1160c96e = () => interopDefault(import('../pages/services.vue' /* webpackChunkName: "pages/services" */))
 const _1842af5c = () => interopDefault(import('../pages/details/_id.vue' /* webpackChunkName: "pages/details/_id" */))
 const _31f2dfea = () => interopDefault(import('../pages/event/_id.vue' /* webpackChunkName: "pages/event/_id" */))
+const _5c06ceda = () => interopDefault(import('../pages/poi/_id.vue' /* webpackChunkName: "pages/poi/_id" */))
 const _1d9a63f7 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -32,9 +33,9 @@ export const routerOptions = {
     component: _0011bd09,
     name: "list"
   }, {
-    path: "/poi",
-    component: _b9471ea2,
-    name: "poi"
+    path: "/pois",
+    component: _68457358,
+    name: "pois"
   }, {
     path: "/services",
     component: _1160c96e,
@@ -47,6 +48,10 @@ export const routerOptions = {
     path: "/event/:id?",
     component: _31f2dfea,
     name: "event-id"
+  }, {
+    path: "/poi/:id?",
+    component: _5c06ceda,
+    name: "poi-id"
   }, {
     path: "/",
     component: _1d9a63f7,

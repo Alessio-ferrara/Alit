@@ -14,11 +14,11 @@
     "_name": "_0011bd09"
   },
   {
-    "name": "poi",
-    "path": "/poi",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/poi.vue",
-    "chunkName": "pages/poi",
-    "_name": "_b9471ea2"
+    "name": "pois",
+    "path": "/pois",
+    "component": "/Users/alessioferrara/Desktop/Alit/pages/pois.vue",
+    "chunkName": "pages/pois",
+    "_name": "_68457358"
   },
   {
     "name": "services",
@@ -40,6 +40,13 @@
     "component": "/Users/alessioferrara/Desktop/Alit/pages/event/_id.vue",
     "chunkName": "pages/event/_id",
     "_name": "_31f2dfea"
+  },
+  {
+    "name": "poi-id",
+    "path": "/poi/:id?",
+    "component": "/Users/alessioferrara/Desktop/Alit/pages/poi/_id.vue",
+    "chunkName": "pages/poi/_id",
+    "_name": "_5c06ceda"
   },
   {
     "name": "index",
