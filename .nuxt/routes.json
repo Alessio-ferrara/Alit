@@ -2,50 +2,50 @@
   {
     "name": "events",
     "path": "/events",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/events.vue",
+    "component": "/Users/francesco/git/Alit/pages/events.vue",
     "chunkName": "pages/events",
-    "_name": "_b0fd6178"
+    "_name": "_0125926d"
   },
   {
     "name": "list",
     "path": "/list",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/list.vue",
+    "component": "/Users/francesco/git/Alit/pages/list.vue",
     "chunkName": "pages/list",
-    "_name": "_0011bd09"
+    "_name": "_b5e2931c"
   },
   {
     "name": "poi",
     "path": "/poi",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/poi.vue",
+    "component": "/Users/francesco/git/Alit/pages/poi.vue",
     "chunkName": "pages/poi",
-    "_name": "_b9471ea2"
+    "_name": "_45962626"
   },
   {
     "name": "services",
     "path": "/services",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/services.vue",
+    "component": "/Users/francesco/git/Alit/pages/services.vue",
     "chunkName": "pages/services",
-    "_name": "_1160c96e"
+    "_name": "_78efb832"
   },
   {
     "name": "details-id",
     "path": "/details/:id?",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/details/_id.vue",
+    "component": "/Users/francesco/git/Alit/pages/details/_id.vue",
     "chunkName": "pages/details/_id",
-    "_name": "_1842af5c"
+    "_name": "_c93a126e"
   },
   {
     "name": "event-id",
     "path": "/event/:id?",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/event/_id.vue",
+    "component": "/Users/francesco/git/Alit/pages/event/_id.vue",
     "chunkName": "pages/event/_id",
-    "_name": "_31f2dfea"
+    "_name": "_37533fbe"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/index.vue",
+    "component": "/Users/francesco/git/Alit/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_1d9a63f7"
+    "_name": "_183c97ae"
   }
 ]
