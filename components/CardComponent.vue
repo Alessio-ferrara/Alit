@@ -88,6 +88,25 @@
         </p>
       </div>
     </div>
+    <div v-if="name == 'itinerary'" class="card h-100">
+      <img
+          src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
+          class="card-img-top"
+          alt="Image"
+      />
+      <div class="card-body">
+        <h5 class="card-title lead text-center text-black">{{ item.name }}</h5>
+        <p class="card-text text-center text-muted">
+          <!-- control of all the attributes to display according to the type passed -->
+          <span v-if="name == 'itineraries'" class="text-primary lead"></span>
+          <br />
+          {{ item.description }}
+          <br />
+          <label>Duration :</label> {{item.duration }}
+        </p>
+      </div>
+    </div>
+
   </span>
 </template>
 

@@ -94,6 +94,10 @@ export default {
           path: '/pois',
         },
         {
+          name: 'Itineraries',
+          path: '/itineraries',
+        },
+        {
           name: 'Contacts',
           path: '/contacts',
         },
