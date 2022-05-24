@@ -16,8 +16,9 @@
   {
     "name": "pois",
     "path": "/pois",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/pois.vue",
-    "chunkName": "pages/pois"
+    "component": "/Users/francesco/git/Alit/pages/pois.vue",
+    "chunkName": "pages/pois",
+    "_name": "_70da3fbd"
   },
   {
     "name": "services",
@@ -43,8 +44,9 @@
   {
     "name": "poi-id",
     "path": "/poi/:id?",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/poi/_id.vue",
-    "chunkName": "pages/poi/_id"
+    "component": "/Users/francesco/git/Alit/pages/poi/_id.vue",
+    "chunkName": "pages/poi/_id",
+    "_name": "_36eaf0d1"
   },
   {
     "name": "index",

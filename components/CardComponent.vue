@@ -10,10 +10,9 @@
       <div class="card-body">
         <h5 class="card-title lead text-center text-black">{{ item.name }}</h5>
         <p class="card-text text-center text-muted">
-          <!-- control of all the attributes to display according to the type passed -->
-          <span v-if="name == 'events'" class="text-danger lead">
-            <i class="fas fa-solid fa-calendar-day"></i>
-            <strong>{{ getDateTime(item.datetime) }}</strong>
+          <span class="text-danger lead">
+            <!-- <i class="fas fa-solid fa-calendar-day"></i> -->
+            <strong>{{getDateTime(item.datetime)}}</strong>
             &nbsp;
           </span>
           <br />
