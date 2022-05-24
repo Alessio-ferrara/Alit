@@ -36,13 +36,20 @@
       </section>
 
       <!-- Section: Text -->
-      <section class="mb-4">
-        <p class="text-center">
-          This website was developed thanks to the efforts of the students of the course of HyperMedia Applications of the
-          Master Degree in Computer Science of the 
-          <a class="text-danger text-decoration-underline" href="https://www.polimi.it/">Politecnico di Milano</a>
-          
-        </p>
+      <section class="mb-4 row">
+        <div class="col-md-9">
+          <p class="">
+            This website was developed thanks to the efforts of the students of the course of HyperMedia Applications of the
+            Master Degree in Computer Science of the
+            <a
+              class="text-danger text-decoration-underline"
+              href="https://www.polimi.it/"
+            >Politecnico di Milano</a>
+          </p>
+        </div>
+        <div class="col-md-3">
+          <img src="../static/Schermata 2022-05-24 alle 18.17.31.png" alt="a" />
+        </div>
       </section>
       <!-- Section: Text -->
     </div>
@@ -52,12 +59,19 @@
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
       © 2022 Copyright:
       <a class="text-danger" href="/about">Alit Group</a>
+      <!-- <a class="text-danger" href="/about">Alit Group </a>© -->
     </div>
     <!-- Copyright -->
   </footer>
   <!-- Footer -->
 </template>
 
+<style scoped>
+img {
+  width: 70px;
+  height: 70px;
+}
+</style>
 
 <script>
 export default {

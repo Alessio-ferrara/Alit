@@ -10,7 +10,7 @@
           <a
             class="nav-link text-darnger mb-2 font-weight-bold pl-3 pr-3"
             href="/"
-          >&nbsp;projectname&nbsp;</a>
+          >&nbsp;Dua Tiranën&nbsp;</a>
         </ul>
       </a>
       <!-- <a class="navbar-brand mt-2 mt-lg-0" href="#">
@@ -56,8 +56,8 @@
 <style scoped>
 .navbar-brand {
   font-weight: lighter !important;
-  font-size: 1.9em;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.5em;
+  /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
 }
 .navbar-brand .btn-danger:hover {
   background: #f93154 !important;

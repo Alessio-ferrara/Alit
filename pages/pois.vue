@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div id="page" class="container-fluid">
     <div class="container">
       <div class="text-center display-4 mt-4">Points of interest</div>
       <p class="text-center text-muted mb-3">
