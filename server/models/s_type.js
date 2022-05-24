@@ -70,6 +70,7 @@ module.exports = (sequelize, DataTypes) => {
   s_type.init(
     {
       name: DataTypes.STRING,
+      icon: DataTypes.STRING
     },
     {
       sequelize,

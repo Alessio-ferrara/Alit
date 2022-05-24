@@ -1,8 +1,8 @@
 <template>
   <div>
     <iframe
-            width="650"
-            height="450"
+            width="100%"
+            height="300"
             frameborder="0"
             style="border:0"
             v-bind:src="'https://www.google.com/maps/embed/v1/place?key=AIzaSyDX_OSdMYc79SeKrOLBh7VqZ5_n-mdexew&q=' + lat + ',' + lang" 

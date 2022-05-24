@@ -2,49 +2,57 @@
   {
     "name": "events",
     "path": "/events",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/events.vue",
-    "chunkName": "pages/events"
+    "component": "/Users/francesco/git/Alit/pages/events.vue",
+    "chunkName": "pages/events",
+    "_name": "_0125926d"
   },
   {
     "name": "list",
     "path": "/list",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/list.vue",
-    "chunkName": "pages/list"
+    "component": "/Users/francesco/git/Alit/pages/list.vue",
+    "chunkName": "pages/list",
+    "_name": "_b5e2931c"
   },
   {
     "name": "pois",
     "path": "/pois",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/pois.vue",
-    "chunkName": "pages/pois"
+    "component": "/Users/francesco/git/Alit/pages/pois.vue",
+    "chunkName": "pages/pois",
+    "_name": "_70da3fbd"
   },
   {
     "name": "services",
     "path": "/services",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/services.vue",
-    "chunkName": "pages/services"
+    "component": "/Users/francesco/git/Alit/pages/services.vue",
+    "chunkName": "pages/services",
+    "_name": "_78efb832"
   },
   {
     "name": "details-id",
     "path": "/details/:id?",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/details/_id.vue",
-    "chunkName": "pages/details/_id"
+    "component": "/Users/francesco/git/Alit/pages/details/_id.vue",
+    "chunkName": "pages/details/_id",
+    "_name": "_c93a126e"
   },
   {
     "name": "event-id",
     "path": "/event/:id?",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/event/_id.vue",
-    "chunkName": "pages/event/_id"
+    "component": "/Users/francesco/git/Alit/pages/event/_id.vue",
+    "chunkName": "pages/event/_id",
+    "_name": "_37533fbe"
   },
   {
     "name": "poi-id",
     "path": "/poi/:id?",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/poi/_id.vue",
-    "chunkName": "pages/poi/_id"
+    "component": "/Users/francesco/git/Alit/pages/poi/_id.vue",
+    "chunkName": "pages/poi/_id",
+    "_name": "_36eaf0d1"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/index.vue",
-    "chunkName": "pages/index"
+    "component": "/Users/francesco/git/Alit/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_183c97ae"
   }
 ]

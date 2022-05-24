@@ -6,21 +6,25 @@ module.exports = {
     const poiType = [
       {
         name: "Museum",
+        icon: "fa-thin fa-landmark",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: "Monument",
+        icon: "fa-thin fa-monument",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: "Church",
+        icon: "fa-thin fa-church",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: "Park",
+        icon:"fa-thin fa-bench-tree",
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -31,16 +35,19 @@ module.exports = {
       },
       {
         name: "Mosque",
+        icon:"fa-thin fa-mosque",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: "Stadium",
+        icon:"fa-thin fa-futbol",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: "Lake",
+        icon:"fa-thin fa-water",
         createdAt: new Date(),
         updatedAt: new Date()
       },

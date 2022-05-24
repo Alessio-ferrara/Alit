@@ -22,18 +22,12 @@
       <div class="row">
         <!-- description -->
         <div class="col-md-6 col-sm-12 mt-3">
-          <h1
-            class="h-1 lead"
-          >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur quibusdam saepe minus ad, quae eveniet fugit alias reprehenderit perspiciatis</h1>
-          <!-- Buttons trigger collapse -->
-          <a
-            class="btn btn-danger"
-            data-mdb-toggle="collapse"
-            href="#moreDetails"
-            role="button"
-            aria-expanded="false"
-            aria-controls="moreDetails"
-          >More details</a>
+          <div class="lead text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit laborum nobis aspernatur ad ullam sed, vitae repudiandae velit magnam eos quos, perspiciatis aliquam dolores odit itaque et totam nulla saepe?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolor iure rerum vel enim id ab praesentium, suscipit laboriosam incidunt modi assumenda a asperiores veritatis sapiente impedit dolores quia necessitatibus.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt assumenda culpa aliquid accusantium officia adipisci sit consequuntur, neque iste cupiditate magni nobis tempore quae recusandae, dignissimos vitae soluta facere consequatur!
+          </div>
+          
           <!-- Collapsed content -->
           <div
             class="collapse mt-3"
@@ -43,7 +37,7 @@
         <!-- GoogleMapAPI -->
         <div class="col-md-6 col-sm-12 mt-3">
           <!-- maps api with the key AIzaSyDX_OSdMYc79SeKrOLBh7VqZ5_n-mdexew -->
-          <google-map :lat="41.3305141" :lang="19.825562857582966" />
+          <google-map :lat="lat" :lang="lng" />
         </div>
       </div>
     </div>
@@ -61,20 +55,14 @@ export default {
   components: {
     GoogleMap
   },
-  // center: { lat: 45.508, lng: -73.587 },
-  // props: {
-  //   title: {
-  //     type: String,
-  //     required: true,
-  //   },
-  //   image: {
-  //     type: String,
-  //     required: true,
-  //   },
-  //   description: {
-  //     type: String,
-  //     required: true,
-  //   },
-  // },
+  data(){
+    // tirana coordinates
+  const lat=  41.327953
+  const lng=  19.819025
+  return{
+    lat,
+    lng
+  }
+  }
 };
 </script>

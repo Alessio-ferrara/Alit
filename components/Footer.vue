@@ -1,6 +1,6 @@
 <template>
   <!-- Footer -->
-  <footer class="bg-dark text-center text-white mt-4">
+  <footer class="bg-dark text-center text-white mt-4 pt-4">
     <!-- Grid container -->
     <div class="container-fluid p-4">
       <!-- section Socials -->
@@ -39,7 +39,9 @@
       <section class="mb-4">
         <p class="text-center">
           This website was developed thanks to the efforts of the students of the course of HyperMedia Applications of the
-          Master Degree in Computer Science of the Politecnico di Milano
+          Master Degree in Computer Science of the 
+          <a class="text-danger text-decoration-underline" href="https://www.polimi.it/">Politecnico di Milano</a>
+          
         </p>
       </section>
       <!-- Section: Text -->
@@ -60,15 +62,15 @@
 <script>
 export default {
   name: 'FooterComponent',
-  data(){
-      return{
-          info:[
-              {
-                  name: "City",
-                  content: "Milano",
-              },
-          ]
-      }
-  }
+  // data(){
+  //     return{
+  //         info:[
+  //             {
+  //                 name: "City",
+  //                 content: "Tirana",
+  //             },
+  //         ]
+  //     }
+  // }
 }
 </script>
