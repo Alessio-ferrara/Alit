@@ -1,11 +1,12 @@
 <template>
   <div class="container-fluid">
-    <div class="container">
+    <div class="container pt-4 mt-5">
       <!-- passing everything to the component that will automatically display all the event groups at the top and elle the events fetched -->
-      <p
-          class="text-center text-muted mb-3"
-      >Page to see all the itineraries</p>
-      <grid-cards :items="itineraries" :name="'itinerary'"/>
+      <p class="text-center mb-3 display-5">
+        ITINERARIES
+      </p>
+      <br>
+      <row-grid-cards :items="itineraries" :name="'itinerary'"/>
     </div>
   </div>
 </template>
@@ -19,13 +20,13 @@
 <script>
 // import CustomPage from '~/components/CustomPage.vue'
 import '../assets/style.css';
-import GridCards from "../components/GridCards.vue"
+import RowGridCards from "../components/RowGridComponent.vue"
 
 
 export default {
   name: 'ItinerariesPage',
   components: {
-    GridCards,
+    RowGridCards,
   },
   data() {
     return {}
