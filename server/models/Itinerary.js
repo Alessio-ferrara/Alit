@@ -26,14 +26,28 @@ module.exports = (sequelize, DataTypes) => {
             },
           ]
         });
-        for (const i in itineraries) {
-            const poi = itineraries[i]['point_of_interests'];
-            const size = poi.length;
-            var obj = {};
-            obj['poi_start'] = poi[0];
-            obj['poi_end'] = poi[size - 1];
-        }
-        return itineraries;
+
+        // for (let i in itineraries) {
+        //     const poi = itineraries[i]['point_of_interests'];
+        //     const size = poi.length;
+        //     itineraries[i].poi_start = poi[0];
+        //     itineraries[i].poi_end = poi[size - 1];
+        // }
+
+        let itinerariesLast = [];
+        itineraries.forEach(itinerary => {
+          let itinerariesItem = {};
+          itinerariesItem.id = itinerary.dataValues.id;
+          itinerariesItem.name = itinerary.dataValues.name;
+          itinerariesItem.description = itinerary.dataValues.description;
+          itinerariesItem.duration = itinerary.dataValues.duration;
+          const poi = itinerary.dataValues.point_of_interests;
+          const size = poi.length;
+          itinerariesItem.poi_start = poi[0];
+          itinerariesItem.poi_end = poi[size - 1];
+          itinerariesLast.push(itinerariesItem)
+        });
+        return itinerariesLast;
       } catch (error) {
         throw error;
       }
