@@ -6,7 +6,7 @@
         <div class="col-md-8 border-right">
           <p class="card-title text-black display-6">{{ item.name }}</p>
           <p class="card-text text-muted">
-            <span class="badge badge-pill badge-danger">{{item.duration }} hours</span>
+            <span class="badge bg-danger text-white rounded-pill p-2">{{item.duration }} hours</span><br>
             <span v-if="name == 'itineraries'" class="text-primary lead"></span>
               <br />
               {{ item.description }}
@@ -15,16 +15,18 @@
         </div>
         <div class="col-md-4 border-left">
           <div class="row">
-           <p class="card-text text-muted">START
+           <p class="card-text text-muted" v-if="item.point_of_interests[0]">
+             <i style = "color:red;" class="fa fa-flag"></i><br>{{item.point_of_interests[0].name}}<br>
            |<br>
           |<br>
           |<br>
           |<br>
-          |<br></p>
+          |</p>
           </div>
 
           <div class="row">
-           <p class="card-text text-muted">END</p>
+           <p class="card-text text-muted" v-if="item.point_of_interests[1]">
+            <i style = "color:red;" class="fa fa-flag flag-mr"></i><br> {{item.point_of_interests[1].name}}</p><br>
           </div>
         </div>
       </div>
