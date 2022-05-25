@@ -2,7 +2,7 @@
   <span>
     <div v-if="name == 'itinerary'" class="card h-200">
       <div class="card-body row border-3">
-        <div class="col-md-8">
+        <div class="col-lg-8 col-md-12">
           <h1 class="card-title text-black text-left display-6">{{ item.name }}</h1>
           <h3 class="card-text text-muted">
             <span class="badge bg-danger text-white p-2 mb-3">{{item.duration }} hours</span>
@@ -10,7 +10,7 @@
           </h3>
         </div>
         <!-- left part of the card -->
-        <div id="itinerary" class="col-md-4">
+        <div id="itinerary" class="col-lg-4 col-md-12">
           <!-- <div class="row d-flex">
             <div class="card-text text-muted text-center col-12" v-if="item.point_of_interests[0]">
               <i style="color:red;" class="fa fa-flag d-block"></i>
@@ -22,7 +22,7 @@
             <div class="wrapper">
               <ul class="sessions">
                 <li>
-                  <div class="time" v-if="item.point_of_interests[0]">
+                  <div class="time">
                     <!-- poi nmae e icon -->
                     <i class="fa fa-solid fa-location-dot text-danger"></i>
                   </div>
@@ -33,7 +33,7 @@
                   <div class="time">...</div>
                 </li>
                 <li>
-                  <div class="time" v-if="item.point_of_interests[0]">
+                  <div class="time">
                     <!-- poi nmae e icon -->
                     <i class="fa-solid fa-flag-checkered text-danger"></i>
                   </div>
@@ -102,7 +102,7 @@ li {
   padding: 3rem 0;
 }
 .card .wrapper {
-  background: #eaf6ff;
+  background: #f7f7f7;
   padding: 2rem;
   border-radius: 15px;
 }

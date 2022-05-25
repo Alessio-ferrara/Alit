@@ -71,6 +71,9 @@ img {
   width: 70px;
   height: 70px;
 }
+footer{
+  margin-top: 30vh!important;
+}
 </style>
 
 <script>
