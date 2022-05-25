@@ -2,21 +2,31 @@
   <span>
     <!-- link passing all the info of the selected item to the  -->
     <div v-if="name == 'itinerary'" class="card h-200">
-      <img
-          src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
-          class="card-img-top"
-          alt="Image"
-      />
-      <div class="card-body">
-        <h5 class="card-title lead text-center text-black">{{ item.name }}</h5>
-        <p class="card-text text-center text-muted">
-          <!-- control of all the attributes to display according to the type passed -->
-          <span v-if="name == 'itineraries'" class="text-primary lead"></span>
-          <br />
-          {{ item.description }}
-          <br />
-          <label>Duration :</label> {{item.duration }}
-        </p>
+      <div class="card-body row border-3">
+        <div class="col-md-8 border-right">
+          <p class="card-title text-black display-6">{{ item.name }}</p>
+          <p class="card-text text-muted">
+            <span class="badge badge-pill badge-danger">{{item.duration }} hours</span>
+            <span v-if="name == 'itineraries'" class="text-primary lead"></span>
+              <br />
+              {{ item.description }}
+              <br />
+          </p>
+        </div>
+        <div class="col-md-4 border-left">
+          <div class="row">
+           <p class="card-text text-muted">START
+           |<br>
+          |<br>
+          |<br>
+          |<br>
+          |<br></p>
+          </div>
+
+          <div class="row">
+           <p class="card-text text-muted">END</p>
+          </div>
+        </div>
       </div>
     </div>
   </span>

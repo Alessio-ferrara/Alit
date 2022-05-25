@@ -6,7 +6,7 @@
       <div
           v-for="(item, itemIndex) of items"
           :key="`${name}${itemIndex}`"
-          class="row-cols-1"
+          class="row-cols-2"
       >
         <!-- link passing all the info of the selected item to the  -->
         <nuxt-link :to="`/${name}/${item.id}`">
