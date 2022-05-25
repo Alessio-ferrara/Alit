@@ -5,7 +5,47 @@ module.exports = {
     await queryInterface.bulkInsert("poi_itineraries", [
       {
         itinerary_id: 1,
+        poi_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },{
+        itinerary_id: 1,
+        poi_id: 3,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },{
+        itinerary_id: 1,
         poi_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },{
+        itinerary_id: 2,
+        poi_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },{
+        itinerary_id: 2,
+        poi_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },{
+        itinerary_id: 3,
+        poi_id: 3,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },{
+        itinerary_id: 3,
+        poi_id: 3,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },{
+        itinerary_id: 4,
+        poi_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },{
+        itinerary_id: 4,
+        poi_id: 2,
         createdAt: new Date(),
         updatedAt: new Date(),
       },

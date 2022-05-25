@@ -18,7 +18,21 @@ module.exports = (sequelize, DataTypes) => {
 
     static getAllItineraries = async function () {
       try {
-        const itineraries = await itinerary.findAll();
+        var itineraries = await itinerary.findAll({
+          include: [
+            {
+              model: sequelize.model('point_of_interest'),
+              attributes: ['name', ['id', 'poi_id']]
+            },
+          ]
+        });
+        for (const i in itineraries) {
+            const poi = itineraries[i]['point_of_interests'];
+            const size = poi.length;
+            var obj = {};
+            obj['poi_start'] = poi[0];
+            obj['poi_end'] = poi[size - 1];
+        }
         return itineraries;
       } catch (error) {
         throw error;
