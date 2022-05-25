@@ -7,6 +7,13 @@
     "_name": "_0125926d"
   },
   {
+    "name": "itineraries",
+    "path": "/itineraries",
+    "component": "/Users/francesco/git/Alit/pages/itineraries.vue",
+    "chunkName": "pages/itineraries",
+    "_name": "_1d5bd976"
+  },
+  {
     "name": "list",
     "path": "/list",
     "component": "/Users/francesco/git/Alit/pages/list.vue",

@@ -20,7 +20,13 @@
   "GridCards": {
     "description": "Auto imported from components/GridCards.vue"
   },
+  "LandscapeCardComponent": {
+    "description": "Auto imported from components/LandscapeCardComponent.vue"
+  },
   "Navbar": {
     "description": "Auto imported from components/Navbar.vue"
+  },
+  "RowGridComponent": {
+    "description": "Auto imported from components/RowGridComponent.vue"
   }
 }

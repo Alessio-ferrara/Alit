@@ -13,4 +13,6 @@ You can directly use them in pages and other components without the need to impo
 - `<Footer>` | `<footer>` (components/Footer.vue)
 - `<GoogleMap>` | `<google-map>` (components/GoogleMap.vue)
 - `<GridCards>` | `<grid-cards>` (components/GridCards.vue)
+- `<LandscapeCardComponent>` | `<landscape-card-component>` (components/LandscapeCardComponent.vue)
 - `<Navbar>` | `<navbar>` (components/Navbar.vue)
+- `<RowGridComponent>` | `<row-grid-component>` (components/RowGridComponent.vue)
