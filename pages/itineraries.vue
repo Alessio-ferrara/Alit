@@ -12,8 +12,9 @@
       <p class="text-center text-muted mb-3">
         Page to see all the itineraries available on the website
       </p>
-      <row-grid-cards :items="itineraries" :name="'itinerary'"/>
+      <hr/>
     </div>
+    <row-grid-cards :items="itineraries" :name="'itinerary'"/>
   </div>
 </template>
 

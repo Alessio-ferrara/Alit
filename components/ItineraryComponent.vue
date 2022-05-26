@@ -79,6 +79,8 @@ li {
 .container-fluid {
   display: flex;
   padding: 0 1rem;
+  padding-top: 0;
+  margin-top: 0;
   padding: 3rem 0;
 }
 .wrapper {

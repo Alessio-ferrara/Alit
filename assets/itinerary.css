@@ -111,3 +111,9 @@
 .card i {
   display: inline;
 }
+
+#side-info{
+  max-height: 20vh;
+  margin-bottom: 10%;
+  border-left: none;
+}
