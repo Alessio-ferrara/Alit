@@ -1,5 +1,5 @@
 <template>
-  <div id="canvas" class="container-fluid">
+  <div v-if="images.length" id="canvas" class="container-fluid">
     <div
       id="carouselExampleControls"
       class="carousel slide"
