@@ -1,28 +1,25 @@
 <template>
+  <!-- eslint-disable vue/no-use-v-if-with-v-for,vue/no-confusing-v-for-v-if -->
   <div class="container">
     <div class="wrapper">
       <ul class="sessions">
         <li>
           <div class="time">
-            <!-- poi name e icon -->
             <i class="fa fa-solid fa-location-dot text-danger"></i>
+           <p>{{poi_start.name}}</p>
           </div>
-          {{poi_start.name}}
         </li>
-        <li v-if="items">
-          <div v-for="(item) in items" :key="item.id" class="time">
-          {{item.name}}
-          </div>
+        <li v-if="items" v-for="(item) in items" :key="item.id" class="time">
+          <div class="time">{{item.name}}</div>
         </li>
         <li v-else>
           <div class="time">...</div>
         </li>
         <li>
           <div class="time">
-            <!-- poi name e icon -->
             <i class="fa-solid fa-flag-checkered text-danger"></i>
           </div>
-          {{poi_end.name}}
+          <p>{{poi_end.name}}</p>
         </li>
       </ul>
     </div>
@@ -57,14 +54,12 @@ li {
   padding: 0;
 }
 
-.card .container {
+ .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0 1rem;
   padding: 3rem 0;
 }
-.card .wrapper {
+ .wrapper {
   background: #f7f7f7;
   padding: 2rem;
   border-radius: 15px;
@@ -73,7 +68,7 @@ h1 {
   font-size: 1card 0.1rem;
   font-family: sans-serif;
 }
-.card .sessions {
+.sessions {
   margin-top: 2rem;
   border-radius: 12px;
   position: relative;
@@ -97,8 +92,7 @@ li:before {
   left: -10px;
   top: 0px;
 }
-
-.card .time {
+ .time {
   color: #2a2839;
   font-family: "Poppins", sans-serif;
   font-weight: 500;

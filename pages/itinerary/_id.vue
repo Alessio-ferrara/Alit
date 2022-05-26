@@ -1,27 +1,34 @@
 <template>
-  <div>
-    <div id="details" class="container mt-4">
-      <h1 class="mt-2 d-flex align-items-center">
-        {{ itinerary.name }}
-        &nbsp;
-        <span class="badge bg-danger">{{ itinerary.duration }}</span>
-      </h1>
-      <!-- <div class="label inline text-danger">{{ poi.poi_type.name }}</div> -->
-      <hr />
+  <div class="card w-50 container-fluid mt-5 pt-5 ">
+    <div class="card-body row border-3">
       <div class="row">
-        <!-- description -->
-        <div class="col-md-6 col-sm-12 mt-3">
+      <h5 class="card-title lead text-black fw-semibold">{{ itinerary.name }}</h5>
+        <hr />
+        <div class="row">
+          <div class="col-md-4">
+            <span class="badge bg-danger text-white p-2 mb-3">{{itinerary.duration }} hours</span>
+            <itinerary-component :items="itinerary.point_of_interests" :poi_start="itinerary.poi_start"  :poi_end="itinerary.poi_end" :name="'it'" />
+          </div>
+        <div id="itinerary" class="col-md-8 mt-5 pt-5">
           <div class="lead text-justify">
             {{itinerary.description}}</div>
-          <br />
         </div>
-        <itinerary-component :items="itinerary.point_of_interests" :poi_start="itinerary.poi_start"  :poi_end="itinerary.poi_end" />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
+<style scoped>
+span {
+  display: inline-block;
+  width: 75px;
+}
 
+#itinerary {
+  border-left: dotted rgb(44, 42, 43);
+}
+</style>
 <script>
 // import CustomPage from '~/components/CustomPage.vue'
 import "../../assets/style.css";
