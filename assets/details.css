@@ -6,16 +6,6 @@ img {
   height: auto;
 }
 
-/* .carousel {
-  width:1280px;
-  height:720px;
-} */
-
-/* .w-100 {
-  width: 100% !important;
-  height: 60vh;
-} */
-
 #canvas {
   padding-left: 0;
   padding-right: 0;
@@ -27,11 +17,9 @@ img {
   height: 60vh;
   overflow: hidden;
 }
-
 #content{
   padding-left: 10%;
   padding-right: 10%;
-
 }
 #details h2,
 #details h1 {
@@ -53,11 +41,9 @@ img {
 #details p{
   font-size: 1.6em;
 }
-
 #side-info ul{
   list-style-type:none;
 }
-
 #side-info > ul {
   padding-left: 0!important;
   align-items: center;
