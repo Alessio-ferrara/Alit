@@ -60,9 +60,10 @@ span {
   display: inline-block;
   width: 75px;
 }
-
-#itinerary {
-  border-left: dotted rgb(44, 42, 43);
+#side-info{
+  max-height: 20vh;
+  margin-bottom: 10%;
+  border-left: none;
 }
 </style>
 <script>
