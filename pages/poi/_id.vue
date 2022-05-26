@@ -13,10 +13,7 @@
         <!-- description -->
         <div class="col-md-6 col-sm-12 mt-3">
           <div class="lead text-justify">
-            {{poi.description}}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit laborum nobis aspernatur ad ullam sed, vitae repudiandae velit magnam eos quos, perspiciatis aliquam dolores odit itaque et totam nulla saepe?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolor iure rerum vel enim id ab praesentium, suscipit laboriosam incidunt modi assumenda a asperiores veritatis sapiente impedit dolores quia necessitatibus.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt assumenda culpa aliquid accusantium officia adipisci sit consequuntur, neque iste cupiditate magni nobis tempore quae recusandae, dignissimos vitae soluta facere consequatur!
+            {{ poi.description }}
           </div>
           <br />
           <!-- Buttons trigger collapse -->
@@ -27,9 +24,9 @@
           <google-map :lat="poi.lat" :lang="poi.lang" />
         </div>
         <div class="collapse mt-3 lead text-muted col-md-12" id="moreDetails">
-              More details that will be displayed on the website after the click of the
-              user.
-            </div>
+          More details that will be displayed on the website after the click of
+          the user.
+        </div>
         <div class="row">
           <div class="col-md-8 col-sm-12">
             <a
@@ -49,7 +46,6 @@
     </div>
   </div>
 </template>
-
 
 <script>
 // import CustomPage from '~/components/CustomPage.vue'
