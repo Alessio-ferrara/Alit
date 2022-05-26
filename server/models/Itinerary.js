@@ -77,6 +77,16 @@ module.exports = (sequelize, DataTypes) => {
         itineraryLast.poi_start = poi[0];
         itineraryLast.poi_end = poi[size - 1];
         itineraryLast.point_of_interests = poi.slice(1,size - 1)
+
+        let images = [];
+        poi.forEach(p => {
+          let img = {};
+          img.path = p.dataValues.main_image;
+          images.push(img)
+        });
+
+        itineraryLast.poi_images = images;
+
         return itineraryLast;
       } catch (error) {
         throw error;
