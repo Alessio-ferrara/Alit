@@ -5,13 +5,18 @@
         <div class="col-lg-8 col-md-12">
           <h1 class="card-title text-black text-left display-6">{{ item.name }}</h1>
           <h3 class="card-text text-muted">
-            <span class="badge bg-danger text-white p-2 mb-3">{{item.duration }} hours</span>
+            <span
+              v-if="item.duration > 1"
+              class="badge bg-danger text-white p-2"
+            >{{item.duration }} hours</span>
+            <span v-else class="badge bg-danger text-white p-2">{{item.duration }} hour</span>
+            <hr />
             <p class="text-muted lead mt-3">{{ item.description }}</p>
           </h3>
         </div>
         <!-- left part of the card -->
         <div id="itinerary" class="col-lg-4 col-md-12">
-        <itinerary-component :poi_start="item.poi_start"  :poi_end="item.poi_end" />
+          <itinerary-component :poi_start="item.poi_start" :poi_end="item.poi_end" />
         </div>
         <!-- right part of the card -->
       </div>

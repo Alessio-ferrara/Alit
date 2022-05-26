@@ -1,4 +1,6 @@
-
+#container{
+  padding-top: 0;
+}
 .card {
   position: relative;
   /* text-align: center; */
@@ -110,4 +112,9 @@
 }
 .card i {
   display: inline;
+}
+#side-info{
+  max-height: 20vh;
+  margin-bottom: 10%;
+  border-left: none;
 }

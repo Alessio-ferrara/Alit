@@ -28,7 +28,7 @@
       <hr />
       <div class="row mt-4">
         <!-- description -->
-        <div class="col-md-8 col-sm-12">
+        <div class="col-lg-8  col-sm-12">
           <div class="lead">
             {{itinerary.description}}
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit laborum nobis aspernatur ad ullam sed, vitae repudiandae velit magnam eos quos, perspiciatis aliquam dolores odit itaque et totam nulla saepe?
@@ -40,14 +40,15 @@
             </div>-->
           </div>
           <br />
-          <div id="side-info" class="col-md-4 col-sm-12">
-            <itinerary-component
+
+        </div>
+        <div id="side-info" class="col-lg-4 col-sm-12">
+          <itinerary-component
               :items="itinerary.point_of_interests"
               :poi_start="itinerary.poi_start"
               :poi_end="itinerary.poi_end"
               :name="'it'"
-            />
-          </div>
+          />
         </div>
       </div>
     </div>
