@@ -39,6 +39,42 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      {
+        name: "POI 4",
+        description: "Point of interest 4",
+        visit_info: "Visit info of poi 4",
+        lat: "-47.80734",
+        lang: "-90.97483",
+        type_id: "3",
+        main_image:
+          "https://www.akamai.com/site/im-demo/media-viewer/10.jpg?imwidth=5000",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "POI 5",
+        description: "Point of interest 5",
+        visit_info: "Visit info of poi 5",
+        lat: "-47.80734",
+        lang: "-90.97483",
+        type_id: "3",
+        main_image:
+          "https://www.akamai.com/site/im-demo/media-viewer/10.jpg?imwidth=5000",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "POI 6",
+        description: "Point of interest 6",
+        visit_info: "Visit info of poi 6",
+        lat: "-47.80734",
+        lang: "-90.97483",
+        type_id: "3",
+        main_image:
+          "https://www.akamai.com/site/im-demo/media-viewer/10.jpg?imwidth=5000",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
     ]);
   },
 
