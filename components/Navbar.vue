@@ -106,14 +106,6 @@ export default {
           path: '/about',
         },
       ],
-      loginList: [{
-        name : 'Login',
-        path: '/login',
-      },
-      {
-        name : 'Sign Up',
-        path: '/signup',
-      }],
     }
   },
 }

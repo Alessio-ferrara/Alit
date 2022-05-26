@@ -3,7 +3,31 @@
   <footer class="bg-dark text-center text-white mt-4 pt-4">
     <!-- Grid container -->
     <div class="container-fluid p-4">
-      <!-- section Socials -->
+      <!-- Section: Text -->
+      <section class="mb-4 row">
+        <div class="col-md-9">
+          <p class>
+            This website was developed thanks to the efforts of the students of the course of HyperMedia Applications of the
+            Master Degree in Computer Science of the
+            <a
+              class="text-danger text-decoration-underline"
+              href="https://www.polimi.it/"
+            >Politecnico di Milano</a>
+          </p>
+        </div>
+        <div class="col-md-3">
+          <img
+            style="width: 90px;height: 90px;"
+            src="../static/Schermata 2022-05-24 alle 18.17.31.png"
+            alt="AlitGroup"
+          />
+          <img style="width: 90px;height: 90px;" src="../static/polimi.jpeg" alt="AlitGroup" />
+        </div>
+      </section>
+      <!-- Section: Text -->
+
+      <!-- Section: Socials -->
+
       <section class="mb-4">
         <!-- Facebook -->
         <a
@@ -35,28 +59,25 @@
         </a>
       </section>
 
-      <!-- Section: Text -->
-      <section class="mb-4 row">
-        <div class="col-md-9">
-          <p class="">
-            This website was developed thanks to the efforts of the students of the course of HyperMedia Applications of the
-            Master Degree in Computer Science of the
-            <a
-              class="text-danger text-decoration-underline"
-              href="https://www.polimi.it/"
-            >Politecnico di Milano</a>
-          </p>
-        </div>
+      <!-- Section: Landmarks -->
+      <!-- <section class="text-left mb-4">
         <div class="col-md-3">
-          <img src="../static/Schermata 2022-05-24 alle 18.17.31.png" alt="a" />
+        <ul style="list-style-type:none;">
+          <li
+            v-for="(item, itemIndex) of footerList"
+            :key="`item${itemIndex}`"
+            class="text-white col-3"
+          >
+            <nuxt-link :to="item.path" class="text-danger">{{ item.name }}</nuxt-link>
+          </li>
+        </ul>
         </div>
-      </section>
-      <!-- Section: Text -->
+      </section> -->
     </div>
     <!-- Grid container -->
 
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 1)">
       © 2022 Copyright:
       <a class="text-danger" href="/about">Alit Group</a>
       <!-- <a class="text-danger" href="/about">Alit Group </a>© -->
@@ -67,27 +88,50 @@
 </template>
 
 <style scoped>
-img {
-  width: 70px;
-  height: 70px;
+footer {
+  margin-top: 30vh !important;
 }
-footer{
-  margin-top: 30vh!important;
+.multi-column{
+  list-style-position: inside;
 }
 </style>
 
 <script>
 export default {
   name: 'FooterComponent',
-  // data(){
-  //     return{
-  //         info:[
-  //             {
-  //                 name: "City",
-  //                 content: "Tirana",
-  //             },
-  //         ]
-  //     }
-  // }
+  data() {
+    return {
+      footerList: [
+        {
+          name: 'Home',
+          path: '/',
+        },
+        {
+          name: 'Services',
+          path: '/services',
+        },
+        {
+          name: 'Events',
+          path: '/events',
+        },
+        {
+          name: 'Points of Interest',
+          path: '/pois',
+        },
+        {
+          name: 'Itineraries',
+          path: '/itineraries',
+        },
+        {
+          name: 'Contacts',
+          path: '/contacts',
+        },
+        {
+          name: 'About us',
+          path: '/about',
+        },
+      ]
+    }
+  },
 }
 </script>
