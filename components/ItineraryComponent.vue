@@ -1,40 +1,35 @@
 <template>
-  <span>
-    <div v-if="name == 'itinerary'" class="card h-200">
-      <div class="card-body row border-3">
-        <div class="col-lg-8 col-md-12">
-          <h1 class="card-title text-black text-left display-6">{{ item.name }}</h1>
-          <h3 class="card-text text-muted">
-            <span class="badge bg-danger text-white p-2 mb-3">{{item.duration }} hours</span>
-            <p class="text-muted lead mt-3">{{ item.description }}</p>
-          </h3>
-        </div>
-        <!-- left part of the card -->
-        <div id="itinerary" class="col-lg-4 col-md-12">
-        <itinerary-component :poi_start="item.poi_start"  :poi_end="item.poi_end" />
-        </div>
-        <!-- right part of the card -->
-      </div>
+  <div class="container">
+    <div class="wrapper">
+      <ul class="sessions">
+        <li>
+          <div class="time">
+            <!-- poi name e icon -->
+            <i class="fa fa-solid fa-location-dot text-danger"></i>
+          </div>
+          {{poi_start.name}}
+        </li>
+        <li v-if="items">
+          <div v-for="(item) in items" :key="item.id" class="time">
+          {{item.name}}
+          </div>
+        </li>
+        <li v-else>
+          <div class="time">...</div>
+        </li>
+        <li>
+          <div class="time">
+            <!-- poi name e icon -->
+            <i class="fa-solid fa-flag-checkered text-danger"></i>
+          </div>
+          {{poi_end.name}}
+        </li>
+      </ul>
     </div>
-  </span>
+  </div>
 </template>
 
 <style scoped>
-.card {
-  position: relative;
-  /* text-align: center; */
-  color: white;
-}
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#itinerary {
-  border-left: dotted rgb(44, 42, 43);
-}
-
 @mixin tablet-and-up {
   @media screen and (min-width: 769px) {
     @content;
@@ -107,22 +102,22 @@ li:before {
   color: #2a2839;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  @include mobile-and-up {
-    font-size: 0.9rem;
-  }
-  @include mobile-only {
-    margin-bottom: 0.3rem;
-    font-size: 0.85rem;
-  }
+@include mobile-and-up {
+  font-size: 0.9rem;
+}
+@include mobile-only {
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+}
 }
 p {
   color: #4f4f4f;
   font-family: sans-serif;
   line-height: 1.5;
   margin-top: 0.4rem;
-  @include mobile-only {
-    font-size: 0.9rem;
-  }
+@include mobile-only {
+  font-size: 0.9rem;
+}
 }
 li:last-child {
   border: 0px;
@@ -135,21 +130,30 @@ i {
 </style>
 
 <script>
-import ItineraryComponent from "~/components/ItineraryComponent";
 export default {
-  name: "LandscapeCardComponent",
-  components : {
-    ItineraryComponent
-  },
+name: "ItineraryComponent",
   props: {
-    item: {
-      type: Object,
+    items: {
+      type: Array,
+      required: false,
+    },
+    poi_start: {
+      type: Array,
+      required: true,
+    },
+    poi_end: {
+      type: Array,
       required: true,
     },
     name: {
       type: String,
       required: true,
     },
-  }
-};
+  },
+}
+
 </script>
+
+<style scoped>
+
+</style>

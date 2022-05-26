@@ -55,18 +55,29 @@ module.exports = (sequelize, DataTypes) => {
     
     static getInfo = async function (itinerary_id) {
       try {
-        const itineraries = await itinerary.findOne({
+        const itineraryData = await itinerary.findOne({
           include: [
             {
               model: sequelize.model('point_of_interest'),
-              attributes: ['name', 'id', 'main_image']
+              attributes: [ 'id', 'name', 'main_image']
             },
           ],
           where: {
             id: itinerary_id,
           },
         });
-        return itineraries;
+
+        let itineraryLast = {};
+        itineraryLast.id = itineraryData.dataValues.id;
+        itineraryLast.name = itineraryData.dataValues.name;
+        itineraryLast.description = itineraryData.dataValues.description;
+        itineraryLast.duration = itineraryData.dataValues.duration;
+        const poi = itineraryData.dataValues.point_of_interests;
+        const size = poi.length;
+        itineraryLast.poi_start = poi[0];
+        itineraryLast.poi_end = poi[size - 1];
+        itineraryLast.point_of_interests = poi.slice(1,size - 1)
+        return itineraryLast;
       } catch (error) {
         throw error;
       }
