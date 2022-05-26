@@ -18,7 +18,7 @@
     </div>
   </div>-->
   <div>
-    <carousel-component :images="itineary" />
+    <carousel-component :images="itinerary.poi_images" />
     <div id="details" class="container mt-4">
       <h1 class="mt-2 mb-2">
         {{ itinerary.name }}
