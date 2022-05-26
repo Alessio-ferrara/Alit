@@ -20,6 +20,9 @@
   "GridCards": {
     "description": "Auto imported from components/GridCards.vue"
   },
+  "ItineraryComponent": {
+    "description": "Auto imported from components/ItineraryComponent.vue"
+  },
   "LandscapeCardComponent": {
     "description": "Auto imported from components/LandscapeCardComponent.vue"
   },

@@ -49,6 +49,13 @@
     "_name": "_37533fbe"
   },
   {
+    "name": "itinerary-id",
+    "path": "/itinerary/:id?",
+    "component": "/Users/francesco/git/Alit/pages/itinerary/_id.vue",
+    "chunkName": "pages/itinerary/_id",
+    "_name": "_fd1508dc"
+  },
+  {
     "name": "poi-id",
     "path": "/poi/:id?",
     "component": "/Users/francesco/git/Alit/pages/poi/_id.vue",

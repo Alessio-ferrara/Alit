@@ -16,7 +16,7 @@
             &nbsp;
           </span>
           <br />
-          {{item.description | truncate 2}}
+          {{item.description | cd  2}}
         </p>
       </div>
     </div>

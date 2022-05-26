@@ -11,6 +11,7 @@ const _70da3fbd = () => interopDefault(import('../pages/pois.vue' /* webpackChun
 const _78efb832 = () => interopDefault(import('../pages/services.vue' /* webpackChunkName: "pages/services" */))
 const _c93a126e = () => interopDefault(import('../pages/details/_id.vue' /* webpackChunkName: "pages/details/_id" */))
 const _37533fbe = () => interopDefault(import('../pages/event/_id.vue' /* webpackChunkName: "pages/event/_id" */))
+const _fd1508dc = () => interopDefault(import('../pages/itinerary/_id.vue' /* webpackChunkName: "pages/itinerary/_id" */))
 const _36eaf0d1 = () => interopDefault(import('../pages/poi/_id.vue' /* webpackChunkName: "pages/poi/_id" */))
 const _183c97ae = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -53,6 +54,10 @@ export const routerOptions = {
     path: "/event/:id?",
     component: _37533fbe,
     name: "event-id"
+  }, {
+    path: "/itinerary/:id?",
+    component: _fd1508dc,
+    name: "itinerary-id"
   }, {
     path: "/poi/:id?",
     component: _36eaf0d1,
