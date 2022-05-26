@@ -1,20 +1,13 @@
 <template>
   <div id="page" class="container-fluid">
-    <!-- <div class="container pt-4 mt-5">
-      <p class="text-center mb-3 display-5">
-        Itineraries
-      </p>
-      <br>
-      <row-grid-cards :items="itineraries" :name="'itinerary'"/>
-    </div> -->
     <div class="container">
       <div class="text-center display-4 mt-4">Itineraries</div>
-      <p class="text-center text-muted mb-3">
-        Page to see all the itineraries available on the website
-      </p>
-      <hr/>
+      <p
+        class="text-center text-muted mb-3"
+      >Page to see all the itineraries available on the website</p>
+      <hr />
     </div>
-    <row-grid-cards :items="itineraries" :name="'itinerary'"/>
+    <row-grid-cards :items="itineraries" :name="'itinerary'" />
   </div>
 </template>
 
