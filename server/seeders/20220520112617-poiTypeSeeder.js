@@ -6,48 +6,49 @@ module.exports = {
     const poiType = [
       {
         name: "Museum",
-        icon: "fa-thin fa-landmark",
+        icon: "fa-solid fa-landmark",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: "Monument",
-        icon: "fa-thin fa-monument",
+        icon: "fa-solid fa-monument",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: "Church",
-        icon: "fa-thin fa-church",
+        icon: "fa-solid fa-church",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: "Park",
-        icon:"fa-thin fa-bench-tree",
+        icon:"fa-solid fa-bench-tree",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: "Square",
+        icon:"fa-solid fa-map-location-dot",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: "Mosque",
-        icon:"fa-thin fa-mosque",
+        icon:"fa-solid fa-mosque",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: "Stadium",
-        icon:"fa-thin fa-futbol",
+        icon:"fa-solid fa-futbol",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: "Lake",
-        icon:"fa-thin fa-water",
+        icon:"fa-solid fa-water",
         createdAt: new Date(),
         updatedAt: new Date()
       },

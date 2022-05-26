@@ -6,9 +6,9 @@ module.exports = {
       {
         name: "Itinerary",
         duration: 3,
-        description: "Itinerary description Itinerary description Itinerary description " +
-                     "Itinerary description Itinerary description Itinerary description "
-        ,
+        description:
+          "Itinerary description Itinerary description Itinerary description " +
+          "Itinerary description Itinerary description Itinerary description ",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -22,32 +22,36 @@ module.exports = {
       {
         name: "Itinerary",
         duration: 3,
-        description: "Itinerary description Itinerary description Itinerary description " +
-            "Itinerary description Itinerary description Itinerary description ",
+        description:
+          "Itinerary description Itinerary description Itinerary description " +
+          "Itinerary description Itinerary description Itinerary description ",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         name: "Itinerary",
         duration: 5,
-        description: "Itinerary description Itinerary description Itinerary description " +
-            "Itinerary description Itinerary description Itinerary description ",
+        description:
+          "Itinerary description Itinerary description Itinerary description " +
+          "Itinerary description Itinerary description Itinerary description ",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         name: "Itinerary",
         duration: 3,
-        description: "Itinerary description Itinerary description Itinerary description " +
-            "Itinerary description Itinerary description Itinerary description ",
+        description:
+          "Itinerary description Itinerary description Itinerary description " +
+          "Itinerary description Itinerary description Itinerary description ",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         name: "Itinerary",
         duration: 4,
-        description: "Itinerary description Itinerary description Itinerary description " +
-            "Itinerary description Itinerary description Itinerary description ",
+        description:
+          "Itinerary description Itinerary description Itinerary description " +
+          "Itinerary description Itinerary description Itinerary description ",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
