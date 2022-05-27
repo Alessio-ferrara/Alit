@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
           where: {
             id: event_id,
           },
-          include: [{ model: sequelize.model('event_image'), attributes: ["path"] }],
+          include: [{ model: sequelize.model('event_image'), attributes: ["path"] }, {model: sequelize.model('point_of_interest'), attributes: ["name"]}],
         });
         return infoEvent;
       } catch (error) {
