@@ -103,7 +103,7 @@ export default {
         },
         {
           name: 'About us',
-          path: '/about',
+          path: '/about_us',
         },
       ],
     }
