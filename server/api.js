@@ -11,11 +11,13 @@ const eventsRoutes = require("./routes/events-route");
 const poisRoutes = require("./routes/pois-route");
 const itinerariesRoutes = require("./routes/itineraries-route");
 const servicesRoutes = require("./routes/services-route");
+const contentRoutes = require("./routes/content-route");
 
 app.use("/events", eventsRoutes);
 app.use("/pois", poisRoutes);
 app.use("/itineraries", itinerariesRoutes);
 app.use("/services", servicesRoutes);
+app.use("/content", contentRoutes);
 
 app.use((req, res, next) => {
   const error = new HttpError("Route not found", 404);
