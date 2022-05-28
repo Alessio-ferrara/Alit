@@ -19,10 +19,6 @@ module.exports = (sequelize, DataTypes) => {
           include: [
             {
               model: sequelize.model("service"),
-              include: {
-                model: sequelize.model("op_hours"),
-                attributes: ["day", "s_hour", "c_hour"],
-              },
             },
           ],
         });

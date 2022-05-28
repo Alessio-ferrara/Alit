@@ -1,5 +1,12 @@
 [
   {
+    "name": "about_us",
+    "path": "/about_us",
+    "component": "/Users/alessioferrara/Desktop/Alit/pages/about_us.vue",
+    "chunkName": "pages/about_us",
+    "_name": "_0936ab0a"
+  },
+  {
     "name": "events",
     "path": "/events",
     "component": "/Users/alessioferrara/Desktop/Alit/pages/events.vue",
