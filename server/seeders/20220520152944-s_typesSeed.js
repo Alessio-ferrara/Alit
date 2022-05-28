@@ -5,31 +5,31 @@ module.exports = {
     await queryInterface.bulkInsert('s_types', [
       {
         name: "Pharmacy",
-        icon: "fa-thin fa-house-medical",
+        icon: "fa-solid fa-lg fa-house-medical",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         name: "Hotel",
-        icon: "fa-thin fa-hotel",
+        icon: "fa-solid fa-lg fa-hotel",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         name: "Resturant",
-        icon: "fa-thin fa-utensils",
+        icon: "fa-solid fa-lg fa-utensils",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         name: "Shopping center",
-        icon: "fa-thin fa-shop",
+        icon: "fa-solid fa-lg fa-shop",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         name: "Hospital",
-        icon: "fa-thin fa-hospital",
+        icon: "fa-solid fa-lg fa-hospital",
         createdAt: new Date(),
         updatedAt: new Date(),
       },

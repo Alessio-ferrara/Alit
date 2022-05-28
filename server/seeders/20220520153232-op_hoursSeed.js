@@ -8,6 +8,7 @@ module.exports = {
         day: "Monday",
         s_hour: "08:00:00",
         c_hour: "20:00:00",
+
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -16,6 +17,7 @@ module.exports = {
         day: "Tusday",
         s_hour: "08:00:00",
         c_hour: "20:00:00",
+
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -24,6 +26,7 @@ module.exports = {
         day: "Friday",
         s_hour: "08:00:00",
         c_hour: "20:00:00",
+
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -32,6 +35,7 @@ module.exports = {
         day: "Monday",
         s_hour: "08:00:00",
         c_hour: "20:00:00",
+
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -40,6 +44,7 @@ module.exports = {
         day: "Tusday",
         s_hour: "08:00:00",
         c_hour: "20:00:00",
+
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -48,6 +53,7 @@ module.exports = {
         day: "Friday",
         s_hour: "08:00:00",
         c_hour: "20:00:00",
+
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -56,6 +62,7 @@ module.exports = {
         day: "Monday",
         s_hour: "08:00:00",
         c_hour: "20:00:00",
+
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -64,6 +71,7 @@ module.exports = {
         day: "Tusday",
         s_hour: "08:00:00",
         c_hour: "20:00:00",
+
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -72,6 +80,7 @@ module.exports = {
         day: "Friday",
         s_hour: "08:00:00",
         c_hour: "20:00:00",
+
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -80,6 +89,7 @@ module.exports = {
         day: "Monday",
         s_hour: "08:00:00",
         c_hour: "20:00:00",
+
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -96,19 +106,11 @@ module.exports = {
         day: "Friday",
         s_hour: "08:00:00",
         c_hour: "20:00:00",
+
         createdAt: new Date(),
         updatedAt: new Date(),
       },
     ]);
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-     */
   },
 
   async down(queryInterface, Sequelize) {

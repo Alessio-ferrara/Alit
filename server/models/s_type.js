@@ -37,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
           include: [
             {
               model: sequelize.model("service"),
-              attributes: ["id", "name", "address"],
+              attributes: ["id", "name", "address", "telephone"],
               include: [{
                 model: sequelize.model("op_hours")
               }]
