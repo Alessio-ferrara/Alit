@@ -2,7 +2,7 @@
 .eslintcache
 .eslintrc.js
 .eslintrc.json
-.nuxt
+.nuxt/
 .eslintcache
 .nuxt/routes.json
 .nuxt/nuxt-google-maps.js
