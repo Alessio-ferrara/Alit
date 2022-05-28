@@ -30,11 +30,13 @@ module.exports = (sequelize, DataTypes) => {
 
     static getServicesByType = async function (type) {
       try {
-        const types = await s_type.findAll({
+        const types = await s_type.findOne({
+          where: {
+            type_id: type,
+          },
           include: [
             {
-              model: sequelize.model('service'),
-              where: { type_id: type },
+              model: sequelize.model("service"),
             },
           ],
         });
@@ -43,13 +45,13 @@ module.exports = (sequelize, DataTypes) => {
         throw error;
       }
     };
-    
+
     static getMainServices = async function () {
       try {
         const types = await s_type.findAll({
           include: [
             {
-              model: sequelize.model('service'),
+              model: sequelize.model("service"),
               where: {
                 id: [1, 3, 4],
               },
@@ -61,12 +63,12 @@ module.exports = (sequelize, DataTypes) => {
         throw error;
       }
     };
-    }
-  
+  }
+
   s_type.init(
     {
       name: DataTypes.STRING,
-      icon: DataTypes.STRING
+      icon: DataTypes.STRING,
     },
     {
       sequelize,
