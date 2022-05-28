@@ -25,7 +25,7 @@
                 Address:
                 <span class="text-muted">{{item.address}}</span>
                 <br />Telephone:
-                <!-- <span class="text-muted">{{item.telephone}}</span> -->
+                <span class="text-muted">{{item.telephone}}</span>
               </p>
               <p class="text-center">
                 <i class="fa fa-lg fa-clock"></i>
