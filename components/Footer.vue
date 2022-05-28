@@ -21,7 +21,7 @@
             src="../static/Schermata 2022-05-24 alle 18.17.31.png"
             alt="AlitGroup"
           />
-          <img style="width: 90px;height: 90px;" src="../static/polimi.jpeg" alt="AlitGroup" />
+          <img style="width: 90px;height: 90px;" src="../static/polimi.jpeg" alt="PoliMi" />
         </div>
       </section>
       <!-- Section: Text -->
@@ -72,7 +72,7 @@
           </li>
         </ul>
         </div>
-      </section> -->
+      </section>-->
     </div>
     <!-- Grid container -->
 
@@ -91,7 +91,7 @@
 footer {
   margin-top: 30vh !important;
 }
-.multi-column{
+.multi-column {
   list-style-position: inside;
 }
 </style>
