@@ -1,13 +1,15 @@
 <template>
-  <div id="page">
-    <div>
-      <div v-for="(service, serviceIndex) of services" :key="`service${serviceIndex}`" class="row">
-        <div class="card">
-          <p>
-            {{service.name}}
-          </p>
-        </div>
-      </div>
+  <div id="page" class="container-fluid">
+    <div class="container">
+      <div class="text-center display-4 mt-4">{{name}}</div>
+      <p class="text-center text-muted mb-3">
+        View all the services under the 
+        <strong class="text-italic">
+        {{name}}
+        </strong>
+         category
+      </p>
+      <grid-cards :items="pois" :name="'poi'" />
     </div>
   </div>
 </template>
@@ -32,7 +34,9 @@ export default {
      const { data } = await $axios.get(`api/services/${id}`);
      console.log(data)
     return {
-      services : data.services
+      services : data.services,
+      name: data.name,
+      icon: data.icon
     }
   }
 };

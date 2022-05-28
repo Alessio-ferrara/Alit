@@ -30,11 +30,7 @@ export const routerOptions = {
 
   routes: [{
     path: "/about_us",
-<<<<<<< HEAD
     component: _7d04c764,
-=======
-    component: _0936ab0a,
->>>>>>> 58d73402b5e1a46b16f10ae702b17360b4c2324a
     name: "about_us"
   }, {
     path: "/events",
