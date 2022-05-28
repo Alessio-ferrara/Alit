@@ -14,6 +14,10 @@
         <div class="col-md-6 col-sm-12 mt-3">
           <div class="lead text-justify">
             {{ poi.description }}
+            <div class="collapse mt-3 lead text-muted col-md-12" id="moreDetails">
+          More details that will be displayed on the website after the click of
+          the user.
+        </div>
           </div>
           <br />
           <!-- Buttons trigger collapse -->
@@ -22,10 +26,6 @@
         <div class="col-md-6 col-sm-12 mt-3">
           <!-- maps api with the key AIzaSyDX_OSdMYc79SeKrOLBh7VqZ5_n-mdexew -->
           <google-map :lat="poi.lat" :lang="poi.lang" />
-        </div>
-        <div class="collapse mt-3 lead text-muted col-md-12" id="moreDetails">
-          More details that will be displayed on the website after the click of
-          the user.
         </div>
         <div class="row">
           <div class="col-md-8 col-sm-12">

@@ -3,66 +3,84 @@
     "name": "about_us",
     "path": "/about_us",
     "component": "/Users/alessioferrara/Desktop/Alit/pages/about_us.vue",
-    "chunkName": "pages/about_us"
+    "chunkName": "pages/about_us",
+    "_name": "_0936ab0a"
   },
   {
     "name": "events",
     "path": "/events",
     "component": "/Users/alessioferrara/Desktop/Alit/pages/events.vue",
-    "chunkName": "pages/events"
+    "chunkName": "pages/events",
+    "_name": "_b0fd6178"
   },
   {
     "name": "itineraries",
     "path": "/itineraries",
     "component": "/Users/alessioferrara/Desktop/Alit/pages/itineraries.vue",
-    "chunkName": "pages/itineraries"
+    "chunkName": "pages/itineraries",
+    "_name": "_49cdc4ce"
   },
   {
     "name": "list",
     "path": "/list",
     "component": "/Users/alessioferrara/Desktop/Alit/pages/list.vue",
-    "chunkName": "pages/list"
+    "chunkName": "pages/list",
+    "_name": "_0011bd09"
   },
   {
     "name": "pois",
     "path": "/pois",
     "component": "/Users/alessioferrara/Desktop/Alit/pages/pois.vue",
-    "chunkName": "pages/pois"
+    "chunkName": "pages/pois",
+    "_name": "_68457358"
   },
   {
     "name": "services",
     "path": "/services",
     "component": "/Users/alessioferrara/Desktop/Alit/pages/services.vue",
-    "chunkName": "pages/services"
+    "chunkName": "pages/services",
+    "_name": "_1160c96e"
   },
   {
     "name": "details-id",
     "path": "/details/:id?",
     "component": "/Users/alessioferrara/Desktop/Alit/pages/details/_id.vue",
-    "chunkName": "pages/details/_id"
+    "chunkName": "pages/details/_id",
+    "_name": "_1842af5c"
   },
   {
     "name": "event-id",
     "path": "/event/:id?",
     "component": "/Users/alessioferrara/Desktop/Alit/pages/event/_id.vue",
-    "chunkName": "pages/event/_id"
+    "chunkName": "pages/event/_id",
+    "_name": "_31f2dfea"
   },
   {
     "name": "itinerary-id",
     "path": "/itinerary/:id?",
     "component": "/Users/alessioferrara/Desktop/Alit/pages/itinerary/_id.vue",
-    "chunkName": "pages/itinerary/_id"
+    "chunkName": "pages/itinerary/_id",
+    "_name": "_ac6a224a"
   },
   {
     "name": "poi-id",
     "path": "/poi/:id?",
     "component": "/Users/alessioferrara/Desktop/Alit/pages/poi/_id.vue",
-    "chunkName": "pages/poi/_id"
+    "chunkName": "pages/poi/_id",
+    "_name": "_5c06ceda"
+  },
+  {
+    "name": "service-id",
+    "path": "/service/:id?",
+    "component": "/Users/alessioferrara/Desktop/Alit/pages/service/_id.vue",
+    "chunkName": "pages/service/_id",
+    "_name": "_49f359c5"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/alessioferrara/Desktop/Alit/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_1d9a63f7"
   }
 ]

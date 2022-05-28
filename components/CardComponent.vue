@@ -39,19 +39,16 @@
       </div>
     </div>
     <div v-if="name == 'service'" class="card h-100">
-      <img
+      <!-- <img
         v-bind:src="require('@/static/' + item.main_image)"
         class="card-img-top"
         alt="Image"
-      />
-
+      /> -->
       <div class="card-body">
         <h5 class="card-title lead text-center text-black">{{ item.name }}</h5>
         <p class="card-text text-center text-muted">
-          <!-- control of all the attributes to display according to the type passed -->
-          <span class="text-primary lead">{{ item.poi_type.name }}</span>
+          <i :class="item.icon"></i>
           <br />
-          {{ item.description | truncate(300) }}
         </p>
       </div>
     </div>
