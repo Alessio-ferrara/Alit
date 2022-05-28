@@ -32,11 +32,15 @@ module.exports = (sequelize, DataTypes) => {
       try {
         const types = await s_type.findOne({
           where: {
-            type_id: type,
+            id: type,
           },
           include: [
             {
               model: sequelize.model("service"),
+              attributes: ["id", "name", "address"],
+              include: [{
+                model: sequelize.model("op_hours")
+              }]
             },
           ],
         });
