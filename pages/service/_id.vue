@@ -45,6 +45,12 @@
           </div>
         </div>
       </div>
+      <div v-if="Object.keys(services).length == 0">
+        <div class="alert alert-warning" role="alert">
+          <i class="fa fa-lg fa-warning">&nbsp;</i>
+          No services matching the choice were found. Try again later &#9203;
+        </div>
+      </div>
     </div>
   </div>
 </template>

@@ -14,8 +14,8 @@
       <!-- We should change this to be styled better -->
       <div v-else class="text-center text-muted mt-3">
         <div class="alert alert-info" role="alert">
-          <i class="fa fa-warning"></i>
-          No events matching the choice were found. Try again later
+          <i class="fa fa-lg fa-warning">&nbsp;</i>
+          No events matching the choice were found. Try again later &#9203;
         </div>
       </div>
     </div>
