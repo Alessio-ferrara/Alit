@@ -42,16 +42,6 @@
     "_name": "_78efb832"
   },
   {
-<<<<<<< HEAD
-    "name": "details-id",
-    "path": "/details/:id?",
-    "component": "/Users/francesco/git/Alit/pages/details/_id.vue",
-    "chunkName": "pages/details/_id",
-    "_name": "_c93a126e"
-  },
-  {
-=======
->>>>>>> 11a9d12fc675d9e285fbac41452e63ea0fa9ba13
     "name": "event-id",
     "path": "/event/:id?",
     "component": "/Users/francesco/git/Alit/pages/event/_id.vue",

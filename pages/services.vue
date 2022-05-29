@@ -30,7 +30,6 @@ import GridCards from '../components/GridCards.vue';
 export default {
   components: { GridCards, BreadCrumb },
   name: 'ServicesPage',
-  
   data() {
     return {}
   },
@@ -42,6 +41,7 @@ export default {
   async asyncData({ $axios }) {
     // get all the data from the backend and pass it to the component in order to be printed
     const { data } = await $axios.get('api/services/');
+    console.log(data)
     return {
       services : data,
       crumbs: [

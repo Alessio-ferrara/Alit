@@ -1,12 +1,13 @@
 <template>
   <div>
     <carousel-component :images="event.event_images" />
-    <bread-crumb :crumbs="crumbs" @selected="selected" />
     <div id="details" class="container mt-4">
+      <bread-crumb :crumbs="crumbs" @selected="selected" />
       <h1 class="mt-2 mb-2">
         {{ event.name }}
         <br />
       </h1>
+
       <!-- <div class="label inline text-danger">{{ event.event_type.name }}</div> -->
       <hr />
       <div class="row mt-4">
@@ -32,7 +33,7 @@
               <nuxt-link class="text-danger text-decoration-underline" :to="`/poi/${event.poi_id}`">
                 <!-- diventerà nuxt link to poi -->
                 <i class="fa-solid fa-location-dot"></i>
-                  <!-- <mark> -->
+                <!-- <mark> -->
                 {{event.point_of_interest.name}}
                 <!-- </mark> -->
               </nuxt-link>

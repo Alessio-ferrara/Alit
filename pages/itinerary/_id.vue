@@ -19,8 +19,8 @@
   </div>-->
   <div>
     <carousel-component :images="itinerary.poi_images" />
-    <bread-crumb :crumbs="crumbs" @selected="selected" />
     <div id="details" class="container mt-4">
+    <bread-crumb :crumbs="crumbs" @selected="selected" />
       <h1 class="mt-2 mb-2">
         {{ itinerary.name }}
         <br />
