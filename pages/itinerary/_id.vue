@@ -20,7 +20,7 @@
   <div>
     <carousel-component :images="itinerary.poi_images" />
     <div id="details" class="container mt-4">
-    <bread-crumb :crumbs="crumbs" @selected="selected" />
+      <bread-crumb :crumbs="crumbs" @selected="selected" />
       <h1 class="mt-2 mb-2">
         {{ itinerary.name }}
         <br />
@@ -29,7 +29,7 @@
       <hr />
       <div class="row mt-4">
         <!-- description -->
-        <div class="col-lg-8  col-sm-12">
+        <div class="col-lg-8 col-sm-12">
           <div class="lead">
             {{itinerary.description}}
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit laborum nobis aspernatur ad ullam sed, vitae repudiandae velit magnam eos quos, perspiciatis aliquam dolores odit itaque et totam nulla saepe?
@@ -41,15 +41,19 @@
             </div>-->
           </div>
           <br />
-
         </div>
         <div id="side-info" class="col-lg-4 col-sm-12">
           <itinerary-component
-              :items="itinerary.point_of_interests"
-              :poi_start="itinerary.poi_start"
-              :poi_end="itinerary.poi_end"
-              :name="'it'"
+            :items="itinerary.point_of_interests"
+            :poi_start="itinerary.poi_start"
+            :poi_end="itinerary.poi_end"
+            :name="'it'"
           />
+          <div class="container">
+            <p
+              class="text-center text-muted fs-6 mt-2 "
+            >Click on a point of interest to get additional informations</p>
+          </div>
         </div>
       </div>
     </div>
@@ -61,7 +65,7 @@ span {
   display: inline-block;
   width: 75px;
 }
-#side-info{
+#side-info {
   max-height: 20vh;
   margin-bottom: 10%;
   border-left: none;
