@@ -5,23 +5,25 @@
       <ul class="sessions">
         <li>
           <div class="time">
-            <nuxt-link class="text-danger text-decoration-underline" :to="`/poi/${poi_start.id}`">
-              <i class="fa fa-solid fa-location-dot text-danger text-decoration-none"></i>
-              {{poi_start.name}}
-            </nuxt-link>
+            <i class="fa fa-solid fa-location-dot text-danger text-decoration-none"></i>
+            <nuxt-link
+              class="text-danger fst-italic"
+              :to="`/poi/${poi_start.id}`"
+            >{{poi_start.name}}</nuxt-link>
           </div>
         </li>
         <li v-for="(item) in items" :key="item.id" class="time text-danger">
-          <nuxt-link class="text-danger text-decoration-underline" :to="`/poi/${item.id}`">
+          <nuxt-link class="text-danger fst-italic" :to="`/poi/${item.id}`">
             <div>{{item.name}}</div>
           </nuxt-link>
         </li>
         <li>
           <div class="time">
-            <nuxt-link class="text-danger text-decoration-underline" :to="`/poi/${poi_end.id}`">
-              <i class="fa-solid fa-flag-checkered text-danger"></i>
-              {{poi_end.name}}
-            </nuxt-link>
+            <i class="fa-solid fa-flag-checkered text-danger"></i>
+            <nuxt-link
+              class="text-danger fst-italic"
+              :to="`/poi/${poi_end.id}`"
+            >{{poi_end.name}}</nuxt-link>
           </div>
         </li>
       </ul>
@@ -113,7 +115,7 @@ h1 {
   font-family: sans-serif;
 }
 .sessions {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   border-radius: 12px;
   position: relative;
 }
@@ -165,5 +167,8 @@ li:last-child {
 }
 i {
   display: inline;
+}
+.container-fluid{
+  padding-top: 0;
 }
 </style>
