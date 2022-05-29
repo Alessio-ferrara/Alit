@@ -11,3 +11,11 @@ mark{
 .badge{
   border-radius: 10px;
 }
+
+hr.white-horizontal{
+    background: white;
+    height: 5px;
+}
+.white{
+    color: white;
+}
