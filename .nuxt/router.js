@@ -10,7 +10,6 @@ const _49cdc4ce = () => interopDefault(import('../pages/itineraries.vue' /* webp
 const _0011bd09 = () => interopDefault(import('../pages/list.vue' /* webpackChunkName: "pages/list" */))
 const _68457358 = () => interopDefault(import('../pages/pois.vue' /* webpackChunkName: "pages/pois" */))
 const _1160c96e = () => interopDefault(import('../pages/services.vue' /* webpackChunkName: "pages/services" */))
-const _1842af5c = () => interopDefault(import('../pages/details/_id.vue' /* webpackChunkName: "pages/details/_id" */))
 const _31f2dfea = () => interopDefault(import('../pages/event/_id.vue' /* webpackChunkName: "pages/event/_id" */))
 const _ac6a224a = () => interopDefault(import('../pages/itinerary/_id.vue' /* webpackChunkName: "pages/itinerary/_id" */))
 const _5c06ceda = () => interopDefault(import('../pages/poi/_id.vue' /* webpackChunkName: "pages/poi/_id" */))
@@ -52,10 +51,6 @@ export const routerOptions = {
     path: "/services",
     component: _1160c96e,
     name: "services"
-  }, {
-    path: "/details/:id?",
-    component: _1842af5c,
-    name: "details-id"
   }, {
     path: "/event/:id?",
     component: _31f2dfea,

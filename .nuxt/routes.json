@@ -42,13 +42,6 @@
     "_name": "_1160c96e"
   },
   {
-    "name": "details-id",
-    "path": "/details/:id?",
-    "component": "/Users/alessioferrara/Desktop/Alit/pages/details/_id.vue",
-    "chunkName": "pages/details/_id",
-    "_name": "_1842af5c"
-  },
-  {
     "name": "event-id",
     "path": "/event/:id?",
     "component": "/Users/alessioferrara/Desktop/Alit/pages/event/_id.vue",

@@ -1,6 +1,7 @@
 <template>
   <div>
     <carousel-component :images="event.event_images" />
+    <bread-crumb :crumbs="crumbs" @selected="selected" />
     <div id="details" class="container mt-4">
       <h1 class="mt-2 mb-2">
         {{ event.name }}
@@ -64,12 +65,14 @@
 import '../../assets/style.css';
 import '../../assets/details.css';
 import CarouselComponent from "~/components/CarouselComponent.vue";
+import BreadCrumb from '~/components/BreadCrumb.vue';
 
 
 export default {
   name: 'EventsPage',
   components: {
     CarouselComponent,
+    BreadCrumb,
   },
   data() {
     return {}
@@ -77,12 +80,19 @@ export default {
   async asyncData({ route, $axios }) {
     const { id } = route.params;
     const { data } = await $axios.get(`api/events/event/${id}`);
-    console.log(data)
     return {
       event: data,
+      crumbs: [
+        { name: "Home", path: "/" },
+        { name: "Events", path: "/events" },
+        { name: data.name, path: "" },
+      ],
     }
   },
   methods: {
+    selected(crumbPath) {
+      this.$router.push(crumbPath);
+    },
     getDateTime(datetime) {
       var date = new Date(datetime);
       var d =
