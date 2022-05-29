@@ -1,13 +1,14 @@
 <template>
   <div id="page" class="container-fluid">
     <div class="container">
-      <div class="text-center display-4 mt-4">{{name}}</div>
+      <div class="text-center display-4 mt-4">{{ name }}</div>
       <p class="text-center text-muted mb-3">
         View all the services under the
-        <strong class="text-italic">{{name}}</strong>
+        <strong class="text-italic">{{ name }}</strong>
         category
       </p>
       <hr />
+      <bread-crumb :crumbs="crumbs" @selected="selected" />
       <!-- end of title -->
       <div class="row row-cols-1 row-cols-md-3 g-4 mt-3 pt-3">
         <div
@@ -20,22 +21,26 @@
               <p class="card-title text-center lead">
                 <i :class="icon"></i>
               </p>
-              <h3 class="card-title text-opacity-75 text-center text-black">{{ item.name }}</h3>
+              <h3 class="card-title text-opacity-75 text-center text-black">
+                {{ item.name }}
+              </h3>
               <p class="text-center">
                 Address:
-                <span class="text-muted">{{item.address}}</span>
+                <span class="text-muted">{{ item.address }}</span>
                 <br />Telephone:
-                <span class="text-muted">{{item.telephone}}</span>
+                <span class="text-muted">{{ item.telephone }}</span>
               </p>
               <p class="text-center">
                 <i class="fa fa-lg fa-clock"></i>
               </p>
               <p
-                v-for="(opening, openingIndex) of item.op_hours "
+                v-for="(opening, openingIndex) of item.op_hours"
                 :key="`${name}${openingIndex}`"
                 class="text-muted d-inline"
               >
-                {{opening.day}}&nbsp;{{opening.s_hour.split(":", 2).join(":")}}-{{opening.c_hour.split(":", 2).join(":")}}
+                {{ opening.day }}&nbsp;{{
+                  opening.s_hour.split(":", 2).join(":")
+                }}-{{ opening.c_hour.split(":", 2).join(":") }}
                 <br />
               </p>
             </div>
@@ -66,26 +71,34 @@ h3 {
 </style>
 
 <script>
+import BreadCrumb from '~/components/BreadCrumb.vue';
 // import CustomPage from '~/components/CustomPage.vue'
 import CarouselComponent from "~/components/CarouselComponent.vue";
 
-
 export default {
-  name: 'ServicePage',
-  components: {
-  },
+  name: "ServicePage",
+  components: {BreadCrumb},
   data() {
-    return {}
+    return {};
+  },
+  methods: {
+    selected(crumbPath) {
+      this.$router.push(crumbPath);
+    },
   },
   async asyncData({ route, $axios }) {
     const { id } = route.params;
-     const { data } = await $axios.get(`api/services/${id}`);
-     console.log(data)
+    const { data } = await $axios.get(`api/services/${id}`);
     return {
-      services : data.services,
+      services: data.services,
       name: data.name,
-      icon: data.icon
-    }
-  }
+      icon: data.icon,
+      crumbs: [
+        { name: "Home", path: "/" },
+        { name: "Services", path: "/services" },
+        { name: data.name, path: "" },
+      ],
+    };
+  },
 };
 </script>

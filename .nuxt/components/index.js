@@ -1,3 +1,4 @@
+export { default as BreadCrumb } from '../../components/BreadCrumb.vue'
 export { default as CardComponent } from '../../components/CardComponent.vue'
 export { default as CarouselComponent } from '../../components/CarouselComponent.vue'
 export { default as CustomPage } from '../../components/CustomPage.vue'

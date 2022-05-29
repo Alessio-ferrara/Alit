@@ -19,6 +19,7 @@
   </div>-->
   <div>
     <carousel-component :images="itinerary.poi_images" />
+    <bread-crumb :crumbs="crumbs" @selected="selected" />
     <div id="details" class="container mt-4">
       <h1 class="mt-2 mb-2">
         {{ itinerary.name }}
@@ -72,22 +73,33 @@ import "../../assets/style.css";
 import "../../assets/details.css";
 import ItineraryComponent from "~/components/ItineraryComponent";
 import CarouselComponent from "~/components/CarouselComponent.vue";
+import BreadCrumb from '~/components/BreadCrumb.vue';
 
 export default {
   name: "ItineraryPage",
   components: {
     ItineraryComponent,
     CarouselComponent,
+    BreadCrumb,
   },
   data() {
     return {};
   },
+  methods: {
+    selected(crumbPath) {
+      this.$router.push(crumbPath);
+    },
+  },
   async asyncData({ route, $axios }) {
     const { id } = route.params;
     const { data } = await $axios.get(`api/itineraries/${id}`);
-    console.log(data);
     return {
       itinerary: data,
+      crumbs: [
+        { name: "Home", path: "/" },
+        { name: "Itineraries", path: "/itineraries" },
+        { name: data.name, path: "" },
+      ],
     };
   },
 };
