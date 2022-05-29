@@ -1,8 +1,9 @@
 <template>
   <div>
     <carousel-component :images="poi.poi_images" />
-    <bread-crumb :crumbs="crumbs" @selected="selected" />
+
     <div id="details" class="container mt-4">
+      <bread-crumb :crumbs="crumbs" @selected="selected" />
       <h1 class="mt-2 d-flex align-items-center">
         {{ poi.name }}
         &nbsp;
@@ -10,7 +11,7 @@
       </h1>
       <!-- <div class="label inline text-danger">{{ poi.poi_type.name }}</div> -->
       <hr />
-      
+
       <div class="row">
         <!-- description -->
         <div class="col-md-6 col-sm-12 mt-3">
@@ -53,7 +54,7 @@
 </template>
 
 <style scoped>
-.badge{
+.badge {
   border-radius: 10px;
 }
 </style>
