@@ -1,22 +1,23 @@
-const  Sequelize  = require("sequelize")
+const Sequelize = require("sequelize");
+const pg = require("pg");
 
-
+let database;
 // Development
-// const database = new Sequelize("Alit", "alit_admin", "alit123", {
-//     host:"localhost",
-//     dialect: "postgres"
-// });
-
-
-
-
+if (process.env.NODE_ENV == "development") {
+  database = new Sequelize("Alit", "alit_admin", "alit123", {
+    host: "localhost",
+    dialect: "postgres",
+  });
+}
 
 // Production (use this code when deploying to production in Heroku)
-const pg = require('pg')
-pg.defaults.ssl = true
-const database = new Sequelize(process.env.DATABASE_URL, {
-  ssl: true,
-  dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
-})
+
+if (process.env.NODE_ENV == "production") {
+  pg.defaults.ssl = true;
+  database = new Sequelize(process.env.DATABASE_URL, {
+    ssl: true,
+    dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
+  });
+}
 
 module.exports = database;
