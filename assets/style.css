@@ -4,6 +4,13 @@
 #page{
   margin-top: 5vh;
 }
+mark{
+  background-color: rgb(255, 235, 235);
+  border-radius: 10px;
+}
+.badge{
+  border-radius: 10px;
+}
 
 hr.white-horizontal{
     background: white;

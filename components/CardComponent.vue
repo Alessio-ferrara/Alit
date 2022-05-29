@@ -16,7 +16,7 @@
             &nbsp;
           </span>
           <br />
-          {{item.description | truncate(300)}}
+          {{item.description | truncate(200)}}
         </p>
       </div>
     </div>
@@ -34,7 +34,7 @@
             getDateTime(item.datetime)
           }}</span>
           <br />
-          {{ item.description | truncate(300) }}
+          {{ item.description | truncate(200) }}
         </p>
       </div>
     </div>

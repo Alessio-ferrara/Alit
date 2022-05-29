@@ -9,6 +9,7 @@
       <p
         class="text-center text-muted mb-3"
       >Page to see all the services related to a specific group</p>
+      <bread-crumb :crumbs="crumbs" @selected="selected" />
       <grid-cards :items="services" :name="'service'" />
     </div>
   </div>
@@ -21,24 +22,32 @@
 </style>
 
 <script>
+import BreadCrumb from '~/components/BreadCrumb.vue';
 // import CustomPage from '~/components/CustomPage.vue'
 import '../assets/style.css';
-import GridCards from "../components/GridCards.vue"
+import GridCards from '../components/GridCards.vue';
 
 export default {
+  components: { GridCards, BreadCrumb },
   name: 'ServicesPage',
-  // components: {
-  //   CustomPage,
-  // },
   data() {
     return {}
+  },
+  methods: {
+    selected(crumbPath) {
+      this.$router.push(crumbPath);
+    },
   },
   async asyncData({ $axios }) {
     // get all the data from the backend and pass it to the component in order to be printed
     const { data } = await $axios.get('api/services/');
     console.log(data)
     return {
-      services : data
+      services : data,
+      crumbs: [
+        { name: "Home", path: "/" },
+        { name: "Services", path: "" },
+      ],
     }
   },
 }
