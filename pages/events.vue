@@ -1,11 +1,19 @@
 <template>
   <div id="page" class="container-fluid">
     <div class="container">
-      <events-list/>
-      <p
-        class="text-center text-muted mb-3"
-      >Page to see all the events related to a specific category</p>
-      <grid-cards :items="events" :name="'event'"/>
+      <events-list :changeSelection="changeSelection" />
+      <p class="text-center text-muted mb-3">
+        Page to see all the events related to a specific category
+      </p>
+      <grid-cards
+        v-if="events[selection].length"
+        :items="events[selection]"
+        :name="'event'"
+      />
+      <!-- We should change this to be styled better -->
+      <p v-else class="text-center text-muted mb-3">
+        There are no events for the specified filter! 
+      </p>
     </div>
   </div>
 </template>
@@ -18,28 +26,32 @@
 
 <script>
 // import CustomPage from '~/components/CustomPage.vue'
-import '../assets/style.css';
-import EventsList from "../components/EventsList.vue"
-import GridCards from "../components/GridCards.vue"
-
+import "../assets/style.css";
+import EventsList from "../components/EventsList.vue";
+import GridCards from "../components/GridCards.vue";
 
 export default {
-  name: 'EventsPage',
+  name: "EventsPage",
   components: {
     GridCards,
     EventsList,
   },
   data() {
     return {
-      // events: data
-    }
+      selection: "all_events",
+    };
   },
   async asyncData({ $axios }) {
     // get all the data from the backend and pass it to the component in order to be printed
-    const { data } = await $axios.get('api/events/list');
+    const { data } = await $axios.get("api/events/");
     return {
-      events : data
-    }
+      events: data,
+    };
   },
-}
+  methods: {
+    changeSelection: function (choose) {
+      this.selection = choose;
+    },
+  },
+};
 </script>

@@ -1,41 +1,31 @@
-
 const HttpError = require("../http-error");
 
-const Event= require("../models").event;
+const Event = require("../models").event;
 const EventInfo = async (req, res, next) => {
   const { event_id } = req.params;
   try {
     const event_info = await Event.getInfo(event_id);
     res.status(200).json(event_info);
   } catch (err) {
-    return next(
-      new HttpError(err, 500)
-    );
+    return next(new HttpError(err, 500));
   }
 };
 
 const GetEvents = async (req, res, next) => {
-  const { type } = req.params;
   try {
-    let events;
-    if (type === "summer") {
-      events = await Event.getSummerEvents();
-    }
-    if (type === "winter") {
-      events = await Event.getWinterEvents();
-    }
-    if (type === "year") {
-      events = await Event.getYearEvents();
-    }
-    if (!type) {
-      events = await Event.getAllEvents();
-    }
+    let events = await Event.getAllEvents();
+    let summer_events = await Event.getSummerEvents();
+    let winter_events = await Event.getWinterEvents();
+    let year_events = await Event.getYearEvents();
 
-    res.status(200).json(events);
+    const all_events = {};
+    all_events["summer_events"] = summer_events;
+    all_events["winter_events"] = winter_events;
+    all_events["year_events"] = year_events;
+    all_events["all_events"] = events;
+    res.status(200).json(all_events);
   } catch (err) {
-    return next(
-      new HttpError(err, 500)
-    );
+    return next(new HttpError(err, 500));
   }
 };
 

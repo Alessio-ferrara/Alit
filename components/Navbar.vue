@@ -4,13 +4,20 @@
     <!-- Container wrapper -->
     <div class="container">
       <!-- Navbar brand -->
-      <a class="navbar-brand  mt-2 mt-lg-0" href="/">
-        <img src="../static/icon.png" height="10px" width="15px" alt="Dua Tiranen" loading="lazy" />
+      <a class="navbar-brand mt-2 mt-lg-0" href="/">
+        <img
+          src="../static/icon.png"
+          height="10px"
+          width="15px"
+          alt="Dua Tiranen"
+          loading="lazy"
+        />
         <ul class="navbar-nav me-auto mb-2 ml-2 mb-lg-0">
           <a
             class="nav-link text-darnger mb-2 font-weight-bold pl-3 pr-3"
             href="/"
-          >&nbsp;Dua Tiranën&nbsp;</a>
+            >&nbsp;Dua Tiranën&nbsp;</a
+          >
         </ul>
       </a>
       <!-- <a class="navbar-brand mt-2 mt-lg-0" href="#">
@@ -42,7 +49,9 @@
             :key="`navItem${navItemIndex}`"
             class="nav-item"
           >
-            <nuxt-link :to="navItem.path" class="nav-link">{{ navItem.name }}</nuxt-link>
+            <nuxt-link :to="navItem.path" class="nav-link">{{
+              navItem.name
+            }}</nuxt-link>
           </li>
         </ul>
       </div>
@@ -73,36 +82,36 @@
 
 <script>
 export default {
-  name: 'Nav_bar',
+  name: "Nav_bar",
   data() {
     return {
       headerList: [
         {
-          name: 'Services',
-          path: '/services',
+          name: "Points of Interest",
+          path: "/pois",
         },
         {
-          name: 'Events',
-          path: '/events',
+          name: "Events",
+          path: "/events",
         },
         {
-          name: 'Points of Interest',
-          path: '/pois',
+          name: "Itineraries",
+          path: "/itineraries",
         },
         {
-          name: 'Itineraries',
-          path: '/itineraries',
+          name: "Services",
+          path: "/services",
         },
         {
-          name: 'Contacts',
-          path: '/contacts',
+          name: "Contacts",
+          path: "/contacts",
         },
         {
-          name: 'About us',
-          path: '/about_us',
+          name: "About us",
+          path: "/about_us",
         },
       ],
-    }
+    };
   },
-}
+};
 </script>

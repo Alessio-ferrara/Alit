@@ -5,7 +5,7 @@
             height="300"
             frameborder="0"
             style="border:0"
-            v-bind:src="'https://www.google.com/maps/embed/v1/view?key=AIzaSyDX_OSdMYc79SeKrOLBh7VqZ5_n-mdexew&center=' + lat + ',' + lang+ '&zoom=14'"
+            v-bind:src="'https://www.google.com/maps/embed/v1/place?key=AIzaSyDX_OSdMYc79SeKrOLBh7VqZ5_n-mdexew&q=' + lat + ',' + lang+ '&zoom=14'"
             allowfullscreen
           ></iframe>
   </div>
