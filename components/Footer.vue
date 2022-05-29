@@ -79,7 +79,7 @@
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 1)">
       © 2022 Copyright:
-      <a class="text-danger" href="/about">Alit Group</a>
+      <a class="text-danger" href="/about_us">Alit Group</a>
       <!-- <a class="text-danger" href="/about">Alit Group </a>© -->
     </div>
     <!-- Copyright -->

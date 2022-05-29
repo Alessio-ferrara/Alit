@@ -47,6 +47,12 @@
   </div>
 </template>
 
+<style scoped>
+.badge{
+  border-radius: 10px;
+}
+</style>
+
 <script>
 // import CustomPage from '~/components/CustomPage.vue'
 import "../../assets/style.css";

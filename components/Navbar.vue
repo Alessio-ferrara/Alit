@@ -20,13 +20,6 @@
           >
         </ul>
       </a>
-      <!-- <a class="navbar-brand mt-2 mt-lg-0" href="#">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item btn-danger">
-            <a class="nav-link text-dark font-weight-bold pl-3 pr-3" href="/">&nbsp;alit&nbsp;</a>
-          </li>
-        </ul>
-      </a>-->
       <!-- Toggle button -->
       <button
         class="navbar-toggler"
@@ -42,8 +35,7 @@
 
       <!-- Collapsible wrapper -->
       <div class="collapse navbar-collapse" id="navbarButtonsExample">
-        <ul class="navbar-nav me-auto mb-2 ml-2 mb-lg-0">
-          <!-- list of items in headerList to display in the navbar -->
+        <ul class="navbar-nav me-auto mb-2 ml-2 mb-lg-0 text-uppercase">
           <li
             v-for="(navItem, navItemIndex) of headerList"
             :key="`navItem${navItemIndex}`"
@@ -66,6 +58,7 @@
 .navbar-brand {
   font-weight: lighter !important;
   font-size: 1.5em;
+  padding-top: 6px;
   /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
 }
 .navbar-brand .btn-danger:hover {
@@ -76,7 +69,7 @@
 }
 .logo {
   color: white;
-  font-size: 32px;
+  /* font-size: 32px; */
 }
 </style>
 

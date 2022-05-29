@@ -15,9 +15,6 @@
             {{event.description}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit laborum nobis aspernatur ad ullam sed, vitae repudiandae velit magnam eos quos, perspiciatis aliquam dolores odit itaque et totam nulla saepe?
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolor iure rerum vel enim id ab praesentium, suscipit laboriosam incidunt modi assumenda a asperiores veritatis sapiente impedit dolores quia necessitatibus.
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt assumenda culpa aliquid accusantium officia adipisci sit consequuntur, neque iste cupiditate magni nobis tempore quae recusandae, dignissimos vitae soluta facere consequatur!
-            <div class="collapse mt-3 text-muted" id="moreDetails">
-              {{event.info}}
-            </div>
           </div>
           <br />
 
@@ -31,26 +28,20 @@
               <strong>{{getDateTime(event.datetime)}}</strong>
             </li>
             <li>
-              <!-- diventerà nuxt link to poi -->
-              <i class="fa-solid fa-location-dot"></i>
-              {{event.point_of_interest.name}}
+              <nuxt-link class="text-danger text-decoration-underline" :to="`/poi/${event.poi_id}`">
+                <!-- diventerà nuxt link to poi -->
+                <i class="fa-solid fa-location-dot"></i>
+                  <!-- <mark> -->
+                {{event.point_of_interest.name}}
+                <!-- </mark> -->
+              </nuxt-link>
             </li>
           </ul>
         </div>
-        
         <div class="row">
-          <div class="col-md-8 col-sm-12">
-            <a
-              class="col-lg-3 btn btn-danger"
-              data-mdb-toggle="collapse"
-              href="#moreDetails"
-              role="button"
-              aria-expanded="false"
-              aria-controls="moreDetails"
-            >
-              <i class="fa fa-circle-info"></i>
-              Show more details
-            </a>
+          <div class="mt-3 text-muted lead">
+            <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nihil quaerat, voluptas quo quam non quasi nobis magnam deleniti, odit dicta maxime, error veniam accusamus! Quo eveniet ex ullam aliquid. -->
+            {{event.info}}
           </div>
         </div>
       </div>
