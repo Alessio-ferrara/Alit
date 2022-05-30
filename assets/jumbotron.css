@@ -16,10 +16,6 @@ img {
     background-size: cover;
     min-height: 100vh;
   }
-  .mask .text-white {
-    margin-left: 5% !important;
-    margin-top: 15% !important;
-  }
   .container-fluid {
     padding-top: 55px;
   }

@@ -9,7 +9,7 @@
     >
       <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
         <div class="d-flex h-100">
-          <div class="text-white text-left mt-3 ml-3 pt-3">
+          <div class="text-white mt-3 ml-3 pt-3">
             <h1 class="display-1">Tirana</h1>
             <hr />
             <p class="lead">Discover more about the gorgeous capital city of Albania.</p>
@@ -27,7 +27,6 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolor iure rerum vel enim id ab praesentium, suscipit laboriosam incidunt modi assumenda a asperiores veritatis sapiente impedit dolores quia necessitatibus.
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt assumenda culpa aliquid accusantium officia adipisci sit consequuntur, neque iste cupiditate magni nobis tempore quae recusandae, dignissimos vitae soluta facere consequatur!
           </div>
-          
           <!-- Collapsed content -->
           <div
             class="collapse mt-3"
@@ -43,6 +42,16 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+.text-white {
+  padding-top: 40px!important;
+}
+.mask .text-white {
+    margin-left:  0;
+    margin-top: 15% !important;
+  }
+</style>
 
 
 <script>

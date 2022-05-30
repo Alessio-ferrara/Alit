@@ -24,6 +24,13 @@
   </span>
 </template>
 
+<style scoped>
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 20%), 0 4px 6px -2px rgb(0 0 0 / 15%) !important;
+}
+</style>
+
 <script>
 import ItineraryComponent from "~/components/ItineraryComponent";
 import "../assets/itinerary.css";
