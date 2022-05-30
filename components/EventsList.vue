@@ -37,6 +37,9 @@
   margin-right: 1%;
   margin-left: 1%;
 }
+img {
+  height: 300px;
+}
 </style>
 
 <script>
