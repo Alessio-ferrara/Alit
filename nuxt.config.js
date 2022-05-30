@@ -88,13 +88,4 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-
-  webpack: (config) => {
-    config.optimization.splitChunks.cacheGroups = {
-      common: {
-        name: "common",
-        chunks: "all",
-      },
-    };
-  },
 };
