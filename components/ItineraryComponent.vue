@@ -62,11 +62,11 @@ name: "ItineraryComponent",
       required: false,
     },
     poi_start: {
-      type: Array,
+      type: Object,
       required: true,
     },
     poi_end: {
-      type: Array,
+      type: Object,
       required: true,
     },
     name: {

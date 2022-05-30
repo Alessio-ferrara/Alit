@@ -61,6 +61,9 @@
   text-align: center;
   color: white;
 }
+img {
+  height: 300px;
+}
 .centered {
   position: absolute;
   top: 50%;

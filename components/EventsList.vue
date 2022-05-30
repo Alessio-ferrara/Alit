@@ -1,7 +1,7 @@
 <template>
   <span>
     <div class="text-center mt-4 pt-3">
-      <p class="text-center text-muted lead"> 
+      <p class="text-center text-muted lead">
         Explore different categories of events...
         </p>
     </div>

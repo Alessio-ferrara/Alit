@@ -7,8 +7,8 @@
       <a class="navbar-brand mt-2 mt-lg-0" href="/">
         <img
           src="../static/icon.png"
-          height="10px"
-          width="15px"
+          height="20px"
+          width="40px"
           alt="Dua Tiranen"
           loading="lazy"
         />
@@ -71,6 +71,11 @@
   color: white;
   /* font-size: 32px; */
 }
+.navbar-brand img { 
+    /* for the navbar brand logo */
+    height: 65px !important;
+    width: 65px !important;
+  }
 </style>
 
 <script>
