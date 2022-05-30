@@ -57,8 +57,8 @@ export default {
   },
   data(){
     // tirana coordinates
-  const lat=  41.327953
-  const lng=  19.819025
+  const lat=  "41.327953"
+  const lng=  "19.819025"
   return{
     lat,
     lng
