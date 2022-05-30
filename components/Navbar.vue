@@ -5,13 +5,7 @@
     <div class="container">
       <!-- Navbar brand -->
       <a class="navbar-brand mt-2 mt-lg-0" href="/">
-        <img
-          src="../static/icon.png"
-          height="10px"
-          width="15px"
-          alt="Dua Tiranen"
-          loading="lazy"
-        />
+        <img src="../static/icon.png" alt="Dua Tiranen" loading="lazy" />
         <ul class="navbar-nav me-auto mb-2 ml-2 mb-lg-0">
           <a
             class="nav-link text-darnger mb-2 font-weight-bold pl-3 pr-3"
