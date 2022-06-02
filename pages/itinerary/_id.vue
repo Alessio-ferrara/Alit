@@ -1,22 +1,4 @@
 <template>
-  <!-- <div class="card w-50 container-fluid mt-5 pt-5 ">
-    <div class="card-body row border-3">
-      <div class="row">
-      <h5 class="card-title lead text-black fw-semibold">{{ itinerary.name }}</h5>
-        <hr />
-        <div class="row">
-          <div class="col-md-4">
-            <span class="badge bg-danger text-white p-2 mb-3">{{itinerary.duration }} hours</span>
-            <itinerary-component :items="itinerary.point_of_interests" :poi_start="itinerary.poi_start"  :poi_end="itinerary.poi_end" :name="'it'" />
-          </div>
-        <div id="itinerary" class="col-md-8 mt-5 pt-5">
-          <div class="lead text-justify">
-            {{itinerary.description}}</div>
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>-->
   <div>
     <carousel-component :images="itinerary.poi_images" />
     <div id="details" class="container mt-4">
@@ -50,9 +32,11 @@
             :name="'it'"
           />
           <div class="container">
-            <p
-              class="text-center text-muted fs-6 mt-2 "
-            >Click on a point of interest to get additional informations</p>
+            <p class="text-center text-muted fs-6 mt-2">
+              <i class="fa-solid fa-hand-pointer"></i>
+              <br/>
+              Click on a point of interest to get additional informations
+            </p>
           </div>
         </div>
       </div>

@@ -12,10 +12,17 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
+<<<<<<< HEAD
 import nuxt_plugin_plugin_233fb500 from 'nuxt_plugin_plugin_233fb500' // Source: .\\components\\plugin.js (mode: 'all')
 import nuxt_plugin_axios_ccf84cba from 'nuxt_plugin_axios_ccf84cba' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_nuxtgooglemaps_5451c754 from 'nuxt_plugin_nuxtgooglemaps_5451c754' // Source: .\\nuxt-google-maps.js (mode: 'all')
 import nuxt_plugin_truncate_7b8e745d from 'nuxt_plugin_truncate_7b8e745d' // Source: ..\\plugins\\truncate.js (mode: 'all')
+=======
+import nuxt_plugin_plugin_4181bc1a from 'nuxt_plugin_plugin_4181bc1a' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_axios_f5cc83a0 from 'nuxt_plugin_axios_f5cc83a0' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_nuxtgooglemaps_3dbd78a7 from 'nuxt_plugin_nuxtgooglemaps_3dbd78a7' // Source: ./nuxt-google-maps.js (mode: 'all')
+import nuxt_plugin_truncate_7b8e745d from 'nuxt_plugin_truncate_7b8e745d' // Source: ../plugins/truncate.js (mode: 'all')
+>>>>>>> 088047ccb237daf92ecb33a8ed5565b90e81b377
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -179,6 +186,7 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
+<<<<<<< HEAD
   if (typeof nuxt_plugin_plugin_233fb500 === 'function') {
     await nuxt_plugin_plugin_233fb500(app.context, inject)
   }
@@ -189,6 +197,18 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_nuxtgooglemaps_5451c754 === 'function') {
     await nuxt_plugin_nuxtgooglemaps_5451c754(app.context, inject)
+=======
+  if (typeof nuxt_plugin_plugin_4181bc1a === 'function') {
+    await nuxt_plugin_plugin_4181bc1a(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_axios_f5cc83a0 === 'function') {
+    await nuxt_plugin_axios_f5cc83a0(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_nuxtgooglemaps_3dbd78a7 === 'function') {
+    await nuxt_plugin_nuxtgooglemaps_3dbd78a7(app.context, inject)
+>>>>>>> 088047ccb237daf92ecb33a8ed5565b90e81b377
   }
 
   if (typeof nuxt_plugin_truncate_7b8e745d === 'function') {
