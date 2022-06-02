@@ -22,7 +22,14 @@ module.exports = {
          text: "Tirana is the capital of Albania and also the main economic , social and cultural center of the country. Tirana. A Dynamic Capital City. Tirana is the capital of Albania and also the main economic , social and cultural center of the country. Tirana is undoubtedly one of the liveliest and most transforming cities in Southeast Europe. A city that seemingly never sleeps, full of friendly faces and featuring surprises hidden around every corner in Tirana and its surroundings.",
          createdAt: new Date(),
          updatedAt: new Date(),
-       }
+       },
+       {
+        page: 'contact_us',
+        field: 'title',
+        text: "Contact Us",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      }
    ], {});
   },
 

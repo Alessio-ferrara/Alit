@@ -8,6 +8,9 @@
   "CarouselComponent": {
     "description": "Auto imported from components/CarouselComponent.vue"
   },
+  "ContactForm": {
+    "description": "Auto imported from components/ContactForm.vue"
+  },
   "CustomPage": {
     "description": "Auto imported from components/CustomPage.vue"
   },

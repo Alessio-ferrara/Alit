@@ -102,7 +102,7 @@ export default {
         },
         {
           name: "Contacts",
-          path: "/contacts",
+          path: "/contact_us",
         },
         {
           name: "About us",
