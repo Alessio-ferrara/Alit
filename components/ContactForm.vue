@@ -1,63 +1,62 @@
 <template>
-  <div>
-    <b-form @submit="onSubmit" @reset="onReset" v-if="show">
-      <b-form-group id="input-group-1" label="Email address:" label-for="input-1">
-        <b-form-input
-          id="input-1"
-          v-model="form.email"
-          type="email"
-          placeholder="Enter your email"
-          required
-        ></b-form-input>
-      </b-form-group>
 
-      <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
-        <b-form-textarea
-            id="textarea"
-            v-model="text"
-            placeholder="Enter your message here..."
-            rows="3"
-            max-rows="6"
-        ></b-form-textarea>
-        <!-- <pre class="mt-3 mb-0">{{ text }}</pre> -->
-      </b-form-group>
+  <div class="mb-3">
 
-      <b-button type="submit" variant="primary">Submit</b-button>
-      <b-button type="reset" variant="danger">Reset</b-button>
-    </b-form>
-    <b-card class="mt-3" header="Form Data Result">
-      <pre class="m-0">{{ form }}</pre>
-    </b-card>
+    <form class="input-field" @submit.prevent="handleSubmit" @reset="onReset">
+      <div class="form-group">
+        <input placeholder="Full name" id="name" type="text"  v-model="name" class="form-control" required />
+      </div>
+
+      <div class="form-group">
+        <input placeholder="Email" id="email" type="email" v-model="email" class="form-control" required />
+      </div>
+      
+      <div class="form-group">
+        <input placeholder="Subject" id="subject" type="text" v-model="subject" class="form-control" required />
+      </div>
+      
+      <div class="form-group">
+        <textarea placeholder="Message" id="message" v-model="message" class="form-control" rows="4" max-rows="10" required ></textarea>
+      </div>
+      
+      <button type="submit" value="submit" class="btn btn-primary"> Submit </button>
+      <button type="reset" value="reset" class="btn btn-danger"> Reset </button>
+    </form>
+
   </div>
 </template>
 
+
+
 <script>
+
+  import axios from 'axios';
+
   export default {
     name: "ContactForm",
     data() {
       return {
-        form: {
+          name: '',
           email: '',
-          text: '',
-        },
-        show: true
+          subject: '',
+          message: ''
       }
     },
     methods: {
       onSubmit(event) {
-        event.preventDefault()
-        alert(JSON.stringify(this.form))
+        axios.post("/api/contact-us", {
+        name: this.name,
+        email: this.email,
+        subject: this.subject,
+        message: this.message
+      })
       },
       onReset(event) {
         event.preventDefault()
-        // Reset our form values
-        this.form.email = ''
-        this.form.text = ''
-        // Trick to reset/clear native browser form validation state
-        this.show = false
-        this.$nextTick(() => {
-          this.show = true
-        })
+        this.name = ''
+        this.email = ''
+        this.subject = ''
+        this.message = ''
       }
     }
   }

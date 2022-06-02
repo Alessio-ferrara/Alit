@@ -1,16 +1,15 @@
 const HttpError = require("../http-error");
 const nodemailer = require("nodemailer");
-const mailGun = require("nodemailer-mailgun-transport");
 
 const sendEmail = async (req, res, next) => {
-  const { name, email, subject, text } = req.params;
+  const { name, email, subject, message } = req.params;
   try {
-    const auth = {
-      auth: {
-        api_key: "495a404e11d21220d1d1d2286744bf92-27a562f9-004fcdc5",
-        domain: "sandbox139b35b612d84fa7be9374826ab69419.mailgun.org",
-      },
-    };
+  //   const auth = {
+  //     auth: {
+  //       api_key: "495a404e11d21220d1d1d2286744bf92-27a562f9-004fcdc5",
+  //       domain: "sandbox139b35b612d84fa7be9374826ab69419.mailgun.org",
+  //     },
+  //   };
 
     var transporter = nodemailer.createTransport({
         host: "smtp-mail.outlook.com", // hostname
@@ -26,10 +25,10 @@ const sendEmail = async (req, res, next) => {
     });
 
     const mailOptions = {
-      from: '"Alit " <duatiranen.alit@outlook.com>',
+      from: email,
       to: "duatiranen.alit@outlook.com",
-      subject: 'Hello ', // Subject line
-      text: 'Hello world ', // plaintext body
+      subject: subject,
+      text: message,
     };
 
     transporter.sendMail(mailOptions, function(error, info){
