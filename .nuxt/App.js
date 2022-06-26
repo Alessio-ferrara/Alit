@@ -6,8 +6,8 @@ import NuxtError from './components/nuxt-error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import _6f6c098b from '..\\layouts\\default.vue'
-import _77430317 from '..\\layouts\\empty.vue'
+import _6f6c098b from '../layouts/default.vue'
+import _77430317 from '../layouts/empty.vue'
 
 const layouts = { "_default": sanitizeComponent(_6f6c098b),"_empty": sanitizeComponent(_77430317) }
 
