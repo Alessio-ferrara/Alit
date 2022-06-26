@@ -1,6 +1,6 @@
 <template>
   <span>
-    <div class="row row-cols-1 g-4 mt-4 m-lg-auto pt-3 w-75 ">
+    <div class="container row row-cols-1 g-4 mt-4 m-lg-auto pt-3 w-100 ">
       <!-- v-for in the col element to display all the events fetched -->
       <div
           v-for="(item, itemIndex) of items"

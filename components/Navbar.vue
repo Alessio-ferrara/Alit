@@ -35,7 +35,7 @@
 
       <!-- Collapsible wrapper -->
       <div class="collapse navbar-collapse" id="navbarButtonsExample">
-        <ul class="navbar-nav me-auto mb-2 ml-2 mb-lg-0 text-uppercase">
+        <ul class="navbar-nav me-auto mb-2 ml-2 mb-lg-0">
           <li
             v-for="(navItem, navItemIndex) of headerList"
             :key="`navItem${navItemIndex}`"
@@ -102,7 +102,7 @@ export default {
         },
         {
           name: "Contacts",
-          path: "/contacts",
+          path: "/contact_us",
         },
         {
           name: "About us",

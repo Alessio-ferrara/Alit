@@ -12,12 +12,14 @@ const poisRoutes = require("./routes/pois-route");
 const itinerariesRoutes = require("./routes/itineraries-route");
 const servicesRoutes = require("./routes/services-route");
 const contentRoutes = require("./routes/content-route");
+const contactRoutes = require("./routes/contact-route");
 
 app.use("/events", eventsRoutes);
 app.use("/pois", poisRoutes);
 app.use("/itineraries", itinerariesRoutes);
 app.use("/services", servicesRoutes);
 app.use("/content", contentRoutes);
+app.use("/contact-us", contactRoutes);
 
 app.use((req, res, next) => {
   const error = new HttpError("Route not found", 404);

@@ -4,17 +4,18 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _0936ab0a = () => interopDefault(import('../pages/about_us.vue' /* webpackChunkName: "pages/about_us" */))
-const _b0fd6178 = () => interopDefault(import('../pages/events.vue' /* webpackChunkName: "pages/events" */))
-const _49cdc4ce = () => interopDefault(import('../pages/itineraries.vue' /* webpackChunkName: "pages/itineraries" */))
-const _0011bd09 = () => interopDefault(import('../pages/list.vue' /* webpackChunkName: "pages/list" */))
-const _68457358 = () => interopDefault(import('../pages/pois.vue' /* webpackChunkName: "pages/pois" */))
-const _1160c96e = () => interopDefault(import('../pages/services.vue' /* webpackChunkName: "pages/services" */))
-const _31f2dfea = () => interopDefault(import('../pages/event/_id.vue' /* webpackChunkName: "pages/event/_id" */))
-const _ac6a224a = () => interopDefault(import('../pages/itinerary/_id.vue' /* webpackChunkName: "pages/itinerary/_id" */))
-const _5c06ceda = () => interopDefault(import('../pages/poi/_id.vue' /* webpackChunkName: "pages/poi/_id" */))
-const _49f359c5 = () => interopDefault(import('../pages/service/_id.vue' /* webpackChunkName: "pages/service/_id" */))
-const _1d9a63f7 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _1ededf8f = () => interopDefault(import('..\\pages\\about_us.vue' /* webpackChunkName: "pages/about_us" */))
+const _451025dc = () => interopDefault(import('..\\pages\\contact_us.vue' /* webpackChunkName: "pages/contact_us" */))
+const _546db958 = () => interopDefault(import('..\\pages\\events.vue' /* webpackChunkName: "pages/events" */))
+const _5796f18c = () => interopDefault(import('..\\pages\\itineraries.vue' /* webpackChunkName: "pages/itineraries" */))
+const _310cc7c6 = () => interopDefault(import('..\\pages\\list.vue' /* webpackChunkName: "pages/list" */))
+const _9975b530 = () => interopDefault(import('..\\pages\\pois.vue' /* webpackChunkName: "pages/pois" */))
+const _1ac9d05d = () => interopDefault(import('..\\pages\\services.vue' /* webpackChunkName: "pages/services" */))
+const _0cf0851f = () => interopDefault(import('..\\pages\\event\\_id.vue' /* webpackChunkName: "pages/event/_id" */))
+const _4e942a4e = () => interopDefault(import('..\\pages\\itinerary\\_id.vue' /* webpackChunkName: "pages/itinerary/_id" */))
+const _1b13692f = () => interopDefault(import('..\\pages\\poi\\_id.vue' /* webpackChunkName: "pages/poi/_id" */))
+const _eca0dcb8 = () => interopDefault(import('..\\pages\\service\\_id.vue' /* webpackChunkName: "pages/service/_id" */))
+const _232e6763 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -29,47 +30,51 @@ export const routerOptions = {
 
   routes: [{
     path: "/about_us",
-    component: _0936ab0a,
+    component: _1ededf8f,
     name: "about_us"
   }, {
+    path: "/contact_us",
+    component: _451025dc,
+    name: "contact_us"
+  }, {
     path: "/events",
-    component: _b0fd6178,
+    component: _546db958,
     name: "events"
   }, {
     path: "/itineraries",
-    component: _49cdc4ce,
+    component: _5796f18c,
     name: "itineraries"
   }, {
     path: "/list",
-    component: _0011bd09,
+    component: _310cc7c6,
     name: "list"
   }, {
     path: "/pois",
-    component: _68457358,
+    component: _9975b530,
     name: "pois"
   }, {
     path: "/services",
-    component: _1160c96e,
+    component: _1ac9d05d,
     name: "services"
   }, {
     path: "/event/:id?",
-    component: _31f2dfea,
+    component: _0cf0851f,
     name: "event-id"
   }, {
     path: "/itinerary/:id?",
-    component: _ac6a224a,
+    component: _4e942a4e,
     name: "itinerary-id"
   }, {
     path: "/poi/:id?",
-    component: _5c06ceda,
+    component: _1b13692f,
     name: "poi-id"
   }, {
     path: "/service/:id?",
-    component: _49f359c5,
+    component: _eca0dcb8,
     name: "service-id"
   }, {
     path: "/",
-    component: _1d9a63f7,
+    component: _232e6763,
     name: "index"
   }],
 

@@ -9,6 +9,7 @@ You can directly use them in pages and other components without the need to impo
 - `<BreadCrumb>` | `<bread-crumb>` (components/BreadCrumb.vue)
 - `<CardComponent>` | `<card-component>` (components/CardComponent.vue)
 - `<CarouselComponent>` | `<carousel-component>` (components/CarouselComponent.vue)
+- `<ContactForm>` | `<contact-form>` (components/ContactForm.vue)
 - `<CustomPage>` | `<custom-page>` (components/CustomPage.vue)
 - `<EventsList>` | `<events-list>` (components/EventsList.vue)
 - `<Footer>` | `<footer>` (components/Footer.vue)
