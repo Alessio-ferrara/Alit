@@ -13,10 +13,8 @@
         <!-- description -->
         <div class="col-lg-8 col-sm-12">
           <div class="lead">
-            {{itinerary.description}}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit laborum nobis aspernatur ad ullam sed, vitae repudiandae velit magnam eos quos, perspiciatis aliquam dolores odit itaque et totam nulla saepe?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolor iure rerum vel enim id ab praesentium, suscipit laboriosam incidunt modi assumenda a asperiores veritatis sapiente impedit dolores quia necessitatibus.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt assumenda culpa aliquid accusantium officia adipisci sit consequuntur, neque iste cupiditate magni nobis tempore quae recusandae, dignissimos vitae soluta facere consequatur!
+            {{ itinerary.description }}
+
             <!-- <div class="collapse mt-3 text-muted" id="moreDetails">
               More details that will be displayed on the website after the click of the
               user.
@@ -34,7 +32,7 @@
           <div class="container">
             <p class="text-center text-muted fs-6 mt-2">
               <i class="fa-solid fa-hand-pointer"></i>
-              <br/>
+              <br />
               Click on a point of interest to get additional informations
             </p>
           </div>
@@ -61,7 +59,7 @@ import "../../assets/style.css";
 import "../../assets/details.css";
 import ItineraryComponent from "~/components/ItineraryComponent";
 import CarouselComponent from "~/components/CarouselComponent.vue";
-import BreadCrumb from '~/components/BreadCrumb.vue';
+import BreadCrumb from "~/components/BreadCrumb.vue";
 
 export default {
   name: "ItineraryPage",

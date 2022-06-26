@@ -4,53 +4,41 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert("itineraries", [
       {
-        name: "Itinerary",
-        duration: 3,
+        name: "Historical Itinerary",
+        duration: 5,
         description:
-          "Itinerary description Itinerary description Itinerary description " +
           "Itinerary description Itinerary description Itinerary description ",
+        short_description:"",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
-        name: "Itinerary",
+        name: "Communism Itinerary",
         duration: 4,
         description: "Itinerary description",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
-        name: "Itinerary",
+        name: "Nature Itinerary",
+        duration: 6,
+        description:
+          "Itinerary description Itinerary description Itinerary description ",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Youth Itinerary",
         duration: 3,
         description:
-          "Itinerary description Itinerary description Itinerary description " +
           "Itinerary description Itinerary description Itinerary description ",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
-        name: "Itinerary",
-        duration: 5,
-        description:
-          "Itinerary description Itinerary description Itinerary description " +
-          "Itinerary description Itinerary description Itinerary description ",
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      },
-      {
-        name: "Itinerary",
-        duration: 3,
-        description:
-          "Itinerary description Itinerary description Itinerary description " +
-          "Itinerary description Itinerary description Itinerary description ",
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      },
-      {
-        name: "Itinerary",
+        name: "Religious Itinerary",
         duration: 4,
         description:
-          "Itinerary description Itinerary description Itinerary description " +
           "Itinerary description Itinerary description Itinerary description ",
         createdAt: new Date(),
         updatedAt: new Date(),

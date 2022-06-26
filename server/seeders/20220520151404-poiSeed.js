@@ -16,6 +16,108 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
+        name: "Grand Park of Tirana",
+        description:
+          "The Grand Park of Tirana (Albanian: Parku i Madh i Tiranës), or the Park on the Artificial Lake, is a 289 hectare public park situated on the southern part of Tirana, Albania, and administered by the Agency of Parks and Recreation of the Municipality of Tirana." +
+          "The Park includes an artificial lake and many other landmarks such as the Saint Procopius Church, the Presidential Palace, and memorials to several Albanian personalities. It remains one of the most relaxing places in the city, despite increasing buildings being developed near the park, an early-morning run or promenade is a daily routines for many citizens. To the southern end of the Park, there is the Zoo and the Botanical Garden. The latter includes many flowers and plants that are common to the Albanian environment. " +
+          "There are almost 120 species of trees, bushes and flowers. The Botanical Garden area is of 14.5 hectares and the lake's size is of 55 hectares, whereas the area of the Park itself is of 230 hectares. " +
+          "The Park was built between 1955 and 1956 based on a Bulgarian plan and used to be called the Gogo stable, in a green area. The Park starts at the southern end of the Dëshmorët e Kombit Boulevard, after the University of Tirana, south of the main Skanderbeg Square. It was formerly called 'Park of Saint Procopius' (Albanian: Parku i Shën Prokopit) from the Saint Procopius Church, which is located in the area. In the internal parts, there can be found the memorials of 45 British and Australian[3] soldiers fallen during World War II, as well as a memorial of hundreds of German soldiers from the same war.",
+        visit_info: "No visit info are available for this point of interest.",
+        lat: "41.312778",
+        lang: "19.822222",
+        type_id: "4",
+        main_image: "images/pois/park_tirana.jpg",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Pyramid of Tirana",
+        description:
+          "The Pyramid of Tirana (Albanian: Piramida) is a structure and former museum located in Tirana, the capital of Albania. It opened as a museum in 1988 and became a conference center in 1991 following the collapse of Communism. During the 1999 Kosovo War, the building was used as a NATO base. In 2018, a new project was unveiled that would open for Creative Technologies under the name of TUMO Center turning the Pyramid into an IT center for youth with a focus on computer programming, robotics, and start ups.",
+        visit_info: "No visit info are available for this point of interest.",
+        lat: "41.323411",
+        lang: "19.821247",
+        type_id: "1",
+        main_image: "images/pois/piramide_tirana.jpeg",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Orthodox Church",
+        description:
+          "The Resurrection Cathedral (Katedralja Ngjallja e Krishtit) is an Albanian Orthodox church situated in the center of Tirana, Albania. It is considered among the largest Eastern Orthodox churches in the Balkans.[1]" +
+          "It was officially opened on June 24, 2012, to celebrate the 20th anniversary of the revival of the Albanian Orthodox Church and the election of Archbishop Anastasios of Albania.",
+        visit_info: "No visit info are available for this point of interest.",
+        lat: "41.326389",
+        lang: "19.8175",
+        type_id: "3",
+        main_image: "images/pois/orthodox_cathedral.jpeg",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Polytechnic University of Tirana",
+        description:
+          "The Polytechnic University of Tirana is the oldest and the second largest university in Albania, after the University of Tirana.[citation needed] It was founded in 1951 and now has approximately 10,000 students, who come from Albania, Kosovo, Montenegro, and North Macedonia. In 2012, at the occasion of the 100th Anniversary of the Independence of Albania, UPT was awarded a high honour badge by the President of Albania, Bujar Nishani.[2] The university is fully accredited by the Albanian Public Agency for Accreditation of Higher Education",
+        visit_info: "No visit info are available for this point of interest.",
+        lat: "41.3172",
+        lang: "19.8213",
+        type_id: "9",
+        main_image: "images/pois/politeknik_tirana.jpeg",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Enver Hoxha's Villa",
+        description:
+          "This was the house of Enver Halil Hoxha, that was an Albanian communist politician. He was First Secretary of the Party of Labour of Albania from 1941 until his death in 1985. He was also a member of the Politburo of the Party of Labour of Albania, chairman of the Democratic Front of Albania, and commander-in-chief of the armed forces and ruled the country from 1944 until his death in 1985. He was the 22nd Prime Minister of Albania from 1944 to 1954 and at various times was both foreign minister and defence minister of the People's Socialist Republic of Albania.",
+        visit_info: "No visit info are available for this point of interest.",
+        lat: "41.66292509926658",
+        lang: "19.818731022648976",
+        type_id: "1",
+        main_image: "images/pois/dictator_house.jpeg",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Zoopark Tirana",
+        description:
+          "Zoopark Tirana  is a public zoo located in Tirana, Albania. It is the only zoo of its kind in the country. Built during 1960–1961, the zoo is concentrated in an area of 6.09 ha (15.0 acres) in the southern part of the city, between the Grand Park and the Botanical Gardens.",
+        visit_info: "Opening hours: \n Every day 09:00-20:00 \n Monday: Closed",
+        lat: "41.307806",
+        lang: "19.809389",
+        type_id: "4",
+        main_image: "images/pois/zoologic_park.jpeg",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "National History Museum",
+        description:
+          "The National History Museum (Albanian: Muzeu Historik Kombëtar) is a historical museum in Tirana, Albania. It was opened on 28 October 1981 and is 27,000 square metres in size, while 18,000 square metres are available for expositions." +
+          "Above the entrance of the museum is a large mural mosaic titled The Albanians that depicts purported ancient to modern figures from Albania's history.[2][3] The museum includes the following pavilions: the Pavilion of Antiquity, Middle Ages, Renaissance, Independence, Iconography, National Liberation Antifascist War, Communist Terror, and Mother Teresa.",
+        visit_info: "Opening hours: \n Every day 09:00-20:00",
+        lat: "41.329167",
+        lang: "19.816944",
+        type_id: "1",
+        main_image: "images/pois/national_museum.jpeg",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Rinia Park",
+        description:
+          "Rinia Park is the central public park of Tirana, Albania. Built in 1950 during the communist era, it covers an area of 2.98 hectares (7.4 acres)." +
+          "The park, 500 metres (1,600 ft) from the central square, is bordered by Dëshmorët e Kombit Boulevard to the east, Bulevardi Gjergi Fishta and Bajram Curri Boulevard to the south, Rruga Ibrahim Rugova to the west and Rruga Myslym Shyri to the north.[1] Immediately to the north is the Teatri i Kukullave and the Orthodox Cathedral. The Taivani Center and water fountain are located on the western perimeter of the park.",
+        visit_info: "No visit info are available for this point of interest.",
+        lat: "41.324722",
+        lang: "19.818056",
+        type_id: "4",
+        main_image: "images/pois/youth_park.jpeg",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
         name: "Arena Kombëtare",
         description:
           "Arena Kombëtare known for sponsorship reasons as the Air Albania Stadium) is an all-seater, multi-purpose football stadium located in the capital city of Tirana which was built on the ground of the former Qemal Stafa Stadium.[2] The stadium has a seating capacity of 21,690 constituting the largest stadium in Albania." +
@@ -78,11 +180,59 @@ module.exports = {
         description:
           "The Clock Tower of Tirana (Albanian: Kulla e Sahatit), was built in 1822 in Tirana, Albania by Etëhem Bey Mollaj, a Bejtexhinj poet who also finished the Et'hem Bey Mosque next to the clock tower.[2] Watchmaster Ismail Tufina was the first to assemble the Tirana clock mechanism in 1822. It is a monument of culture of first category, approved on 24 May 1948. " +
           "The stairs have 90 steps that go in a spiral fashion. It is 35 metres (115 ft) tall and was the tallest building in the city at the time. Since the restoration of 2016, 9,833 visitors were counted, who have visited the tower.[3] The installation of the clock was done by the renowned Tufina watchmakers.  The Tufina's took care of the clock from 1822 until 1973 when forcefully removed by the communist regime.",
-        visit_info: "Visit info of poi 6",
+        visit_info: "No visit info are available for this point of interest.",
         lat: "41.32791448452915",
         lang: "19.819775783700685",
         type_id: "2",
         main_image: "images/pois/clock_tower.jpeg",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "The Cloud (Reja)",
+        description:
+          "REJA-The Serpentine Gallery Pavilion 2013 is designed by multi award-winning Japanese architect Sou Fujimoto. He was the thirteenth and, at 41, the youngest architect to have accepted the invitation from the Serpentine Gallery to design a temporary structure for the SerThe most ambitious architectural programme of its kind worldwide, the Serpentine’s annual Pavilion commisspentine Gallery in 2013.",
+        visit_info: "No visit info are available for this point of interest.",
+        lat: "41.325708853221656",
+        lang: "19.81973993185982",
+        type_id: "2",
+        main_image: "images/pois/cloud_monument.jpeg",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Tanner's Bridge",
+        description:
+          "The Tanners' Bridge is an 18th-century Ottoman period stone footbridge located in Tirana, Albania. The bridge, built near the Tanners' Mosque, was once part of the Saint George Road that linked Tirana with the eastern highlands. The road was the rout by which livestock and produce entered the city. The bridge crossed the Lanë stream near the area where butcher shops and leather workers were located. The bridge fell into disrepair when the Lanë was diverted in the 1930s. In the 1990s the bridge was restored for use by pedestrians.",
+        visit_info: "No visit info are available for this point of interest.",
+        lat: "41.32645970595197",
+        lang: "19.82606825331918",
+        type_id: "2",
+        main_image: "images/pois/tanner_bridge.jpeg",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Mount Dajt Park",
+        description:
+          "Mount Dajti National Park (1,611m above sea level) is easily accessible from the city, just 25 km to its east. A weekend trip there is a very popular activity for people from Tirana. The cable car station is just 20 minutes by car or bus from centre of Tirana, and from where you take the cable car to have a wonderful experience. A quarter of an hour later and you are near the top of the mountain where there are wonderful panoramic views of the city, villages, forests, the sea, and traditional houses, as well as quirky idiosyncrasies such as the bunkers.",
+        visit_info: "No visit info are available for this point of interest.",
+        lat: "41.71215150300809",
+        lang: "19.854998418590547",
+        type_id: "4",
+        main_image: "images/pois/mount_dajt.jpeg",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "St. Paul's Cathedral",
+        description:
+          "St Paul's Cathedral is a cathedral in Tirana, Albania. It belongs to the Roman Catholic Archdiocese of Tiranë-Durrës. The stained glass window to the left of the front door features Pope John Paul II and Mother Teresa.[1] Also a statue of Mother Teresa can be found at the entrance of the cathedral. It is a modern-looking building and does not resemble a traditional church.",
+        visit_info: "No visit info are available for this point of interest.",
+        lat: "41.324722",
+        lang: "19.821389",
+        type_id: "3",
+        main_image: "images/pois/cath_cattolic.jpeg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
