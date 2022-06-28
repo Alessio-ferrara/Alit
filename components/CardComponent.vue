@@ -38,7 +38,7 @@
         </p>
       </div>
     </div>
-    <div v-if="name == 'service'" class="card h-100">
+    <div id="service-cards" v-if="name == 'service'" class="card h-100">
       <!-- <img
         v-bind:src="require('@/static/' + item.main_image)"
         class="card-img-top"
@@ -69,6 +69,9 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.service-cards:hover{
+ background-color: darkcyan;
 }
 .card:hover{
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 20%), 0 4px 6px -2px rgb(0 0 0 / 15%)!important;
