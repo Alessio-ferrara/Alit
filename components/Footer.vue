@@ -5,8 +5,8 @@
     <div class="container-fluid p-4">
       <!-- Section: Text -->
       <section class="mb-4 row">
-        <div class="col-md-9">
-          <p class>
+        <div class="col-md-9 ml-4">
+          <p>
             This website was developed thanks to the efforts of the students of the course of HyperMedia Applications of the
             Master Degree in Computer Science of the
             <a

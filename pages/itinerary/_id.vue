@@ -11,10 +11,9 @@
       <hr />
       <div class="row mt-4">
         <!-- description -->
-        <div class="col-lg-8 col-sm-12">
-          <div class="lead">
+        <div class="col-lg-8 col-sm-12 text-justify">
+          <div id="presentation" class="lead">
             {{ itinerary.description }}
-
             <!-- <div class="collapse mt-3 text-muted" id="moreDetails">
               More details that will be displayed on the website after the click of the
               user.
@@ -51,6 +50,12 @@ span {
   max-height: 20vh;
   margin-bottom: 10%;
   border-left: none;
+}
+#presentation {
+  text-align: justify;
+}
+#presentation:after {
+  text-align: justify;
 }
 </style>
 <script>

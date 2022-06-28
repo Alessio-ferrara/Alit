@@ -14,7 +14,7 @@
       <div class="row">
         <!-- description -->
         <div class="col-md-6 col-sm-12 mt-3">
-          <div class="lead text-justify">
+          <div id="presentation" class="lead text-justify">
             {{ poi.description }}
             <div class="collapse mt-3 lead text-muted col-md-12" id="moreDetails">
               More details that will be displayed on the website after the click
@@ -52,6 +52,12 @@
 <style scoped>
 .badge {
   border-radius: 10px;
+}
+#presentation{
+    text-align: justify;
+}
+#presentation:after{
+    text-align: justify;
 }
 </style>
 

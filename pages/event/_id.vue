@@ -12,11 +12,19 @@
       <hr />
       <div class="row mt-4">
         <!-- description -->
-        <div class="col-md-8 col-sm-12">
+        <div id="presentation" class="col-md-8 col-sm-12 text-justify">
           <div class="lead">
-            {{event.description}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit laborum nobis aspernatur ad ullam sed, vitae repudiandae velit magnam eos quos, perspiciatis aliquam dolores odit itaque et totam nulla saepe?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolor iure rerum vel enim id ab praesentium, suscipit laboriosam incidunt modi assumenda a asperiores veritatis sapiente impedit dolores quia necessitatibus.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt assumenda culpa aliquid accusantium officia adipisci sit consequuntur, neque iste cupiditate magni nobis tempore quae recusandae, dignissimos vitae soluta facere consequatur!
+            {{ event.description }} Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Suscipit laborum nobis aspernatur ad ullam sed,
+            vitae repudiandae velit magnam eos quos, perspiciatis aliquam
+            dolores odit itaque et totam nulla saepe? Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quam dolor iure rerum vel enim id ab
+            praesentium, suscipit laboriosam incidunt modi assumenda a
+            asperiores veritatis sapiente impedit dolores quia necessitatibus.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt
+            assumenda culpa aliquid accusantium officia adipisci sit
+            consequuntur, neque iste cupiditate magni nobis tempore quae
+            recusandae, dignissimos vitae soluta facere consequatur!
           </div>
           <br />
 
@@ -27,14 +35,17 @@
           <ul class="lead text-danger pl-0">
             <li>
               <i class="fa-solid fa-calendar-day"></i>
-              <strong>{{getDateTime(event.datetime)}}</strong>
+              <strong>{{ getDateTime(event.datetime) }}</strong>
             </li>
             <li>
-              <nuxt-link class="text-danger text-decoration-underline" :to="`/poi/${event.poi_id}`">
+              <nuxt-link
+                class="text-danger text-decoration-underline"
+                :to="`/poi/${event.poi_id}`"
+              >
                 <!-- diventerà nuxt link to poi -->
                 <i class="fa-solid fa-location-dot"></i>
                 <!-- <mark> -->
-                {{event.point_of_interest.name}}
+                {{ event.point_of_interest.name }}
                 <!-- </mark> -->
               </nuxt-link>
             </li>
@@ -43,7 +54,7 @@
         <div class="row">
           <div class="mt-3 text-muted lead">
             <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nihil quaerat, voluptas quo quam non quasi nobis magnam deleniti, odit dicta maxime, error veniam accusamus! Quo eveniet ex ullam aliquid. -->
-            {{event.info}}
+            {{ event.info }}
           </div>
         </div>
       </div>
@@ -51,23 +62,30 @@
   </div>
 </template>
 
+<style scoped>
+#presentation {
+  text-align: justify;
+}
+#presentation:after {
+  text-align: justify;
+}
+</style>
 
 <script>
 // import CustomPage from '~/components/CustomPage.vue'
-import '../../assets/style.css';
-import '../../assets/details.css';
+import "../../assets/style.css";
+import "../../assets/details.css";
 import CarouselComponent from "~/components/CarouselComponent.vue";
-import BreadCrumb from '~/components/BreadCrumb.vue';
-
+import BreadCrumb from "~/components/BreadCrumb.vue";
 
 export default {
-  name: 'EventsPage',
+  name: "EventsPage",
   components: {
     CarouselComponent,
     BreadCrumb,
   },
   data() {
-    return {}
+    return {};
   },
   async asyncData({ route, $axios }) {
     const { id } = route.params;
@@ -79,7 +97,7 @@ export default {
         { name: "Events", path: "/events" },
         { name: data.name, path: "" },
       ],
-    }
+    };
   },
   methods: {
     selected(crumbPath) {

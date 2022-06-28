@@ -4,18 +4,18 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _0936ab0a = () => interopDefault(import('../pages/about_us.vue' /* webpackChunkName: "pages/about_us" */))
-const _174ee5c8 = () => interopDefault(import('../pages/contact_us.vue' /* webpackChunkName: "pages/contact_us" */))
-const _b0fd6178 = () => interopDefault(import('../pages/events.vue' /* webpackChunkName: "pages/events" */))
-const _49cdc4ce = () => interopDefault(import('../pages/itineraries.vue' /* webpackChunkName: "pages/itineraries" */))
-const _0011bd09 = () => interopDefault(import('../pages/list.vue' /* webpackChunkName: "pages/list" */))
-const _68457358 = () => interopDefault(import('../pages/pois.vue' /* webpackChunkName: "pages/pois" */))
-const _1160c96e = () => interopDefault(import('../pages/services.vue' /* webpackChunkName: "pages/services" */))
-const _31f2dfea = () => interopDefault(import('../pages/event/_id.vue' /* webpackChunkName: "pages/event/_id" */))
-const _ac6a224a = () => interopDefault(import('../pages/itinerary/_id.vue' /* webpackChunkName: "pages/itinerary/_id" */))
-const _5c06ceda = () => interopDefault(import('../pages/poi/_id.vue' /* webpackChunkName: "pages/poi/_id" */))
-const _49f359c5 = () => interopDefault(import('../pages/service/_id.vue' /* webpackChunkName: "pages/service/_id" */))
-const _1d9a63f7 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _dbe5e968 = () => interopDefault(import('../pages/about_us.vue' /* webpackChunkName: "pages/about_us" */))
+const _b53b534e = () => interopDefault(import('../pages/contact_us.vue' /* webpackChunkName: "pages/contact_us" */))
+const _5bbdb055 = () => interopDefault(import('../pages/events.vue' /* webpackChunkName: "pages/events" */))
+const _7e28665d = () => interopDefault(import('../pages/itineraries.vue' /* webpackChunkName: "pages/itineraries" */))
+const _3b652e5a = () => interopDefault(import('../pages/list.vue' /* webpackChunkName: "pages/list" */))
+const _0730b7a5 = () => interopDefault(import('../pages/pois.vue' /* webpackChunkName: "pages/pois" */))
+const _e41007cc = () => interopDefault(import('../pages/services.vue' /* webpackChunkName: "pages/services" */))
+const _70569939 = () => interopDefault(import('../pages/event/_id.vue' /* webpackChunkName: "pages/event/_id" */))
+const _320368aa = () => interopDefault(import('../pages/itinerary/_id.vue' /* webpackChunkName: "pages/itinerary/_id" */))
+const _2f568fe9 = () => interopDefault(import('../pages/poi/_id.vue' /* webpackChunkName: "pages/poi/_id" */))
+const _7e4dfb54 = () => interopDefault(import('../pages/service/_id.vue' /* webpackChunkName: "pages/service/_id" */))
+const _4cb51cc6 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -30,51 +30,51 @@ export const routerOptions = {
 
   routes: [{
     path: "/about_us",
-    component: _0936ab0a,
+    component: _dbe5e968,
     name: "about_us"
   }, {
     path: "/contact_us",
-    component: _174ee5c8,
+    component: _b53b534e,
     name: "contact_us"
   }, {
     path: "/events",
-    component: _b0fd6178,
+    component: _5bbdb055,
     name: "events"
   }, {
     path: "/itineraries",
-    component: _49cdc4ce,
+    component: _7e28665d,
     name: "itineraries"
   }, {
     path: "/list",
-    component: _0011bd09,
+    component: _3b652e5a,
     name: "list"
   }, {
     path: "/pois",
-    component: _68457358,
+    component: _0730b7a5,
     name: "pois"
   }, {
     path: "/services",
-    component: _1160c96e,
+    component: _e41007cc,
     name: "services"
   }, {
     path: "/event/:id?",
-    component: _31f2dfea,
+    component: _70569939,
     name: "event-id"
   }, {
     path: "/itinerary/:id?",
-    component: _ac6a224a,
+    component: _320368aa,
     name: "itinerary-id"
   }, {
     path: "/poi/:id?",
-    component: _5c06ceda,
+    component: _2f568fe9,
     name: "poi-id"
   }, {
     path: "/service/:id?",
-    component: _49f359c5,
+    component: _7e4dfb54,
     name: "service-id"
   }, {
     path: "/",
-    component: _1d9a63f7,
+    component: _4cb51cc6,
     name: "index"
   }],
 

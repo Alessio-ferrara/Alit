@@ -22,7 +22,7 @@
       <div class="row">
         <!-- description -->
         <div class="col-md-6 col-sm-12 mt-3">
-          <div class="lead text-justify">
+          <div id="presentation" class="lead text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit laborum nobis aspernatur ad ullam sed, vitae repudiandae velit magnam eos quos, perspiciatis aliquam dolores odit itaque et totam nulla saepe?
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolor iure rerum vel enim id ab praesentium, suscipit laboriosam incidunt modi assumenda a asperiores veritatis sapiente impedit dolores quia necessitatibus.
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt assumenda culpa aliquid accusantium officia adipisci sit consequuntur, neque iste cupiditate magni nobis tempore quae recusandae, dignissimos vitae soluta facere consequatur!
@@ -47,6 +47,14 @@
 .text-white {
   padding-top: 40px!important;
 }
+#presentation{
+    text-align: justify;
+}
+#presentation:after{
+    text-align: justify;
+}
+
+
 .mask .text-white {
     margin-left:  0;
     margin-top: 15% !important;
