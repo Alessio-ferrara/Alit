@@ -52,6 +52,12 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
+      {
+        name: "Institution",
+        icon:"fa-solid fa-building-columns",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
     ];
     
     await queryInterface.bulkInsert("poi_types", poiType);
