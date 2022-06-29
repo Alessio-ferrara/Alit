@@ -33,7 +33,7 @@ module.exports = {
       {
         name: "Pyramid of Tirana",
         description:
-          "The Pyramid of Tirana (Albanian: Piramida) is a structure and former museum located in Tirana, the capital of Albania. It opened as a museum in 1988 and became a conference center in 1991 following the collapse of Communism. During the 1999 Kosovo War, the building was used as a NATO base. In 2018, a new project was unveiled that would open for Creative Technologies under the name of TUMO Center turning the Pyramid into an IT center for youth with a focus on computer programming, robotics, and start ups.",
+          "The Pyramid of Tirana  is a structure and former museum located in Tirana, the capital of Albania. It opened as a museum in 1988 and became a conference center in 1991 following the collapse of Communism. During the 1999 Kosovo War, the building was used as a NATO base. In 2018, a new project was unveiled that would open for Creative Technologies under the name of TUMO Center turning the Pyramid into an IT center for youth with a focus on computer programming, robotics, and start ups.",
         visit_info: "No visit info are available for this point of interest.",
         lat: "41.323411",
         lang: "19.821247",
@@ -43,7 +43,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        name: "Orthodox Church",
+        name: "Resurrection Cathedral",
         description:
           "The Resurrection Cathedral (Katedralja Ngjallja e Krishtit) is an Albanian Orthodox church situated in the center of Tirana, Albania. It is considered among the largest Eastern Orthodox churches in the Balkans.[1]" +
           "It was officially opened on June 24, 2012, to celebrate the 20th anniversary of the revival of the Albanian Orthodox Church and the election of Archbishop Anastasios of Albania.",
