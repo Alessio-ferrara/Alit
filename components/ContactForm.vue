@@ -41,6 +41,7 @@
           v-model="message"
           class="form-control"
           rows="6"
+          style="height: 500"
           max-rows="10"
           required
         ></textarea>
@@ -54,7 +55,7 @@
           Submit
           <i class="fas fa-solid fa-arrow-right"></i>
         </button>
-        <br/>
+        <br />
         <!-- <a class="btn btn-light btn-sm" type="reset" value="reset" >Reset Fields</a> -->
         <!-- <button type="reset" value="reset" class="btn rounded-pill btn-danger">
           Reset
@@ -71,6 +72,15 @@
 .input-group-text {
   background-color: rgb(249, 49, 82);
   color: white;
+}
+
+textarea {
+  padding: 8px;
+  border: 1px solid #aeaeae;
+  resize: none;
+  height: 15% !important;
+  overflow: hidden;
+  font-size: 16px;
 }
 </style>
 

@@ -32,7 +32,6 @@
       >
         <i class="fas fa-bars"></i>
       </button>
-
       <!-- Collapsible wrapper -->
       <div class="collapse navbar-collapse" id="navbarButtonsExample">
         <ul class="navbar-nav me-auto mb-2 ml-2 mb-lg-0">
@@ -40,6 +39,8 @@
             v-for="(navItem, navItemIndex) of headerList"
             :key="`navItem${navItemIndex}`"
             class="nav-item"
+            v-on:click="setActive(navItem.name)"
+            :class="{active: isActive(navItem.name)}"
           >
             <nuxt-link :to="navItem.path" class="nav-link">{{
               navItem.name
@@ -55,6 +56,12 @@
 </template>
 
 <style scoped>
+.navbar-nav > .active > a {
+  color: rgb(255, 83, 112) !important;
+}
+.nav-item > a:hover {
+
+}
 .navbar-brand {
   font-weight: lighter !important;
   font-size: 1.5em;
@@ -71,18 +78,20 @@
   color: white;
   /* font-size: 32px; */
 }
-.navbar-brand img { 
-    /* for the navbar brand logo */
-    height: 65px !important;
-    width: 65px !important;
-  }
+.navbar-brand img {
+  /* for the navbar brand logo */
+  height: 65px !important;
+  width: 65px !important;
+}
 </style>
 
 <script>
+
 export default {
   name: "Nav_bar",
   data() {
     return {
+      activeItem: '',
       headerList: [
         {
           name: "Points of Interest",
@@ -110,6 +119,14 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    isActive(item) {
+      return this.activeItem == item
+    },
+    setActive(item) {
+      this.activeItem = item
+    }
   },
 };
 </script>
