@@ -2,10 +2,11 @@
   <span>
     <!-- link passing all the info of the selected item to the  -->
     <div v-if="name == 'event'" class="card h-100">
-      <img
-        v-bind:src="require('@/static/' + item.main_image)"
+      <nuxt-img
+        v-bind:src="'/' + item.main_image"
         class="card-img-top"
         alt="Image"
+        format="webp"
       />
       <div class="card-body">
         <h5 class="card-title lead text-center text-black">{{ item.name }}</h5>
@@ -21,10 +22,11 @@
       </div>
     </div>
     <div v-if="name == 'poi'" class="card h-100">
-      <img
-        v-bind:src="require('@/static/' + item.main_image)"
+       <nuxt-img
+        v-bind:src="'/' + item.main_image"
         class="card-img-top"
         alt="Image"
+        format="webp"
       />
       <div class="card-body">
         <h5 class="card-title lead text-center text-black">{{ item.name }}</h5>

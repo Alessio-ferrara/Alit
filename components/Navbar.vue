@@ -5,10 +5,9 @@
     <div class="container">
       <!-- Navbar brand -->
       <a class="navbar-brand mt-2 mt-lg-0" href="/">
-        <img
-          src="../static/icon.png"
-          height="20px"
-          width="40px"
+        <nuxt-img
+          src="/icon.png"
+          format="webp"
           alt="Dua Tiranen"
           loading="lazy"
         />

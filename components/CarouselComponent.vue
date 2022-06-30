@@ -7,8 +7,9 @@
     >
       <div class="carousel-inner shadow-4-strong">
         <div class="carousel-item active">
-          <img
-            v-bind:src="require('@/static/' + images[0].path)"
+          <nuxt-img
+            v-bind:src="'/' + images[0].path"
+            format="webp"
             class="d-block w-100"
             alt="Image"
           />
@@ -18,8 +19,9 @@
           :key="`imageItem${imageIndex}`"
           class="carousel-item"
         >
-          <img
-            v-bind:src="require('@/static/' + imageItem.path)"
+          <nuxt-img
+            v-bind:src="'/' + imageItem.path"
+            format="webp"
             class="d-block w-100"
             alt="Image"
           />

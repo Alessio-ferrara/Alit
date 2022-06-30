@@ -40,7 +40,7 @@ export default {
       pois: data,
       crumbs: [
         { name: "Home", path: "/" },
-        { name: "Point of Interests", path: "" },
+        { name: "Point of Interests", path: "/pois" },
       ],
     };
   },

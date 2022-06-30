@@ -55,7 +55,7 @@ export default {
       events: data,
       crumbs: [
         { name: "Home", path: "/" },
-        { name: "Events", path: "" },
+        { name: "Events", path: "/events" },
       ],
     };
   },
