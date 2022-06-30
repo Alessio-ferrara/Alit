@@ -53,13 +53,15 @@ export default {
     ],
   },
   env: {
-    baseURL: process.env.BASE_URL || "http://localhost:3000",
+    baseURL: process.env.BASE_URL || 'http://localhost:3000'
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["@/plugins/truncate.js"],
+  plugins: [
+    "@/plugins/truncate.js",
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -86,7 +88,11 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: process.env.baseURL,
+    //baseURL: 'http://localhost:3000'
+    baseURL:
+      process.env.NODE_ENV == "development"
+        ? "http://localhost:3000"
+        : "https://dua-tiranen.herokuapp.com",
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
