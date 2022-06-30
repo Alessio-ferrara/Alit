@@ -16,9 +16,9 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
     "bootstrap": "^5.2.0-beta1",
+    "@nuxt/image": "^0.7.1",
     "core-js": "^3.19.3",
     "express": "^4.18.1",
-    "ipx": "^0.9.9",
     "mdb-ui-kit": "^4.0.0",
     "nodemailer": "^6.7.5",
     "nodemailer-mailgun-transport": "^2.1.4",
@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.3",
+    "@nuxt/image": "^0.7.1",
     "@nuxtjs/eslint-config": "^8.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
     "eslint": "^8.4.1",
