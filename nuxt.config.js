@@ -7,7 +7,6 @@ export default {
       path: "/api",
       handler: "~/server/api.js",
     },
-    { path: "/_ipx", handler: "~/server/middleware/ipx.js" },
   ],
   head: {
     title: "Dua Tiranën",
