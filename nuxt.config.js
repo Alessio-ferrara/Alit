@@ -7,6 +7,7 @@ export default {
       path: "/api",
       handler: "~/server/api.js",
     },
+    { path: "/_ipx", handler: "~/server/middleware/ipx.js" },
   ],
   head: {
     title: "Dua Tiranën",
@@ -53,15 +54,13 @@ export default {
     ],
   },
   env: {
-    baseURL: process.env.BASE_URL || 'http://localhost:3000'
+    baseURL: process.env.BASE_URL || "http://localhost:3000",
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    "@/plugins/truncate.js",
-  ],
+  plugins: ["@/plugins/truncate.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -83,7 +82,7 @@ export default {
       },
     ],
     "@nuxtjs/axios",
-    '@nuxt/image'
+    "@nuxt/image",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
