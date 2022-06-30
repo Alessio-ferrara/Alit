@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING(10000)
       },
       description: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(10000)
       },
       main_image: {
         type: Sequelize.STRING

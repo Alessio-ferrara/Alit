@@ -34,13 +34,13 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        itinerary_id: 1,
+        itinerary_id: 2,
         poi_id: 6,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
-        itinerary_id: 1,
+        itinerary_id: 2,
         poi_id: 11,
         createdAt: new Date(),
         updatedAt: new Date(),
