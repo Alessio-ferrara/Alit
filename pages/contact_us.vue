@@ -32,6 +32,21 @@ export default {
         return {
             contact: data,
         };
-    }
+    },
+    head() {
+    return {
+      title: "Contact us Dua Tiranën",
+      meta: [
+        { charset: "utf-8" },
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "If you have any questions or doubts, contact us here and our team of Dua Tiranën will reach out to you immediately to help.",
+        },
+      ],
+    };
+  },
+    
 };
 </script>

@@ -44,5 +44,19 @@ export default {
       ],
     };
   },
+  head() {
+    return {
+      title: "Points of Interest of Tirana",
+      meta: [
+        { charset: "utf-8" },
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Here you can find some of the most interesting places of Tirana, such as Skanderbeg Square, Arena Kombetare, Piramida, Reja, National Historic Museum, Polytechnic University of Tirana, Dajti Mount Park, Gran Park Tirana, and House of Leaves.",
+        },
+      ],
+    };
+  },
 };
 </script>

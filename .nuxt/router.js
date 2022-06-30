@@ -8,7 +8,6 @@ const _501b684c = () => interopDefault(import('../pages/about_us.vue' /* webpack
 const _194d7359 = () => interopDefault(import('../pages/contact_us.vue' /* webpackChunkName: "pages/contact_us" */))
 const _13bf4d55 = () => interopDefault(import('../pages/events.vue' /* webpackChunkName: "pages/events" */))
 const _f0be2d46 = () => interopDefault(import('../pages/itineraries.vue' /* webpackChunkName: "pages/itineraries" */))
-const _512a0b5a = () => interopDefault(import('../pages/list.vue' /* webpackChunkName: "pages/list" */))
 const _1cf594a5 = () => interopDefault(import('../pages/pois.vue' /* webpackChunkName: "pages/pois" */))
 const _4c06591a = () => interopDefault(import('../pages/services.vue' /* webpackChunkName: "pages/services" */))
 const _7413dc39 = () => interopDefault(import('../pages/event/_id.vue' /* webpackChunkName: "pages/event/_id" */))
@@ -44,10 +43,6 @@ export const routerOptions = {
     path: "/itineraries",
     component: _f0be2d46,
     name: "itineraries"
-  }, {
-    path: "/list",
-    component: _512a0b5a,
-    name: "list"
   }, {
     path: "/pois",
     component: _1cf594a5,

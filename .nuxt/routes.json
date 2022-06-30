@@ -28,13 +28,6 @@
     "_name": "_f0be2d46"
   },
   {
-    "name": "list",
-    "path": "/list",
-    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/list.vue",
-    "chunkName": "pages/list",
-    "_name": "_512a0b5a"
-  },
-  {
     "name": "pois",
     "path": "/pois",
     "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/pois.vue",
