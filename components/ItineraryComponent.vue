@@ -106,9 +106,9 @@ li {
   padding: 0;
 }
 .wrapper {
-  background: #f7f7f7;
+  background: #ffffff;
   padding: 2rem;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 h1 {
   font-size: 1card 0.1rem;
@@ -122,6 +122,7 @@ h1 {
 li {
   padding-bottom: 1.5rem;
   border-left: 3px solid rgb(249, 49, 84);
+  text-decoration: underline red;
   position: relative;
   padding-left: 20px;
   margin-left: 10px;

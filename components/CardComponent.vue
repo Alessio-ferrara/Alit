@@ -38,7 +38,18 @@
         </p>
       </div>
     </div>
-    <div id="service-cards" v-if="name == 'service'" class="card d-flex">
+    <div id="service-cards" v-if="name == 'service' && item.name != 'Emergecy numbers'" class="card d-flex">
+      <div class="card-body align-items-center d-flex justify-content-center">
+        <h4 class="card-title lead text-center text-black align-middle">
+          {{ item.name }}
+          <p class="card-text text-center text-danger">
+            <i :class="item.icon"></i>
+            <br />
+          </p>
+        </h4>
+      </div>
+    </div>
+    <div id="service-cards" v-else-if="name == 'service'" class="card border border-danger d-flex">
       <div class="card-body align-items-center d-flex justify-content-center">
         <h4 class="card-title lead text-center text-black align-middle">
           {{ item.name }}

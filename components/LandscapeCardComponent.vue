@@ -11,7 +11,7 @@
             >{{item.duration }} hours</span>
             <span v-else class="badge bg-danger text-white p-2">{{item.duration }} hour</span>
             <hr />
-            <p class="text-muted lead mt-3">{{ item.short_description }} ciaooo</p>
+            <p class="text-muted lead mt-3">{{ item.short_description }}</p>
           </h3>
         </div>
         <!-- left part of the card -->

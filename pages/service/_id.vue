@@ -18,7 +18,7 @@
         >
           <div class="card h-100">
             <div class="card-body">
-              <p class="card-title text-center lead">
+              <p class="card-title text-center lead text-danger">
                 <i :class="icon"></i>
               </p>
               <h3 class="card-title text-opacity-75 text-center text-black">{{ item.name }}</h3>
