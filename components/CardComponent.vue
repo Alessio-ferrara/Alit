@@ -3,11 +3,12 @@
     <!-- link passing all the info of the selected item to the  -->
     <div v-if="name == 'event'" class="card h-100">
       <nuxt-img
-        v-bind:src="require('@/static/' + item.main_image)"
-        format="webp"
-        width="300" height="300"
+        v-bind:src="'/' + item.main_image"
         class="card-img-top"
         alt="Image"
+        width="300"
+        height="300"
+        format="webp"
       />
       <div class="card-body">
         <h5 class="card-title lead text-center text-black">{{ item.name }}</h5>

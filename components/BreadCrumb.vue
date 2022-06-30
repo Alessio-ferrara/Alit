@@ -32,7 +32,6 @@ export default {
       this.$emit("selected", crumbPath);
     },
     generateURL(path) {
-      console.log(path)
       return process.env.baseURL + path;
     },
   },
