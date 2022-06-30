@@ -83,6 +83,7 @@ export default {
       },
     ],
     "@nuxtjs/axios",
+    '@nuxt/image'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -97,4 +98,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  image: {
+    // Options
+  }
 };

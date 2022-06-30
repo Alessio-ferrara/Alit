@@ -2,8 +2,10 @@
   <span>
     <!-- link passing all the info of the selected item to the  -->
     <div v-if="name == 'event'" class="card h-100">
-      <img
+      <nuxt-img
         v-bind:src="require('@/static/' + item.main_image)"
+        format="webp"
+        width="300" height="300"
         class="card-img-top"
         alt="Image"
       />
