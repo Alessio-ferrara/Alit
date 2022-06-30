@@ -15,11 +15,13 @@
           class="card border bg-light text-muted"
           @click="handleChange(eventItem.c, eventItem.name)"
         >
-          <img
-            v-bind:src="require(`/static/images/${eventItem.image}`)"
-            class="card-img-top"
-            alt="Events Image"
-          />
+        <nuxt-img
+        v-bind:src="'/images/' + eventItem.image"
+        class="card-img-top"
+        alt="Events Image"
+        format="webp"
+      />
+     
           <div class="card-body">
             <h5 class="card-title lead text-center">{{ eventItem.name }}</h5>
           </div>

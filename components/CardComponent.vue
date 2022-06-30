@@ -6,8 +6,6 @@
         v-bind:src="'/' + item.main_image"
         class="card-img-top"
         alt="Image"
-        width="300"
-        height="300"
         format="webp"
       />
       <div class="card-body">
