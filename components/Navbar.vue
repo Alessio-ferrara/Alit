@@ -40,11 +40,15 @@
             :key="`navItem${navItemIndex}`"
             class="nav-item"
             v-on:click="setActive(navItem.name)"
-            :class="{active: isActive(navItem.name)}"
+            :class="{ active: isActive(navItem.name) }"
           >
-            <nuxt-link :to="navItem.path" class="nav-link">{{
-              navItem.name
-            }}</nuxt-link>
+            <nuxt-link :to="navItem.path" class="nav-link">
+              <span
+                data-bs-toggle="collapse"
+                data-bs-target=".navbar-collapse.show"
+                >{{ navItem.name }}</span
+              >
+            </nuxt-link>
           </li>
         </ul>
       </div>
@@ -58,9 +62,6 @@
 <style scoped>
 .navbar-nav > .active > a {
   color: rgb(255, 83, 112) !important;
-}
-.nav-item > a:hover {
-
 }
 .navbar-brand {
   font-weight: lighter !important;
@@ -86,12 +87,11 @@
 </style>
 
 <script>
-
 export default {
   name: "Nav_bar",
   data() {
     return {
-      activeItem: '',
+      activeItem: "",
       headerList: [
         {
           name: "Points of Interest",
@@ -122,11 +122,11 @@ export default {
   },
   methods: {
     isActive(item) {
-      return this.activeItem == item
+      return this.activeItem == item;
     },
     setActive(item) {
-      this.activeItem = item
-    }
+      this.activeItem = item;
+    },
   },
 };
 </script>
