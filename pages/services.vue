@@ -22,16 +22,16 @@
 </style>
 
 <script>
-import BreadCrumb from '~/components/BreadCrumb.vue';
+import BreadCrumb from "~/components/BreadCrumb.vue";
 // import CustomPage from '~/components/CustomPage.vue'
-import '../assets/style.css';
-import GridCards from '../components/GridCards.vue';
+import "../assets/style.css";
+import GridCards from "../components/GridCards.vue";
 
 export default {
   components: { GridCards, BreadCrumb },
-  name: 'ServicesPage',
+  name: "ServicesPage",
   data() {
-    return {}
+    return {};
   },
   methods: {
     selected(crumbPath) {
@@ -40,15 +40,29 @@ export default {
   },
   async asyncData({ $axios }) {
     // get all the data from the backend and pass it to the component in order to be printed
-    const { data } = await $axios.get('api/services/');
-    console.log(data)
+    const { data } = await $axios.get("api/services/");
+    console.log(data);
     return {
-      services : data,
+      services: data,
       crumbs: [
         { name: "Home", path: "/" },
         { name: "Services", path: "" },
       ],
-    }
+    };
   },
-}
+  head() {
+    return {
+      title: "Services of Tirana",
+      meta: [
+        { charset: "utf-8" },
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Discover here the variety of the services you can find in Tirana, including pharmacies, hospitals, hotels, restaurants, shopping centers.",
+        },
+      ],
+    };
+  },
+};
 </script>

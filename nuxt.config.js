@@ -9,14 +9,14 @@ export default {
     },
   ],
   head: {
-    title: "Alit",
+    title: "Dua Tiranën",
     htmlAttrs: {
       lang: "en",
     },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
+      { hid: "description", name: "description", content: "Let's discover Tirana, the capital city of Albania and one of the most important cities from the economic, political, historical and nature point of view. Tirana, chosen also The European Youth Capital, is a touristic gem." },
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [

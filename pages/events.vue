@@ -67,5 +67,19 @@ export default {
       this.$router.push(crumbPath);
     },
   },
+  head() {
+    return {
+      title: "Events in Tirana",
+      meta: [
+        { charset: "utf-8" },
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "With the diversity of places, culture and history, in Tirana you can always find something to do. Here you can find a list of events to attend, furthemore grouped in summer and winter events to easily search according to the time of the visit there.",
+        },
+      ],
+    };
+  },
 };
 </script>

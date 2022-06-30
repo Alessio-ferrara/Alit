@@ -19,7 +19,7 @@
 </style>
 
 <script>
-import BreadCrumb from '~/components/BreadCrumb.vue';
+import BreadCrumb from "~/components/BreadCrumb.vue";
 // import CustomPage from '~/components/CustomPage.vue'
 import "../assets/style.css";
 import RowGridCards from "../components/RowGridComponent.vue";
@@ -45,6 +45,20 @@ export default {
       crumbs: [
         { name: "Home", path: "/" },
         { name: "Itineraries", path: "" },
+      ],
+    };
+  },
+  head() {
+    return {
+      title: "Itineraries of Tirana",
+      meta: [
+        { charset: "utf-8" },
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Tirana, as an important city in many aspects, offers a variety of possible itineraries, which you can discover here thematically grouped as: Historic, Nature, Youth and Religious.",
+        },
       ],
     };
   },

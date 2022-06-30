@@ -62,5 +62,19 @@ export default {
       about: data,
     };
   },
+  head() {
+    return {
+      title: "About the city of Tirana",
+      meta: [
+        { charset: "utf-8" },
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Find here a general overview of Tirana, the capital city of Albania.",
+        },
+      ],
+    };
+  }
 };
 </script>

@@ -23,12 +23,12 @@
               </p>
               <h3 class="card-title text-opacity-75 text-center text-black">{{ item.name }}</h3>
               <p class="text-center">
-                Address:
+                <span v-if="item.address">Address:</span>
                 <span class="text-muted">{{ item.address }}</span>
                 <br />Telephone:
                 <span class="text-muted">{{ item.telephone }}</span>
               </p>
-              <p class="text-center">
+              <p class="text-center" v-if="item.op_hours.length" >
                 <i class="fa fa-lg fa-clock"></i>
               </p>
               <p

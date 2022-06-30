@@ -181,6 +181,15 @@ img {
   background-color: rgb(249, 49, 82);
   color: white;
 }
+
+textarea {
+  padding: 8px;
+  border: 1px solid #aeaeae;
+  resize: none;
+  height: 15% !important;
+  overflow: hidden;
+  font-size: 16px;
+}
 </style>
 
 <script>
