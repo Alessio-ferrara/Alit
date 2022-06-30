@@ -16,7 +16,7 @@
             &nbsp;
           </span>
           <br />
-          {{item.description | truncate(200)}}
+          {{ item.description | truncate(200) }}
         </p>
       </div>
     </div>
@@ -38,18 +38,15 @@
         </p>
       </div>
     </div>
-    <div id="service-cards" v-if="name == 'service'" class="card h-100">
-      <!-- <img
-        v-bind:src="require('@/static/' + item.main_image)"
-        class="card-img-top"
-        alt="Image"
-      /> -->
-      <div class="card-body">
-        <h5 class="card-title lead text-center text-black">{{ item.name }}</h5>
-        <p class="card-text text-center text-muted">
-          <i :class="item.icon"></i>
-          <br />
-        </p>
+    <div id="service-cards" v-if="name == 'service'" class="card d-flex">
+      <div class="card-body align-items-center d-flex justify-content-center">
+        <h4 class="card-title lead text-center text-black align-middle">
+          {{ item.name }}
+          <p class="card-text text-center text-danger">
+            <i :class="item.icon"></i>
+            <br />
+          </p>
+        </h4>
       </div>
     </div>
   </span>
@@ -70,11 +67,19 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.service-cards:hover{
- background-color: darkcyan;
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 20%), 0 4px 6px -2px rgb(0 0 0 / 15%) !important;
+  background-color: rgb(247, 246, 246) !important;
 }
-.card:hover{
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 20%), 0 4px 6px -2px rgb(0 0 0 / 15%)!important;
+#service-cards {
+  height: 30vh;
+}
+#service-cards .card-title {
+  font-size: 30px !important;
+}
+#service-cards:hover {
+  background-color: rgb(247, 246, 246) !important;
 }
 </style>
 

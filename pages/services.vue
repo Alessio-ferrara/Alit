@@ -8,7 +8,7 @@
       </div>
       <p
         class="text-center text-muted mb-3"
-      >Page to see all the services related to a specific group</p>
+      >Select a service to get useful informations and contacts</p>
       <bread-crumb :crumbs="crumbs" @selected="selected" />
       <grid-cards :items="services" :name="'service'" />
     </div>

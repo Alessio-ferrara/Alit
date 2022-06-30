@@ -7,6 +7,10 @@
 </template>
 
 <script>
+function zoom() {
+        document.body.style.zoom = "90%" 
+    }
+    
 import NavBar from '~/components/Navbar.vue'
 import FooTer from  '~/components/Footer.vue'
 export default {
