@@ -6,9 +6,9 @@
         Services
         <!-- shall display the eventItem.name whose index == the one received from props -->
       </div>
-      <p class="text-center text-muted mb-3">
-        Page to see all the services related to a specific group
-      </p>
+      <p
+        class="text-center text-muted mb-3"
+      >Select a service to get useful informations and contacts</p>
       <bread-crumb :crumbs="crumbs" @selected="selected" />
       <grid-cards :items="services" :name="'service'" />
     </div>

@@ -6,7 +6,7 @@
       </div>
 
     <p class="text-center text-muted mb-3">
-        Reach out for anything!
+        You need help? Fill the fields below and contact our team!
     </p>
     
     <hr />
