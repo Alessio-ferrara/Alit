@@ -16,7 +16,12 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "Let's discover Tirana, the capital city of Albania and one of the most important cities from the economic, political, historical and nature point of view. Tirana, chosen also The European Youth Capital, is a touristic gem." },
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Let's discover Tirana, the capital city of Albania and one of the most important cities from the economic, political, historical and nature point of view. Tirana, chosen also The European Youth Capital, is a touristic gem.",
+      },
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [
@@ -47,7 +52,9 @@ export default {
       }, //MDB
     ],
   },
-
+  env: {
+    baseURL: process.env.BASE_URL || "http://localhost:3000",
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
@@ -79,11 +86,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    //baseURL: 'http://localhost:3000'
-    baseURL:
-      process.env.NODE_ENV == "development"
-        ? "http://localhost:3000"
-        : "https://dua-tiranen.herokuapp.com",
+    baseURL: process.env.baseURL,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

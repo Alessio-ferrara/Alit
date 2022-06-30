@@ -1,15 +1,12 @@
 <template>
   <nav aria-label="bradcrumb">
     <ol class="breadcrumb">
-      <li
-        v-for="(crumb, ci) in crumbs"
-        :key="ci.name"
-        class="breadcrumb-item"
-      >
+      <li v-for="(crumb, ci) in crumbs" :key="ci.name" class="breadcrumb-item">
         <a
           class=""
           :class="{ disabled: isLast(ci) }"
           @click="selected(crumb.path)"
+          v-bind:href="generateURL(crumb.path)"
         >
           {{ crumb.name }}
         </a>
@@ -34,6 +31,10 @@ export default {
     selected(crumbPath) {
       this.$emit("selected", crumbPath);
     },
+    generateURL(path) {
+      console.log(path)
+      return process.env.baseURL + path;
+    },
   },
 };
 </script>
@@ -43,14 +44,15 @@ export default {
   background-color: white;
   border-radius: 0.37rem;
 }
-a:hover{
+a:hover {
   cursor: pointer;
 }
-a{
-    color: rgb(255, 83, 112);
+a {
+  color: rgb(255, 83, 112);
 }
-.disabled , .disabled:hover{
-  color:  grey;
+.disabled,
+.disabled:hover {
+  color: grey;
   cursor: default;
 }
 </style>

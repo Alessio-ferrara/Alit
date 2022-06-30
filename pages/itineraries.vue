@@ -44,7 +44,7 @@ export default {
       itineraries: data,
       crumbs: [
         { name: "Home", path: "/" },
-        { name: "Itineraries", path: "" },
+        { name: "Itineraries", path: "/itineraries" },
       ],
     };
   },

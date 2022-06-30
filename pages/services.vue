@@ -46,7 +46,7 @@ export default {
       services: data,
       crumbs: [
         { name: "Home", path: "/" },
-        { name: "Services", path: "" },
+        { name: "Services", path: "/services" },
       ],
     };
   },
