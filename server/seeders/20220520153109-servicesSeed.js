@@ -123,6 +123,27 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      {
+        type_id: 6,
+        name: "Ambulance",
+        telephone: "127",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        type_id: 6,
+        name: "Firefighter",
+        telephone: "128",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        type_id: 6,
+        name: "Police",
+        telephone: "129",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
     ]);
     /**
      * Add seed commands here.
