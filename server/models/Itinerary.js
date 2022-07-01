@@ -40,6 +40,7 @@ module.exports = (sequelize, DataTypes) => {
           itinerariesItem.id = itinerary.dataValues.id;
           itinerariesItem.name = itinerary.dataValues.name;
           itinerariesItem.description = itinerary.dataValues.description;
+          itinerariesItem.short_description = itinerary.dataValues.short_description;
           itinerariesItem.duration = itinerary.dataValues.duration;
           const poi = itinerary.dataValues.point_of_interests;
           const size = poi.length;
@@ -96,6 +97,7 @@ module.exports = (sequelize, DataTypes) => {
   itinerary.init({
     name: DataTypes.STRING,
     description: DataTypes.STRING,
+    short_description : DataTypes.STRING,
     duration: DataTypes.INTEGER
   }, {
     sequelize,
