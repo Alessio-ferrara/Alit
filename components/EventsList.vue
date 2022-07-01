@@ -7,7 +7,7 @@
     </div>
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div
-        v-for="(eventItem, eventItemIndex) of getList()"
+        v-for="(eventItem, eventItemIndex) of GroupList"
         :key="`eventItem${eventItemIndex}`"
         class="col-lg-4 col-md-12"
       >
@@ -79,11 +79,6 @@ export default {
           image: "events/winter-events.jpeg",
           c: "winter_events"
         },
-        {
-          name: "All Events",
-          image: "events/winter-events.jpeg",
-          c: "all_events"
-        },
       ],
     };
   },
@@ -93,15 +88,6 @@ export default {
       this.name = name;
       this.changeSelection(choice)
     },
-    getList:  function(){
-      var array = []                            //array to get all the correct cards to display in the EventList
-      for (var i = 0; i < this.GroupList.length; i++) {   //get all the elements of GroupList except my selection
-        if(this.selection != this.GroupList[i].c){
-          array.push(this.GroupList[i]);
-        }
-      }
-      return array
-    }
   },
 };
 </script>

@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.STRING(10000)
       },
       short_description: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(10000)
       },
       duration: {
         type: Sequelize.INTEGER

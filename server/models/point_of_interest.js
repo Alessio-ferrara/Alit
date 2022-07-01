@@ -34,6 +34,7 @@ module.exports = (sequelize, DataTypes) => {
           include: [
             { model: sequelize.model('poi_image'), attributes: ["path"] },
             { model: sequelize.model('poi_types'), attributes: ["name"] },
+            {model: sequelize.model('event'), attributes: ["id", "name", "main_image", "datetime"]}
           ],
         });
         return info;

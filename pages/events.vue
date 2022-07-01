@@ -11,7 +11,7 @@
         :items="events[selection]"
         :name="'event'"
       />
-      <!-- We should change this to be styled better -->
+      <!-- TODO We should change this to be styled better -->
       <div v-else class="text-center text-muted mt-3">
         <div class="alert alert-info" role="alert">
           <i class="fa fa-lg fa-warning">&nbsp;</i>

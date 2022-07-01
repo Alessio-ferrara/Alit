@@ -17,7 +17,7 @@
             &nbsp;
           </span>
           <br />
-          {{ item.description | truncate(200) }}
+          <span v-if="item.description">{{ item.description | truncate(200) }}</span>
         </p>
       </div>
     </div>

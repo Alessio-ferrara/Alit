@@ -16,34 +16,28 @@
         <div class="col-md-6 col-sm-12 mt-3">
           <div id="presentation" class="lead text-justify">
             {{ poi.description }}
-            <div class="collapse mt-3 lead text-muted col-md-12" id="moreDetails">
-              More details that will be displayed on the website after the click
-              of the user.
-            </div>
+            <br />
+            <br />
+            <div style="fontweight: 900">Visit information:</div>
+            {{ poi.visit_info }}
           </div>
           <br />
-          <div class="row mb-3">
-            <div class="col">
-              <a
-                class="btn btn-danger"
-                data-mdb-toggle="collapse"
-                href="#moreDetails"
-                role="button"
-                aria-expanded="false"
-                aria-controls="moreDetails"
-              >
-                <i class="fa fa-circle-info"></i>
-                Show more details
-              </a>
-            </div>
-          </div>
+
           <!-- Buttons trigger collapse -->
         </div>
         <!-- GoogleMapAPI -->
         <div class="col-md-6 col-sm-12 mt-3">
-          <!-- maps api with the key AIzaSyDX_OSdMYc79SeKrOLBh7VqZ5_n-mdexew -->
+          <!-- maps api -->
           <google-map :lat="poi.lat" :lang="poi.lang" />
         </div>
+      </div>
+      <div v-if="poi.events.length">
+        <h2 style="fontWeight:900, margin:0">Events</h2>
+        <grid-cards
+          v-if="poi.events.length"
+          :items="poi.events"
+          :name="'event'"
+        />
       </div>
     </div>
   </div>
@@ -53,11 +47,14 @@
 .badge {
   border-radius: 10px;
 }
-#presentation{
-    text-align: justify;
+#presentation {
+  text-align: justify;
 }
-#presentation:after{
-    text-align: justify;
+#presentation:after {
+  text-align: justify;
+}
+#details h2 {
+  margin: 0 !important;
 }
 </style>
 
@@ -85,6 +82,7 @@ export default {
   async asyncData({ route, $axios }) {
     const { id } = route.params;
     const { data } = await $axios.get(`api/pois/poi/${id}`);
+    console.log(data);
     return {
       poi: data,
       crumbs: [
