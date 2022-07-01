@@ -12,16 +12,10 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-<<<<<<< HEAD
 import nuxt_plugin_plugin_159b9802 from 'nuxt_plugin_plugin_159b9802' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_image_06773313 from 'nuxt_plugin_image_06773313' // Source: ./image.js (mode: 'all')
 import nuxt_plugin_axios_1b703618 from 'nuxt_plugin_axios_1b703618' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_nuxtgooglemaps_02847fbf from 'nuxt_plugin_nuxtgooglemaps_02847fbf' // Source: ./nuxt-google-maps.js (mode: 'all')
-=======
-import nuxt_plugin_plugin_7c0615fc from 'nuxt_plugin_plugin_7c0615fc' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_image_1c3c1013 from 'nuxt_plugin_image_1c3c1013' // Source: ./image.js (mode: 'all')
-import nuxt_plugin_axios_31351318 from 'nuxt_plugin_axios_31351318' // Source: ./axios.js (mode: 'all')
-import nuxt_plugin_nuxtgooglemaps_73f8fa82 from 'nuxt_plugin_nuxtgooglemaps_73f8fa82' // Source: ./nuxt-google-maps.js (mode: 'all')
->>>>>>> 200ffed0ebba42e4e35c4c57255c89e32165ff3c
 import nuxt_plugin_truncate_7b8e745d from 'nuxt_plugin_truncate_7b8e745d' // Source: ../plugins/truncate.js (mode: 'all')
 
 // Component: <ClientOnly>
@@ -190,17 +184,12 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_plugin_159b9802(app.context, inject)
   }
 
-<<<<<<< HEAD
-  if (typeof nuxt_plugin_axios_1b703618 === 'function') {
-    await nuxt_plugin_axios_1b703618(app.context, inject)
-=======
-  if (typeof nuxt_plugin_image_1c3c1013 === 'function') {
-    await nuxt_plugin_image_1c3c1013(app.context, inject)
+  if (typeof nuxt_plugin_image_06773313 === 'function') {
+    await nuxt_plugin_image_06773313(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_31351318 === 'function') {
-    await nuxt_plugin_axios_31351318(app.context, inject)
->>>>>>> 200ffed0ebba42e4e35c4c57255c89e32165ff3c
+  if (typeof nuxt_plugin_axios_1b703618 === 'function') {
+    await nuxt_plugin_axios_1b703618(app.context, inject)
   }
 
   if (typeof nuxt_plugin_nuxtgooglemaps_02847fbf === 'function') {

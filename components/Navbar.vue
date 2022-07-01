@@ -13,7 +13,7 @@
         />
         <ul class="navbar-nav me-auto mb-2 ml-2 mb-lg-0">
           <a
-            class="nav-link text-darnger mb-2 font-weight-bold pl-3 pr-3"
+            class="nav-link mb-2 pl-3 pr-3"
             href="/"
             >&nbsp;Dua Tiranën&nbsp;</a
           >
@@ -63,9 +63,10 @@
   color: rgb(255, 83, 112) !important;
 }
 .navbar-brand {
-  font-weight: lighter !important;
-  font-size: 1.5em;
+  font-weight: light !important;
+  font-size: 1em;
   padding-top: 6px;
+  padding-bottom: 0;
   /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
 }
 .navbar-brand .btn-danger:hover {
@@ -80,8 +81,8 @@
 }
 .navbar-brand img {
   /* for the navbar brand logo */
-  height: 65px !important;
-  width: 65px !important;
+  height: 60px !important;
+  width: 60px !important;
 }
 </style>
 

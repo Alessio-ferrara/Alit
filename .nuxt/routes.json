@@ -2,133 +2,78 @@
   {
     "name": "about_us",
     "path": "/about_us",
-<<<<<<< HEAD
     "component": "/Users/francescomazzola/Git/Alit/pages/about_us.vue",
     "chunkName": "pages/about_us",
     "_name": "_dbe5e968"
-=======
-    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/about_us.vue",
-    "chunkName": "pages/about_us"
->>>>>>> 200ffed0ebba42e4e35c4c57255c89e32165ff3c
   },
   {
     "name": "contact_us",
     "path": "/contact_us",
-<<<<<<< HEAD
     "component": "/Users/francescomazzola/Git/Alit/pages/contact_us.vue",
     "chunkName": "pages/contact_us",
     "_name": "_b53b534e"
-=======
-    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/contact_us.vue",
-    "chunkName": "pages/contact_us"
->>>>>>> 200ffed0ebba42e4e35c4c57255c89e32165ff3c
   },
   {
     "name": "events",
     "path": "/events",
-<<<<<<< HEAD
     "component": "/Users/francescomazzola/Git/Alit/pages/events.vue",
     "chunkName": "pages/events",
     "_name": "_5bbdb055"
-=======
-    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/events.vue",
-    "chunkName": "pages/events"
->>>>>>> 200ffed0ebba42e4e35c4c57255c89e32165ff3c
   },
   {
     "name": "itineraries",
     "path": "/itineraries",
-<<<<<<< HEAD
     "component": "/Users/francescomazzola/Git/Alit/pages/itineraries.vue",
     "chunkName": "pages/itineraries",
     "_name": "_7e28665d"
-=======
-    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/itineraries.vue",
-    "chunkName": "pages/itineraries"
->>>>>>> 200ffed0ebba42e4e35c4c57255c89e32165ff3c
   },
   {
     "name": "pois",
     "path": "/pois",
-<<<<<<< HEAD
     "component": "/Users/francescomazzola/Git/Alit/pages/pois.vue",
     "chunkName": "pages/pois",
     "_name": "_0730b7a5"
-=======
-    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/pois.vue",
-    "chunkName": "pages/pois"
->>>>>>> 200ffed0ebba42e4e35c4c57255c89e32165ff3c
   },
   {
     "name": "services",
     "path": "/services",
-<<<<<<< HEAD
     "component": "/Users/francescomazzola/Git/Alit/pages/services.vue",
     "chunkName": "pages/services",
     "_name": "_e41007cc"
-=======
-    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/services.vue",
-    "chunkName": "pages/services"
->>>>>>> 200ffed0ebba42e4e35c4c57255c89e32165ff3c
   },
   {
     "name": "event-id",
     "path": "/event/:id?",
-<<<<<<< HEAD
     "component": "/Users/francescomazzola/Git/Alit/pages/event/_id.vue",
     "chunkName": "pages/event/_id",
     "_name": "_70569939"
-=======
-    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/event/_id.vue",
-    "chunkName": "pages/event/_id"
->>>>>>> 200ffed0ebba42e4e35c4c57255c89e32165ff3c
   },
   {
     "name": "itinerary-id",
     "path": "/itinerary/:id?",
-<<<<<<< HEAD
     "component": "/Users/francescomazzola/Git/Alit/pages/itinerary/_id.vue",
     "chunkName": "pages/itinerary/_id",
     "_name": "_320368aa"
-=======
-    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/itinerary/_id.vue",
-    "chunkName": "pages/itinerary/_id"
->>>>>>> 200ffed0ebba42e4e35c4c57255c89e32165ff3c
   },
   {
     "name": "poi-id",
     "path": "/poi/:id?",
-<<<<<<< HEAD
     "component": "/Users/francescomazzola/Git/Alit/pages/poi/_id.vue",
     "chunkName": "pages/poi/_id",
     "_name": "_2f568fe9"
-=======
-    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/poi/_id.vue",
-    "chunkName": "pages/poi/_id"
->>>>>>> 200ffed0ebba42e4e35c4c57255c89e32165ff3c
   },
   {
     "name": "service-id",
     "path": "/service/:id?",
-<<<<<<< HEAD
     "component": "/Users/francescomazzola/Git/Alit/pages/service/_id.vue",
     "chunkName": "pages/service/_id",
     "_name": "_7e4dfb54"
-=======
-    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/service/_id.vue",
-    "chunkName": "pages/service/_id"
->>>>>>> 200ffed0ebba42e4e35c4c57255c89e32165ff3c
   },
   {
     "name": "index",
     "path": "/",
-<<<<<<< HEAD
     "component": "/Users/francescomazzola/Git/Alit/pages/index.vue",
     "chunkName": "pages/index",
     "_name": "_4cb51cc6"
-=======
-    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/index.vue",
-    "chunkName": "pages/index"
->>>>>>> 200ffed0ebba42e4e35c4c57255c89e32165ff3c
   }
 ]

@@ -1,10 +1,10 @@
 <template>
-  <div class="container-fluid mt-3">
+  <div class="container-fluid">
     <div id="background" class="row mt-3">
       <div class="col-xl-6 col-12 mb-0 text-center">
         <img
           src="@/static/images/about/connect.png"
-          style="max-width: 100%; height: auto"
+          style="max-width: 100%; height: auto; object-fit: scale-down;"
           alt="Connect"
         />
       </div>
