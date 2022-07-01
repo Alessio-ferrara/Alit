@@ -50,9 +50,7 @@
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
 
 <script>
 import "../assets/style.css";
