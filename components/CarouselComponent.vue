@@ -11,6 +11,7 @@
             v-bind:src="'/' + images[0].path"
             format="webp"
             class="d-block w-100"
+            style="object-fit: cover; height: 70vw; max-height: 70vh"
             alt="Image"
           />
         </div>
@@ -23,6 +24,7 @@
             v-bind:src="'/' + imageItem.path"
             format="webp"
             class="d-block w-100"
+            style="object-fit: cover; height: 70vw; max-height: 70vh"
             alt="Image"
           />
         </div>
@@ -49,10 +51,6 @@
     <!-- !carousel -->
   </div>
 </template>
-
-<style scoped>
-
-</style>
 
 <script>
 import "../assets/style.css";

@@ -66,7 +66,7 @@
     </form>
   </div> -->
   <div class="container">
-    <div class="row mb-3 mt-3 ml-3 mr-3 pb-3">
+    <div class="row mb-3 mt-3 ml-3 mr-3 pb-3 gx-3">
       <form
         class="col-lg-6 mt-3 card bg-white rounded-5"
         @submit.prevent="handleSubmit"
@@ -140,7 +140,7 @@
           </div>
         </div>
       </form>
-      <div class="col-lg-6 col-12 text-center mt-3 pt-3">
+      <div id="illustration" class="col-lg-6 col-12 text-center mt-3 p-3">
         <img
           src="@/static/images/avatar2.png"
           alt="..."
@@ -181,7 +181,6 @@ img {
   background-color: rgb(249, 49, 82);
   color: white;
 }
-
 textarea {
   padding: 8px;
   border: 1px solid #aeaeae;
@@ -189,6 +188,27 @@ textarea {
   height: 15% !important;
   overflow: hidden;
   font-size: 16px;
+}
+/* #illustration {
+  border-radius: 50%;
+  height: 70vh;
+  width: 40%;
+  padding-left: 5%;
+  box-shadow:
+    inset 0 0 50px #fff,      
+    inset 20px 0 80px #f0f,  
+    inset -20px 0 80px #0ff, 
+    inset 20px 0 300px #f0f, 
+    inset -20px 0 300px #0ff,
+    0 0 50px #fff,           
+    -10px 0 80px #f0f,       
+    10px 0 80px #0ff;         
+}
+*/ #illustration img {
+  background:none;
+} 
+#illustration img:first-child{
+  transform: scaleX(-1);
 }
 </style>
 

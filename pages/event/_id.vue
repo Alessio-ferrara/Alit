@@ -32,6 +32,9 @@
         </div>
         <!-- put a line and the thimbnail of the card -->
         <div id="side-info" class="col-md-4 col-sm-12">
+          <p class="lead text-danger mb-0">
+            Event Informations:
+          </p>
           <ul class="lead text-danger pl-0">
             <li>
               <i class="fa-solid fa-calendar-day"></i>

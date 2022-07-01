@@ -1,3 +1,6 @@
+export { default as AboutCards } from '../../components/AboutCards.vue'
+export { default as AboutCharts } from '../../components/AboutCharts.vue'
+export { default as AboutUs } from '../../components/AboutUs.vue'
 export { default as BreadCrumb } from '../../components/BreadCrumb.vue'
 export { default as CardComponent } from '../../components/CardComponent.vue'
 export { default as CarouselComponent } from '../../components/CarouselComponent.vue'

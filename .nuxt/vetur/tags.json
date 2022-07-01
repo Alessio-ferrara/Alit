@@ -1,4 +1,13 @@
 {
+  "AboutCards": {
+    "description": "Auto imported from components/AboutCards.vue"
+  },
+  "AboutCharts": {
+    "description": "Auto imported from components/AboutCharts.vue"
+  },
+  "AboutUs": {
+    "description": "Auto imported from components/AboutUs.vue"
+  },
   "BreadCrumb": {
     "description": "Auto imported from components/BreadCrumb.vue"
   },

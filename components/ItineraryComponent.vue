@@ -1,5 +1,4 @@
 <template>
-  <!-- eslint-disable vue/no-use-v-if-with-v-for,vue/no-confusing-v-for-v-if -->
   <div id="container" class="container-fluid">
     <div v-if="items" class="wrapper">
       <ul class="sessions">

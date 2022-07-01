@@ -1,39 +1,34 @@
 <template>
-    <div id="page" class="container-fluid">
+  <div id="page" class="container-fluid">
     <div class="container">
       <div class="text-center display-4 mt-4">
-       {{ contact.title }}
+        {{ contact.title }}
       </div>
-
-    <p class="text-center text-muted mb-3">
+      <p class="text-center text-muted mb-3">
         You need help? Fill the fields below and contact our team!
-    </p>
-    
-    <hr />
-      
-    <contact-form></contact-form>
-
+      </p>
+      <hr />
+      <contact-form></contact-form>
     </div>
   </div>
 </template>
 
-
 <script>
-import ContactForm from '~/components/ContactForm.vue'
-import '../assets/style.css';
+import ContactForm from "~/components/ContactForm.vue";
+import "../assets/style.css";
 
 export default {
-    name: "ContactUsPage",
-    components: {
-        ContactForm,
-    },
-    async asyncData({ route, $axios }) {
-        const { data } = await $axios.get(`api/content/contact_us`);
-        return {
-            contact: data,
-        };
-    },
-    head() {
+  name: "ContactUsPage",
+  components: {
+    ContactForm,
+  },
+  async asyncData({ route, $axios }) {
+    const { data } = await $axios.get(`api/content/contact_us`);
+    return {
+      contact: data,
+    };
+  },
+  head() {
     return {
       title: "Contact us Dua Tiranën",
       meta: [
@@ -47,6 +42,5 @@ export default {
       ],
     };
   },
-    
 };
 </script>

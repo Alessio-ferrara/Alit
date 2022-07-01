@@ -34,7 +34,6 @@
 <script>
 import ItineraryComponent from "~/components/ItineraryComponent";
 import "../assets/itinerary.css";
-
 export default {
   name: "LandscapeCardComponent",
   components : {
