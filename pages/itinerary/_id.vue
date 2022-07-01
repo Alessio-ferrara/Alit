@@ -13,9 +13,6 @@
         <!-- description -->
         <div class="col-lg-8 col-sm-12 text-justify">
           <div id="presentation" class="lead">
-            {{itinerary.short_description}}
-            <br/>
-            Description:
             <br/>
             {{ itinerary.description }}
             <!-- <div class="collapse mt-3 text-muted" id="moreDetails">
