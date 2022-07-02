@@ -110,7 +110,7 @@ export default {
           path: "/services",
         },
         {
-          name: "Contacts",
+          name: "Contact us",
           path: "/contact_us",
         },
         {
