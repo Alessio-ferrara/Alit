@@ -14,7 +14,7 @@
         </nuxt-link>
       </div>
     </div>
-  </span>
+  </span>   
 </template>
 
 <script>
