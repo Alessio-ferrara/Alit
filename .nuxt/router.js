@@ -4,17 +4,17 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _501b684c = () => interopDefault(import('../pages/about_us.vue' /* webpackChunkName: "pages/about_us" */))
-const _194d7359 = () => interopDefault(import('../pages/contact_us.vue' /* webpackChunkName: "pages/contact_us" */))
-const _13bf4d55 = () => interopDefault(import('../pages/events.vue' /* webpackChunkName: "pages/events" */))
-const _f0be2d46 = () => interopDefault(import('../pages/itineraries.vue' /* webpackChunkName: "pages/itineraries" */))
-const _1cf594a5 = () => interopDefault(import('../pages/pois.vue' /* webpackChunkName: "pages/pois" */))
-const _4c06591a = () => interopDefault(import('../pages/services.vue' /* webpackChunkName: "pages/services" */))
-const _7413dc39 = () => interopDefault(import('../pages/event/_id.vue' /* webpackChunkName: "pages/event/_id" */))
-const _8131a8ac = () => interopDefault(import('../pages/itinerary/_id.vue' /* webpackChunkName: "pages/itinerary/_id" */))
-const _778892e9 = () => interopDefault(import('../pages/poi/_id.vue' /* webpackChunkName: "pages/poi/_id" */))
-const _f0730358 = () => interopDefault(import('../pages/service/_id.vue' /* webpackChunkName: "pages/service/_id" */))
-const _20e84074 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _dbe5e968 = () => interopDefault(import('../pages/about_us.vue' /* webpackChunkName: "pages/about_us" */))
+const _b53b534e = () => interopDefault(import('../pages/contact_us.vue' /* webpackChunkName: "pages/contact_us" */))
+const _5bbdb055 = () => interopDefault(import('../pages/events.vue' /* webpackChunkName: "pages/events" */))
+const _7e28665d = () => interopDefault(import('../pages/itineraries.vue' /* webpackChunkName: "pages/itineraries" */))
+const _0730b7a5 = () => interopDefault(import('../pages/pois.vue' /* webpackChunkName: "pages/pois" */))
+const _e41007cc = () => interopDefault(import('../pages/services.vue' /* webpackChunkName: "pages/services" */))
+const _70569939 = () => interopDefault(import('../pages/event/_id.vue' /* webpackChunkName: "pages/event/_id" */))
+const _320368aa = () => interopDefault(import('../pages/itinerary/_id.vue' /* webpackChunkName: "pages/itinerary/_id" */))
+const _2f568fe9 = () => interopDefault(import('../pages/poi/_id.vue' /* webpackChunkName: "pages/poi/_id" */))
+const _7e4dfb54 = () => interopDefault(import('../pages/service/_id.vue' /* webpackChunkName: "pages/service/_id" */))
+const _4cb51cc6 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -29,47 +29,47 @@ export const routerOptions = {
 
   routes: [{
     path: "/about_us",
-    component: _501b684c,
+    component: _dbe5e968,
     name: "about_us"
   }, {
     path: "/contact_us",
-    component: _194d7359,
+    component: _b53b534e,
     name: "contact_us"
   }, {
     path: "/events",
-    component: _13bf4d55,
+    component: _5bbdb055,
     name: "events"
   }, {
     path: "/itineraries",
-    component: _f0be2d46,
+    component: _7e28665d,
     name: "itineraries"
   }, {
     path: "/pois",
-    component: _1cf594a5,
+    component: _0730b7a5,
     name: "pois"
   }, {
     path: "/services",
-    component: _4c06591a,
+    component: _e41007cc,
     name: "services"
   }, {
     path: "/event/:id?",
-    component: _7413dc39,
+    component: _70569939,
     name: "event-id"
   }, {
     path: "/itinerary/:id?",
-    component: _8131a8ac,
+    component: _320368aa,
     name: "itinerary-id"
   }, {
     path: "/poi/:id?",
-    component: _778892e9,
+    component: _2f568fe9,
     name: "poi-id"
   }, {
     path: "/service/:id?",
-    component: _f0730358,
+    component: _7e4dfb54,
     name: "service-id"
   }, {
     path: "/",
-    component: _20e84074,
+    component: _4cb51cc6,
     name: "index"
   }],
 
