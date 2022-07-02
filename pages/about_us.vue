@@ -1,10 +1,10 @@
 <template>
   <div class="container-fluid">
     <div id="background" class="row mt-3">
-      <about-us />
+      <about-us :about_us_data="about"/>
       <div id="content" class="row m-0">
-        <about-charts />
-        <about-cards />
+        <about-charts :about_us_data="about" />
+        <about-cards :about_us_data="about" />
       </div>
     </div>
   </div>
@@ -69,6 +69,7 @@ export default {
   name: "AboutUsPage",
   async asyncData({ route, $axios }) {
     const { data } = await $axios.get(`api/content/about_us`);
+    console.log(data)
     return {
       about: data,
     };
