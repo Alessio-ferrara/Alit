@@ -1,9 +1,9 @@
 <template>
   <div id="page" class="container-fluid">
     <div class="container">
-      <div class="text-center display-4 mt-4">Points of interest</div>
+      <div class="text-center display-4 mt-4">{{content.title}}</div>
       <p class="text-center text-muted mb-3">
-        Page to see all the points of interest (POI) related to a specific group
+        {{content.description}}
       </p>
       <bread-crumb :crumbs="crumbs" @selected="selected" />
       <grid-cards :items="pois" :name="'poi'" />
@@ -26,7 +26,9 @@ export default {
   name: "PoisPage",
   components: { GridCards, BreadCrumb },
   data() {
-    return {};
+    return {
+      content: []
+    };
   },
   methods: {
     selected(crumbPath) {
@@ -36,8 +38,10 @@ export default {
   async asyncData({ $axios }) {
     // get all the data from the backend and pass it to the component in order to be printed
     const { data } = await $axios.get("api/pois/list");
+    const content = await $axios.get("api/content/poi");
     return {
       pois: data,
+      content: content.data,
       crumbs: [
         { name: "Home", path: "/" },
         { name: "Point of Interests", path: "/pois" },

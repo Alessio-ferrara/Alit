@@ -1,9 +1,9 @@
 <template>
   <div id="page" class="container-fluid">
     <div class="container">
-      <div class="text-center display-4 mt-4">Itineraries</div>
+      <div class="text-center display-4 mt-4">{{content.title}}</div>
       <p class="text-center text-muted mb-3">
-        Page to see all the itineraries available on the website
+        {{content.description}}
       </p>
       <bread-crumb :crumbs="crumbs" @selected="selected" />
       <hr />
@@ -40,7 +40,10 @@ export default {
   },
   async asyncData({ $axios }) {
     const { data } = await $axios.get("api/itineraries/");
+    const content = await $axios.get("api/content/itinerary");
+    console.log(content.data)
     return {
+      content: content.data,
       itineraries: data,
       crumbs: [
         { name: "Home", path: "/" },
