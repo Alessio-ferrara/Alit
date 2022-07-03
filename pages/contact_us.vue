@@ -23,6 +23,7 @@ export default {
     ContactForm,
   },
   async asyncData({ route, $axios }) {
+    //Retrieving the content's data from the database content table, passing the page as a parameter of the request.
     const { data } = await $axios.get("api/content/contact_us");
     return {
       contact: data,

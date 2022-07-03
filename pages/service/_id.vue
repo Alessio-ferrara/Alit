@@ -9,7 +9,7 @@
       </p>
       <bread-crumb :crumbs="crumbs" @selected="selected" />
       <hr />
-      <!-- end of title -->
+      <!-- Displaying all the information about the service of that service type -->
       <div class="row row-cols-1 row-cols-md-3 g-4 mt-3 pt-3">
         <div
           v-for="(item, itemIndex) of services"
@@ -22,7 +22,7 @@
                 <i :class="icon"></i>
               </p>
               <h3 class="card-title text-opacity-75 text-center text-black">{{ item.name }}</h3>
-              <p class="text-center">
+              <p class="te xt-center">
                 <span v-if="item.address">Address:</span>
                 <span class="text-muted">{{ item.address }}</span>
                 <br />Telephone:
@@ -45,6 +45,7 @@
           </div>
         </div>
       </div>
+      <!-- If there are no service for this service type we display this -->
       <div v-if="Object.keys(services).length == 0">
         <div class="alert alert-warning" role="alert">
           <i class="fa fa-lg fa-warning">&nbsp;</i>
@@ -76,8 +77,6 @@ h3 {
 
 <script>
 import BreadCrumb from '~/components/BreadCrumb.vue';
-// import CustomPage from '~/components/CustomPage.vue'
-import CarouselComponent from "~/components/CarouselComponent.vue";
 
 export default {
   name: "ServicePage",
@@ -92,6 +91,7 @@ export default {
   },
   async asyncData({ route, $axios }) {
     const { id } = route.params;
+    //We get all the services for the specified serviceID
     const { data } = await $axios.get(`api/services/${id}`);
     return {
       services: data.services,

@@ -1,6 +1,7 @@
 <template>
   <nav aria-label="bradcrumb">
     <ol class="breadcrumb">
+      <!-- Displaying the breadcrumb, making the last one (the page where we are at the moment) as disabled -->
       <li v-for="(crumb, ci) in crumbs" :key="ci.name" class="breadcrumb-item">
         <a
           class=""
@@ -31,6 +32,7 @@ export default {
     selected(crumbPath) {
       this.$emit("selected", crumbPath);
     },
+    //Generating the full url in order to jump to insert an href
     generateURL(path) {
       return process.env.baseURL + path;
     },

@@ -19,6 +19,7 @@ export default {
     };
   },
   async asyncData({ $axios }) {
+    //Getting data from the database and passing it to the component that will display it
     const { data } = await $axios.get("api/content/index");
     return {
       content: data,
