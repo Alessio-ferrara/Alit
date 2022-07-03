@@ -34,7 +34,7 @@
               <p
                 v-for="(opening, openingIndex) of item.op_hours"
                 :key="`${name}${openingIndex}`"
-                class="text-muted d-inline"
+                class="text-muted text-center mb-0"
               >
                 {{ opening.day }}&nbsp;{{
                 opening.s_hour.split(":", 2).join(":")

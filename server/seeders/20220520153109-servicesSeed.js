@@ -6,7 +6,7 @@ module.exports = {
       {
         type_id: 1,
         name: "Farmaci DITE e NATE",
-        address: "Rruga Mine Peza, Tiranë 1028, Albania",
+        address: "Rruga Mine Peza",
         telephone: "+355 45629666",
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -14,7 +14,7 @@ module.exports = {
       {
         type_id: 1,
         name: "Farmaci Milano",
-        address: "Rruga Mikel Maruli, Tirana, Albania",
+        address: "Rruga Mikel Maruli",
         telephone: "+355 45629665",
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -22,7 +22,7 @@ module.exports = {
       {
         type_id: 1,
         name: "Orange Farmaci",
-        address: "Rr. Irfan Tomini, Pallat 12 kate, kati 1",
+        address: "Rruga Irfan Tomini, Pallati 12 kate, kati 1",
         telephone: "+355 5694030070",
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -54,7 +54,7 @@ module.exports = {
       {
         type_id: 3,
         name: "Artigiano at Vila",
-        address: "Rruga Papa Gjon Pali II 9, Tirana 1001, Albania",
+        address: "Rruga Papa Gjon Pali II 9",
         telephone: "+355 676000480",
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -94,7 +94,7 @@ module.exports = {
       {
         type_id: 5,
         name: "Hygeia Hospital",
-        address: "Tiranë Kashar MËZEZ KM 01 i Rrugës dytësore të Autostradës",
+        address: "Rruga Dytësore e Autostradës, Kashar, Kamëz",
         telephone: "+355 42390000",
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -102,7 +102,7 @@ module.exports = {
       {
         type_id: 4,
         name: "Tirana East Gate",
-        address: "Rruga Nacionale, Autostrada Tiranë - Elbasan",
+        address: "Autostrada Tiranë - Elbasan",
         telephone: "+355 42395001",
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -110,7 +110,7 @@ module.exports = {
       {
         type_id: 4,
         name: "Toptani Shopping Center",
-        address: "Rruga Abdi Toptani 1001",
+        address: "Rruga Abdi Toptani",
         telephone: "+355 44540999",
         createdAt: new Date(),
         updatedAt: new Date(),
