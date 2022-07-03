@@ -1,6 +1,5 @@
-template>
+<template>
   <span class="row mt-3"> 
-    <!-- <hr/> -->
     <h1 class="text-center text-danger fw-light mt-3">{{about_us_data.cards_title}}</h1>
      <div class="col-12 card mt-4">
           <div class="card-body">
@@ -56,7 +55,7 @@ template>
         </div>
         <div class="col-12 card">
           <div class="card-body">
-            <p class="lead text-danger m-3">{{about_us_data.festivals_title}}</p>
+            <p class="lead text-danger m-3">{{about_us_data.nightlife_title}}</p>
             <div class="mr-3">
               <nuxt-img
                   v-bind:src="'/' + about_us_data.nightlife_image"
