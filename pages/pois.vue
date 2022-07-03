@@ -5,7 +5,9 @@
       <p class="text-center text-muted mb-3">
         {{ content.description }}
       </p>
+      <!-- We use select to generate the breadcrumbs correctly -->
       <bread-crumb :crumbs="crumbs" @selected="selected" />
+      <!-- We pass the pois from the database and we specify the name, so that we can handle them correctly in the component that is dynamic -->
       <grid-cards :items="pois" :name="'poi'" />
     </div>
   </div>
@@ -38,6 +40,7 @@ export default {
   async asyncData({ $axios }) {
     // get all the data from the backend and pass it to the component in order to be printed
     const { data } = await $axios.get("api/pois/list");
+    //Get the data of the content from the backend in order to not have static data in the page.
     const content = await $axios.get("api/content/poi");
     return {
       pois: data,

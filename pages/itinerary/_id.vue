@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- We pass all the images to a carousel component we created in order to display them on the top -->
     <carousel-component :images="itinerary.poi_images" />
     <div id="details" class="container mt-4">
       <bread-crumb :crumbs="crumbs" @selected="selected" />
@@ -49,8 +50,6 @@ span {
   width: 75px;
 }
 #side-info {
-  /* max-height: 20vh;
-  margin-bottom: 10%; */
   border-left: none;
 }
 #presentation {
@@ -61,7 +60,6 @@ span {
 }
 </style>
 <script>
-// import CustomPage from '~/components/CustomPage.vue'
 import "../../assets/style.css";
 import "../../assets/details.css";
 import ItineraryComponent from "~/components/ItineraryComponent";
@@ -85,6 +83,7 @@ export default {
   },
   async asyncData({ route, $axios }) {
     const { id } = route.params;
+    //Getting all the information about the itinerary from the database
     const { data } = await $axios.get(`api/itineraries/${id}`);
     return {
       itinerary: data,

@@ -20,7 +20,6 @@
 
 <script>
 import BreadCrumb from "~/components/BreadCrumb.vue";
-// import CustomPage from '~/components/CustomPage.vue'
 import "../assets/style.css";
 import RowGridCards from "../components/RowGridComponent.vue";
 
@@ -39,6 +38,7 @@ export default {
     },
   },
   async asyncData({ $axios }) {
+    //Retrieving both data of the itineraries and also content data to display title and information of the page.
     const { data } = await $axios.get("api/itineraries/");
     const content = await $axios.get("api/content/itinerary");
 

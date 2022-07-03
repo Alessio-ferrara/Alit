@@ -13,10 +13,6 @@
             {{ description }}
           </div>
           <!-- Collapsed content -->
-          <div class="collapse mt-3" id="moreDetails">
-            More details about tirana to be displayed after the click of the
-            user.
-          </div>
         </div>
         <!-- GoogleMapAPI -->
         <div class="col-md-6 col-sm-12 mt-3">
@@ -64,6 +60,12 @@ export default {
   name: "CustomPage",
   components: {
     GoogleMap,
+  },
+  props: {
+    description: {
+      type: String,
+      required: true
+    },
   },
   data() {
     // tirana coordinates

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- We pass all the images to a carousel component we created in order to display them on the top -->
     <carousel-component :images="poi.poi_images" />
     <div id="details" class="container mt-4">
       <bread-crumb :crumbs="crumbs" @selected="selected" />
@@ -8,7 +9,6 @@
         &nbsp;
         <span class="badge bg-danger">{{ poi.poi_type.name }}</span>
       </h1>
-      <!-- <div class="label inline text-danger">{{ poi.poi_type.name }}</div> -->
       <hr />
 
       <div class="row">
@@ -22,8 +22,6 @@
             {{ poi.visit_info }}
           </div>
           <br />
-
-          <!-- Buttons trigger collapse -->
         </div>
         <!-- GoogleMapAPI -->
         <div class="col-md-6 col-sm-12 mt-3">
@@ -81,8 +79,8 @@ export default {
   },
   async asyncData({ route, $axios }) {
     const { id } = route.params;
+    //Get the information about a point specified by the poi_id
     const { data } = await $axios.get(`api/pois/poi/${id}`);
-
     return {
       poi: data,
       crumbs: [
