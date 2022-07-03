@@ -28,7 +28,7 @@
             <p class="text-center text-muted fs-6 mt-2">
               <i class="fa-solid fa-hand-pointer"></i>
               <br />
-              Click on a point of interest to get additional information
+               Click to get additional information
             </p>
           </div>
         </div>

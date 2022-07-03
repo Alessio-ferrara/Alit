@@ -2,7 +2,7 @@
   <!-- Footer -->
   <footer class="bg-dark text-center text-white mt-4 pt-4">
     <!-- Grid container -->
-    <div class="container-fluid p-4">
+    <div class="container p-4">
       <!-- Section: Text -->
       <section class="mb-4 row">
         <div class="col-md-9 ml-4">
@@ -27,7 +27,6 @@
       <!-- Section: Text -->
 
       <!-- Section: Socials -->
-
       <section class="mb-4">
         <!-- Facebook -->
         <a
@@ -89,7 +88,7 @@
 
 <style scoped>
 footer {
-  margin-top: 30vh !important;
+  margin-top: 20vh !important;
 }
 .multi-column {
   list-style-position: inside;
@@ -101,6 +100,7 @@ export default {
   name: 'FooterComponent',
   data() {
     return {
+      // list of items to loop trough in order to have the landmarks on the footer too
       footerList: [
         {
           name: 'Home',

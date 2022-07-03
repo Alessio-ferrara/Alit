@@ -1,24 +1,27 @@
 <template>
   <div id="container" class="container-fluid">
-    <!-- in the itinerary_id page -->
+    <!-- component that we use in the itineary/id page in order to display the full itinerary-->
     <div v-if="items" class="wrapper">
       <ul class="sessions">
         <li>
+          <!-- using .time div in order to display a stop on the stepper with the point of interest name in it -->
           <div class="time">
             <mark>
               <i
                 class="fa fa-solid fa-location-dot text-danger text-decoration-none"
               ></i>
+              <!-- creating a link for the starting point of interest -->
               <nuxt-link class="text-danger" :to="`/poi/${poi_start.id}`">{{
                 poi_start.name
               }}</nuxt-link>
             </mark>
           </div>
         </li>
+        <!-- doing the same as above for all the intermediate points of interests -->
         <li id="stop" v-for="item in items" :key="item.id" class="time text-danger">
           <nuxt-link class="text-danger" :to="`/poi/${item.id}`">
             <div>
-              <!-- <i
+              <!--  <i
                 style="
                   color: transparent;
                   cursor: default;
@@ -34,6 +37,7 @@
         <li>
           <div class="time">
             <mark>
+              <!-- displaying the last poi as the ones above -->
               <i class="fa-solid fa-flag-checkered text-danger"></i>
               <nuxt-link class="text-danger" :to="`/poi/${poi_end.id}`">{{
                 poi_end.name
@@ -43,7 +47,7 @@
         </li>
       </ul>
     </div>
-    <!-- in the card compoment -->
+    <!-- in the landscape_card compoment that we use in the itineraries page -->
     <div  v-else class="wrapper mb-4">
       <ul class="sessions">
         <li style="text-decoration: none">
@@ -59,6 +63,8 @@
             <div class="time">{{ item.name }}</div>
           </mark>
         </li>
+        <!-- since it's the general page we don't want to display all the intermediate points of interests so we display three dots in order to give the user
+        the idea that the itinerary consists of more pois than the starting and ending one -->
         <li style="text-decoration: none">
           <div class="time">...</div>
         </li>
@@ -96,6 +102,7 @@ export default {
 </script>
 
 <style scoped>
+/* css stile for the component that has to be displayed differently on the two pages */
 @mixin tablet-and-up {
   @media screen and (min-width: 769px) {
     @content;
