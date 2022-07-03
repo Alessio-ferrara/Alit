@@ -1,4 +1,5 @@
 <template>
+  <!--this component contains code for displaying the first section on the about us page-->
   <span class="row">
     <div class="col-xl-6 col-12 mb-0 mt-0 text-center">
       <img
@@ -11,6 +12,9 @@
     <div class="col-xl-6 col-12 mt-3 mb-0">
       <h1 id="intro" class="container mt-3 display-5">{{about_us_data.title}}</h1>
       <div class="container lead" v-html="about_us_data.description">
+        <!-- since we are retrieving and displaying content from the database
+             in cases like this where we needed to display a text with html tags
+             we use v-html to interpret the tags and not display them -->
       </div>
     </div>
     <div class="col-12 text-center mt-4">
@@ -88,6 +92,8 @@ export default {
       type: Object,
       required: true,
     },
+    //about_us_data contains an object with title description and image
+    //it is passed on to the component once it is called
   },
 };
 </script>

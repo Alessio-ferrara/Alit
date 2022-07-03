@@ -1,6 +1,8 @@
 <template>
+  <!--this component contains code cards into different pages-->
   <span>
-    <!-- link passing all the info of the selected item to the  -->
+    <!-- if the page we are displaying is events, we add to the card the following elements :
+         image, name, datetime and description-->
     <div v-if="name == 'event'" class="card h-100">
       <nuxt-img
         v-bind:src="'/' + item.main_image"
@@ -17,10 +19,14 @@
             &nbsp;
           </span>
           <br />
+          <!--the v-if here is used to avoid getting an error in
+              case description is null and we try to truncate a null element-->
           <span v-if="item.description">{{ item.description | truncate(200) }}</span>
         </p>
       </div>
     </div>
+    <!-- if the page we are displaying is points of interest, we add to the card the following elements :
+         image, name, datetime and description-->
     <div v-if="name == 'poi'" class="card h-100">
        <nuxt-img
         v-bind:src="'/' + item.main_image"
@@ -31,16 +37,14 @@
       <div class="card-body">
         <h5 class="card-title lead text-center text-black">{{ item.name }}</h5>
         <p id="presentation" class="card-text text-center text-justify text-muted">
-          <!-- control of all the attributes to display according to the type passed -->
-          <span v-if="name == 'events'" class="text-primary lead">{{
-            getDateTime(item.datetime)
-          }}</span>
           <br />
           {{ item.description | truncate(200) }}
         </p>
       </div>
     </div>
-    <div id="service-cards" v-if="name == 'service' && item.name != 'Emergecy numbers'" class="card d-flex">
+
+    <!-- this is used to display all service cards except the emergency numbers card because it is stylized in a different way-->
+    <div id="service-cards" v-if="name == 'service' && item.name != 'Emergency numbers'" class="card d-flex">
       <div class="card-body align-items-center d-flex justify-content-center">
         <h4 class="card-title lead text-center text-black align-middle">
           {{ item.name }}
@@ -51,7 +55,8 @@
         </h4>
       </div>
     </div>
-    <div id="service-cards" v-else-if="name == 'service'" class="card border border-danger d-flex">
+    <!-- displays emergency number service card-->
+    <div id="service-cards" v-else-if="item.name != 'Emergency numbers'" class="card border border-danger d-flex">
       <div class="card-body align-items-center d-flex justify-content-center">
         <h4 class="card-title lead text-center text-black align-middle">
           {{ item.name }}
@@ -112,11 +117,12 @@ export default {
     item: {
       type: Object,
       required: true,
-    },
+    },//item contains all the data we need to display on the page
     name: {
       type: String,
       required: true,
-    },
+    },//name contains the type of card we want to display,
+      // whether it is an event, a poi or a service
   },
   methods: {
     getDateTime(datetime) {
@@ -127,8 +133,8 @@ export default {
         date.getHours() +
         ":" +
         ((date.getMinutes() < 10 ? "0" : "") + date.getMinutes());
-      return " " + d; //+ " "+ time
+      return " " + d;
     },
   },
-};
+};//this function is used to display the date time in a string format
 </script>

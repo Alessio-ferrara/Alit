@@ -1,4 +1,5 @@
 <template>
+  <!-- We use this component to display the contact form -->
   <div class="container">
     <div class="row mb-3 mt-3 ml-3 mr-3 pb-3 gx-3">
       <form
@@ -8,9 +9,11 @@
       >
         <div class="card-header text-center text-muted lead h4">You need help? Fill in the fields below.</div>
 
+        <!-- code to display field validation errors -->
         <span class="form-error" v-if="e.name">{{ e.name }}</span>
         <div class="col-xl-6 col-12 mr-3 mt-3">
           <div class="input-group mb-3">
+            <!-- we bind the input field to the model attribute -->
             <input
               id="name"
               type="text"
@@ -95,7 +98,7 @@
         />
         <br />
         <p class="lead text-center">
-          Our team is always waiting for feedback to help our customers!
+          Our team is always waiting for feedback to help our users!
         </p>
       </div>
     </div>
@@ -136,22 +139,6 @@ textarea {
   overflow: hidden;
   font-size: 16px;
 }
-/* #illustration {
-    border-radius: 50%;
-    height: 70vh;
-    width: 40%;
-    padding-left: 5%;
-    box-shadow:
-      inset 0 0 50px #fff,      
-      inset 20px 0 80px #f0f,  
-      inset -20px 0 80px #0ff, 
-      inset 20px 0 300px #f0f, 
-      inset -20px 0 300px #0ff,
-      0 0 50px #fff,           
-      -10px 0 80px #f0f,       
-      10px 0 80px #0ff;         
-  }
-  */
 #illustration img {
   background: none;
 }
@@ -178,7 +165,7 @@ export default {
         email: undefined,
         subject: undefined,
         message: undefined,
-      },
+      },//initialize the form fields and error messages to be displayed
     };
   },
   methods: {
@@ -188,11 +175,10 @@ export default {
         await axios.post("/api/contact-us", { ...this.contact });
         // Redirect
         location.reload();
-        // Actions to be performed after the execution of the backend call
       } catch (error) {
         error.response.data.errors.forEach(
           (er) => (this.e[er.name] = er.message)
-        );
+        );//catch and display errors
         
       }
     },

@@ -1,6 +1,8 @@
 <template>
+  <!--this component contains code for displaying the cards section on the about us page-->
   <span class="row mt-3"> 
     <h1 class="text-center text-danger fw-light mt-3">{{about_us_data.cards_title}}</h1>
+    <!--displaying about us content that was retrieved from the database-->
      <div class="col-12 card mt-4">
           <div class="card-body">
             <p class="lead text-danger m-3">{{about_us_data.museum_title}}</p>
@@ -13,6 +15,7 @@
                   format="webp"
                   style="float: left"
               />
+              <!--we use v-bind to bind database information to html element attributes -->
             </div>
             <p id="description" class="text-black p-3 h5 lead text-justify">
               {{about_us_data.museum_description}}
@@ -97,12 +100,14 @@ p {
 </style>
 
 <script>
-import about_us from "~/pages/about_us";
 
 export default {
   name: "About-Cards",
   props: {
     about_us_data: {
+      //the about us data contains the about us cards info
+      //it is retrieved from the database and passed on to this component
+      //when it is called
       type: Object,
       required: true,
     },

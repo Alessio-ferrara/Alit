@@ -1,3 +1,4 @@
+<!-- this component is used to display the homepage -->
 <template>
   <div class="container-fluid mt-3 p-0">
     <div
@@ -12,13 +13,8 @@
           <div id="presentation" class="lead text-justify">
             {{ description }}
           </div>
-          <!-- Collapsed content -->
-          <div class="collapse mt-3" id="moreDetails">
-            More details about tirana to be displayed after the click of the
-            user.
-          </div>
         </div>
-        <!-- GoogleMapAPI -->
+        <!-- GoogleMapAPI to display the interactive map located in Tirana -->
         <div class="col-md-6 col-sm-12 mt-3">
           <!-- maps api with the key AIzaSyDX_OSdMYc79SeKrOLBh7VqZ5_n-mdexew -->
           <google-map :lat="lat" :lang="lng" />
@@ -65,13 +61,15 @@ export default {
   components: {
     GoogleMap,
   },
+  props : {
+    description : String
+  },
   data() {
-    // tirana coordinates
     const lat = "41.327953";
     const lng = "19.819025";
     return {
       lat,
-      lng,
+      lng,//passing Tirana's coordinates that will be used in the google maps api
     };
   },
 };
