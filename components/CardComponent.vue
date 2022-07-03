@@ -21,14 +21,16 @@
           <br />
           <!--the v-if here is used to avoid getting an error in
               case description is null and we try to truncate a null element-->
-          <span v-if="item.description">{{ item.description | truncate(200) }}</span>
+          <span v-if="item.description">{{
+            item.description | truncate(200)
+          }}</span>
         </p>
       </div>
     </div>
     <!-- if the page we are displaying is points of interest, we add to the card the following elements :
          image, name, datetime and description-->
     <div v-if="name == 'poi'" class="card h-100">
-       <nuxt-img
+      <nuxt-img
         v-bind:src="'/' + item.main_image"
         class="card-img-top"
         alt="Image"
@@ -36,7 +38,10 @@
       />
       <div class="card-body">
         <h5 class="card-title lead text-center text-black">{{ item.name }}</h5>
-        <p id="presentation" class="card-text text-center text-justify text-muted">
+        <p
+          id="presentation"
+          class="card-text text-center text-justify text-muted"
+        >
           <br />
           {{ item.description | truncate(200) }}
         </p>
@@ -44,7 +49,11 @@
     </div>
 
     <!-- this is used to display all service cards except the emergency numbers card because it is stylized in a different way-->
-    <div id="service-cards" v-if="name == 'service' && item.name != 'Emergency numbers'" class="card d-flex">
+    <div
+      id="service-cards"
+      v-if="name == 'service' && item.name != 'Emergency numbers'"
+      class="card d-flex"
+    >
       <div class="card-body align-items-center d-flex justify-content-center">
         <h4 class="card-title lead text-center text-black align-middle">
           {{ item.name }}
@@ -56,7 +65,11 @@
       </div>
     </div>
     <!-- displays emergency number service card-->
-    <div id="service-cards" v-else-if="item.name != 'Emergency numbers'" class="card border border-danger d-flex">
+    <div
+      id="service-cards"
+      v-if="item.name == 'Emergency numbers' && name == 'service'"
+      class="card border border-danger d-flex"
+    >
       <div class="card-body align-items-center d-flex justify-content-center">
         <h4 class="card-title lead text-center text-black align-middle">
           {{ item.name }}
@@ -104,7 +117,7 @@ img {
 #presentation:after{
     text-align: justify!important;
 } */
-mark{
+mark {
   color: rgba(249, 49, 82, 0.9);
   /* color: white; */
 }
@@ -117,12 +130,12 @@ export default {
     item: {
       type: Object,
       required: true,
-    },//item contains all the data we need to display on the page
+    }, //item contains all the data we need to display on the page
     name: {
       type: String,
       required: true,
-    },//name contains the type of card we want to display,
-      // whether it is an event, a poi or a service
+    }, //name contains the type of card we want to display,
+    // whether it is an event, a poi or a service
   },
   methods: {
     getDateTime(datetime) {
@@ -136,5 +149,5 @@ export default {
       return " " + d;
     },
   },
-};//this function is used to display the date time in a string format
+}; //this function is used to display the date time in a string format
 </script>
