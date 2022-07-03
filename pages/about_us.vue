@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div id="background" class="row mt-3">
-      <about-us />
+      <!-- <about-us /> -->
       <div id="content" class="row m-0">
         <!-- <about-charts /> -->
         <!-- <about-cards /> -->
@@ -87,6 +87,6 @@ export default {
       ],
     };
   },
-  components: { AboutUs },
+  components: {  },
 };
 </script>
