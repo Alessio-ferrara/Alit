@@ -8,16 +8,16 @@
 
 <script>
 function zoom() {
-        document.body.style.zoom = "90%" 
-    }
-    
-import NavBar from '~/components/Navbar.vue'
-import FooTer from  '~/components/Footer.vue'
+  document.body.style.zoom = "90%";
+}
+
+import NavBar from "~/components/Navbar.vue";
+import FooTer from "~/components/Footer.vue";
 export default {
-  name: 'DefaultLayout',
+  name: "DefaultLayout",
   components: {
     NavBar,
-    FooTer
+    FooTer,
   },
-}
+};
 </script>
