@@ -1,9 +1,9 @@
 <template>
   <span class="row">
     <div class="col-xl-6 col-12 mb-0 mt-0 text-center">
-      <img
+      <nuxt-img
         id="illustration"
-        src="@/static/images/about/connect.png"
+        src="images/about/connect.png"
         style="max-width: 100%; height: auto; object-fit: scale-down"
         alt="Connect"
       />
