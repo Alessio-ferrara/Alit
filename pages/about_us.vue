@@ -1,9 +1,9 @@
 <template>
   <div class="container-fluid">
     <div id="background" class="row mt-3">
-      <about-us :about_us_data="about"/>
+      <about-us :scroll="scrollDown" :about_us_data="about" />
       <div id="content" class="row m-0">
-        <about-charts :about_us_data="about" />
+        <about-charts id="charts" :about_us_data="about" />
         <about-cards :about_us_data="about" />
       </div>
     </div>
@@ -33,7 +33,6 @@ img {
   background-color: white;
 }
 #content .col-12 {
-
   margin-bottom: 8vh;
 }
 img {
@@ -50,7 +49,6 @@ p {
 </style>
 
 <script>
-import { styles } from "object-inspect/util.inspect";
 import "../assets/style.css";
 import AboutUs from "~/components/AboutUs.vue";
 import AboutCharts from "~/components/AboutCharts.vue";
@@ -61,7 +59,6 @@ export default {
   async asyncData({ route, $axios }) {
     //Getting content from database to fill the components of about us
     const { data } = await $axios.get("api/content/about_us");
-
     return {
       about: data,
     };
@@ -81,10 +78,11 @@ export default {
     };
   },
   components: { AboutUs, AboutCards, AboutCharts },
-  // methods:{
-  //   scrollToElement() {
-  //       .scrollIntoView({ behavior: "smooth" });
-  //     }
-  // }
+  methods: {
+    scrollDown() {
+      const el = document.querySelector('#content');
+      el.scrollIntoView()
+    },
+  },
 };
 </script>
