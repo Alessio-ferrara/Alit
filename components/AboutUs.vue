@@ -1,11 +1,11 @@
 <template>
   <span class="row">
     <div class="col-xl-6 col-12 mb-0 text-center">
-      <img
+      <!-- <img
         src="@/static/images/about/connect.png"
         style="max-width: 100%; height: auto; object-fit: scale-down"
         alt="Connect"
-      />
+      /> -->
     </div>
     <div class="col-xl-6 col-12 mt-3 mb-0">
       <h1 id="intro" class="container mt-3 display-5">
