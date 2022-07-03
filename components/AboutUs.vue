@@ -1,48 +1,29 @@
 <template>
   <span class="row">
     <div class="col-xl-6 col-12 mb-0 text-center">
-      <img
+      <!-- <img
         src="@/static/images/about/connect.png"
         style="max-width: 100%; height: auto; object-fit: scale-down"
         alt="Connect"
-      />
+      /> -->
     </div>
     <div class="col-xl-6 col-12 mt-3 mb-0">
-      <h1 id="intro" class="container mt-3 display-5">About us</h1>
-      <div class="container lead">
-        <p>
-          Albania is considered the <mark>bridge</mark> between western and
-          easter Europe, mixing the two different culture in an unique one.
-        </p>
-        <p>
-          <mark>Tirana</mark> is the capital of Albania and also the main
-          economic, social and cultural center of the country. Tirana is one of
-          the country's <mark> leading business </mark> and cultural centers
-          including
-          <mark> entertainment, music, media, fashion, </mark>
-          and the arts all contribute to its status as Albania's largest city.
-        </p>
-        <p>
-          The city environment and its attraction provide one of the most
-          fascinating places to <mark> visit </mark> in eastern Europe.
-          <mark>Explore</mark> some the faces of this polyedric
-          <mark>city</mark>, feel welcomed thanks to the
-          <mark>hospitality</mark> of the city and his inhabitants.
-        </p>
-        <p class="pt-3">What are you waiting for?</p>
-      </div>
+      <h1 id="intro" class="container mt-3 display-5">
+        {{ about_us_data.title }}
+      </h1>
+      <div class="container lead" v-html="about_us_data.description"></div>
     </div>
     <div class="col-12 text-center">
       <p class="text-center">
-        Find out more below
+        {{ about_us_data.find_out_more }}
         <i class="fa fa-solid fa-circle-arrow-down"></i>
       </p>
     </div>
     <div id="gradient" class="col-12 m-0 p-0">
-      <img
-        src="@/static/images/about/gradient.png"
-        style="width: 100vw; max-height: 60vh"
+      <nuxt-img
+        v-bind:src="'/' + about_us_data.image"
         alt="Gradient"
+        style="width: 100vw; max-height: 60vh"
       />
     </div>
   </span>
@@ -53,7 +34,7 @@
   /* background: linear-gradient(180deg, rgba(249,49,84,1) 0%, rgba(249,49,84,1) 80%, rgba(254,254,254,1) 100%); */
   cursor: default;
 }
-mark {
+div >>> p mark {
   color: rgb(57, 47, 245);
   background-color: inherit;
   font-weight: normal;
@@ -99,5 +80,11 @@ p {
 export default {
   name: "About-us",
   data() {},
+  props: {
+    about_us_data: {
+      type: Array,
+      required: true,
+    },
+  },
 };
 </script>

@@ -23,7 +23,7 @@ export default {
     ContactForm,
   },
   async asyncData({ route, $axios }) {
-    const { data } = await $axios.get(`api/content/contact_us`);
+    const { data } = await $axios.get("api/content/contact_us");
     return {
       contact: data,
     };
