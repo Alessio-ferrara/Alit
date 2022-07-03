@@ -108,10 +108,9 @@ p {
 <script>
 export default {
   name: "About-Charts",
-  data(){},
   props: {
     about_us_data: {
-      type: Array,
+      type: Object,
       required: true,
     },
   },

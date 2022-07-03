@@ -1,29 +1,28 @@
 <template>
   <span class="row">
     <div class="col-xl-6 col-12 mb-0 text-center">
-      <!-- <img
+      <img
         src="@/static/images/about/connect.png"
         style="max-width: 100%; height: auto; object-fit: scale-down"
         alt="Connect"
-      /> -->
+      />
     </div>
     <div class="col-xl-6 col-12 mt-3 mb-0">
-      <h1 id="intro" class="container mt-3 display-5">
-        {{ about_us_data.title }}
-      </h1>
-      <div class="container lead" v-html="about_us_data.description"></div>
+      <h1 id="intro" class="container mt-3 display-5">{{about_us_data.title}}</h1>
+      <div class="container lead" v-html="about_us_data.description">
+      </div>
     </div>
     <div class="col-12 text-center">
       <p class="text-center">
-        {{ about_us_data.find_out_more }}
+        {{about_us_data.find_out_more}}
         <i class="fa fa-solid fa-circle-arrow-down"></i>
       </p>
     </div>
     <div id="gradient" class="col-12 m-0 p-0">
       <nuxt-img
-        v-bind:src="'/' + about_us_data.image"
-        alt="Gradient"
-        style="width: 100vw; max-height: 60vh"
+          v-bind:src="'/' + about_us_data.image"
+          alt="Gradient"
+          style="width: 100vw; max-height: 60vh"
       />
     </div>
   </span>
@@ -34,7 +33,7 @@
   /* background: linear-gradient(180deg, rgba(249,49,84,1) 0%, rgba(249,49,84,1) 80%, rgba(254,254,254,1) 100%); */
   cursor: default;
 }
-div >>> p mark {
+div >>> p  mark {
   color: rgb(57, 47, 245);
   background-color: inherit;
   font-weight: normal;
@@ -79,10 +78,9 @@ p {
 <script>
 export default {
   name: "About-us",
-  data() {},
   props: {
     about_us_data: {
-      type: Array,
+      type: Object,
       required: true,
     },
   },
