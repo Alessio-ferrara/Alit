@@ -12,7 +12,7 @@ const sendEmail = async (req, res, next) => {
     errors.push({
       name: "name",
       message:
-        "The name contains invalid characters! Please enter only letters!",
+        "Invalid field! The name should contain only letters.",
     });
   }
   if (!email || !validator.isEmail(email)) {

@@ -6,10 +6,11 @@
         @submit="onSubmit"
         method="post"
       >
-        <!-- <div class="card-header text-center text-dark h4">Contact form</div> -->
-        <div class="col-12">
-          <span class="form-error" v-if="e.name">{{ e.name }}</span>
-          <div class="input-group mb-3 mt-3">
+        <div class="card-header text-center text-muted lead h4">You need help? Fill in the fields below.</div>
+
+        <span class="form-error" v-if="e.name">{{ e.name }}</span>
+        <div class="col-xl-6 col-12 mr-3 mt-3">
+          <div class="input-group mb-3">
             <input
               id="name"
               type="text"
@@ -22,8 +23,9 @@
             />
           </div>
         </div>
-        <div class="col-12">
-          <span class="form-error" v-if="e.email">{{ e.email }}</span>
+
+        <span class="form-error" v-if="e.email">{{ e.email }}</span>
+        <div class="col-xl-6 col-12">
           <div class="input-group mb-3">
             <input
               id="email"
@@ -37,8 +39,9 @@
             />
           </div>
         </div>
+
+        <span class="form-error" v-if="e.subject">{{ e.subject }}</span>
         <div class="col-12">
-          <span class="form-error" v-if="e.subject">{{ e.subject }}</span>
           <div class="input-group mb-3">
             <input
               id="subject"
@@ -52,8 +55,9 @@
             />
           </div>
         </div>
+
+        <span class="form-error" v-if="e.message">{{ e.message }}</span>
         <div class="col-12 mb-0">
-          <span class="form-error" v-if="e.message">{{ e.message }}</span>
           <div class="md-form mb-4 pink-textarea active-pink-textarea">
             <textarea
               id="message"
@@ -90,9 +94,8 @@
           class="img-thumbnail"
         />
         <br />
-        <p class="lead">
-          Our team is always waiting for feedback to help our customers, we will
-          contact you as soon as possible!
+        <p class="lead text-center">
+          Our team is always waiting for feedback to help our customers!
         </p>
       </div>
     </div>
