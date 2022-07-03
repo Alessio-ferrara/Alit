@@ -69,7 +69,7 @@ export default {
   name: "AboutUsPage",
   async asyncData({ route, $axios }) {
     const { data } = await $axios.get("api/content/about_us");
-    console.log(data)
+
     return {
       about: data,
     };

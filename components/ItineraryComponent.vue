@@ -68,10 +68,6 @@ name: "ItineraryComponent",
       type: Object,
       required: true,
     },
-    name: {
-      type: String,
-      required: true,
-    },
   },
 }
 
