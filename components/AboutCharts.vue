@@ -1,5 +1,6 @@
 <template>
-    <span class="row mb-3">
+  <!--this component contains code for displaying the charts section on the about us page-->
+  <span class="row mb-3">
         <div class="col-xl-3 col-md-6 col-12 mb-2">
           <div class="card">
             <div class="card-content">
@@ -9,9 +10,14 @@
                     <i
                       v-bind:class=about_us_data.visitors_icon
                     ></i>
+                    <!-- the icon class is also saved and retrieved from the database-->
+                    <!-- this decision was made to facilitate the modification of frontend content
+                         by just changing the seeder values, without having to go back into the vue code-->
+                    <!-- we use v-bind to bind it to the class attribute of the icon-->
                   </div>
                   <div class="media-body text-dark float-right lead text-right">
                     <h5 class="lead text-success">{{about_us_data.visitors_number}}</h5>
+                    <!--display content retrieved from the database-->
                     <span>{{about_us_data.visitor_title}}</span>
                   </div>
                 </div>
@@ -110,6 +116,9 @@ export default {
   name: "About-Charts",
   props: {
     about_us_data: {
+      //the about us data contains the about us charts info
+      //it is retrieved from the database and passed on to this component
+      //when it is called
       type: Object,
       required: true,
     },

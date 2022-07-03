@@ -1,4 +1,5 @@
 <template>
+  <!-- this component is used to display a carousel of images-->
   <div v-if="images.length" id="canvas" class="container-fluid">
     <div
       id="carouselExampleControls"
@@ -7,6 +8,8 @@
     >
       <div class="carousel-inner shadow-4-strong">
         <div class="carousel-item active">
+          <!-- we use nuxt-img to display the first (active) image by binding the
+               first element of the images array to the src attribute -->
           <nuxt-img
             v-bind:src="'/' + images[0].path"
             format="webp"
@@ -15,6 +18,7 @@
             alt="Image"
           />
         </div>
+        <!-- loop through the array to display the remaining images -->
         <div
           v-for="(imageItem, imageIndex) of images.slice(1)"
           :key="`imageItem${imageIndex}`"
@@ -62,7 +66,8 @@ export default {
     images: {
       type: Array,
       required: true,
-    },
+    },//images is an array of images paths
+      // that was retrieved from the database
   },
 };
 </script>

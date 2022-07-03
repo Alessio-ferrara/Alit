@@ -5,6 +5,7 @@ const POIinfo = async (req, res, next) => {
   const { poi_id } = req.params;
   try {
     const poi_info = await Point_of_interest.getInfo(poi_id);
+    console.log(poi_info)
     res.status(200).json(poi_info);
   } catch (err) {
     return next(

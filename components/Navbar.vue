@@ -12,10 +12,9 @@
           loading="lazy"
         />
         <ul class="navbar-nav me-auto mb-2 ml-2 mb-lg-0">
-          <a
-            class="nav-link text-danger mb-2 pl-3 pr-3"
-            href="/"
-            >&nbsp;Dua Tiranën&nbsp;</a
+          <span
+            class="text-danger mb-2 pl-3 pr-3"
+            >&nbsp;Dua Tiranën&nbsp;</span
           >
         </ul>
       </a>
