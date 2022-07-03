@@ -9,6 +9,7 @@
         class="card-img-top"
         alt="Image"
         format="webp"
+        sizes="sm:100vw md:50vw lg:400px"
       />
       <div class="card-body">
         <h5 class="card-title lead text-center text-black">{{ item.name }}</h5>
@@ -79,6 +80,27 @@
             <br />
           </p>
         </h4>
+      </div>
+    </div>
+    <div v-if="name == 'itinerary'" class="card h-100">
+      <itinerary-component
+        :poi_start="item.poi_start"
+        :poi_end="item.poi_end"
+      />
+
+      <div class="card-body p-0">
+        <h5 class="card-title lead text-center text-black">{{ item.name }}</h5>
+        <p id="presentation" class="card-text text-center text-muted">
+          <!-- basge to give information on the duration of the itinerary, displaying the text correctly depending on the hours -->
+
+          <span v-if="item.duration > 1" class="text-danger lead"
+            ><mark>{{ item.duration }} hours</mark> </span
+          >
+
+          <span v-else class="text-danger lead"
+            ><mark>{{ item.duration }} hour</mark></span
+          >
+        </p>
       </div>
     </div>
   </span>

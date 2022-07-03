@@ -27,12 +27,6 @@ module.exports = (sequelize, DataTypes) => {
           ]
         });
 
-        // for (let i in itineraries) {
-        //     const poi = itineraries[i]['point_of_interests'];
-        //     const size = poi.length;
-        //     itineraries[i].poi_start = poi[0];
-        //     itineraries[i].poi_end = poi[size - 1];
-        // }
 
         let itinerariesLast = [];
         itineraries.forEach(itinerary => {

@@ -37,6 +37,10 @@
           :name="'event'"
         />
       </div>
+      <div class="mt-5" v-if="poi.itineraries && poi.itineraries.length">
+        <h2 style="fontWeight:900, margin:0">Itineraries</h2>
+        <grid-cards :items="poi.itinerariesLast" :name="'itinerary'" />
+      </div>
     </div>
   </div>
 </template>
@@ -54,6 +58,10 @@
 #details h2 {
   margin: 0 !important;
 }
+
+h3 {
+  font-size: small;
+}
 </style>
 
 <script>
@@ -62,12 +70,14 @@ import "../../assets/style.css";
 import "../../assets/details.css";
 import CarouselComponent from "~/components/CarouselComponent.vue";
 import BreadCrumb from "~/components/BreadCrumb.vue";
+import GridCards from "../../components/GridCards.vue";
 
 export default {
   name: "PoiPage",
   components: {
     CarouselComponent,
     BreadCrumb,
+    GridCards,
   },
   data() {
     return {};
@@ -79,8 +89,10 @@ export default {
   },
   async asyncData({ route, $axios }) {
     const { id } = route.params;
+
     //Get the information about a point specified by the poi_id
     const { data } = await $axios.get(`api/pois/poi/${id}`);
+    console.log(data.itinerariesLast);
     return {
       poi: data,
       crumbs: [
