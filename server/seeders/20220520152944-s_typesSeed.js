@@ -34,7 +34,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        name: "Emergecy numbers",
+        name: "Emergency numbers",
         icon: "fa-solid fa-lg fa-phone",
         createdAt: new Date(),
         updatedAt: new Date(),

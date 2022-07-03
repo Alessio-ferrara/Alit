@@ -10,10 +10,10 @@
       />
       <div class="card-body">
         <h5 class="card-title lead text-center text-black">{{ item.name }}</h5>
-        <p class="card-text text-center text-muted">
+        <p id="presentation" class="card-text text-center text-muted">
           <span class="text-danger lead">
             <!-- <i class="fas fa-solid fa-calendar-day"></i> -->
-            <strong>{{ getDateTime(item.datetime) }}</strong>
+            <mark>{{ getDateTime(item.datetime) }}</mark>
             &nbsp;
           </span>
           <br />
@@ -30,7 +30,7 @@
       />
       <div class="card-body">
         <h5 class="card-title lead text-center text-black">{{ item.name }}</h5>
-        <p class="card-text text-center text-muted">
+        <p id="presentation" class="card-text text-center text-justify text-muted">
           <!-- control of all the attributes to display according to the type passed -->
           <span v-if="name == 'events'" class="text-primary lead">{{
             getDateTime(item.datetime)
@@ -80,7 +80,6 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .card:hover {
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 20%), 0 4px 6px -2px rgb(0 0 0 / 15%) !important;
   background-color: rgb(247, 246, 246) !important;
@@ -93,6 +92,16 @@ img {
 }
 #service-cards:hover {
   background-color: rgb(247, 246, 246) !important;
+}
+/* #presentation{
+    text-align: justify!important;
+}
+#presentation:after{
+    text-align: justify!important;
+} */
+mark{
+  color: rgba(249, 49, 82, 0.9);
+  /* color: white; */
 }
 </style>
 

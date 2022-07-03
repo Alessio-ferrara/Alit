@@ -2,23 +2,8 @@
   <div class="container-fluid mt-3 p-0">
     <div
       class="p-5 text-center bg-image min-vh-50 mt-3"
-      style="
-        background-image: url('https://images.unsplash.com/photo-1624305740286-dbbccc54fb96?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1865&q=80');
-        height: 70vw;
-        max-height: 70vh;
-        object-fit: scale-down;
-      "
-    >
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
-        <div class="d-flex h-100">
-          <div class="text-white mt-3 ml-3 pt-3">
-            <h1 class="display-1">{{title}}</h1>
-            <hr />
-            <p class="lead">{{short_description}}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+      style="height: 70vw; max-height: 70vh; object-fit: scale-down"
+    ></div>
     <!--  /jumbotron -->
     <div class="container">
       <div class="row">
@@ -47,16 +32,26 @@
 .text-white {
   padding-top: 40px !important;
 }
+.bg-image {
+  background-image: url(@/static/images/landing.png);
+}
 #presentation {
   text-align: justify;
 }
 #presentation:after {
   text-align: justify;
 }
-
 .mask .text-white {
   margin-left: 0;
   margin-top: 15% !important;
+}
+.left {
+  float: left;
+  padding: 0 20px 20px 0;
+}
+.right {
+  float: right;
+  padding: 0 0 20px 20px;
 }
 </style>
 
@@ -69,20 +64,6 @@ export default {
   name: "CustomPage",
   components: {
     GoogleMap,
-  },
-  props: {
-    description: {
-      type: String,
-      required: true,
-    },
-    title: {
-      type: String,
-      required: true,
-    },
-    short_description: {
-      type: String,
-      required: true,
-    },
   },
   data() {
     // tirana coordinates

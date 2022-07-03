@@ -1,50 +1,73 @@
 <template>
   <div id="container" class="container-fluid">
+    <!-- in the itinerary_id page -->
     <div v-if="items" class="wrapper">
       <ul class="sessions">
         <li>
           <div class="time">
-            <i class="fa fa-solid fa-location-dot text-danger text-decoration-none"></i>
-            <nuxt-link
-              class="text-danger fst-italic"
-              :to="`/poi/${poi_start.id}`"
-            >{{poi_start.name}}</nuxt-link>
+            <mark>
+              <i
+                class="fa fa-solid fa-location-dot text-danger text-decoration-none"
+              ></i>
+              <nuxt-link class="text-danger" :to="`/poi/${poi_start.id}`">{{
+                poi_start.name
+              }}</nuxt-link>
+            </mark>
           </div>
         </li>
-        <li v-for="(item) in items" :key="item.id" class="time text-danger">
-          <nuxt-link class="text-danger fst-italic" :to="`/poi/${item.id}`">
-            <div>{{item.name}}</div>
+        <li id="stop" v-for="item in items" :key="item.id" class="time text-danger">
+          <nuxt-link class="text-danger" :to="`/poi/${item.id}`">
+            <div>
+              <!-- <i
+                style="
+                  color: transparent;
+                  cursor: default;
+                "
+                class="fa-solid fa-square"
+              ></i> -->
+              <mark class="text-danger ml-4">
+                {{ item.name }}
+              </mark>
+            </div>
           </nuxt-link>
         </li>
         <li>
           <div class="time">
-            <i class="fa-solid fa-flag-checkered text-danger"></i>
-            <nuxt-link
-              class="text-danger fst-italic"
-              :to="`/poi/${poi_end.id}`"
-            >{{poi_end.name}}</nuxt-link>
+            <mark>
+              <i class="fa-solid fa-flag-checkered text-danger"></i>
+              <nuxt-link class="text-danger" :to="`/poi/${poi_end.id}`">{{
+                poi_end.name
+              }}</nuxt-link>
+            </mark>
           </div>
         </li>
       </ul>
     </div>
-    <div v-else class="wrapper">
+    <!-- in the card compoment -->
+    <div  v-else class="wrapper mb-4">
       <ul class="sessions">
-        <li>
+        <li style="text-decoration: none">
           <div class="time">
-            <i class="fa fa-solid fa-location-dot text-danger"></i>
-            {{poi_start.name}}
+            <mark>
+              <i class="fa fa-solid fa-location-dot text-danger"></i>
+              {{ poi_start.name }}
+            </mark>
           </div>
         </li>
-        <li v-for="(item) in items" :key="item.id" class="time">
-          <div class="time">{{item.name}}</div>
+        <li v-for="item in items" :key="item.id" class="time">
+          <mark>
+            <div class="time">{{ item.name }}</div>
+          </mark>
         </li>
-        <li>
+        <li style="text-decoration: none">
           <div class="time">...</div>
         </li>
-        <li>
+        <li style="text-decoration: none">
           <div class="time">
-            <i class="fa-solid fa-flag-checkered text-danger"></i>
-            {{poi_end.name}}
+            <mark>
+              <i class="fa-solid fa-flag-checkered text-danger"></i>
+              {{ poi_end.name }}
+            </mark>
           </div>
         </li>
       </ul>
@@ -54,7 +77,7 @@
 
 <script>
 export default {
-name: "ItineraryComponent",
+  name: "ItineraryComponent",
   props: {
     items: {
       type: Array,
@@ -68,13 +91,8 @@ name: "ItineraryComponent",
       type: Object,
       required: true,
     },
-    name: {
-      type: String,
-      required: true,
-    },
   },
-}
-
+};
 </script>
 
 <style scoped>
@@ -121,11 +139,14 @@ h1 {
 li {
   padding-bottom: 1.5rem;
   border-left: 3px solid rgb(249, 49, 84);
-  text-decoration: underline red;
   position: relative;
   padding-left: 20px;
   margin-left: 10px;
 }
+#stop{
+    text-decoration: none;
+}
+
 
 li:before {
   content: "";
@@ -168,7 +189,10 @@ li:last-child {
 i {
   display: inline;
 }
-.container-fluid{
+.container-fluid {
   padding-top: 0;
+}
+li i{
+  text-decoration: none!important;
 }
 </style>

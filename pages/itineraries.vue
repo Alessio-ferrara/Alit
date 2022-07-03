@@ -41,7 +41,7 @@ export default {
   async asyncData({ $axios }) {
     const { data } = await $axios.get("api/itineraries/");
     const content = await $axios.get("api/content/itinerary");
-    console.log(content.data)
+
     return {
       content: content.data,
       itineraries: data,

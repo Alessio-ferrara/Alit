@@ -38,15 +38,9 @@
             v-for="(navItem, navItemIndex) of headerList"
             :key="`navItem${navItemIndex}`"
             class="nav-item"
-            v-on:click="setActive(navItem.name)"
-            :class="{ active: isActive(navItem.name) }"
           >
             <nuxt-link :to="navItem.path" class="nav-link">
-              <span
-                data-bs-toggle="collapse"
-                data-bs-target=".navbar-collapse.show"
-                >{{ navItem.name }}</span
-              >
+              {{ navItem.name }}
             </nuxt-link>
           </li>
         </ul>
