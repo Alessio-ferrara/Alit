@@ -1,6 +1,6 @@
 <template>
   <span>
-    <div class="container row row-cols-1 g-4 mt-4 m-lg-auto pt-3 w-100 ">
+    <div class="container row row-cols-1 g-4 mt-4 m-lg-auto pt-3 w-100">
       <!-- v-for the item in itemlist to display the card in a grid that is different from the one of events/pois/services displaying the cards in full rows -->
       <div
           v-for="(item, itemIndex) of items"
@@ -17,6 +17,12 @@
     </div>
   </span>
 </template>
+
+<style scoped>
+  .row{
+    margin-left: 0;
+  }
+</style>
 
 <script>
 import LandscapeCardComponent from "~/components/LandscapeCardComponent";

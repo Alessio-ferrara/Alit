@@ -20,29 +20,27 @@
         <i class="fa fa-solid fa-circle-arrow-down"></i>
       </p>
     </div>
-    <div id="gradient" class="col-12 m-0 p-0">
+    <div style="min-width: 100vw;" id="gradient" class="col-12 m-0 p-0">
       <nuxt-img
         v-bind:src="'/' + about_us_data.image"
         alt="Gradient"
-        style="width: 100vw; max-height: 30vh"
+        style="width: 100%; max-height: 30vh; margin: 0 0 0 0;"
       />
     </div>
   </span>
 </template>
+
 <style scoped>
 #illustration {
   transform: scaleX(-1);
   max-height: 60vh;
 }
-#background {
-  background: rgb(249, 49, 84);
-  cursor: default;
-}
 #gradient {
   background-color: none;
+  width: 100vw;
 }
 div >>> p mark {
-  color: rgb(57, 47, 245);
+  color: rgb(44, 37, 184);
   background-color: inherit;
   font-weight: normal;
   border-radius: 0;

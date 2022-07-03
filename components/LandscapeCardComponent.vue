@@ -7,21 +7,21 @@
           <h1 class="card-title text-black text-left display-6">{{ item.name }}</h1>
           <h3 class="card-text text-muted">
             <!-- basge to give information on the duration of the itinerary, displaying the text correctly depending on the hours -->
-            <span
+            <mark
               v-if="item.duration > 1"
-              class="badge bg-danger text-white p-2"
-            >{{item.duration }} hours</span>
-            <span v-else class="badge bg-danger text-white p-2">{{item.duration }} hour</span>
+              class="text-danger h4"
+            >{{item.duration }} hours</mark>
+            <mark v-else class="text-danger h4">{{item.duration }} hour</mark>
             <hr />
-            <p class="text-muted lead mt-3">{{ item.short_description }}</p>
+            <p class="text-muted lead mt-3" >{{ item.short_description }}</p>
           </h3>
         </div>
-        <!-- left part of the card -->
+        <!-- /left part of the card -->
         <div id="itinerary" class="col-lg-4 col-md-12">
           <!-- call to itinerary component passing the starting and ending point and displaying the "short" itinerary version -->
           <itinerary-component :poi_start="item.poi_start" :poi_end="item.poi_end" />
         </div>
-        <!-- right part of the card -->
+        <!-- /right part of the card -->
       </div>
     </div>
   </span>

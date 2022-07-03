@@ -12,14 +12,9 @@
 
 <style scoped>
 #background {
+  /* background: rgb(218, 81, 104); */
   background: rgb(249, 49, 84);
   cursor: default;
-}
-mark {
-  color: rgb(57, 47, 245);
-  background-color: inherit;
-  font-weight: normal;
-  border-radius: 0;
 }
 img {
   height: 80vh !important;
@@ -33,7 +28,6 @@ img {
   background-color: white;
 }
 #content .col-12 {
-
   margin-bottom: 8vh;
 }
 img {
@@ -43,9 +37,6 @@ img {
 }
 p {
   color: whitesmoke;
-}
-.media {
-  justify-content: space-evenly;
 }
 </style>
 

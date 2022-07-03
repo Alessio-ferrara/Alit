@@ -6,6 +6,12 @@
       <bread-crumb :crumbs="crumbs" @selected="selected" />
       <h1 class="mt-2 mb-2">
         {{ itinerary.name }}
+
+            <mark  v-if="itinerary.duration > 1"
+              class="text-danger h4">
+            {{itinerary.duration }} hours
+            </mark>
+            <mark v-else class="text-danger h4">{{itinerary.duration }} hour</mark>
         <br />
       </h1>
       <hr />

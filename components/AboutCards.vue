@@ -77,6 +77,9 @@
 </template>
 
 <style scoped>
+.row{
+  margin-left: 0;
+}
 img {
   height: 80vh !important;
   max-height: 80vh;
@@ -98,7 +101,11 @@ p {
   color: whitesmoke;
 }
 .card{
-  align-content: space-around
+  align-content: space-around;
+  align-items: center
+}
+.media {
+  justify-content: space-evenly;
 }
 </style>
 

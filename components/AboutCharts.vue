@@ -1,16 +1,16 @@
 <template>
   <!--this component contains code for displaying the charts section on the about us page-->
-  <span class="row mb-3">
-        <div class="col-xl-3 col-md-6 col-12 mb-2">
+  <span id="charts_row" class="row mb-3">
+        <div class="col-xl-3 col-12 mb-2">
           <div class="card">
             <div class="card-content">
               <div class="card-body">
                 <div class="media d-flex">
                   <div class="align-self-center text-left">
                     <i
-                      v-bind:class=about_us_data.visitors_icon
+                      v-bind:class='about_us_data.visitors_icon'
                     ></i>
-                    <!-- the icon class is also saved and retrieved from the database-->
+                    <!-- the icon class is also saved and retrieved from the database -->
                     <!-- this decision was made to facilitate the modification of frontend content
                          by just changing the seeder values, without having to go back into the vue code-->
                     <!-- we use v-bind to bind it to the class attribute of the icon-->
@@ -25,7 +25,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-md-6 col-12 mb-2">
+        <div class="col-xl-3 col-12 mb-2">
           <div class="card">
             <div class="card-content">
               <div class="card-body">
@@ -44,7 +44,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-md-6 col-12 mb-2">
+        <div class="col-xl-3 col-12 mb-2">
           <div class="card">
             <div class="card-content">
               <div class="card-body">
@@ -63,7 +63,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-md-6 col-12 mb-2">
+        <div class="col-xl-3 col-12 mb-2">
           <div class="card">
             <div class="card-content">
               <div class="card-body">
@@ -86,6 +86,9 @@
 </template>
 
 <style scoped>
+#charts_row{
+  margin-left: 0;
+}
 #intro {
   font-weight: normal;
   color: white;

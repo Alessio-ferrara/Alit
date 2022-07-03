@@ -7,12 +7,12 @@
       <section class="mb-4 row">
         <div class="col-md-9 ml-4">
           <p>
-            This website was developed thanks to the efforts of the students of the course of HyperMedia Applications of the
+            This website was developed by Alit Group, thanks to the efforts of the students of the course of HyperMedia Applications of the
             Master Degree in Computer Science of the
             <a
               class="text-danger text-decoration-underline"
               href="https://www.polimi.it/"
-            >Politecnico di Milano</a>
+            >Politecnico di Milano.</a>
           </p>
         </div>
         <div class="col-md-3">

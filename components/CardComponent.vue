@@ -82,7 +82,7 @@
         </h4>
       </div>
     </div>
-    <div v-if="name == 'itinerary'" class="card h-100">
+    <div id="itinerary_card" v-if="name == 'itinerary'" class="card h-100">
       <itinerary-component
         :poi_start="item.poi_start"
         :poi_end="item.poi_end"
@@ -90,7 +90,7 @@
 
       <div class="card-body p-0">
         <h5 class="card-title lead text-center text-black">{{ item.name }}</h5>
-        <p id="presentation" class="card-text text-center text-muted">
+        <p id="presentation" class="card-text text-center text-muted mb-3">
           <!-- basge to give information on the duration of the itinerary, displaying the text correctly depending on the hours -->
 
           <span v-if="item.duration > 1" class="text-danger lead"
@@ -143,6 +143,9 @@ img {
 mark {
   color: rgba(249, 49, 82, 0.9);
   /* color: white; */
+}
+#itinerary_card{
+  text-align: left;
 }
 </style>
 
