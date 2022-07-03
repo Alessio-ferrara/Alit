@@ -35,6 +35,7 @@
         class="card-img-top"
         alt="Image"
         format="webp"
+        sizes="sm:100vw md:50vw lg:400px"
       />
       <div class="card-body">
         <h5 class="card-title lead text-center text-black">{{ item.name }}</h5>
