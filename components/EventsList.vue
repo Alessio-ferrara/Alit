@@ -6,11 +6,13 @@
         </p>
     </div>
     <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- for each event in the GroupList we display the three groups of events (Summer,Winter,Year) -->
       <div
         v-for="(eventItem, eventItemIndex) of GroupList"
         :key="`eventItem${eventItemIndex}`"
         class="col-lg-4 col-md-12"
       >
+      <!-- on selection change we change the page accordingly and show the remaining elements of the previous GroupList -->
         <div
           class="card border bg-light text-muted"
           @click="handleChange(eventItem.c, eventItem.name)"
@@ -82,6 +84,7 @@ export default {
       ],
     };
   },
+  // on change of the event group to show we dynamically update the group list with the correct content to show
   methods: {
     handleChange: function (choice, name) {
       this.selection = choice;

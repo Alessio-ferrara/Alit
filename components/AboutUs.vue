@@ -1,33 +1,30 @@
 <template>
-  <!--this component contains code for displaying the first section on the about us page-->
   <span class="row">
     <div class="col-xl-6 col-12 mb-0 mt-0 text-center">
-      <img
+      <nuxt-img
         id="illustration"
-        src="@/static/images/about/connect.png"
+        src="images/about/connect.png"
         style="max-width: 100%; height: auto; object-fit: scale-down"
         alt="Connect"
       />
     </div>
     <div class="col-xl-6 col-12 mt-3 mb-0">
-      <h1 id="intro" class="container mt-3 display-5">{{about_us_data.title}}</h1>
-      <div class="container lead" v-html="about_us_data.description">
-        <!-- since we are retrieving and displaying content from the database
-             in cases like this where we needed to display a text with html tags
-             we use v-html to interpret the tags and not display them -->
-      </div>
+      <h1 id="intro" class="container mt-3 display-5">
+        {{ about_us_data.title }}
+      </h1>
+      <div class="container lead text-light" v-html="about_us_data.description"></div>
     </div>
     <div class="col-12 text-center mt-4">
       <p class="text-center">
-        {{about_us_data.find_out_more}}
+        {{ about_us_data.find_out_more }}
         <i class="fa fa-solid fa-circle-arrow-down"></i>
       </p>
     </div>
     <div id="gradient" class="col-12 m-0 p-0">
       <nuxt-img
-          v-bind:src="'/' + about_us_data.image"
-          alt="Gradient"
-          style="width: 100vw; max-height: 60vh"
+        v-bind:src="'/' + about_us_data.image"
+        alt="Gradient"
+        style="width: 100vw; max-height: 30vh"
       />
     </div>
   </span>
@@ -39,10 +36,12 @@
 }
 #background {
   background: rgb(249, 49, 84);
-  /* background: linear-gradient(180deg, rgba(249,49,84,1) 0%, rgba(249,49,84,1) 80%, rgba(254,254,254,1) 100%); */
   cursor: default;
 }
-div >>> p  mark {
+#gradient {
+  background-color: none;
+}
+div >>> p mark {
   color: rgb(57, 47, 245);
   background-color: inherit;
   font-weight: normal;
@@ -92,8 +91,6 @@ export default {
       type: Object,
       required: true,
     },
-    //about_us_data contains an object with title description and image
-    //it is passed on to the component once it is called
   },
 };
 </script>

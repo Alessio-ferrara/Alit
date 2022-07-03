@@ -13,7 +13,7 @@
         />
         <ul class="navbar-nav me-auto mb-2 ml-2 mb-lg-0">
           <a
-            class="nav-link mb-2 pl-3 pr-3"
+            class="nav-link text-danger mb-2 pl-3 pr-3"
             href="/"
             >&nbsp;Dua Tiranën&nbsp;</a
           >
@@ -34,6 +34,7 @@
       <!-- Collapsible wrapper -->
       <div class="collapse navbar-collapse" id="navbarButtonsExample">
         <ul class="navbar-nav me-auto mb-2 ml-2 mb-lg-0">
+          <!-- looping trough the headerList in order to display all the elements of the navbar using the item name and path to correctly navigate to the desired part -->
           <li
             v-for="(navItem, navItemIndex) of headerList"
             :key="`navItem${navItemIndex}`"

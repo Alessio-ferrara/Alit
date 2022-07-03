@@ -97,6 +97,9 @@ img {
 p {
   color: whitesmoke;
 }
+.card{
+  align-content: space-around
+}
 </style>
 
 <script>

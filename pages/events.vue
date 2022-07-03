@@ -3,15 +3,17 @@
     <div class="container">
       <events-list :changeSelection="changeSelection" />
       <p class="text-center text-muted mb-3">
-        {{content.description}}
+        {{ content.description }}
       </p>
       <bread-crumb :crumbs="crumbs" @selected="selected" />
+      <!-- Display all the events that are in the selected period -->
       <grid-cards
         v-if="events[selection].length"
         :items="events[selection]"
         :name="'event'"
       />
       <!-- TODO We should change this to be styled better -->
+      <!-- If no events are there for the specified period we display this dive-->
       <div v-else class="text-center text-muted mt-3">
         <div class="alert alert-info" role="alert">
           <i class="fa fa-lg fa-warning">&nbsp;</i>
@@ -29,7 +31,7 @@
 </style>
 
 <script>
-import BreadCrumb from '~/components/BreadCrumb.vue';
+import BreadCrumb from "~/components/BreadCrumb.vue";
 // import CustomPage from '~/components/CustomPage.vue'
 import "../assets/style.css";
 import EventsList from "../components/EventsList.vue";
@@ -47,10 +49,12 @@ export default {
       selection: "all_events",
     };
   },
-  
+
   async asyncData({ $axios }) {
     // get all the data from the backend and pass it to the component in order to be printed
     const { data } = await $axios.get("api/events/");
+
+    //Get the data to be displayed form the content table in the database, in order to not have static information on the website.
     const content = await $axios.get("api/content/event");
     return {
       content: content.data,

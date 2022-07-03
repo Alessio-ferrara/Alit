@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- creating an iframe with the full width and specified height in order to display the map according to our form factor -->
     <iframe
       title="map"
       width="100%"
@@ -19,7 +20,7 @@
 </template>
 
 <script>
-// can add to the url the '&maptype=satellite' in order to display the satellite view
+// can add to the url the '&maptype=satellite' in order to display the satellite view but looks too dispersive
 
 export default {
   name: "GoogleMap",

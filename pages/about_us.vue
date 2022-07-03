@@ -13,7 +13,6 @@
 <style scoped>
 #background {
   background: rgb(249, 49, 84);
-  /* background: linear-gradient(180deg, rgba(249,49,84,1) 0%, rgba(249,49,84,1) 80%, rgba(254,254,254,1) 100%); */
   cursor: default;
 }
 mark {
@@ -34,20 +33,12 @@ img {
   background-color: white;
 }
 #content .col-12 {
-  /* margin-bottom: 15vh; */
+
   margin-bottom: 8vh;
 }
-/* #description {
-  text-align: justify;
-}
-#description:after {
-  text-align: justify;
-  word-spacing: -2px;
-} */
-#content img {
+img {
   height: 25vh !important;
   max-width: 30vh !important;
-  /* float: left; */
   margin: 5px;
 }
 p {
@@ -68,6 +59,7 @@ import AboutCards from "~/components/AboutCards.vue";
 export default {
   name: "AboutUsPage",
   async asyncData({ route, $axios }) {
+    //Getting content from database to fill the components of about us
     const { data } = await $axios.get("api/content/about_us");
 
     return {
@@ -88,7 +80,7 @@ export default {
       ],
     };
   },
-  components: { AboutUs },
+  components: { AboutUs, AboutCards, AboutCharts },
   // methods:{
   //   scrollToElement() {
   //       .scrollIntoView({ behavior: "smooth" });
