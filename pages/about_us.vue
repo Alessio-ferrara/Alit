@@ -3,8 +3,8 @@
     <div id="background" class="row mt-3">
       <about-us />
       <div id="content" class="row m-0">
-        <about-charts />
-        <about-cards />
+        <!-- <about-charts /> -->
+        <!-- <about-cards /> -->
       </div>
     </div>
   </div>
