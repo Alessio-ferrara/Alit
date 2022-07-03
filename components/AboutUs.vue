@@ -1,7 +1,8 @@
 <template>
   <span class="row">
-    <div class="col-xl-6 col-12 mb-0 text-center">
+    <div class="col-xl-6 col-12 mb-0 mt-0 text-center">
       <img
+        id="illustration"
         src="@/static/images/about/connect.png"
         style="max-width: 100%; height: auto; object-fit: scale-down"
         alt="Connect"
@@ -32,7 +33,7 @@
         <p class="pt-3">What are you waiting for?</p>
       </div>
     </div>
-    <div class="col-12 text-center">
+    <div class="col-12 text-center mt-4">
       <p class="text-center">
         Find out more below
         <i class="fa fa-solid fa-circle-arrow-down"></i>
@@ -41,13 +42,17 @@
     <div id="gradient" class="col-12 m-0 p-0">
       <img
         src="@/static/images/about/gradient.png"
-        style="width: 100vw; max-height: 60vh"
+        style="width: 100vw; max-height: 40vh"
         alt="Gradient"
       />
     </div>
   </span>
 </template>
 <style scoped>
+#illustration {
+  transform: scaleX(-1);
+  max-height: 60vh;
+}
 #background {
   background: rgb(249, 49, 84);
   /* background: linear-gradient(180deg, rgba(249,49,84,1) 0%, rgba(249,49,84,1) 80%, rgba(254,254,254,1) 100%); */

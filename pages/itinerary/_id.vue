@@ -7,33 +7,28 @@
         {{ itinerary.name }}
         <br />
       </h1>
-      <!-- <div class="label inline text-danger">{{ event.event_type.name }}</div> -->
       <hr />
       <div class="row mt-4">
         <!-- description -->
         <div class="col-lg-8 col-sm-12 text-justify">
           <div id="presentation" class="lead">
-            <br/>
+            <br />
             {{ itinerary.description }}
-            <!-- <div class="collapse mt-3 text-muted" id="moreDetails">
-              More details that will be displayed on the website after the click of the
-              user.
-            </div>-->
           </div>
           <br />
         </div>
-        <div id="side-info" class="col-lg-4 col-sm-12">
-          <itinerary-component
-            :items="itinerary.point_of_interests"
-            :poi_start="itinerary.poi_start"
-            :poi_end="itinerary.poi_end"
-            :name="'it'"
-          />
-          <div class="container">
+        <div id="side-info" class="col-lg-4 col-sm-12 mb-3">
+          <div>
+            <itinerary-component
+              :items="itinerary.point_of_interests"
+              :poi_start="itinerary.poi_start"
+              :poi_end="itinerary.poi_end"
+              :name="'it'"
+            />
             <p class="text-center text-muted fs-6 mt-2">
               <i class="fa-solid fa-hand-pointer"></i>
               <br />
-              Click on a point of interest to get additional informations
+              Click on a point of interest to get additional information
             </p>
           </div>
         </div>
@@ -43,13 +38,19 @@
 </template>
 
 <style scoped>
+@media screen and (max-width: 1000px) {
+  .row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 span {
   display: inline-block;
   width: 75px;
 }
 #side-info {
-  max-height: 20vh;
-  margin-bottom: 10%;
+  /* max-height: 20vh;
+  margin-bottom: 10%; */
   border-left: none;
 }
 #presentation {

@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div id="background" class="row mt-3">
-      <about-us />
+      <about-us @click="scrollToElement" />
       <div id="content" class="row m-0">
         <about-charts />
         <about-cards />
@@ -88,5 +88,10 @@ export default {
     };
   },
   components: { AboutUs },
+  // methods:{
+  //   scrollToElement() {
+  //       .scrollIntoView({ behavior: "smooth" });
+  //     }
+  // }
 };
 </script>
