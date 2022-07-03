@@ -188,10 +188,8 @@ export default {
         await axios.post("/api/contact-us", { ...this.contact });
         // Redirect
         location.reload();
-        console.log("There was a success");
         // Actions to be performed after the execution of the backend call
       } catch (error) {
-        console.log(error.response.data);
         error.response.data.errors.forEach(
           (er) => (this.e[er.name] = er.message)
         );

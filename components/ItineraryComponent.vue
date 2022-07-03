@@ -91,10 +91,6 @@ export default {
       type: Object,
       required: true,
     },
-    name: {
-      type: String,
-      required: true,
-    },
   },
 };
 </script>

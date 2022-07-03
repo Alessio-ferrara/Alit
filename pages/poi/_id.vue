@@ -82,7 +82,7 @@ export default {
   async asyncData({ route, $axios }) {
     const { id } = route.params;
     const { data } = await $axios.get(`api/pois/poi/${id}`);
-    console.log(data);
+
     return {
       poi: data,
       crumbs: [
