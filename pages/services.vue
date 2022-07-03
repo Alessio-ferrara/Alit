@@ -3,12 +3,10 @@
     <div class="container">
       <!-- passing everything to the component that will automatically display all the event groups at the top and elle the events fetched -->
       <div class="text-center display-4 mt-4">
-        Services
+        {{ content.title }}
         <!-- shall display the eventItem.name whose index == the one received from props -->
       </div>
-      <p
-        class="text-center text-muted mb-3"
-      >Select a service to get useful informations and contacts</p>
+      <p class="text-center text-muted mb-3">{{ content.description }}</p>
       <bread-crumb :crumbs="crumbs" @selected="selected" />
       <grid-cards :items="services" :name="'service'" />
     </div>
@@ -41,8 +39,9 @@ export default {
   async asyncData({ $axios }) {
     // get all the data from the backend and pass it to the component in order to be printed
     const { data } = await $axios.get("api/services/");
-    console.log(data);
+    const content = await $axios.get("api/content/service");
     return {
+      content: content.data,
       services: data,
       crumbs: [
         { name: "Home", path: "/" },

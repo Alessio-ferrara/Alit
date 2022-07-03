@@ -3,7 +3,7 @@
     <div class="container">
       <events-list :changeSelection="changeSelection" />
       <p class="text-center text-muted mb-3">
-        Page to see all the events related to a specific category
+        {{content.description}}
       </p>
       <bread-crumb :crumbs="crumbs" @selected="selected" />
       <grid-cards
@@ -51,7 +51,9 @@ export default {
   async asyncData({ $axios }) {
     // get all the data from the backend and pass it to the component in order to be printed
     const { data } = await $axios.get("api/events/");
+    const content = await $axios.get("api/content/event");
     return {
+      content: content.data,
       events: data,
       crumbs: [
         { name: "Home", path: "/" },

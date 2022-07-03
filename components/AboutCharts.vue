@@ -7,12 +7,12 @@
                 <div class="media d-flex">
                   <div class="align-self-center text-left">
                     <i
-                      class="fa-solid fa-2xl fa-chart-line text-success float-left"
+                      v-bind:class=about_us_data.visitors_icon
                     ></i>
                   </div>
                   <div class="media-body text-dark float-right lead text-right">
-                    <h5 class="lead text-success">6.000.000</h5>
-                    <span>Visitors per year</span>
+                    <h5 class="lead text-success">{{about_us_data.visitors_number}}</h5>
+                    <span>{{about_us_data.visitor_title}}</span>
                   </div>
                 </div>
               </div>
@@ -26,12 +26,12 @@
                 <div class="media d-flex">
                   <div class="align-self-center text-left">
                     <i
-                      class="fa-regular fa-2xl fa-comment text-warning float-left"
+                        v-bind:class=about_us_data.posts_icon
                     ></i>
                   </div>
                   <div class="media-body text-dark float-right lead text-right">
-                    <h5 class="lead text-warning">15.780</h5>
-                    <span>Monthly posts</span>
+                    <h5 class="lead text-warning">{{about_us_data.posts_number}}</h5>
+                    <span>{{about_us_data.posts_title}}</span>
                   </div>
                 </div>
               </div>
@@ -45,12 +45,12 @@
                 <div class="media d-flex">
                   <div class="align-self-center text-left">
                     <i
-                      class="fa-regular fa-2xl fa-eye text-primary float-left"
+                        v-bind:class=about_us_data.users_icon
                     ></i>
                   </div>
                   <div class="media-body text-dark float-right lead text-right">
-                    <h5 class="lead text-primary">132</h5>
-                    <span>Monthly users</span>
+                    <h5 class="lead text-primary">{{about_us_data.users_number}}</h5>
+                    <span>{{about_us_data.users_title}}</span>
                   </div>
                 </div>
               </div>
@@ -64,12 +64,12 @@
                 <div class="media d-flex">
                   <div class="align-self-center text-left">
                     <i
-                      class="fa fa-2xl fa-location-dot text-danger float-left"
+                        v-bind:class=about_us_data.attractions_icon
                     ></i>
                   </div>
                   <div class="media-body text-dark float-right lead text-right">
-                    <h5 class="lead text-danger">180</h5>
-                    <span>Attractions</span>
+                    <h5 class="lead text-danger">{{about_us_data.attractions_number}}</h5>
+                    <span>{{about_us_data.attractions_title}}</span>
                   </div>
                 </div>
               </div>
@@ -108,6 +108,11 @@ p {
 <script>
 export default {
   name: "About-Charts",
-  data(){}
+  props: {
+    about_us_data: {
+      type: Object,
+      required: true,
+    },
+  },
 };
 </script>

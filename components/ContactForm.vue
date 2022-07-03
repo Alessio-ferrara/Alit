@@ -1,97 +1,35 @@
 <template>
-  <!-- <div class="mb-3 row pb-3 container ml-3 mr-3">
-    <form class="" @submit.prevent="handleSubmit" @reset="onReset">
-      <div class="col-lg-4 mt-3">
-        <div class="input-group mb-3">
-          <input
-            id="name"
-            placeholder="Full name"
-            type="text"
-            v-model="name"
-            class="form-control rounded-5"
-            required
-          />
-        </div>
-        <div class="input-group mb-3">
-          <input
-            placeholder="Email"
-            id="email"
-            type="email"
-            v-model="email"
-            class="form-control rounded-5"
-            required
-          />
-        </div>
-      </div>
-      <div class="col-lg-6 mt-3">
-        <div class="input-group mb-3 mt-3">
-          <input
-            placeholder="Subject"
-            id="subject"
-            type="text"
-            v-model="subject"
-            class="form-control rounded-5"
-            required
-          />
-        </div>
-        <div class="input-group mb-3">
-          <textarea
-            placeholder="Message..."
-            id="message"
-            v-model="message"
-            class="form-control rounded-5"
-            required
-          ></textarea>
-        </div>
-      </div>
-      <div class="col-lg-">
-        <div id="image" class="text-center mb-3 col-6">
-      <img src="@/static/images/ok.png" alt="..." class="img-thumbnail" />
-    </div>
-      </div>
-    <div class="row">
-
-      <div class="align-center justify-center text-center">
-        <button
-          type="submit"
-          value="submit"
-          class="btn btn-danger btn-rounded mb-3"
-        >
-          Submit
-          <i class="fas fa-solid fa-arrow-right"></i>
-        </button>
-        <br />
-      </div>
-        </div>
-    </form>
-  </div> -->
   <div class="container">
     <div class="row mb-3 mt-3 ml-3 mr-3 pb-3 gx-3">
       <form
         class="col-lg-6 mt-3 card bg-white rounded-5"
-        @submit.prevent="handleSubmit"
+        @submit="onSubmit"
+        method="post"
       >
-        <div class="card-header text-center text-dark h4">Contact form</div>
+        <div class="card-header text-center text-muted lead h4">You need help? Fill in the fields below.</div>
 
-        <div class="col-lg-6 col-12 mt-3">
-          <div class="input-group mb-3 mt-3">
+        <span class="form-error" v-if="e.name">{{ e.name }}</span>
+        <div class="col-xl-6 col-12 mr-3 mt-3">
+          <div class="input-group mb-3">
             <input
               id="name"
               type="text"
               class="form-control rounded-5"
               placeholder="Name"
-              v-model="name"
+              v-model="contact.name"
               aria-label="name"
               aria-describedby="basic-addon1"
               required
             />
           </div>
         </div>
-        <div class="col-lg-6 col-12">
+
+        <span class="form-error" v-if="e.email">{{ e.email }}</span>
+        <div class="col-xl-6 col-12">
           <div class="input-group mb-3">
             <input
               id="email"
-              v-model="email"
+              v-model="contact.email"
               type="email"
               class="form-control rounded-5"
               placeholder="E-mail"
@@ -101,12 +39,14 @@
             />
           </div>
         </div>
+
+        <span class="form-error" v-if="e.subject">{{ e.subject }}</span>
         <div class="col-12">
           <div class="input-group mb-3">
             <input
               id="subject"
               type="text"
-              v-model="subject"
+              v-model="contact.subject"
               class="form-control rounded-5"
               placeholder="Subject"
               aria-label="subject"
@@ -115,11 +55,13 @@
             />
           </div>
         </div>
+
+        <span class="form-error" v-if="e.message">{{ e.message }}</span>
         <div class="col-12 mb-0">
           <div class="md-form mb-4 pink-textarea active-pink-textarea">
             <textarea
               id="message"
-              v-model="message"
+              v-model="contact.message"
               placeholder="Message..."
               class="md-textarea form-control rounded-5"
               rows="3"
@@ -152,9 +94,8 @@
           class="img-thumbnail"
         />
         <br />
-        <p class="lead">
-          Our team is always waiting for feedback to help our customers, we will
-          contact you as soon as possible!
+        <p class="lead text-center">
+          Our team is always waiting for feedback to help our customers!
         </p>
       </div>
     </div>
@@ -162,6 +103,12 @@
 </template>
 
 <style scoped>
+span.form-error {
+  color: red;
+  padding: 4px;
+  font-size: 14px;
+}
+
 textarea {
   height: 4vh !important;
 }
@@ -190,24 +137,25 @@ textarea {
   font-size: 16px;
 }
 /* #illustration {
-  border-radius: 50%;
-  height: 70vh;
-  width: 40%;
-  padding-left: 5%;
-  box-shadow:
-    inset 0 0 50px #fff,      
-    inset 20px 0 80px #f0f,  
-    inset -20px 0 80px #0ff, 
-    inset 20px 0 300px #f0f, 
-    inset -20px 0 300px #0ff,
-    0 0 50px #fff,           
-    -10px 0 80px #f0f,       
-    10px 0 80px #0ff;         
+    border-radius: 50%;
+    height: 70vh;
+    width: 40%;
+    padding-left: 5%;
+    box-shadow:
+      inset 0 0 50px #fff,      
+      inset 20px 0 80px #f0f,  
+      inset -20px 0 80px #0ff, 
+      inset 20px 0 300px #f0f, 
+      inset -20px 0 300px #0ff,
+      0 0 50px #fff,           
+      -10px 0 80px #f0f,       
+      10px 0 80px #0ff;         
+  }
+  */
+#illustration img {
+  background: none;
 }
-*/ #illustration img {
-  background:none;
-} 
-#illustration img:first-child{
+#illustration img:first-child {
   transform: scaleX(-1);
 }
 </style>
@@ -219,27 +167,36 @@ export default {
   name: "ContactForm",
   data() {
     return {
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
+      contact: {
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      },
+      e: {
+        name: undefined,
+        email: undefined,
+        subject: undefined,
+        message: undefined,
+      },
     };
   },
   methods: {
-    onSubmit(event) {
-      axios.post("/api/contact-us", {
-        name: this.name,
-        email: this.email,
-        subject: this.subject,
-        message: this.message,
-      });
-    },
-    onReset(event) {
+    onSubmit: async function (event) {
       event.preventDefault();
-      this.name = "";
-      this.email = "";
-      this.subject = "";
-      this.message = "";
+      try {
+        await axios.post("/api/contact-us", { ...this.contact });
+        // Redirect
+        location.reload();
+        console.log("There was a success");
+        // Actions to be performed after the execution of the backend call
+      } catch (error) {
+        console.log(error.response.data);
+        error.response.data.errors.forEach(
+          (er) => (this.e[er.name] = er.message)
+        );
+        
+      }
     },
   },
 };

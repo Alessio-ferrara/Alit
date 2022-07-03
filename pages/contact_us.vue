@@ -5,7 +5,7 @@
         {{ contact.title }}
       </div>
       <p class="text-center text-muted mb-3">
-        You need help? Fill the fields below and contact our team!
+        We will contact you as soon as possible!
       </p>
       <hr />
       <contact-form></contact-form>
@@ -23,7 +23,7 @@ export default {
     ContactForm,
   },
   async asyncData({ route, $axios }) {
-    const { data } = await $axios.get(`api/content/contact_us`);
+    const { data } = await $axios.get("api/content/contact_us");
     return {
       contact: data,
     };
