@@ -6,16 +6,20 @@
         src="images/about/connect.png"
         style="max-width: 100%; height: auto; object-fit: scale-down"
         alt="Connect"
+        format="webp"
       />
     </div>
     <div class="col-xl-6 col-12 mt-3 mb-0">
       <h1 id="intro" class="container mt-3 display-5">
         {{ about_us_data.title }}
       </h1>
-      <div class="container lead text-light" v-html="about_us_data.description"></div>
+      <div
+        class="container lead text-light"
+        v-html="about_us_data.description"
+      ></div>
     </div>
-    <div class="col-12 text-center mt-4">
-      <p class="text-center">
+    <div class="col-12 text-center mt-4" @click="scroll" style="cursor: pointer;">
+      <p class="text-center" >
         {{ about_us_data.find_out_more }}
         <i class="fa fa-solid fa-circle-arrow-down"></i>
       </p>
@@ -88,6 +92,9 @@ export default {
     about_us_data: {
       type: Object,
       required: true,
+    },
+    scroll: {
+      type: Function,
     },
   },
 };
