@@ -6,6 +6,7 @@
         src="images/about/connect.png"
         style="max-width: 100%; height: auto; object-fit: scale-down"
         alt="Connect"
+        format="webp"
       />
     </div>
     <div class="col-xl-6 col-12 mt-3 mb-0">
@@ -28,6 +29,7 @@
         v-bind:src="'/' + about_us_data.image"
         alt="Gradient"
         style="width: 100vw; max-height: 30vh"
+        format="webp"
       />
     </div>
   </span>
