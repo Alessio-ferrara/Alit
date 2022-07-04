@@ -105,7 +105,17 @@ p {
   align-items: center
 }
 .media {
-  justify-content: space-evenly;
+  justify-content: space-evenly!important;
+}
+/* for smaller devices cards */
+@media screen and (max-width: 800px) {
+  #content img {
+  height: auto !important;
+  max-width: 100% !important;
+  /* float: left; */
+  margin: auto;
+  margin-bottom: 10px;
+}
 }
 </style>
 
