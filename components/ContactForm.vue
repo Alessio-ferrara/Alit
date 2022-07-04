@@ -7,7 +7,7 @@
         @submit="onSubmit"
         method="post"
       >
-        <div class="card-header text-center text-muted lead h4">You need help? Fill in the fields below.</div>
+        <div class="card-header text-center text-muted lead h4">Reach out by filling in the form below.</div>
 
         <!-- code to display field validation errors -->
         <span class="form-error" v-if="e.name">{{ e.name }}</span>
