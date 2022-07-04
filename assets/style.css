@@ -1,6 +1,10 @@
 .container-fluid {
     padding-top:50px;
 }
+.container-fluid>.container {
+  padding-top:50px;
+}
+/* style for the padding of the inside of the page to move titles down a bti */
 #page{
   margin-top: 1vh;
 }
