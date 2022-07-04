@@ -73,9 +73,9 @@ In our models we have:
 - Opening Hours
 
 Here is the ER diagram of the model:
-![ER Diagram](public/backend/img/er_diagram.png "ER Diagram")
+![ER Diagram](ER_schema.jpeg "ER Diagram")
 
-![Logical Design](public/backend/img/logical_design.png "Logical Design")
+![Logical Design](Logic_schema.jpeg "Logical Design")
 
 ## Implementation
 
