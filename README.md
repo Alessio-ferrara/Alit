@@ -144,6 +144,67 @@ The production environment is hosted on Heroku. They provide a ready to use Post
 ├── package.json          # npm project dependencies
 └── README.md             # git documentation
 ```
+### Components
+
+<code>AboutCards:</code> This component is used to correctly display the information in about us.
+
+<code>AboutCharts:</code> This component is used to correctly display the charts in about us.
+
+<code>AboutUs:</code> This component is used to display the description and the image in the about us page.
+
+<code>BreadCrumb:</code> This component is used to display the orientation info.
+
+<code>CardComponent:</code> This component is used everytime we need to display a card, so it is used by services, itineraries, pois and also events.
+
+<code>CarouselComponent:</code> This component is used to display the images inside a carousel.
+
+<code>ContactForm:</code> This component is used to display a form and to handle the logic of it.
+
+<code>CustomPage:</code> This component is used to display the information of the home page.
+
+<code>EventList:</code> This component is used to display all the possible filters of the events.
+
+<code>Footer:</code> This component is used to display the footer with the links.
+
+<code>GoogleMap:</code> This component is used to display the Google map, by using an iframe.
+
+<code>GridCards:</code> This component is used to display a list of objects: services, pois and events.
+
+<code>ItineraryComponent:</code> This component is used to display the information about an itinerary in a styled way.
+
+<code>LandscapeCardComponent:</code> This component is used to display a itinerary.
+
+<code>ModalComponent:</code> This component is used to display a modal after the sending of an email.
+
+<code>Navbar:</code> This component is used to display the navbar.
+
+<code>RowGridComponent:</code> This component is used to display a list of itineraries in rows.
+
+### Routing
+
+
+<code>/</code> This page is the homepage, it contains information about the city and an interactive map.
+
+<code>/about_us</code> This page contains information about the city of Tirana
+
+<code>/contact_us</code> This page allows an user to send an email to us.
+
+<code>/events</code> This page shows all the events, they can be filtered as summer/winter events.
+
+<code>/itineraries</code> This page shows all the itineraries.
+
+<code>/pois</code> This page shows all the point of interest of Tirana.
+
+<code>/services</code> This page shows the main services types.
+
+<code>/event/:id</code> This page shows the information about a particular event.
+
+<code>/itinerary/:id</code> This page shows the information about a particular itinerary.
+
+<code>/poi/:id</code> This page shows the information about a particular point of interest.
+
+<code>/service/:id</code> This page shows all the services avaible for a service type.
+
 
 ### Discussion
 
