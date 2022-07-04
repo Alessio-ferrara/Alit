@@ -11,3 +11,4 @@
 .nuxt/router.js
 .nuxt/routes.json
 .nuxt/nuxt-google-maps.js
+.eslintcache
