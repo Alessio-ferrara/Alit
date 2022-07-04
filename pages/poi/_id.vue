@@ -29,6 +29,7 @@
           <google-map :lat="poi.lat" :lang="poi.lang" />
         </div>
       </div>
+      <!-- check if we have related events to the specific poi, if we do we print the gridcards of the events -->
       <div v-if="poi.events.length">
         <h2 style="fontWeight:900, margin:0">Events</h2>
         <grid-cards

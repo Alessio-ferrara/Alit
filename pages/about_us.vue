@@ -38,10 +38,13 @@ img {
 p {
   color: whitesmoke;
 }
+.cointainer-fluid{
+  margin-top: -20px!important;
+  padding-top: -20px!important;
+}
 </style>
 
 <script>
-import "../assets/style.css";
 import AboutUs from "~/components/AboutUs.vue";
 import AboutCharts from "~/components/AboutCharts.vue";
 import AboutCards from "~/components/AboutCards.vue";

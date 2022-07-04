@@ -41,7 +41,7 @@
 }
 #gradient {
   background-color: none;
-  width: 100vw;
+  width: 100%;
 }
 div >>> p mark {
   color: rgb(44, 37, 184);
