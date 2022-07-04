@@ -12,8 +12,7 @@
           loading="lazy"
         />
         <ul class="navbar-nav me-auto mb-2 ml-2 mb-lg-0">
-          <span
-            class="text-danger mb-2 pl-3 pr-3"
+          <span class="text-danger mb-2 pl-3 pr-3"
             >&nbsp;Dua Tiranën&nbsp;</span
           >
         </ul>
@@ -39,9 +38,9 @@
             :key="`navItem${navItemIndex}`"
             class="nav-item"
           >
-            <nuxt-link :to="navItem.path" class="nav-link">
+            <a v-bind:href="navItem.path" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show">
               {{ navItem.name }}
-            </nuxt-link>
+            </a>
           </li>
         </ul>
       </div>
@@ -113,14 +112,6 @@ export default {
         },
       ],
     };
-  },
-  methods: {
-    isActive(item) {
-      return this.activeItem == item;
-    },
-    setActive(item) {
-      this.activeItem = item;
-    },
   },
 };
 </script>

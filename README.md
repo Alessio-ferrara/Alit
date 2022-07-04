@@ -1,10 +1,22 @@
-# Final Project template
+# Hypermedia Applications - Dua Tiranën
+
+#### Opening the app
+
+[Deployment on Heroku](https://dua-tiranen.herokuapp.com/)
 
 ## Build Setup
 
 ```bash
 # install dependencies
 $ npm install
+
+#setup database
+Create an user in PostgreSQL with the data you can find inside server/config/config.json then run the following commands.
+$ cd server
+$ npx sequelize-cli db:create
+$ npx sequelize-cli db:migrate
+$ npx sequelize-cli db:seed:all
+
 
 # serve with hot reload at localhost:3000
 $ npm run dev
@@ -17,52 +29,141 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+# Backend Documentation
 
-## Special Directories
+## General group information
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+**Course:** Hypermedia Applications (Web and Multimedia)
 
-### `assets`
+**Group Name:** Alit
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+| Member | First name | Last Name | Person Code | Email address                     |
+| ------ | ---------- | --------- | ----------- | --------------------------------- |
+| 1      | Alessio    | Ferrara   | 10826871    | alessio2.ferrara@mail.polimi.it   |
+| 2      | Francesco  | Mazzola   | 10864060    | francesco2.mazzola@mail.polimi.it |
+| 3      | Kristina   | Ropi      | 10801067    | kristina.ropi@mail.polimi.it |
+| 4      | Ermenda    | Hoxha     | 10801074    | ermenda.hoxha@mail.polimi.it |
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+## Specification
 
-### `components`
+#### Web Architecture
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+![Web Architecture](wa.jpg "Web Architecture")
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+Our web application's architecture is built on three layers:
 
-### `layouts`
+<ul>
+<li>Data layer</li>
+<li>Application</li>
+<li>Presentation</li>
+</ul>
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+The data layer is implemented through the <code>PostgreSQL</code> database, which contains the application data.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+The application layer is implemented through the backend software which exposes a REST API (under the endpoint <code>/api</code>) to the public in order to enable the interaction with frontend using a <code>Express</code> server. This layer contains three components, router, controllers, and models. The models interacts with the data layer to retrieve the data from database using a SQL query builder for Postgress named <code>Sequelize</code> provided by node package manager (npm).
 
-### `pages`
+The presentation layer is implemented through the <code>Vue.js</code> JavaScript framework. For the frontend part <code>Bootstrap 5</code> framework together with <code>MDBootstrap </code> has been used to satisfy responsiveness.
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+### Data model
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+In our models we have:
 
-### `plugins`
+- Content
+- POI
+- POI Image
+- POI Itinerary
+- POI Types
+- Event
+- Event Image
+- Itinerary
+- Service
+- Service Types
+- Opening Hours
 
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+Here is the ER diagram of the model:
+![ER Diagram](ER_schema.jpeg "ER Diagram")
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
+![Logical Design](Logic_schema.jpeg "Logical Design")
 
-### `static`
+## Implementation
 
-This directory contains your static files. Each file inside this directory is mapped to `/`.
+### Tools used
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
+- <code>Nuxt.js</code>
+- <code>HTML</code> / <code>CSS</code> / <code>JavaScript</code>
+- <code>JSON</code>
+- <code>SQL</code>
+- <code>Bootstrap</code> / <code>MDBootstrap</code> / <code>axios</code> / <code>Vue.js</code> framework for frontend
+- <code>Sequelize</code> framework for backend
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+The technology stack and tools that were used:
+ - <code>Vue.js</code> and <code>Nuxt.js</code> as JavaScript frameworks.
+ - <code>Javascript</code> on <code>Node.js</code> runtime using <code>npm</code> as the default package manager.
+ - <code>Postman</code> for testing the API completly but we could also use [Swagger inspector](https://inspector.swagger.io/).
+ - <code>Postgres</code> RDBMS and <code>pg Admin 4</code> query tool
+ - <code>axios</code> to retrieve data from API
+ - <code>Visual Studio Code</code> as a text editor embedded with linter to analyzes source code in order to flag programming errors, bugs, stylistic errors, and suspicious constructs.
+ - <code>Developer tools</code> embedded in Google chrome.
 
-### `store`
 
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
+The node packages that were used:
+  - <code>pg</code> node-postgres (aka pg) is a collection of Node.js modules for interfacing with PostgreSQL database.
+  - <code>sequelize</code> as an ORM tool for PostgresSQL
+  - <code>nodemailer</code> to allow email sending.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+
+### Environments
+
+We used localhost testing environment for development. The environment composed by Vue.js, Nuxt.js, Express.js, Node.js, Postgres and PGAdmin.
+
+The production environment is hosted on Heroku. They provide a ready to use Postgres database and a NodeJS environment.
+
+### Project structure
+
+```
+.
+├──  .nuxt                 # Nuxt files
+├──  assets                # Contains css files.
+├──  components            # Contains all the components used in the frontend
+├──  layots                # define standard layouts for 
+├──  mixins                # define common methods used in   more pages.
+├──  pages                 # contains all the pages of the application
+├──  plugins               # contains all the plugins used in the pages.
+└── server  
+    ├── config/            # contains all the config files for the backend server.
+    ├── controllers/       # contains all the files that handle application logic.
+    ├── migration/         # contains all the migration files of the database.
+    ├──models/             # Contains all the data models.
+    ├──routes/             # Contains all the api routings.
+    ├──seeders/            # Contains the seeders files of the database.
+    ├──api.js              # Contains the logic of the backend server.
+    ├──http-error.js       # A file used to handle backend errors messages.
+├── static                # contains all the static file of the application.
+├── .env                  # contains the environment variables
+├── nuxt.config.js        # contains all the nuxt configuration details about the application.
+├── package.json          # npm project dependencies
+└── README.md             # git documentation
+```
+
+### Discussion
+
+<blockquote>How, in your opinion, you were relevant to the best practices of the framework used?</blockquote>
+
+We decided to adopt SSR (Server Side Rendering) in our application due to the following reasons:
+
+- <code>Faster time-to-content: </code> 
+Server-rendered markup doesn't need to wait until all JavaScript has been downloaded and executed to be displayed, so your user will see a fully-rendered page sooner. In addition, data fetching is done on the server-side for the initial visit, which likely has a faster connection to your database than the client.
+
+- <code>Improve the SEO:</code>
+The search engine crawlers will directly see the fully rendered page. Thus the position of our website on the search results will increase, increasing also the visibility of the website.
+
+## Other information
+
+### Task assignment
+
+| Member                | Front-end | Backend | Documentation|
+| --                    |--         |--       |--            |
+| Alessio Ferrara       | 23%       | 50%     | 20%          |
+| Francesco Mazzola     | 35%       | 0%      | 15%          |
+| Kristina Ropi         | 22%       | 50%     | 25%          |
+| Ermenda Hoxha         | 20%       | 0%      | 40%          |

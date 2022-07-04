@@ -5,7 +5,7 @@
         {{ contact.title }}
       </div>
       <p class="text-center text-muted mb-3">
-        We will contact you as soon as possible!
+        Do you have any questions? We would love to hear from you!
       </p>
       <bread-crumb :crumbs="crumbs" @selected="selected" />
       <hr />

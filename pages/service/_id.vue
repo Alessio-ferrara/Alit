@@ -22,7 +22,7 @@
                 <i :class="icon"></i>
               </p>
               <h3 class="card-title text-opacity-75 text-center text-black">{{ item.name }}</h3>
-              <p class="te xt-center">
+              <p class="text-center">
                 <span v-if="item.address">Address:</span>
                 <span class="text-muted">{{ item.address }}</span>
                 <br />Telephone:
