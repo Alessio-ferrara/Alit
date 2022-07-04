@@ -257,7 +257,13 @@ module.exports = {
       {
         page: "index",
         field: "description",
-        text: "Tirana is the capital of Albania and also the main economic , social and cultural center of the country. Tirana. A Dynamic Capital City. Tirana is the capital of Albania and also the main economic , social and cultural center of the country. Tirana is undoubtedly one of the liveliest and most transforming cities in Southeast Europe. A city that seemingly never sleeps, full of friendly faces and featuring surprises hidden around every corner in Tirana and its surroundings.",
+        text: "Tirana. A Dynamic Capital City. Tirana is the capital of Albania and also the main economic , social and c" +
+            "ultural center of the country. Tirana is undoubtedly one of the liveliest and most transforming cities in" +
+            " Southeast Europe. It is known for its colorful Ottoman-, Fascist- and Soviet" +
+            "-era architecture. Pastel buildings surround the city's focal point, Skanderbeg Square, which is named for its " +
+            "equestrian statue of a national hero. On the square's north end is the modernist National History Museum, covering" +
+            " prehistoric times through Communist rule and the anti-Communist uprisings of the 1990s. A must visit. A city that seemingly never " +
+            "sleeps, full of friendly faces and featuring surprises hidden around every corner in Tirana and its surroundings.",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
