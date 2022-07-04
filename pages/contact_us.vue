@@ -7,6 +7,7 @@
       <p class="text-center text-muted mb-3">
         We will contact you as soon as possible!
       </p>
+      <bread-crumb :crumbs="crumbs" @selected="selected" />
       <hr />
       <contact-form></contact-form>
     </div>
@@ -16,17 +17,28 @@
 <script>
 import ContactForm from "~/components/ContactForm.vue";
 import "../assets/style.css";
+import BreadCrumb from "~/components/BreadCrumb.vue";
 
 export default {
   name: "ContactUsPage",
   components: {
     ContactForm,
+    BreadCrumb
+},
+  methods: {
+    selected(crumbPath) {
+      this.$router.push(crumbPath);
+    },
   },
   async asyncData({ route, $axios }) {
     //Retrieving the content's data from the database content table, passing the page as a parameter of the request.
     const { data } = await $axios.get("api/content/contact_us");
     return {
       contact: data,
+      crumbs: [
+        { name: "Home", path: "/" },
+        { name: "Contact us", path: "/contact_us" },
+      ],
     };
   },
   head() {

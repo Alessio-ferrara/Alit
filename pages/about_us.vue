@@ -3,6 +3,7 @@
     <div id="background" class="row mt-3">
       <about-us :scroll="scrollDown" :about_us_data="about" />
       <div id="content" class="row m-0">
+        <bread-crumb :crumbs="crumbs" @select="selected" />
         <about-charts id="charts" :about_us_data="about" />
         <about-cards :about_us_data="about" />
       </div>
@@ -45,6 +46,7 @@ import "../assets/style.css";
 import AboutUs from "~/components/AboutUs.vue";
 import AboutCharts from "~/components/AboutCharts.vue";
 import AboutCards from "~/components/AboutCards.vue";
+import BreadCrumb from "~/components/BreadCrumb.vue";
 
 export default {
   name: "AboutUsPage",
@@ -53,6 +55,10 @@ export default {
     const { data } = await $axios.get("api/content/about_us");
     return {
       about: data,
+      crumbs: [
+        { name: "Home", path: "/" },
+        { name: "About us", path: "/about_us" },
+      ],
     };
   },
   head() {
@@ -69,11 +75,14 @@ export default {
       ],
     };
   },
-  components: { AboutUs, AboutCards, AboutCharts },
+  components: { AboutUs, AboutCards, AboutCharts, BreadCrumb },
   methods: {
     scrollDown() {
       const el = document.querySelector('#content');
       el.scrollIntoView()
+    },
+    selected(crumbPath) {
+      this.$router.push(crumbPath);
     },
   },
 };
