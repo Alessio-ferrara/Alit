@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-0">
     <!-- We pass all the images to a carousel component we created in order to display them on the top -->
     <carousel-component :images="event.event_images" />
     <div id="details" class="container mt-4">

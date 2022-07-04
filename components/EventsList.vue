@@ -72,7 +72,7 @@ export default {
           c: "summer_events"
         },
         {
-          name: "This year's Events",
+          name: "2022 Events",
           image: "events/year-events.jpeg",
           c: "year_events"
         },

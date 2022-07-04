@@ -6,7 +6,7 @@ module.exports = {
       {
         page: "about_us",
         field: "title",
-        text: "About Us",
+        text: "About us",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -27,7 +27,7 @@ module.exports = {
       {
         page: "about_us",
         field: "cards_title",
-        text: "Tirana's faces",
+        text: "Tirana's attractions",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -172,7 +172,7 @@ module.exports = {
       {
         page: "about_us",
         field: "visitor_title",
-        text: "Visitors per year",
+        text: "Visitors",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -193,7 +193,7 @@ module.exports = {
       {
         page: "about_us",
         field: "posts_title",
-        text: "Posts per month",
+        text: "Montly posts",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -354,7 +354,7 @@ module.exports = {
       {
         page: "contact_us",
         field: "title",
-        text: "Contact Us",
+        text: "Contact us",
         createdAt: new Date(),
         updatedAt: new Date(),
       },

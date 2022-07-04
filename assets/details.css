@@ -1,14 +1,14 @@
 .container-fluid {
-  padding-top: 90px;
+  padding-top: 80px;
 }
 
 img {
   height: auto;
 }
-
 #canvas {
   padding-left: 0;
   padding-right: 0;
+  padding-top: 0;
 }
 /* to make images responsive inside the carousel */
 .carousel-item  > img {
