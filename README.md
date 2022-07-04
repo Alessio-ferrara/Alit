@@ -33,14 +33,14 @@ $ npm run generate
 | ------ | ---------- | --------- | ----------- | --------------------------------- |
 | 1      | Alessio    | Ferrara   | 10826871    | alessio2.ferrara@mail.polimi.it   |
 | 2      | Francesco  | Mazzola   | 10864060    | francesco2.mazzola@mail.polimi.it |
-| 3      | Kristina   | Ropi      | 10801067    | francesco2.mazzola@mail.polimi.it |
-| 3      | Ermenda    | Hoxha     | 10801074    | francesco2.mazzola@mail.polimi.it |
+| 3      | Kristina   | Ropi      | 10801067    | kristina.ropi@mail.polimi.it |
+| 4      | Ermenda    | Hoxha     | 10801074    | ermenda.hoxha@mail.polimi.it |
 
 ## Specification
 
 #### Web Architecture
 
-![Web Architecture](public/backend/img/web-architecture.jpg "Web Architecture")
+![Web Architecture](wa.jpg "Web Architecture")
 
 Our web application's architecture is built on three layers:
 
@@ -114,13 +114,13 @@ The production environment is hosted on Heroku. They provide a ready to use Post
 
 ```
 .
-└── .nuxt                 # Nuxt files
-└── assets                # Contains css files.
-└── components            # Contains all the components used in the frontend
-└── layots                # define standard layouts for 
-└── mixins                # define common methods used in   more pages.
-└── pages                 # contains all the pages of the application
-└── plugins               # contains all the plugins used in the pages.
+├──  .nuxt                 # Nuxt files
+├──  assets                # Contains css files.
+├──  components            # Contains all the components used in the frontend
+├──  layots                # define standard layouts for 
+├──  mixins                # define common methods used in   more pages.
+├──  pages                 # contains all the pages of the application
+├──  plugins               # contains all the plugins used in the pages.
 └── server  
     ├── config/            # contains all the config files for the backend server.
     ├── controllers/       # contains all the files that handle application logic.
@@ -148,3 +148,14 @@ Server-rendered markup doesn't need to wait until all JavaScript has been downlo
 
 - <code>Improve the SEO:</code>
 The search engine crawlers will directly see the fully rendered page. Thus the position of our website on the search results will increase, increasing also the visibility of the website.
+
+## Other information
+
+### Task assignment
+
+| Member                | Front-end | Backend | Documentation|
+| --                    |--         |--       |--            |
+| Alessio Ferrara       | 23%       | 50%     | 20%          |
+| Francesco Mazzola     | 35%       | 0%      | 15%          |
+| Kristina Ropi         | 22%       | 50%     | 25%          |
+| Ermenda Hoxha         | 20%       | 0%      | 40%          |
