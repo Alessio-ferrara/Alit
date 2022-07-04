@@ -7,21 +7,36 @@
       <section class="mb-4 row">
         <div class="col-md-9 ml-4">
           <p>
-            This website was developed by Alit Group, thanks to the efforts of the students of the course of HyperMedia Applications of the
-            Master Degree in Computer Science of the
+            This website was developed by Alit Group, thanks to the efforts of
+            the students of the course of HyperMedia Applications of the Master
+            Degree in Computer Science of the
             <a
               class="text-danger text-decoration-underline"
               href="https://www.polimi.it/"
-            >Politecnico di Milano.</a>
+              >Politecnico di Milano.</a
+            >
+          </p>
+          <p>
+            Find out more on
+            <a
+              class="text-info text-decoration-underline"
+              href="https://github.com/Alessio-ferrara/Alit"
+            >
+              GiitHub
+            </a>
           </p>
         </div>
         <div class="col-md-3">
           <img
-            style="width: 90px;height: 90px;"
+            style="width: 90px; height: 90px"
             src="../static/Schermata 2022-05-24 alle 18.17.31.png"
             alt="AlitGroup"
           />
-          <img style="width: 90px;height: 90px;" src="../static/polimi.jpeg" alt="PoliMi" />
+          <img
+            style="width: 90px; height: 90px"
+            src="../static/polimi.jpeg"
+            alt="PoliMi"
+          />
         </div>
       </section>
       <!-- Section: Text -->
@@ -97,41 +112,41 @@ footer {
 
 <script>
 export default {
-  name: 'FooterComponent',
+  name: "FooterComponent",
   data() {
     return {
       // list of items to loop trough in order to have the landmarks on the footer too
       footerList: [
         {
-          name: 'Home',
-          path: '/',
+          name: "Home",
+          path: "/",
         },
         {
-          name: 'Services',
-          path: '/services',
+          name: "Services",
+          path: "/services",
         },
         {
-          name: 'Events',
-          path: '/events',
+          name: "Events",
+          path: "/events",
         },
         {
-          name: 'Points of Interest',
-          path: '/pois',
+          name: "Points of Interest",
+          path: "/pois",
         },
         {
-          name: 'Itineraries',
-          path: '/itineraries',
+          name: "Itineraries",
+          path: "/itineraries",
         },
         {
-          name: 'Contacts',
-          path: '/contacts',
+          name: "Contacts",
+          path: "/contacts",
         },
         {
-          name: 'About us',
-          path: '/about',
+          name: "About us",
+          path: "/about",
         },
-      ]
-    }
+      ],
+    };
   },
-}
+};
 </script>
