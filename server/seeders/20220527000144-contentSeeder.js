@@ -257,13 +257,10 @@ module.exports = {
       {
         page: "index",
         field: "description",
-        text: "Tirana. A Dynamic Capital City. Tirana is the capital of Albania and also the main economic , social and c" +
-            "ultural center of the country. Tirana is undoubtedly one of the liveliest and most transforming cities in" +
-            " Southeast Europe. It is known for its colorful Ottoman-, Fascist- and Soviet" +
-            "-era architecture. Pastel buildings surround the city's focal point, Skanderbeg Square, which is named for its " +
-            "equestrian statue of a national hero. On the square's north end is the modernist National History Museum, covering" +
-            " prehistoric times through Communist rule and the anti-Communist uprisings of the 1990s. A must visit. A city that seemingly never " +
-            "sleeps, full of friendly faces and featuring surprises hidden around every corner in Tirana and its surroundings.",
+        text:
+          "Tirana, the city where entertainment never ends! Tirana is the capital city and at the same time the largest one of Albania.  Full of life and attractions, Tirana has gathered more than 40% of the population that sees living there as an opportunity for a better present and future. With all the political, social, cultural, and economic power, this city is undoubtedly the heart and the brain of the country, and one of the liveliest and most transforming cities in Southeast Europe." +
+          "Tirana—with its mix of history, traditions, cultures, cuisines, and folk elements that are reflected in every street—has become a magnet for visitors all around the world. Along the typical national elements, in every part of this stunning city can be found also the world culture brought by the millions of Albanians who live abroad but never forget their roots. With its diversity of colors, activities, and attractions, Tirana offers something to everybody! " +
+          "Welcome to Tirana, the European Youth Capital for 2022!",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
