@@ -11,7 +11,7 @@ module.exports = {
                     "Albania, on the 26th, 27th, 28th of August 2022. Albanian singer Dua Lipa " +
                     "will be holding her 3rd concert in Tirana. ",
         datetime: "2022-08-26T20:00:00",
-        info: "https://ticketing.festtix.co.uk/e/15/embed-tickets",
+        info: "Tickets can be purchased starting from the 5th of July.",
         poi_id: 1,
         main_image: "images/events/sunnyHill.png",
         createdAt: new Date(),
@@ -26,7 +26,7 @@ module.exports = {
             "The opening and closing of the festival will take place in the Tirana Amphitheater." +
             " Afterwards, the show will take place in Rinia Park (Youth Park). ",
         datetime: "2022-07-18T20:00:00",
-        info: "No info available.",
+        info: "Tickets can be bought near the Amphitheater info point.",
         poi_id: 9,
         main_image: "images/events/movie_fest.jpg",
         createdAt: new Date(),
@@ -40,7 +40,7 @@ module.exports = {
             "founded by Edit Pula and is organized by the Municipality of Tirana in collaboration" +
             " with DoArt.\n" + "The festival runs from May 26 to June 12, 2022. ",
         datetime: "2022-05-26T12:00:00",
-        info: "Info",
+        info: "Free entry, no need to purchase tickets.",
         poi_id: 15,
         main_image: "images/events/cloud_fest.jpg",
         createdAt: new Date(),
@@ -50,9 +50,9 @@ module.exports = {
         name: "National Circus Exhibition",
         description: "The National Circus of Albania will entertain the audience at " +
             "the Tirana Amphitheater inside the Grand Park of Tirana every Saturday at 18.30.\n" +
-            "Free entrance ",
+            "Don't miss the opportunity to be part of an incredible experience!",
         datetime: "2022-05-06T18:30:00",
-        info: "Info",
+        info: "Free entry, no need to purchase tickets.",
         poi_id: 2,
         main_image: "images/events/circus.jpg",
         createdAt: new Date(),
@@ -66,7 +66,7 @@ module.exports = {
             "The exhibition entitled \"Touch\" will remain open to the public until February 28, 2022, " +
             "in the 'Forum' hall and the Enver Hoxha Villa. ",
         datetime: "2022-02-04T010:00:00",
-        info: "Info",
+        info: "Open to public. Free entry.",
         poi_id: 6,
         main_image: "images/events/touch.jpg",
         createdAt: new Date(),
@@ -82,7 +82,7 @@ module.exports = {
             "4 days with different programs in different locations, in ArTurbina, in the Destil Creative " +
             "Hub, the march in Skënderbej Square and the inauguration of the installation \"Red Shoes\".",
         datetime: "2022-03-05T010:00:00",
-        info: "Info",
+        info: "No ticket info available.",
         poi_id: 1,
         main_image: "images/events/femfest.jpg",
         createdAt: new Date(),
@@ -94,7 +94,7 @@ module.exports = {
             "who have booked in the previous canceled concerts, can still use their tickets for the " +
             "new confirmed date.",
         datetime: "2022-03-14T020:00:00",
-        info: "Info",
+        info: "New tickets can be bought starting from the 10th of February.",
         poi_id: 1,
         main_image: "images/events/maluma.jpg",
         createdAt: new Date(),
@@ -108,7 +108,7 @@ module.exports = {
             "effort to remember, honor and keep alive the most important figures in the creation of the " +
             "Albanian tradition, culture and values." ,
         datetime: "2022-02-08T019:00:00",
-        info: "Info",
+        info: "Tickets are available near the National Museum of History.",
         poi_id: 8,
         main_image: "images/events/gala.jpg",
         createdAt: new Date(),
@@ -120,7 +120,7 @@ module.exports = {
             "Albania, in the Castle of Tirana is organized an event by the Association of " +
             "Albanian Collectors who will exhibit various objects from their collections",
         datetime: "2022-02-11T011:00:00",
-        info: "Info",
+        info: "Exhibition available to everyone. No need for purchasing tickets.",
         poi_id: 1,
         main_image: "images/events/collection.jpg",
         createdAt: new Date(),
@@ -145,7 +145,7 @@ module.exports = {
             "An exhibition at the National Museum tells exactly the stories of 8 of the survivors and " +
             "historical facts about the suffering of Albanians in Nazi camps ",
         datetime: "2022-01-27T11:00:00",
-        info: "Info",
+        info: "No ticket info available.",
         poi_id: 8,
         main_image: "images/events/holocaust.jpg",
         createdAt: new Date(),
