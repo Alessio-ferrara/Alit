@@ -10,6 +10,14 @@
 # install dependencies
 $ npm install
 
+#setup database
+Create an user in PostgreSQL with the data you can find inside server/config/config.json then run the following commands.
+$ cd server
+$ npx sequelize-cli db:create
+$ npx sequelize-cli db:migrate
+$ npx sequelize-cli db:seed:all
+
+
 # serve with hot reload at localhost:3000
 $ npm run dev
 
