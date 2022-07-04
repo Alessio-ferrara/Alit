@@ -2,78 +2,78 @@
   {
     "name": "about_us",
     "path": "/about_us",
-    "component": "C:\\\\Users\\\\Ermenda Hoxha\\\\Desktop\\\\Alit\\\\pages\\\\about_us.vue",
+    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/about_us.vue",
     "chunkName": "pages/about_us",
-    "_name": "_1ededf8f"
+    "_name": "_501b684c"
   },
   {
     "name": "contact_us",
     "path": "/contact_us",
-    "component": "C:\\\\Users\\\\Ermenda Hoxha\\\\Desktop\\\\Alit\\\\pages\\\\contact_us.vue",
+    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/contact_us.vue",
     "chunkName": "pages/contact_us",
-    "_name": "_451025dc"
+    "_name": "_194d7359"
   },
   {
     "name": "events",
     "path": "/events",
-    "component": "C:\\\\Users\\\\Ermenda Hoxha\\\\Desktop\\\\Alit\\\\pages\\\\events.vue",
+    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/events.vue",
     "chunkName": "pages/events",
-    "_name": "_546db958"
+    "_name": "_13bf4d55"
   },
   {
     "name": "itineraries",
     "path": "/itineraries",
-    "component": "C:\\\\Users\\\\Ermenda Hoxha\\\\Desktop\\\\Alit\\\\pages\\\\itineraries.vue",
+    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/itineraries.vue",
     "chunkName": "pages/itineraries",
-    "_name": "_5796f18c"
+    "_name": "_f0be2d46"
   },
   {
     "name": "pois",
     "path": "/pois",
-    "component": "C:\\\\Users\\\\Ermenda Hoxha\\\\Desktop\\\\Alit\\\\pages\\\\pois.vue",
+    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/pois.vue",
     "chunkName": "pages/pois",
-    "_name": "_9975b530"
+    "_name": "_1cf594a5"
   },
   {
     "name": "services",
     "path": "/services",
-    "component": "C:\\\\Users\\\\Ermenda Hoxha\\\\Desktop\\\\Alit\\\\pages\\\\services.vue",
+    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/services.vue",
     "chunkName": "pages/services",
-    "_name": "_1ac9d05d"
+    "_name": "_4c06591a"
   },
   {
     "name": "event-id",
     "path": "/event/:id?",
-    "component": "C:\\\\Users\\\\Ermenda Hoxha\\\\Desktop\\\\Alit\\\\pages\\\\event\\\\_id.vue",
+    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/event/_id.vue",
     "chunkName": "pages/event/_id",
-    "_name": "_0cf0851f"
+    "_name": "_7413dc39"
   },
   {
     "name": "itinerary-id",
     "path": "/itinerary/:id?",
-    "component": "C:\\\\Users\\\\Ermenda Hoxha\\\\Desktop\\\\Alit\\\\pages\\\\itinerary\\\\_id.vue",
+    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/itinerary/_id.vue",
     "chunkName": "pages/itinerary/_id",
-    "_name": "_4e942a4e"
+    "_name": "_8131a8ac"
   },
   {
     "name": "poi-id",
     "path": "/poi/:id?",
-    "component": "C:\\\\Users\\\\Ermenda Hoxha\\\\Desktop\\\\Alit\\\\pages\\\\poi\\\\_id.vue",
+    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/poi/_id.vue",
     "chunkName": "pages/poi/_id",
-    "_name": "_1b13692f"
+    "_name": "_778892e9"
   },
   {
     "name": "service-id",
     "path": "/service/:id?",
-    "component": "C:\\\\Users\\\\Ermenda Hoxha\\\\Desktop\\\\Alit\\\\pages\\\\service\\\\_id.vue",
+    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/service/_id.vue",
     "chunkName": "pages/service/_id",
-    "_name": "_eca0dcb8"
+    "_name": "_f0730358"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\Ermenda Hoxha\\\\Desktop\\\\Alit\\\\pages\\\\index.vue",
+    "component": "/Users/alessioferrara/Desktop/Progetti/Alit/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_232e6763"
+    "_name": "_20e84074"
   }
 ]

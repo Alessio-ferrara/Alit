@@ -20,5 +20,6 @@ You can directly use them in pages and other components without the need to impo
 - `<GridCards>` | `<grid-cards>` (components/GridCards.vue)
 - `<ItineraryComponent>` | `<itinerary-component>` (components/ItineraryComponent.vue)
 - `<LandscapeCardComponent>` | `<landscape-card-component>` (components/LandscapeCardComponent.vue)
+- `<ModalComponent>` | `<modal-component>` (components/ModalComponent.vue)
 - `<Navbar>` | `<navbar>` (components/Navbar.vue)
 - `<RowGridComponent>` | `<row-grid-component>` (components/RowGridComponent.vue)

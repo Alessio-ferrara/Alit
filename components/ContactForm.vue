@@ -7,7 +7,9 @@
         @submit="onSubmit"
         method="post"
       >
-        <div class="card-header text-center text-muted lead h4">Reach out by filling in the form below.</div>
+        <div class="card-header text-center text-muted lead h4">
+          Reach out by filling in the form below.
+        </div>
 
         <!-- code to display field validation errors -->
         <span class="form-error" v-if="e.name">{{ e.name }}</span>
@@ -102,6 +104,7 @@
         </p>
       </div>
     </div>
+    <modal-component v-show="isModalVisible" @close="closeModal" />
   </div>
 </template>
 
@@ -149,11 +152,14 @@ textarea {
 
 <script>
 import axios from "axios";
+import ModalComponent from "./ModalComponent.vue";
 
 export default {
+  components: { ModalComponent },
   name: "ContactForm",
   data() {
     return {
+      isModalVisible: false,
       contact: {
         name: "",
         email: "",
@@ -165,21 +171,27 @@ export default {
         email: undefined,
         subject: undefined,
         message: undefined,
-      },//initialize the form fields and error messages to be displayed
+      }, //initialize the form fields and error messages to be displayed
     };
   },
   methods: {
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+      location.reload();
+    },
     onSubmit: async function (event) {
       event.preventDefault();
       try {
         await axios.post("/api/contact-us", { ...this.contact });
         // Redirect
-        location.reload();
+        this.showModal();
       } catch (error) {
         error.response.data.errors.forEach(
           (er) => (this.e[er.name] = er.message)
-        );//catch and display errors
-        
+        ); //catch and display errors
       }
     },
   },
