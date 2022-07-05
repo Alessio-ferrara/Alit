@@ -20,7 +20,7 @@
               id="name"
               type="text"
               class="form-control rounded-5"
-              placeholder="Name"
+              placeholder="Full Name"
               v-model="contact.name"
               aria-label="name"
               aria-describedby="basic-addon1"

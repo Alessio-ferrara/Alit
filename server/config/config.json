@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "alit_admin",
-    "password": "alit123",
+    "username": "postgres",
+    "password": "root",
     "database": "Alit",
     "host": "localhost",
     "dialect": "postgres"

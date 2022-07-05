@@ -32,7 +32,11 @@ module.exports = (sequelize, DataTypes) => {
     };
     static getAllEvents = async function () {
       try {
-        const events = await event.findAll();
+        const events = await event.findAll({
+          order: [
+            ['datetime', 'DESC']
+          ],
+        });
         return events;
       } catch (error) {
         throw error;
@@ -55,7 +59,9 @@ module.exports = (sequelize, DataTypes) => {
                 new Date().getFullYear()
               ),
             ],
-          },
+          },order: [
+            ['datetime', 'DESC']
+          ],
         });
         return summerEvents;
       } catch (error) {
@@ -79,6 +85,9 @@ module.exports = (sequelize, DataTypes) => {
               ),
             ],
           },
+          order: [
+            ['datetime', 'DESC']
+          ],
         });
         return winterEvents;
       } catch (error) {
@@ -92,6 +101,9 @@ module.exports = (sequelize, DataTypes) => {
             sequelize.fn("date_part", "year", sequelize.col("datetime")),
             new Date().getFullYear()
           ),
+          order: [
+            ['datetime', 'DESC']
+          ],
         });
         return yearEvents;
       } catch (error) {

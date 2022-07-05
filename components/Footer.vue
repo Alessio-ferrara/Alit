@@ -22,7 +22,7 @@
               class="text-info text-decoration-underline"
               href="https://github.com/Alessio-ferrara/Alit"
             >
-              GiitHub
+              GitHub
             </a>
           </p>
         </div>
